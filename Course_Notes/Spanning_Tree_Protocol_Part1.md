@@ -123,7 +123,7 @@ SPANNING TREE PROTOCOL STEPS
 1) One SWITCH is elected as ROOT BRIDGE. All PORTS on the ROOT BRIDGE are DESIGNATED PORTS (FORWARDING STATE)
 
 - ROOT BRIDGE selection order:
-    - 1) Lowest BRIDGE ID
+    - 1) Lowest BRIDGE Priority
     - 2) Lowest MAC Address (in case of Bridge ID tie)
 
 2) Each remaining SWITCH will select ONE of its INTERFACES to be it’s ROOT PORT (FORWARDING STATE). PORTS across from the ROOT PORT are always DESIGNATED PORTS.
