@@ -145,7 +145,7 @@ This makes all current passwords *encrypted*
 
 Future passwords will ALSO be *encrypted*
 
-“Enable secret” will not be effected (it’s ALWAYS encrypted)
+“Enable secret” will not be affected (it’s ALWAYS encrypted)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/09c841fe-b5c0-4683-9082-baf060e24c03)
 
