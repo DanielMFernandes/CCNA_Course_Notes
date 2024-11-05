@@ -101,7 +101,7 @@ If you disable 'service password-encryption'
 
 Router(config)# enable secret (password)
 
-// enable secret will ALWAYS be encrypted (at level 5)
+// enable secret will ALWAYS be encrypted (level 5 encryption)
 
 ---
 
