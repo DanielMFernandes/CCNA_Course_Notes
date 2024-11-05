@@ -68,11 +68,8 @@ To enter Global Configuration Mode, enter the command, within Privileged EXEC mo
  'configure terminal' (or 'conf t')
 
 Router# configure terminal
+
 Router(config) #		
-
-Router(config) # run 
-
-Router(config) # no 
 
 Type 'exit' to drop back into 'Privileged EXEC' mode.
 
