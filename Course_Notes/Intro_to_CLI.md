@@ -89,7 +89,7 @@ If you enable 'service password-encryption'
 
 - Current passwords WILL be encrypted.
 - Future passwords WILL be encrypted.
-- The 'enable secret' WILL NOT be effected.
+- The 'enable secret' WILL NOT be affected.
 
 If you disable 'service password-encryption'
 
