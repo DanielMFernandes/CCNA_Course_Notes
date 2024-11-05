@@ -29,7 +29,7 @@ Flow Control: None
 
 ---
 
-When you first enter the CLI you will DEFAULT be in what is called 'User EXEC' mode.
+When you first enter the CLI you will be in what is called 'User EXEC' mode by DEFAULT.
 
 USER EXEC MODE:
 
