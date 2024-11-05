@@ -128,19 +128,10 @@ Router# show startup-config // for startup config //
 To SAVE the Running configuration file, you can:
 
 Router# write
-Building configuration...
-[OK]
 
 Router# write memory
-Building configuration...
-[OK]
 
 Router# copy running-config startup-config
-
-Destination filename [startup-config]?
-
-Building configuration...
-[OK]
 
 ---
 
