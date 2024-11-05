@@ -52,8 +52,7 @@ T = Twisted Pair
 Most Ethernet uses copper cables.
 
 UTP or Unshielded Twisted Pair
-(no metallic shield)
-Twist protects against EMI (Electromagnetic Interference)
+(no metallic shield). The twisting protects against EMI (Electromagnetic Interference)
 
 Most use 8 wires (4 pairs) however ...
 
