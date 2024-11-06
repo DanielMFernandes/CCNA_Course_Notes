@@ -97,7 +97,7 @@ E8:BA:70 // 11:28:74
 
 OUI    // Unique Device ID
 
-HEXADECIMAL
+
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/65a5e84a-b8db-46f5-b288-518139e99453)
 
