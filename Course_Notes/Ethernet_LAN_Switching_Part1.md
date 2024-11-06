@@ -47,7 +47,7 @@ DESTINATION AND SOURCE
 - Layer 2 Address
 - Indicates the devices sending / receiving the frame
 - MAC = ’Media Access Control’
-- = 6 byte (48-bit) address of the physical device
+- = 6 bytes (48-bit) address of the physical device
 
 ---
 
