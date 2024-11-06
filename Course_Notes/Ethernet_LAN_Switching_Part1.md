@@ -91,6 +91,8 @@ MAC ADDRESS (48 bits long)
 
 Example:
 
+E8:BA:70:11:28:74
+
 E8:BA:70 // 11:28:74
 
 OUI    // Unique Device ID
