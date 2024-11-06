@@ -113,10 +113,9 @@ Vlan --- MAC Address --- Type --- Ports(interfaces)
 
 
 SW1# clear mac address-table dynamic <optional MAC address>
-
 // clears the entire switches MAC table.
-// IF the "address" option is used, it will clear the SPECFIC MAC address.
 
-SW1 #clear mac address-table dynamic interface <optional Interface>
 
-// clears the MAC table entry of the Switch by it's **INTERFACE n**ame.
+// IF the "address" option is used, it will clear the **SPECIFIC** MAC address.
+
+// If the "interface" option is used, it will clear the MAC table entry of the Switch by it's **INTERFACE** name.
