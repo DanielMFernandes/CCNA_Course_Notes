@@ -10,6 +10,7 @@ Ethernet Header --- DATA (Packet) --- Ethernet Trailer
 The Ethernet Header contains 5 Fields:
 
 Preamble -- SFD -- Destination -- Source -- Type/Length
+
 7 bytes  -- 1 byte -- 6 bytes -- 6 bytes --   2 bytes
 
 Ethernet Trailer contains 1 Field:
