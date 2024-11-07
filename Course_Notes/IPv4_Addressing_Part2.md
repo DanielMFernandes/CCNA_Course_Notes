@@ -28,9 +28,9 @@ What about a Class B Network ?
 
 172.16.0.0/16 ----> 172.16.255.255/16
 
-Host portion = 16 bits = 2^16 = 65,536
+Host portion = 16 bits = 2^16 = 65536
 
-Maximum hosts per network = 2^16-2 = 65,534 hosts
+Maximum hosts per network = 2^16 - 2 = 65534 hosts
 
 ---
 
@@ -38,9 +38,9 @@ What about a Class A Network ?
 
 10.0.0.0/8 -------------> 10.255.255.255/8
 
-Host portion = 24 bits = 2^24 = 16,777,216
+Host portion = 24 bits = 2^24 = 16777216
 
-Maximum hosts per network = 2^24-2 = 16,777,214 hosts
+Maximum hosts per network = 2^24 - 2 = 16777214 hosts
 
 ---
 
@@ -48,7 +48,7 @@ THEREFORE:
 
 The formula for calculating the number of HOSTS on a network is:
 
-2 ^ N - 2 (2 to the power of N - 2)
+2^N - 2 (2 to the power of N - 2)
 
 where N = number of HOST bits
 
@@ -60,17 +60,17 @@ Class C Network
 
 192.168.1.0/24 (NETWORK ADDRESS)
 
-Add 1 so the Host Portion = 00000001
+Add 1 to the Host Portion = 00000001
 
-192.168.1.1/24 = FIRST USABLE ADDRESS
+192.168.1.1 = FIRST USABLE ADDRESS
 
 ---
 
-192.168.1.255/24 (BROADCAST ADDRESS)
+192.168.1.255 (BROADCAST ADDRESS)
 
 Subtract 1 from the BROADCAST ADDRESS = 11111110
 
-192.168.1.254/24 = LAST USABLE ADDRESS
+192.168.1.254 = LAST USABLE ADDRESS
 
 ---
 
@@ -80,7 +80,7 @@ Class B Network
 
 Add 1 to Host portion so 0000 0000 0000 0001
 
-172.16.0.1/16 is the FIRST USABLE ADDRESS
+172.16.0.1 is the FIRST USABLE ADDRESS
 
 ---
 
@@ -88,7 +88,7 @@ Add 1 to Host portion so 0000 0000 0000 0001
 
 Subtract 1 to Broadcast Address so 1111 1111 1111 1110
 
-172.16.255.254/16 is the LAST USABLE ADDRESS
+172.16.255.254 is the LAST USABLE ADDRESS
 
 ---
 
@@ -98,7 +98,7 @@ Class A Network
 
 Add 1 to Host portion so 00000000 00000000 00000001
 
-10.0.0.1/8 is the FIRST USABLE ADDRESS
+10.0.0.1 is the FIRST USABLE ADDRESS
 
 ---
 
@@ -106,7 +106,7 @@ Add 1 to Host portion so 00000000 00000000 00000001
 
 Subtract 1 to Broadcast Address so 1111 1111 1111 1110
 
-10.255.255.254/16 is the LAST USABLE ADDRESS
+10.255.255.254 is the LAST USABLE ADDRESS
 
 ---
 
