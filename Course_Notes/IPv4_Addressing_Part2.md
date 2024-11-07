@@ -20,7 +20,7 @@ AND
 
 192.168.1.255 (BROADCAST ADDRESS) is ALSO reserved.
 
-The MAXIMUM Hosts per Network = 2^8-2 = 254 hosts
+The MAXIMUM Hosts per Network = 2^8 - 2 = 254 hosts
 
 ---
 
