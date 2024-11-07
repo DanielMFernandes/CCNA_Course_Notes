@@ -113,6 +113,7 @@ Subtract 1 to Broadcast Address so 1111 1111 1111 1110
 CISCO CLI DEVICE CONFIGURATION
 
 R1> enable
+
 R1# show ip interface brief
 
 Lists the Interfaces, IP Addresses, Method, Status, and Protocol.
@@ -198,11 +199,11 @@ More 'show' CLI Commands
 
 Example:
 
-// Configure mode for interface Gigabyte Interface 0/0
+// Configure mode for interface g0/0
 
 R1(config) #int g0/0
 
-R1(config) #description ## to SW1 ##
+R1(config-if) #description ## to SW1 ##
 
 This sets the 'Description' column to display:
 
