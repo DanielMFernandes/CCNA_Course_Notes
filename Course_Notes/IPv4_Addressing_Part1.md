@@ -85,9 +85,9 @@ Hexadecimal (base 16)
 
 Ex: 3294, would be CDE
 ```
-C (C * 256 / 12 * 256 = 3072) // 256ths position
-D (D * 16 / D=13 so 16*13 = 208) // 16ths position
-E (E * 1 / E = 14)	// 1s position
+C (C * 256 = 12 * 256 = 3072) // 256ths position
+D (D * 16 = 13 * 16 = 208) // 16ths position
+E (E * 1 = 14 * 1 = 14)	// 1s position
 ```
 Adding these up, we get 3294
 
