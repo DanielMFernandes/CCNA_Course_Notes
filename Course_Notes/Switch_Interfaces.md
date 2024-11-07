@@ -20,7 +20,7 @@ This will show the interfaces currently on Switch 1. It has the same information
 
 Notice the Status (Layer 2) and Protocol (Layer 1) columns are showing "up/up".
 
-Unlike ROUTERS, SWITCHES do no DEFAULT to 'administrative down/down'(shutdown).
+Unlike ROUTERS, SWITCHES do NOT DEFAULT to 'administrative down/down'(shutdown).
 
 Unconnected devices will show as "down" and "down" (not connected to another device)
 
@@ -29,7 +29,7 @@ Unconnected devices will show as "down" and "down" (not connected to another dev
 
 // Show the status of all interfaces on SW1
 
-SW1#show interfaces status
+SW1# show interfaces status
 
 This will list:
 
@@ -98,14 +98,14 @@ In the past, LAN HUBS used HALF DUPLEX.
 
 When multiple packets were received by the HUB, the HUB would simple FLOOD the connections with frame data, causing a COLLISION (on the interface), and hosts would not receive the frame  intact.
 
-All devices connected to a HUB are called a COLLISION DOMAIN.
+All devices connected to a HUB are in the same COLLISION DOMAIN.
 
-To DEAL with COLLISIONS, Ethernet devices use a mechanism called CSMA/CD.
+To deal with collisions, Ethernet devices use a mechanism called CSMA/CD.
 
 CSMA/CD = CARRIER SENSE MULTIPLE ACCESS with COLLISION DETECTION.
 
 - Before sending frames, devices 'listen' to the collision domain until they detect that other devices are not sending.
-- IF a collision occurs, the device sends a jamming signal to inform the other devices that a collision happened.
+- If a collision occurs, the device sends a jamming signal to inform the other devices that a collision happened.
 - Each device will wait a random period of time before sending frames again.
 - The process repeats.
 
@@ -163,4 +163,4 @@ Error stats will be at the bottom.
 
 **Input errors**: Total of various counters, such as the above four
 
-**Output errors**: Frames the SWITCH tried to send, but failed due to an error
+**Output errors**: Frames the switch tried to send, but failed due to an error
