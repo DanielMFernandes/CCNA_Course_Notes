@@ -3,6 +3,7 @@
 REVIEW:
 
 SWITCHES forward traffic WITHIN LAN's
+
 ROUTERS forward traffic BETWEEN LAN's
 
 WAN (Wide Area Network)
