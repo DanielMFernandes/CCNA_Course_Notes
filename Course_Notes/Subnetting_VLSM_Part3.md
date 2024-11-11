@@ -8,12 +8,12 @@ Given a 10.0.0.0/8 network, you must create 2000 subnets which will distributed 
 
 2^10 = 1024 so 2^11 = 2048. We have to "borrow" 11 bits (Left to Right) to get enough subnets
 
-0000 1010 . 0000 0000 . 000 | 00000 . 0000 0000
+00001010 . 00000000 . 000 | 00000 . 00000000
 
 8 bits + 8 bits + 3 = 19 bits
 
-0000 1010 . 0000 0000 . 000 | 00000 . 0000 0000
-1111 1111 . 1111 1111 . 111 | 00000 . 0000 0000
+00001010 . 00000000 . 000 | 00000 . 00000000
+11111111 . 11111111 . 111 | 00000 . 00000000
 
 255.255.224.0 is the Subnet mask
 
@@ -50,7 +50,7 @@ THE POINT TO POINT CONNECTION (between the two ROUTERS)
 ```
 192.168.1.0 / 24
 
-1000 0000 . 1010 1000 . 0000 0001 | 0000 0000  (last is host octet = 254 usable hosts)
+10000000 . 10101000 . 00000001 . | 00000000  (last is host octet = 254 usable hosts)
 
 Shifting LEFT - we DOUBLE the # of hosts
 Shifting RIGHT - we HALF the # of hosts
@@ -60,10 +60,10 @@ TOKYO LAN A (we need to borrow 1 host bits, to the RIGHT, to leave enough for 2^
 so:
 ```
 192.168.1.0/25 (Network Address)
-1000 0000 . 1010 1000 . 0000 0001 . 0 | 000 0000
+10000000 . 10101000 . 00000001 . 0 | 0000000
 
 Converting remaining Host Bits to 1s:
-0111 1111, we get 127 so
+01111111, we get 127 so
 
 192.168.1.127/25 is the Broadcast Address
 ```
@@ -94,11 +94,11 @@ We need to borrow to get enough for 45 hosts.
 |---|--|--|--|-|-|-|-|
 |x  |x | 0| 0|0|0|0|0|
 ```
-1000 0000 . 1010 1000 . 0000 0001 . 10 | 00 0000
+10000000 . 10101000 . 00000001 . 10 | 000000
 
 192 . 168 . 1 . 128
 
-1000 0000 . 1010 1000 . 0000 0001 . 10 | 11 1111
+10000000 . 10101000 . 00000001 . 10 | 111111
 
 192 . 168 . 1 . 191 (Broadcast Address)
 ```
@@ -112,11 +112,11 @@ We need to borrow to get enough for 29 hosts.
 |---|--|--|--|-|-|-|-|
 |x  |x | x| 0|0|0|0|0|
 ```
-1000 0000 . 1010 1000 . 0000 0001 . 110 | 0 0000
+10000000 . 10101000 . 00000001 . 110 | 00000
 
 192.168.1.192 (Net Address)
 
-1000 0000 . 1010 1000 . 0000 0001 . 110 | 1 1111
+10000000 . 10101000 . 00000001 . 110 | 11111
 
 192.168.1.224 (Broadcast address)
 
@@ -139,7 +139,7 @@ We need to borrow to get enough for 8 hosts. Remember total usable hosts is equa
 
 192.168.1.224 (Net Address)
 
-1000 0000 . 1010 1000 . 0000 0001 . 1110 | 1111
+10000000 . 10101000 . 00000001 . 1110 | 1111
 
 192.168.1.239 (Broadcast address)
 
@@ -158,11 +158,11 @@ We need to borrow to get enough for 4 hosts. Remember total usable hosts is equa
 |---|--|--|--|-|-|-|-|
 |x  |x | x| x|x|x|0|0|
 ```
-1000 0000 . 1010 1000 . 0000 0001 . 1111 00 | 00
+10000000 . 10101000 . 00000001 . 111100 | 00
 
 192.168.1.240 (Net Address)
 
-1000 0000 . 1010 1000 . 0000 0001 . 1111 00 | 11
+10000000 . 10101000 . 00000001 . 111100 | 11
 
 192.168.1.243 (Broadcast address)
 
