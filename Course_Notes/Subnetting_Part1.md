@@ -112,7 +112,6 @@ SUBNETTING CHEATSHEET:
     
     d) Find the next subnet address. Add the number of addresses to the highlighted portion of the CIDR to find it. 
 ---
----
     Example: 117.190.155.226/18
 
    a)
@@ -134,14 +133,20 @@ SUBNETTING CHEATSHEET:
    Network in the range: 117.190.128.0
    
    d)
+   
    (Network portion) + (address value) = 128 + 64 = 192
    Next Subnet: 117.190.192.0
 
    Final Result
+   
    Network: 117.190.128.0
+   
    First Host: 117.190.128.1
+   
    Last Host:117.190.191.254
+   
    Broadcast: 117.190.191.255
+   
    Next Subnet: 117.190.192.0
 
 ---
