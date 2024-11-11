@@ -76,7 +76,7 @@ FIRST USABLE: 192.168.1.1/25
 LAST USABLE: 192.168.1.126/25
 TOTAL NUMBER OF USABLE HOSTS: 126 (2^7 -2)
 
-Since TOKYO LAN A is 192.168.1.127, the next Subnet (TOKYO LAN B) starts at 192.168.1.128 (Network Address)
+Since TOKYO LAN A is 192.168.1.127, the next Subnet (TORONTO LAN B) starts at 192.168.1.128 (Network Address)
 ```
 ---
 TORONTO LAN B
