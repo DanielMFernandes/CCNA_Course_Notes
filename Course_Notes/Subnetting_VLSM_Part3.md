@@ -135,7 +135,7 @@ We need to borrow to get enough for 8 hosts. Remember total usable hosts is equa
 |---|--|--|--|-|-|-|-|
 |x  |x | x| x|0|0|0|0|
 ```
-1000 0000 . 1010 1000 . 0000 0001 . 1110 | 0000
+10000000 . 10101000 . 00000001 . 1110 | 0000
 
 192.168.1.224 (Net Address)
 
