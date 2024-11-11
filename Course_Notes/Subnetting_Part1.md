@@ -104,79 +104,46 @@ SUBNETTING CHEATSHEET:
 
 1. Use a given CIDR/Mask to find column on Cheat Sheet
     
-    a) Write down the correct subnet mask for the CIDR
+    a) Write down the correct subnet mask for the CIDR.
     
     b) Highlight the correct column in the Prefix Lenght and the CIDR portion that will change in the process. This is usually where you might make mistakes!
     
-    c) Write down the network address for that CIDR/Mask (you will have to check the networks AND addreses columns for that). If this is too complex, you might have to divide the CIDR/Number of addresses to find the correct network. 
+    c) Write down the network address for that CIDR/Mask (you will have to check the networks AND addreses columns for that). If this is too complex, you might have to divide the CIDR/Number of addresses (find the integer number) to find the correct network. 
     
     d) Find the next subnet address. Add the number of addresses to the highlighted portion of the CIDR to find it. 
     
-    Example: 117.190.105.226/18
+    Example: 117.190.155.226/18
+
+   a)
+
+   255.255.192.0
+
+   b)
+
+   117.190.**155**.226/18
+
+   255.255.**192**.0
+
+   c)
+   
+   Integer division: 155/64 = 2
+   
+   Multiply result per address value: 64 * 2 = 128
+
+   Network in the range: 117.190.128.0
+   
+   d)
+   (Network portion) + (address value) = 128 + 64 = 192
+   Next Subnet: 117.190.192.0
+
+   Final Result
+   Network: 117.190.128.0
+   First Host: 117.190.128.1
+   Last Host:117.190.191.254
+   Broadcast: 117.190.191.255
+   Next Subnet: 117.190.192.0
 
 ---
-
-Solving CIDR/Subnet for 3rd Octet IPs :
-
-Every number LEFT of 3rd Octet is 255. Every number RIGHT of 3rd Octet is 0
-
-Example: 10.4.77.188 / 19 → Subnet : 255.255.224.0
-
-You use the SAME process as above except when finding Target IPs, you use the 3rd Octet for your Target.
-
-Example: 10.4.77.188 /19 → Subnet : 255.255.224.0
-
-256 - 224 = 32 so…
-
-Using 32, we step through the address blocks 0, 32,64, and 96.
-Since 77 is between 64 and 96, there’s our range.
-
-Network: 10.4.64.0 (Start / First Block)
-
-Next: 10.4.96.0 (Second Block)
-…
-
-Number of IP Addresses is : 2^(32-CIDR). In this example 2^13 = 8192
-
-Solving for 2nd and 1st Octet is the same as above, keeping in mind the Octet column is USED to check for the Target number of a given address.
-
----
-Alternative method to "Cheat Sheet"
-
-![image](https://github.com/user-attachments/assets/d1e103b8-142a-44cc-8ab4-f5337268c9de)
-
-1. Find the "magic octet" where a given IP /Prefix lies, from the bit chart shown (boundary digits are inclusive of the octet preceding them)
-2. Count the number of network bits (left to right) in that octet and count the same amount, using the red bit slot chart. This'll be your address group size.
-3. Subtract that number from 256 to find your Subnet Mask number used in the "magic octet" (any octet LEFT of that "magic octet" will be 255, everything RIGHT of that octet will be 0)
-4. Divide whatever IP octet number is in the "magic octet" by the address group size.
-  - If there is a remainder, multiple the whole integer by the address group size - your Base Network Address is that value, with every octet to the right of that as all 0's
-  - If there is NO remainder, the IP number in the "magic octet" IS the Base Network Address is that value, with every octet to the right of that as all 0's
-5. The Base Broadcast Number will be Network Base Number + Group Size - 1 in the "magic octet", every value to the right of that octet will be 255.
-6. Number of subnets is (2 to the power of the number of network bits in the "magic octet". ** 2^8 or 256 is equal to 0 **)
-7. Total Useable Hosts size is (2 to the power of (32 - Prefix Length) -2)
----
-Example 1:
-```
-154 . 219 . 154 . 180 /20
-
-Third Octet = Magic
-
-Address Group Size = 16 (L/R count of 4)
-256 - 16 = 240 therefore Subnet Mask is 255.255.240.0
-
-Divide 3rd digit / Address Group Size (16)
-154 / 16 = 9 (with remainder)
-9 * 16 = 144 (Base Network #)
-
-Network : 154 . 219 . 144 . 0
-
-Broadcast Base # = 144 + 16 - 1 = 159
-
-Broadcast : 154. 219 . 159 . 255
-
-Subnets = 2^4 network bits = 16
-Total Host Size = (2^(32 - 20))-2 = 4094
-```
 ---
 Example 2:
 ```
