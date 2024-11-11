@@ -89,9 +89,9 @@ which has 16 hosts per group (2 * 4 bits = 16) - 2 Reserved IPs for Network and 
 
 SUBNETTING CHEATSHEET:
 
-| Prefix Length | Mask | Networks | Number of Addresses |
+| CIDR Prefix Length | Mask | Networks | Number of Addresses |
 | ---------- | ---------- | ---------- | ---------- |
-| /1                      /9    /17    /25 | 128 | 2 | 128 |
+| /1    /9    /17    /25 | 128 | 2 | 128 |
 | /2    /10    /18    /26 | 192 | 4 | 64 |
 | /3    /11    /19    /27 | 224 | 8 | 32 |
 | /4    /12    /20    /28 | 240 | 16 | 16 |
