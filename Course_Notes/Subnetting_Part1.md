@@ -18,7 +18,7 @@ The IANA (Internet Assigned Numbers Authority) assigns IPv4 addresses/networks t
 
 The problem with 'CLASSFUL' assignment is that it led to IP Address wastefulness.
 
-Example: A company requiring 5000 address was assigned a CLASS B IP, leaving 60000+ addresses unused.
+Example: A company requiring 5000 addresses was assigned a CLASS B IP, leaving 60000+ addresses unused.
 
 ---
 
@@ -35,7 +35,8 @@ HOW MANY USABLE ADDRESSES ARE THERE IN EACH NETWORK?
 
 REMEMBER:
 
-2^n - 2 = Usable Address
+2^n - 2 = Usable Addresses
+
 n = number of host bits
 
 CIDR PRACTICE!
@@ -46,22 +47,22 @@ CIDR PRACTICE!
 
 203 . 0 . 113 . 0 is written in binary as :
 
-1100 1011 . 0000 0000 . 0111 0001 . 0 | 000 0000
+11001011 . 00000000 . 01110001 . 0 | 0000000
 
 (Subnet prefix is the first 25 bits)
 
 Flipping all the bits to 1’s, we get the SUBNET MASK for /25:
 
-1111 1111 . 1111 1111 . 1111 1111 . 1 | 000 0000
+11111111 . 11111111 . 11111111 . 1 | 0000000
 
 which is equal to:
 
-255.255.255.128 (because the last octet is 1000 0000 = 128 in binary)
+255.255.255.128 (because the last octet is 10000000 = 128 in binary)
 
-SO - the based on previous definition of USABLE ADDRESSES, the number of hosts for
+Based on previous definition of USABLE ADDRESSES, the number of hosts for
 203.0.113.0 /25 is:
 
-2^(7 bits) or (128) - 2 = 126 hosts.
+2^(7 bits) - 2 = 128 - 2 = 126 hosts.
 
 ---
 
@@ -69,20 +70,20 @@ What about /28 ?
 
 203 . 0 . 113 . 0 is written in binary as :
 
-1100 1011 . 0000 0000 . 0111 0001 . 0000 | 0000
+11001011 . 00000000 . 01110001 . 0000 | 0000
 
 (Subnet prefix is the first 28 bits)
 
 flipping all the bits to 1’s, we get the SUBNET MASK for /28:
 
-1111 1111 . 1111 1111 . 1111 1111 . 1111 | 0000
+11111111 . 11111111 . 11111111 . 1111 | 0000
 
 which is equal to:
 
-255.255.255.240 (because the last octet is 1111 0000) = 128+64+32+16 =  (128+32) + (64+16) = 160 + 80 = 240
+255.255.255.240 (because the last octet is 11110000) = 128 + 64 + 32 + 16 = 240
 
 The SUBNET MASK for /28 is 255.255.255.240
-which has 16 hosts / group (2 * 4 bits = 16) - 2 Reserved IPs for Network and Broadcast 
+which has 16 hosts per group (2 * 4 bits = 16) - 2 Reserved IPs for Network and Broadcast 
 
 ---
 
