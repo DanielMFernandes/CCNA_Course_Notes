@@ -137,9 +137,8 @@ SUBNETTING CHEATSHEET:
    (Network portion) + (address value) = 128 + 64 = 192
    Next Subnet: 117.190.192.0
    
----
    Final Result
-   
+   ---
    Network: 117.190.128.0
    
    First Host: 117.190.128.1
