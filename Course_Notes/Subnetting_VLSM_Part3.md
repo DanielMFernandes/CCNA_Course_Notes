@@ -31,7 +31,6 @@ VARIABLE-LENGTH SUBNET MASKS (VLSM)
 - Until now, we have practiced subnetting using FLSM (Fixed-Length Subnet Masks).
 - This means that all of the subnets use the same prefix length (ie: Subnetting a Class C network into 4 subnets using /26)
 - VLSM (Variable-Length Subnet Masks) is the process of creating subnets of different sizes, to make your use of network addresses more efficient.
-- VLSM is more complicated than FLSM, BUT it's easy if you follow the steps correctly.
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/30a08f93-796a-4fe9-854e-58af0bcbd69b)
 
