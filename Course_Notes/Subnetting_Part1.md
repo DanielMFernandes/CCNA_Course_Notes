@@ -111,7 +111,8 @@ SUBNETTING CHEATSHEET:
     c) Write down the network address for that CIDR/Mask (you will have to check the networks AND addreses columns for that). If this is too complex, you might have to divide the CIDR/Number of addresses (find the integer number) to find the correct network. 
     
     d) Find the next subnet address. Add the number of addresses to the highlighted portion of the CIDR to find it. 
-    
+---
+---
     Example: 117.190.155.226/18
 
    a)
