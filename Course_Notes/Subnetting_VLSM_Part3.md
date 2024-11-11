@@ -13,6 +13,7 @@ Given a 10.0.0.0/8 network, you must create 2000 subnets which will distributed 
 8 bits + 8 bits + 3 = 19 bits
 
 00001010 . 00000000 . 000 | 00000 . 00000000
+
 11111111 . 11111111 . 111 | 00000 . 00000000
 
 255.255.224.0 is the Subnet mask
