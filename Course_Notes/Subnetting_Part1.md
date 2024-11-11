@@ -89,7 +89,7 @@ which has 16 hosts per group (2 * 4 bits = 16) - 2 Reserved IPs for Network and 
 
 SUBNETTING CHEATSHEET:
 
-| CIDR Prefix Length | Mask | Networks | Number of Addresses |
+| Prefix Length | Mask | Networks | Addresses (subtract 2 to find hosts) |
 | ---------- | ---------- | ---------- | ---------- |
 | /1    /9    /17    /25 | 128 | 2 | 128 |
 | /2    /10    /18    /26 | 192 | 4 | 64 |
@@ -104,24 +104,15 @@ SUBNETTING CHEATSHEET:
 
 1. Use a given CIDR/Mask to find column on Cheat Sheet
     
-    a) CIDR/Subnet Mask map to each other
+    a) Write down the correct subnet mask for the CIDR
     
-    b) Locate Group Size
+    b) Highlight the correct column in the Prefix Lenght and the CIDR portion that will change in the process. This is usually where you might make mistakes!
     
-    c) Increase by Group Size until you PASS the Target IP (not less or equal !)
+    c) Write down the network address for that CIDR/Mask (you will have to check the networks AND addreses columns for that). If this is too complex, you might have to divide the CIDR/Number of addresses to find the correct network. 
     
-    d) If passing the Target IP reaches 256, increase the Octet BEFORE it by one and current Octet becomes 0 : IF NECESSARY
+    d) Find the next subnet address. Add the number of addresses to the highlighted portion of the CIDR to find it. 
     
-    Example: 10.2.2.256 → 10.2.3.0
-    
-
-1. Number BEFORE Target IP is NETWORK ID
-2. Number AFTER Target IP is NEXT NETWORK
-3. IP Address BEFORE Next Network is BROADCAST
-4. IP Address AFTER Network ID is First Host
-5. IP Address BEFORE Broadcast IP is Last Host
-6. Group Size is total # of IP Addresses
-    - Don’t forget to subtract 2 for USABLE #
+    Example: 117.190.105.226/18
 
 ---
 
