@@ -8,7 +8,7 @@ DTP (Dynamic Trunking Protocol)
 
 - DTP is ENABLED by default on all Cisco SWITCH interfaces
 
-We’ve been manually configuring SWITCHPORTS using :
+We’ve been manually configuring SWITCHPORTS using:
 
 - “switchport mode access”
 - “switchport mode trunk”
