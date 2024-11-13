@@ -136,7 +136,7 @@ ROOT GUARD / LOOP GUARD:
 ![image](https://github.com/psaumur/CCNA/assets/106411237/bb38aedc-df38-4d76-b6cb-30319e74ecc1)
 
 
-You probably do NOT have to know these STP optional features (or others such as UplinkFast, Backbone Fast, etcetera) for the CCNA. 
+You probably do NOT have to know these STP optional features (or others such as UplinkFast, BackboneFast, etc) for the CCNA. 
 
 BUT…
 
@@ -178,7 +178,7 @@ Command to CONFIGURE Spanning-Tree SECONDARY ROOT BRIDGE on a SWITCH
 
 
 
-- The “spanning-tree vlan <vlan-number> root secondary” command sets the STP PRIORITY to 28672 (exactly 4096 higher than 24576).
+- The “spanning-tree vlan <vlan-number> root secondary” command sets the STP PRIORITY to 28672 (24576 + 4096).
 
 ---
 
