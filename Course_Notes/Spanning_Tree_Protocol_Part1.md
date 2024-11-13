@@ -3,7 +3,7 @@
 REDUNDANCY IN NETWORKS
 
 - Essential in network design
-- Modern networks are expected to run 24/7/265; even a short downtime can be disastrous for business.
+- Modern networks are expected to run 24/7/365; even a short downtime can be disastrous for business.
 - If one network component fails, you must ensure that other components will take over with little or no downtime.
 - As much as possible, you must implement REDUNDANCY at every possible point in the network
 
