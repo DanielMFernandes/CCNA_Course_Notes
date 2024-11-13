@@ -1,4 +1,4 @@
-# 19. DTP / VTP (Not in Syllabus)
+# 19. DTP / VTP 
 
 DTP (Dynamic Trunking Protocol)
 
