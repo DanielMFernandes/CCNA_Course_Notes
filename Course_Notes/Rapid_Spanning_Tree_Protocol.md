@@ -11,7 +11,7 @@ MSTP (802.1s) is more useful for VERY LARGE networks.
 
 WHAT IS RAPID PER-VLAN SPANNING TREE PLUS?
 
-> RSTP is not a time-based spanning tree algorithm like 802.1D. Therefore, RSTP offers an improvment over teh 30 seconds or more 802.1D takes to move a link to forwarding. The heart of the protocol is a new bridge-bridge handshake mechanism, which allows ports to move directly to forwarding
+> RSTP is not a time-based spanning tree algorithm like 802.1D. Therefore, RSTP offers an improvement over the 30 seconds or more 802.1D takes to move a link to forwarding. The heart of the protocol is a new bridge-bridge handshake mechanism, which allows ports to move directly to forwarding
 
 ---
 
@@ -45,10 +45,8 @@ RSTP PORT STATES
 RSTP ROLES
 
 - The ROOT PORT role remains unchanged in RSTP
-    - The PORT that is closest to the ROOT BRIDGE becomes the ROOT PORT for the SWITCH
     - The ROOT BRIDGE is the only SWITCH that doesn’t have a ROOT PORT
 - The DESIGNATED PORT role remains unchanged in RSTP
-    - The PORT on a segment (Collision Domain) that sends the best BPDU is that segment’s DESIGNATED PORT (only one per segment!)
 - The NON-DESIGNATED PORT role is split into TWO separate roles in RSTP:
     - The ALTERNATE PORT role
     - The BACKUP PORT role
@@ -60,7 +58,7 @@ RSTP ROLES
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7d81e70c-3b31-4448-9d45-9aadb738c74d)
 
-- An ALTERNATE PORT (labelled “A” above) functions as a backup to the ROOT PORT
+- An ALTERNATE PORT (labelled “A” above) functions as an alternative to the ROOT PORT
 - If the ROOT PORT fails, the SWITCH can immediately move it’s best alternate port to FORWARDING
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/41f3be85-6225-4749-83b4-f76952c5756a)
