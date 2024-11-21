@@ -122,9 +122,9 @@ EACH ROUTING PROTOCOL uses a different METRIC to determine which ROUTE is best
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/bf324652-f4b8-482e-af17-03da590ac85d)
 
-The above choose the RED PATH because the “cost”, using R3 F2/0 and R4 F2/0 (FastEthernet) is HIGHER than the  R2 G1/0 and R4 G0/0 (GigabyteEthernet)
+The above chooses the RED PATH because the “cost”, using R3 F2/0 and R4 F2/0 (FastEthernet) is HIGHER than the  R2 G1/0 and R4 G0/0 (GigabitEthernet)
 
-What if BOTH connections were GigabyteEthernet? (ie: the same METRIC value)
+What if BOTH connections were GigabitEthernet? (ie: the same METRIC value)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/3f8437cc-5b38-4f1e-b185-c5e9fce6c5f1)
 
@@ -132,7 +132,7 @@ BOTH ROUTES are added to the ROUTE TABLE
 
 So …
 
-💡 If a ROUTER learns TWO (or more) ROUTES via the same ****ROUTING PROTOCOL to the same DESTINATION (same network address, same subnet mask) with the same METRIC, both will be added to the routing table. Traffic will be LOAD-BALANCED over both ROUTES
+💡 If a ROUTER learns TWO (or more) ROUTES via the same ROUTING PROTOCOL to the same DESTINATION (same network address, same subnet mask) with the same METRIC, both will be added to the routing table. Traffic will be LOAD-BALANCED over both ROUTES
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/79662f99-a847-457b-8080-76f77c25c5e6)
 
