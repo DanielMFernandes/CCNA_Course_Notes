@@ -21,7 +21,7 @@ Some OVERSUBSCRIPTION is acceptable, but too much will cause congestion.
 WHY?
 
 - If ALL of ASW1s INTERFACES were FORWARDING, LAYER 2 LOOPS would form between ASW1 and DSW1, leading to a BROADCAST STORM (Bad!)
-- Other links will be unused unless the active link fails. In that case, one of the inactive link will start forwarding.
+- Other links will be unused unless the active link fails. In that case, one of the inactive links will start forwarding.
 
 An ETHERCHANNEL (in network topology diagrams) is represented like THIS (circle around multi-connections)
 
@@ -110,6 +110,7 @@ PAgP negotiations to form an ETHERCHANNEL
 
 
 💡 AWS1(config-if-range)# channel-group 1 mode desirable.
+
 Creating a port-channel interface Port-channel1
 
 Shows up in the interface as “Port-channel1”
@@ -132,7 +133,7 @@ LACP CONFIGURATION
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/0a314613-d398-49f1-a4d3-1b50fb96ab7d)
 
-LACP negotiations for form an ETHERCHANNEL
+LACP negotiations to form an ETHERCHANNEL
 
 The “channel-group” number has to MATCH for member INTERFACES on the same SWITCH.
 
@@ -259,7 +260,7 @@ Where do we configure the IP Address?  Directly on the PORT INTERFACE !
 
 COMMANDS LEARNED IN THIS CHAPTER
 ```
-SW(config) port-channel load-balance *mode*
+SW(config) port-channel load-balance <mode>
 ```
 Configures the EtherChannel load-balancing method on a SWITCH 
 ```
@@ -267,7 +268,7 @@ SW# show etherchannel load-balance
 ```
 Displays information about the load-balancing settings
 ```
-SW(config-if)# channel-group *number* mode {desirable | auto | active | passive | on}
+SW(config-if)# channel-group <number> mode <desirable | auto | active | passive | on>
 ```
 Configures an interface to be PART of an EtherChannel
 ```
