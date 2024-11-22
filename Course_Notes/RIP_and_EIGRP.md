@@ -92,7 +92,7 @@ To SHARE this DEFAULT ROUTE with R1’s RIP neighbors, using this command:
 
 RIP doesn’t care about interface AD cost (RIP cost is 120), only “hops”.
 
-Since both have an equal number of “hops”, both paths appear in the DEFAULT ROUTE (Gateway of Last Resort)
+Since both have an equal number of “hops” (looking at R4), both paths appear in the DEFAULT ROUTE (Gateway of Last Resort)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/1deccb54-02e0-4d3b-b203-277d656504b3)
 
