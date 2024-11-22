@@ -5,11 +5,11 @@ ROUTING INFORMATION PROTOCOL (RIP)
 - Routing Information Protocol (Industry Standard)
 - is a DISTANCE VECTOR IGP
     - uses Routing-By-Rumor logic to learn/share routes
-- Uses HOP COUNT as it’s METRIC (One Router = One Hop)  Bandwidth is irrelevant
+- Uses HOP COUNT as it’s METRIC (One Router = One Hop). Bandwidth is irrelevant
 - MAX HOP COUNT is 15 (anything more is considered unreachable)
 - Has THREE VERSIONS:
-    - RIPv1 and RIPv2; used for IPv4
-    - RIPng (RIP Next Generation) used for IPv6
+    - RIPv1 and RIPv2 are used for IPv4
+    - RIPng (RIP Next Generation) is used for IPv6
 - Uses TWO MESSAGE TYPES:
     - REQUEST :
         - To ask RIP-ENABLED neighbour ROUTERS to send their ROUTING TABLE
@@ -133,8 +133,8 @@ CONFIGURATION OF EIGRP
 
 - The AS (Autonomous System) number MUST MATCH between ROUTERS or they will NOT form an ADJACENCY and share ROUTE information
 - Auto-summary might be ENABLED or DISABLED by DEFAULT; depending on the ROUTER/IOS version. If ENABLED, DISABLE it.
-- The **“network”** command will assume a CLASSFUL ADDRESS, if you don’t specify the SUBNET MASK
 - EIGRP uses a *wildcard mask* instead of a regular subnet mask
+- The **“network”** command will assume a CLASSFUL ADDRESS, if you don’t specify the WILDCARD MASK
 
 A WILDCARD MASK is an “inverted” SUBNET MASK
 
