@@ -5,7 +5,7 @@ LOOPBACK INTERFACES
 - A LOOPBACK INTERFACE is a virtual INTERFACE in the ROUTER
 - It is ALWAYS UP/UP - unless you manually shut it down
 - It is NOT dependent on a PHYSICAL INTERFACE
-- So, it provides a consistent IP ADDRESS that can be used to REACH / IDENTIFY the ROUTER
+- So, it provides a consistent IP ADDRESS that can be used to reach/identify the router
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/697e7d43-b428-4fe3-a270-5fc1c9ad13d0)
 
@@ -38,7 +38,7 @@ OSPF BROADCAST NETWORK TYPE
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8f99053d-3501-4d1d-86a2-f859c62c160d)
 
 - Enabled on ETHERNET and FDDI interfaces by DEFAULT
-- ROUTERS *dynamically discover* neighbors by SENDING / LISTENING for OSPF “Hello” messages using the multicast address 224.0.0.5
+- ROUTERS *dynamically discover* neighbors by SENDING and LISTENING for OSPF “Hello” messages using the multicast address 224.0.0.5
 - A **DR (DESIGNATED ROUTER)** and **BDR (BACKUP DESIGNATION ROUTER)** must be elected on each subnet (only DR if there are no OSPF neighbors, ie: R1’s G1/0 INTERFACE)
 - ROUTERS which aren’t the DR or BDR become a **DROther**
 
@@ -54,24 +54,21 @@ The DR / BDR election order of priority:
 
 “Second Place” because the BDR
 
-<aside>
+
 💡 DEFAULT OSPF INTERFACE PRIORITY is “1” on ALL INTERFACES!
 
-</aside>
 
 The command to change the OSPF PRIORITY of an INTERFACE is :
 
-<aside>
-💡 R2(config-if)# ip ospf priority <priority number>
 
-</aside>
+💡 R2(config-if)# ip ospf priority <*priority-number*>
+
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/cd98b06f-3730-4b2d-8dfe-a6387fdb66a1)
 
-<aside>
+
 💡 IF an OSPF PRIORITY is set to “0”, the ROUTER CANNOT be the DR / BDR for the SUBNET!
 
-</aside>
 
 The DR / DBR ELECTION is “non-preemptive”.
 
@@ -86,10 +83,9 @@ Once the DR / DBR are selected, they will keep their role until OSPF is:
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/82eb1f11-4aed-456b-b2b1-1679cae06743)
 
-<aside>
+
 💡 In the BROADCAST NETWORK TYPE, ROUTERS will only form a FULL OSPF ADJACENCY with the DR and the BDR of the SEGMENT!
 
-</aside>
 
 Therefore, ROUTERS only exchange LSAs with the DR and BDR.
 
@@ -97,10 +93,9 @@ DROthers will NOT exchange LSAs with each other.
 
 ALL ROUTERS will still have the same LSDB but THIS reduces the amount of LSAs flooding the NETWORK
 
-<aside>
+
 💡 MESSAGES to the DR / BDR are MULTICAST to 224.0.0.6
 
-</aside>
 
 The DR and BDR will form a FULL ADJACENCY with ALL ROUTERS in the SUBNET
 
