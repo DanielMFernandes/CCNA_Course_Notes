@@ -46,9 +46,7 @@ LOOPBACK INTERFACES have a COST of 1
 
 To CHANGE the OSPF COST of an INTERFACE, you use the command :
 
-<aside>
-💡 R1(config-if)# ip ospf cost <cost>
-</aside>
+R1(config-if)# ip ospf cost <*cost*>
 
 MANUAL COSTS take precedent over AUTOMATIC CALCULATED COST
 
