@@ -26,10 +26,9 @@ OSPF NETWORK TYPES
 - NON-BROADCAST :
     - Enabled by DEFAULT on **FRAME RELAY** and **X.25** INTERFACES
 
-<aside>
+
 💡  CCNA focuses on BROADCAST and POINT-TO-POINT types
 
-</aside>
 
 ---
 
@@ -110,15 +109,13 @@ OSPF POINT-TO-POINT NETWORK TYPE
 ![image](https://github.com/psaumur/CCNA/assets/106411237/51d7d486-a810-4a69-8be2-804f667fca03)
 
 - ENABLED on **SERIAL** INTERFACES using the **PPP** and **HDLC** encapsulations, by DEFAULT
-- ROUTERS dynamically discover neighbors by SENDING / LISTENING for OSPF “Hello” messages using the multicast address 224.0.0.5
+- ROUTERS dynamically discover neighbors by SENDING and LISTENING for OSPF “Hello” messages using the multicast address 224.0.0.5
 - A DR and BDR are NOT elected
 - These ENCAPSULATIONS are used for “Point-To-Point” connections
     - Therefore, there is no point in electing  a DR and DBR
     - The TWO ROUTERS will form a FULL ADJACENCY with each other
 
 ---
-
-(ASIDE)
 
 SERIAL INTERFACES
 
@@ -148,25 +145,19 @@ SERIAL INTERFACES SUMMARY
 - The DEFAULT encapsulation is HDLC
 - You can configure PPP encapsulation with this command:
     
-    <aside>
-    💡 R1(config-if)# **encapsulation ppp**
+    💡 R1(config-if)# encapsulation *ppp*
     
-    </aside>
     
 - One side is DCE, other side is DTE
 - Identify which side is DCE / DTE :
     
-    <aside>
-    💡 R1# **show controllers** *interface-id*
+    💡 R1# show controllers <*interface-id*>
     
-    </aside>
     
 - You must configure the CLOCK RATE on the DCE side:
     
-    <aside>
-    💡 R1(config-if)# clock rate *bits-per-second*
+    💡 R1(config-if)# clock rate <*bits-per-second*>
     
-    </aside>
     
 
 ---
@@ -177,10 +168,8 @@ SERIAL INTERFACES SUMMARY
 
 - You can configure the OSPF NETWORK TYPE on an INTERFACE with :
 
-<aside>
 💡 R1(config-if)# ip ospf network <network type>
 
-</aside>
 
 For example, if TWO ROUTES are directly connected with an ETHERNET link, there is no need for a DR / DBR. You can configure the POINT-TO-POINT NETWORK type in this case
 
@@ -188,10 +177,8 @@ NOTE: Not all NETWORK TYPES work on ALL LINK TYPES (for example, a serial link c
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8688e7ef-d166-4433-9f65-b918917f385f)
 
-<aside>
 💡 NON-BROADCAST NETWORK type Default Timers : Hello 30, Dead 120
 
-</aside>
 
 ---
 
