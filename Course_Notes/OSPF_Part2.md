@@ -54,10 +54,9 @@ One more option to change the OSPF COST of an INTERFACE is to change the BANDWID
 
 The FORMULA to CALCULATE OSPF COST is :
 
-<aside>
-💡 **reference bandwidth / interface bandwidth**
 
-</aside>
+💡 reference bandwidth / interface bandwidth
+
 
 - Although the BANDWIDTH matches the INTERFACE SPEED (by DEFAULT), changing the INTERFACE BANDWIDTH **doesn’t actually change the speed at which the INTERFACE operates**
 - The BANDWIDTH is just a VALUE that is used to calculate OSPF COST, EIGRP METRIC, etcetera…
@@ -78,21 +77,19 @@ THREE WAYS to modify the OSPF COST:
 
 1) Change the ***reference bandwidth***
 
-<aside>
-💡 R1(config-router)# **auto-cost reference-bandwidth** *megabits-per-second*
-</aside>
+
+💡 R1(config-router)# auto-cost reference-bandwidth <*megabits-per-second*>
+
 
 2) Manual configuration:
 
-<aside>
-💡 R1(config-router)# ip ospf cost <cost>
-</aside>
+
+💡 R1(config-router)# ip ospf cost <*cost*>
 
 3) Change the ***interface bandwidth***
 
-<aside>
-💡 R1(config-router)# **bandwidth <***kilobits-per-second>*
-</aside>
+
+💡 R1(config-router)# bandwidth <*Kilobits-per-second*>
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/aba02fbc-174c-41a1-a8e3-0ffdda3a6cbd)
 
