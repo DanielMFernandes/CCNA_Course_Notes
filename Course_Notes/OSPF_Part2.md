@@ -202,34 +202,28 @@ MORE OSPF CONFIGURATIONS
 
 Activate OSPF DIRECTLY on an INTERFACE with this command:
 
-<aside>
-💡 R1(config-if)# ip ospf *process-id* area *area*
+💡 R1(config-if)# ip ospf <*process-id*> area <*area*>
 
-</aside>
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/ad7aafd6-9cd8-4259-bd32-aff7b5893b46)
 
 Configure ALL INTERFACES as OSPF Passive Interfaces
 
-<aside>
-💡 R1(config-router) #passive-interface default
+💡 R1(config-router)# passive-interface default
 
-</aside>
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e953696d-283f-4676-8df2-9aff0418d78d)
 
 Can then REMOVE specific INTERFACES from being passive using:
 
-<aside>
-💡 R1(config-router) #no passive-interface *interface-id*
+💡 R1(config-router)# no passive-interface <*interface-id*>
 
-</aside>
 
 Activating OSPF DIRECTLY on INTERFACES will show a different output in “show ip protocols”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/915e31ee-4fee-455b-a947-229e0af4b182)
 
-They will appear under “Routing on Interfaces Configured Explicitly (Area #) :” (as above)
+They will appear under “Routing on Interfaces Configured Explicitly (Area #): ” (as above)
 
 Showing the OSPF LSDB of a Device
 
