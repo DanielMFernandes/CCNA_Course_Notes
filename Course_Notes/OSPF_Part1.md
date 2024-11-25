@@ -104,7 +104,6 @@ The “network” command tells OSPF to:
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/41da3fe8-f24a-468c-beeb-91cc12066c70)
 
-- Know this command from RIP and EIGRP
 - The “passive-interface” command tells the ROUTERS to stop sending OSFP ‘hello’ messages out of the INTERFACE
 - However, the ROUTER will continue to send LSA’s informing it’s neighbors about the SUBNET configured on the INTERFACE
 - You should ALWAYS USE this command on neighbors which don’t have any OSPF neighbors
