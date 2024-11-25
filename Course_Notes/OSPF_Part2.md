@@ -4,14 +4,14 @@ OSPF METRIC (Cost)
 
 - OSPFs METRIC is called **COST**
 - It is automatically calculated based on the bandwidth (SPEED) of the INTERFACE
-- It is calculated by DIVIDING a REFERENCE BANDWIDTH value by the INTERFACE bandwidth
+- It is calculated by dividing a REFERENCE BANDWIDTH value by the interface's bandwidth
 - The DEFAULT REFERENCE BANDWIDTH is 100 mbps
-    - REFERENCE: 100 mbps / INTERFACE: 10 mbps = COST (10)
-    - REFERENCE: 100 mbps / INTERFACE: 100 mbps = COST (1)
-    - REFERENCE: 100 mbps / INTERFACE: 1000 mbps = COST (1)
-    - REFERENCE: 100 mbps / INTERFACE: 10000 mbps = COST (1)
-- ALL COST values less than 1 will be CONVERTED to 1
-- Therefore FastEthernet (100 mbps), Gigabit Ethernet (1000 mbps), 10 Gig Ethernet, etc. are EQUAL and all have a COST of 1
+    - REFERENCE: 100 mbps / INTERFACE: 10 mbps = COST: 10
+    - REFERENCE: 100 mbps / INTERFACE: 100 mbps = COST: 1
+    - REFERENCE: 100 mbps / INTERFACE: 1000 mbps = COST: 1
+    - REFERENCE: 100 mbps / INTERFACE: 10000 mbps = COST: 1
+- ALL COST values less than 1 will be rounded to 1
+- Therefore FastEthernet (100 Mbps), Gigabit Ethernet (1000 Mbps), 10 Gig Ethernet, etc. are EQUAL and all have a COST of 1
 
 FastEthernet COST
 
@@ -23,7 +23,7 @@ Gigabit Ethernet COST
 
 You can (and SHOULD) change the REFERENCE BANDWIDTH with this command:
 
-💡 R1(config-router)# **auto-cost reference-bandwidth** *megabits-per-second*
+💡 R1(config-router)# auto-cost reference-bandwidth <*megabits-per-second*>
 
 The command is entered in “megabits per second” (DEFAULT is “100”)
 
