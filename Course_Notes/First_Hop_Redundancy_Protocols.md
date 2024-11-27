@@ -5,11 +5,11 @@ THE PURPOSE OF FHRPS
  
 ![image](https://github.com/psaumur/CCNA/assets/106411237/32c286ce-e042-4cda-9067-c232a210ec81)
 
-What happens when the configured DEFAULT GATEWAY for network HOSTS goes down ?
+What happens when the configured DEFAULT GATEWAY for network HOSTS goes down?
 
 What happens to the routed traffic?
 
-How can we route our traffic to the functional GATEWAY at R2 (.253) ? 
+How can we route our traffic to the functional GATEWAY at R2 (.253)? 
 
 This is what the FIRST HOP REDUNDANCY PROTOCOL is designed to fix
 
@@ -61,12 +61,10 @@ It becomes a STANDBY ROUTER
 
 R2 remains the ACTIVE ROUTER
 
-<aside>
-💡 FPRPs are “non-preemptive”. The current ACTIVE ROUTER will not automatically give up its role, even if the former ACTIVE ROUTER returns.
+💡 FHRPs are “non-preemptive”. The current ACTIVE ROUTER will not automatically give up its role, even if the former ACTIVE ROUTER returns.
 
-*** You CAN change this setting to make R1 ‘preempt’ R2 and take back it’s ACTIVE role, automatically ***
+** You can change this setting to make R1 ‘preempt’ R2 and take back it’s ACTIVE role, automatically **
 
-</aside>
 
 ---
 
@@ -116,7 +114,7 @@ GLBP (GATEWAY LOAD BALANCING PROTOCOL)
 - Cisco Proprietary
 - LOAD BALANCES among MULTIPLE ROUTERS within a SINGLE SUBNET
 - An AVG (Active Virtual Gateway) is elected
-- Up to FOUR AVFs (Active Virtual Forwarders) are assigned BY the AVG (the AVG can be an AVF, too)
+- Up to FOUR AVFs (Active Virtual Forwarders) are assigned by the AVG (the AVG can be an AVF, too)
 - Each AVF acts as the DEFAULT GATEWAY for a portion of the HOSTS in the SUBNET
 
 - Multicast IPv4 ADDRESSES :
