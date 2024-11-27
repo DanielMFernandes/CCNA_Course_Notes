@@ -13,13 +13,13 @@ BASICS OF LAYER 4
     - Flow Control
 - Provides LAYER 4 ADDRESSING (PORT numbers) - NOT the physical interfaces / ports on network devices
     - IDENTIFY the APPLICATION LAYER protocol
-    - Provides SESSION multiplexing
+    - Provides session multiplexing
 
 ---
 
-WHAT IS A SESSION ? 
+WHAT IS A SESSION? 
 
-- A SESSION is an EXCHANGE of DATA between TWO or MORE communicating DEVICES
+- A SESSION is an exchange of data between TWO or MORE communicating devices
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2d8c6c74-24e5-4574-b454-bc694f056bec)
 
