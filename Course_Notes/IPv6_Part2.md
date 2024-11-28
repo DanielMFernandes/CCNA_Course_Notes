@@ -30,7 +30,7 @@ CONFIGURING IPv6 ADDRESSES with EUI-64
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4c69d97a-a611-4a94-9e11-9016ec456819)
 
-NOTE the “2001:DB8…” Address has “E” changed to “c”. This is the 7th bit getting flipped (1110 to 1100 = 12 = hex ‘C’)
+NOTE the “2001:DB8…” Address has “E” instead of “c”. This is the 7th bit getting flipped (1110 to 1100)
 
 ---
 
