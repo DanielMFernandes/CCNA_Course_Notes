@@ -81,7 +81,7 @@ NEIGHBOR DISCOVERY PROTOCOL (NDP)
 
 - NEIGHBOR DISCOVERY PROTOCOL (NDP) is a PROTOCOL used with IPv6
 - It has various functions and one of those functions is to replace ARP, which is no longer used in IPv6
-- The ARP-like function of NDP uses ICMPv6 and SOLICITED-MODE Multicast Addresses to learn the MAC ADDRESS of other HOSTS (ARP in IPv4 uses Broadcast Messages)
+- The ARP-like function of NDP uses ICMPv6 and SOLICITED-MODE Multicast Addresses to learn the MAC ADDRESS of other HOSTS (ARP in IPv4 uses Broadcast Messages). The main difference between ARP and NDP is that ARP uses broadcast address for the MAC Destination while NDP uses a Multicast Address.
 
 - TWO MESSAGES types are used:
     - 1) NEIGHBOR SOLICITATION (NS)
