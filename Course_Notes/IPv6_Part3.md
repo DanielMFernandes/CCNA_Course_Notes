@@ -174,10 +174,8 @@ DIRECTLY ATTACHED Static Route:
 - `ipv6 route destination / prefix-length exit-interface`
 - Example : `~~R1(config)# ipv6 route 2001:db8:0:3:: /64 g0/0~~`
 
-<aside>
 💡 In IPv6, you CANNOT use DIRECTLY ATTACHED Static Routes if the INTERFACE is an ETHERNET INTERFACE
 
-</aside>
 
 RECURSIVE Static Route:
 
@@ -193,7 +191,7 @@ FULLY SPECIFIED Static Route:
 
 ---
 
-(NOTE THAT THESE ROUTES ARE ALL RECURSIVE : They specify the Next-Hop)
+(NOTE THAT THESE ROUTES ARE ALL RECURSIVE: They specify the Next-Hop)
 
 NETWORK ROUTE:
 
