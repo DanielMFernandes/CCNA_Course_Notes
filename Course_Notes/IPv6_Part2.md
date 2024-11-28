@@ -127,7 +127,7 @@ Remember THESE THREE PARTS of a GLOBAL UNICAST ADDRESS
 (FF00:: to FFFF : FFFF : FFFF : FFFF : FFFF : FFFF : FFFF : FFFF)
 
 
-- **IPv6 doesn’t use Broadcast** (there IS NO “Broadcast Address” in IPv6!)
+- **IPv6 doesn’t use Broadcast (there IS NO “Broadcast Address” in IPv6!)**
 
 YOU MUST KNOW THE MULTICAST ADDRESS FOR EACH ROUTER TYPE
 
