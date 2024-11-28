@@ -98,6 +98,8 @@ IPv6 NEIGHBOR TABLE
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/085bb9df-8015-4c2f-bfc8-2d6336436fe2)
 
+- IPv6 does NOT have an ARP Table. Instead it uses a Neighbor Table
+
 - Another function of NDP allows HOSTS to automatically discover ROUTERS on the LOCAL NETWORK
 
 - TWO MESSAGES are used for this process:
