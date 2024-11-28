@@ -77,11 +77,9 @@ Remember THESE THREE PARTS of a GLOBAL UNICAST ADDRESS
 - Do NOT need to be GLOBALLY UNIQUE (*)
 - CANNOT be ROUTED over the INTERNET
 
-<aside>
 💡 Uses the ADDRESS block FC00 ::/7
 (FC00:: to FDFF : FFFF : FFFF : FFFF : FFFF : FFFF : FFFF : FFFF)
 
-</aside>
 
 - A later UPDATE required the 8th bit to be set to 1 so the FIRST TWO DIGITS must be FD
 
@@ -96,11 +94,9 @@ Remember THESE THREE PARTS of a GLOBAL UNICAST ADDRESS
 - **Link-Local** IPv6 ADDRESSES are AUTOMATICALLY generated on IPv6-enabled INTERFACES
 - Use command `R1(config-if)# ipv6 enable` on an interface to enable IPv6 on an INTERFACE
 
-<aside>
 💡 Uses the ADDRESS block FE80::/10
 (FE80:: to FEBF : FFFF : FFFF : FFFF : FFFF : FFFF : FFFF : FFFF)
 
-</aside>
 
 - The STANDARD states that the 54-bits AFTER FE80/10 should be ALL 0’s so you won’t see Link-Local ADDRESSES beginning with FE9, FEA, or FEB - ONLY FE8(!)
 - The INTERFACE ID is generated using EUI-64 rules
@@ -127,11 +123,9 @@ Remember THESE THREE PARTS of a GLOBAL UNICAST ADDRESS
 - **Multicast** Addresses are one-to-many
     - ONE SOURCE to MULTIPLE DESTINATIONS (that have joined the specific ***multicast*** group)
 
-<aside>
 💡 IPv6 uses range FF00::/8 for multicast
 (FF00:: to FFFF : FFFF : FFFF : FFFF : FFFF : FFFF : FFFF : FFFF)
 
-</aside>
 
 - **IPv6 doesn’t use Broadcast** (there IS NO “Broadcast Address” in IPv6!)
 
