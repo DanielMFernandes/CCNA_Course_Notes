@@ -20,8 +20,8 @@ ANOTHER WAY TO CONFIGURE NUMBERED ACLs
 
 ADVANTAGES OF NAMED ACL CONFIG MODE
 
-- You can easily DELETE individual entries in the ACL with the command "no *entry-number*"
-- You can easily DELETE individual entries in the ACL with the command "no *sequence-number*"
+- You can easily DELETE individual entries in the ACL with `no *entry-number*"`
+- You can easily DELETE individual entries in the ACL with `no *sequence-number*"`
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f7f85684-6300-495d-bde9-1e1ffcead85e)
 
@@ -38,7 +38,7 @@ This doesn’t work with NUMBERED access lists
 RESEQUENCING ACLs
 
 - There is a *resequencing* function that helps edit ACLs
-- The command is  `R1(config)#ip access-list resequence *acl-id starting-seq-num increment*`
+- The command is  `R1(config)# ip access-list resequence *acl-id starting-seq-num increment*`
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/1c5e3f13-900a-4be4-99ba-db86b0128f57)
 
