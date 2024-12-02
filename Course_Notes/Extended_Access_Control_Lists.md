@@ -161,6 +161,7 @@ REQUIREMENTS:
 EXTENDED ACL #1 (Applied at R1 G0/1 INBOUND interface)
 
 `R1(config)# ip access-list extended HTTP_SRV1`
+
 `R1(config-ext-nacl)# deny tcp 192.168.1.0 0.0.0.255 host 10.0.1.100 eq 443`
 
 `R1(config-ext-nacl)# permit ip any any`
