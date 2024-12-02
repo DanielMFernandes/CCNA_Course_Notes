@@ -20,8 +20,8 @@ ANOTHER WAY TO CONFIGURE NUMBERED ACLs
 
 ADVANTAGES OF NAMED ACL CONFIG MODE
 
-- You can easily DELETE individual entries in the ACL with `no *entry-number*"`
-- You can easily DELETE individual entries in the ACL with `no *sequence-number*"`
+- You can easily DELETE individual entries in the ACL with `no {entry-number}`
+- You can easily DELETE individual entries in the ACL with `no {sequence-number}`
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f7f85684-6300-495d-bde9-1e1ffcead85e)
 
@@ -60,22 +60,16 @@ EXTENDED NUMBERS AND NAMED ACLs
 
 EXTENDED NUMBERED ACL
 
-<aside>
-💡 `R1(config)# access-list *number* [permit | deny] *protocol src-ip dest-ip*`
+💡 `R1(config)# access-list *number* {permit|deny} *protocol src-ip dest-ip*`
 
-</aside>
 
 EXTENDED NAMED ACL
 
-<aside>
 💡 `R1(config)# ip access-list extended {name | number}`
 
-</aside>
 
-<aside>
 💡 `R1(config-ext-nacl)# {seq-num} {permit | deny} *protocol src-ip dest-ip*`
 
-</aside>
 
 ---
 
@@ -93,10 +87,8 @@ MATCHING THE SOURCE / DESTINATION IP ADDRESS
 
 This command:
 
-<aside>
 💡 `R1(config-ext-nacl)#deny tcp any 10.0.0.0 0.0.0.255`
 
-</aside>
 
 Deny ALL PACKETS that encapsulate a TCP segment from ANY source to DESTINATION 10.0.0.0/24
 
