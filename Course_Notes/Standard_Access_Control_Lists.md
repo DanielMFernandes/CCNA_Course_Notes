@@ -3,7 +3,6 @@
 WHAT ARE ACLs
 
 - ACLs (Access Control Lists) have multiple uses
-- In DAY 34 and DAY 35, we will focus on ACL’s from a security perspective
 - ACLs function as a “packet filter” - instructing the ROUTER to ALLOW or DENY specific traffic
 - ACLs can filter traffic based on:
     - SOURCE / DESTINATION IP ADDRESSES
@@ -20,7 +19,7 @@ HOW ACLs WORK
 💡 REQUIREMENTS:
 
 - Hosts in 192.168.1.0/24 should have ACCESS to the 10.0.1.0/24 NETWORK
-- Hosts in 192.168.2.0/24 should not have ACCESS to the 10.0.10/24 NETWORK
+- Hosts in 192.168.2.0/24 should not have ACCESS to the 10.0.1.0/24 NETWORK
 </aside>
 
 ACLs are configured GLOBALLY on the ROUTER (Global Config Mode)
@@ -45,7 +44,7 @@ ACLs are configured GLOBALLY on the ROUTER (Global Config Mode)
 IMPLICIT DENY
 
 - What will happen if a PACKET doesn’t match any of the entries in an ACL ?
-- There is an INPLICIT DENY at the end of ALL ACL’s
+- There is an IMPLICIT DENY at the end of ALL ACL’s
 - The IMPLICIT DENY tells the ROUTER to DENY ALL TRAFFIC that doesn’t match ANY of the configured entries in the ACL
 
 ---
@@ -136,4 +135,3 @@ WHY THE REORDERING?
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e5ed273d-1c24-4b78-884f-712e1cf6922a)
 
-CISCOs PACKET TRACER does not reorder these, however.
