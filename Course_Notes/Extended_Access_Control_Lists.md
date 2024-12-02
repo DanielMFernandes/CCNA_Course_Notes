@@ -20,8 +20,8 @@ ANOTHER WAY TO CONFIGURE NUMBERED ACLs
 
 ADVANTAGES OF NAMED ACL CONFIG MODE
 
-- You can easily DELETE individual entries in the ACL with NO *entry-number*
-- You can easily DELETE individual entries in the ACL with NO *sequence-number*
+- You can easily DELETE individual entries in the ACL with the command "no *entry-number*"
+- You can easily DELETE individual entries in the ACL with the command "no *sequence-number*"
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f7f85684-6300-495d-bde9-1e1ffcead85e)
 
