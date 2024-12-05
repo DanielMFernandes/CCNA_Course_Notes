@@ -37,7 +37,7 @@ This doesn’t work with NUMBERED access lists
 RESEQUENCING ACLs
 
 - There is a *resequencing* function that helps edit ACLs
-- The command is  `R1(config)# ip access-list resequence *acl-id starting-seq-num increment*`
+- The command is  `R1(config)# ip access-list resequence {acl-id} {starting-seq-num} {increment}`
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/1c5e3f13-900a-4be4-99ba-db86b0128f57)
 
@@ -59,7 +59,7 @@ EXTENDED NUMBERS AND NAMED ACLs
 
 EXTENDED NUMBERED ACL
 
-💡 `R1(config)# access-list *number* {permit|deny} *protocol src-ip dest-ip*`
+💡 `R1(config)# access-list {number} {permit|deny} {protocol} {src-ip} {dest-ip}`
 
 
 EXTENDED NAMED ACL
@@ -67,7 +67,7 @@ EXTENDED NAMED ACL
 💡 `R1(config)# ip access-list extended {name | number}`
 
 
-💡 `R1(config-ext-nacl)# {seq-num} {permit | deny} *protocol src-ip dest-ip*`
+💡 `R1(config-ext-nacl)# {seq-num} {permit | deny} {protocol} {src-ip} {dest-ip}`
 
 
 ---
