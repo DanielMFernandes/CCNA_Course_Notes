@@ -61,11 +61,9 @@ STANDARD NUMBERED ACLs
 - Numbered ACLs are identified with a number (ie: ACL 1, ACL 2, etc.)
 - Different TYPES of ACLs have a different range of numbers that can be used
     
-    <aside>
     💡 STANDARD ACLs can use 1-99 and 1300-1999
     
-    </aside>
-    
+
 
 - The basic command to configure a STANDARD NUMBERED ACL
     - `R1(config)# access-list *number* {deny | permit} *ip wildcard-mask*`
@@ -100,10 +98,8 @@ TO APPLY AN ACL TO AN INTERFACE
 
 WHY WAS THIS RULE PLACED ON G0/2 OUT ? 
 
-<aside>
 💡 STANDARD ACLs should be applied as CLOSE to the DESTINATION as possible!
 
-</aside>
 
 ---
 
@@ -112,8 +108,8 @@ STANDARD NAMED ACLs
 - Standard ACLs match traffic based only on the SOURCE IP ADDRESS of the PACKET
 - NAMED ACLs are identified with a NAME (ie: ‘BLOCK_BOB’)
 - STANDARD NAMED ACLs are configured by entering ‘standard named ACL config mode’ then configuring EACH entry within that config mode
-    - `R1(config)# ip access-list standard *acl-name*`
-    - `R1(config-std-nacl)# [*entry-number*] {deny | permit} *ip wildcard-mask*`
+    - `R1(config)# ip access-list standard {acl-name}`
+    - `R1(config-std-nacl)# [entry-number] {deny | permit} {ip} {wildcard-mask}`
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/94e9b58d-07f6-4ad6-9c92-b00c01ce311d)
 
