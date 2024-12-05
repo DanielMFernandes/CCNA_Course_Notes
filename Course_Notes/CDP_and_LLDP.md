@@ -24,10 +24,8 @@ CISCO DISCOVERY PROTOCOL (CDP)
 - CDP is a Cisco proprietary protocol
 - It is enabled on Cisco devices (routers, switches, firewalls, IP Phones, etc) by DEFAULT
 
-<aside>
 💡 CDP Messages are periodically sent to Multicast MAC ADDRESS `0100.0CCC.CCCC`
 
-</aside>
 
 
 - When a DEVICE receives a CDP message, it PROCESSES and DISCARDS the message. It does NOT forward it to other devices.
@@ -47,7 +45,7 @@ CDP NEIGHBOR TABLES
 
 “Device ID” = What devices were DISCOVERED by CDP
 
-“Local Intrface” = What LOCAL device interface the neighbors are connected to
+“Local Interface” = What local device interface the neighbors are connected to
 
 “Holdtime” = Hold-time countdown in seconds (0 = device removed from table)
 
@@ -81,8 +79,8 @@ CDP CONFIGURATION COMMANDS
 - CDP is also ENABLED on each INTERFACE, by DEFAULT
 - To ENABLE / DISABLE CDP globally: `R1(config)# [no] cdp run`
 - To ENABLE / DISABLE CDP on specific interfaces : `R1(config-if)# [no] cdp enable`
-- Configure the CDP timer: `R1(config)# cdp time *seconds*`
-- Configure the CDP holdtime: `R1(config)# cdp holdtime *seconds*`
+- Configure the CDP timer: `R1(config)# cdp time {seconds}`
+- Configure the CDP holdtime: `R1(config)# cdp holdtime {seconds}`
 - ENABLE / DISABLE CDPv2: `R1(config)# [no] cdp advertise-v2`
 
  
@@ -95,10 +93,8 @@ LINK LAYER DISCOVERY PROTOCOL (LLDP)
 - It is usually DISABLED on Cisco devices, by DEFAULT, so it must be manually ENABLED
 - A device can run CDP and LLDP at the same time
 
-<aside>
 💡 LLDP Messages are periodically sent to Multicast MAC ADDRESS `0180.c200.000E`
 
-</aside>
 
 - When a DEVICE receives an LLDP message, it PROCESSES and DISCARDS the message. It does NOT forward it to OTHER DEVICES
 - By DEFAULT, LLDP Messages are sent once every **30 seconds**
@@ -122,9 +118,9 @@ YOU NEED TO ENABLE BOTH TO SEND AND RECEIVE (Unless you want to only enable SEND
 
  
 
-- Configure the LLDP timer: `R1(config)# lldp timer *seconds*`
-- Configure the LLDP holdtime: `R1(config)# lldp holdtime *seconds*`
-- Configure the LLDP reinit timer: `R1(config)# lldp reinit *seconds*`
+- Configure the LLDP timer: `R1(config)# lldp timer {seconds}`
+- Configure the LLDP holdtime: `R1(config)# lldp holdtime {seconds}`
+- Configure the LLDP reinit timer: `R1(config)# lldp reinit {seconds}`
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/25afc5ad-4d82-4472-b282-31ed2a65eae7)
 
