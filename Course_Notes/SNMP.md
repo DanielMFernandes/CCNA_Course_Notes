@@ -2,7 +2,7 @@
 
 SNMP OVERVIEW
 
-- SNMP is an INDUSTRY-STANDARD FRAMEWORK and PROTOCOL that was originally released in 1988
+- SNMP is an INDUSTRY-STANDARD FRAMEWORK and protocol that was originally released in 1988
 
 These RFCs make up SNMPv1 (Do not need to memorize)
 
@@ -14,12 +14,12 @@ RFC 1067 - A simple network management protocol
 
 - Don’t let the ‘Simple’ in the name fool you !
 - SNMP can be used to monitor the STATUS of DEVICES, make CONFIGURATION CHANGES, etc.
-- There are TWO MAIN TYPES of DEVICES in SNMP:
+- There are TWO MAIN TYPES of devices in SNMP:
     - MANAGED DEVICES
-        - These are the DEVICES being managed using SNMP
+        - These are the devices being managed using SNMP
             - Ex: ROUTERS, SWITCHES
     - NETWORK MANAGEMENT STATION (NMS)
-        - The DEVICE / DEVICES managing the MANAGED DEVICES
+        - The device(s) managing the MANAGED DEVICES
         - THIS is the SNMP ‘SERVER’
 
 ---
@@ -57,17 +57,15 @@ SNMP VERSIONS
 - Many versions of SNMP have been proposed/developed, however, only three major versions have achieved wide-spread use:
 
 - **SNMPv1**
-    - The ORIGINAL version of SNMP
+    - The original version of SNMP
 - **SNMPv2c**
     - Allows the NMS to retrieve LARGE AMOUNTS of information in a SINGLE REQUEST, so it is more efficient
     - ‘c’ refers to the ‘community strings’ used as PASSWORDS in SNMPv1, removed from SNMPv2, and then added BACK for SNMPv2
 - **SNMPv3**
     - A much more SECURE version of SNMP that supports STRONG ENCRYPTION and AUTHENTICATION.
         
-        <aside>
-        💡 WHENEVER POSSIBLE, this version should be used!
+        💡 whenever possible, this version should be used!
         
-        </aside>
         
 
 ---
@@ -122,14 +120,14 @@ variable-bindings : contains the OID sent to identify the issue.
 
 SNMP SUMMARY
 
-- SNMP helps MANAGE DEVICES over a NETWORK
-- MANAGED DEVICES are the devices being managed using SNMP (such as ROUTERS, SWITCHES, FIREWALLS)
+- SNMP helps manage devices over a network
+- Managed devices are the devices being managed using SNMP (such as ROUTERS, SWITCHES, FIREWALLS)
 - NETWORK MANAGEMENT STATIONS (NMS) are the SNMP “servers” that manage the devices
     - NMS receives notifications from Managed Devices
     - NMS changes settings on Managed Devices
     - NMS checks status of Managed Devices
     
-- Variables, such as Interface Status, Temperature, Traffic Load, Hostname, etc are STORED in the MANAGMENT INFORMATION BASE (MIB) and identified using Object IDs (OIDs)
+- Variables, such as Interface Status, Temperature, Traffic Load, Hostname, etc are stored in the MANAGMENT INFORMATION BASE (MIB) and identified using Object IDs (OIDs)
 
 Main SNMP versions : SNMPv1, SNMPv2c, SNMPv3
 
