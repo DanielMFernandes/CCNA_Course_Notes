@@ -7,8 +7,8 @@ THE PURPOSE OF DHCP
     - When you connect a phone/laptop to WiFi, do you ask your network admin which IP ADDRESS, SUBNET MASK, DEFAULT GATEWAY, etc the device should use?
 - Typically used for CLIENT devices (workstations, phones, etc)
 - DEVICES (such as ROUTERS, SERVERS, etc) are usually MANUALLY configured
-- In small networks (such as Home NETWORKS), the ROUTER typically acts as the DHCP SERVER for HOSTS in the LAN
-- In large networks, the dhcp server is usually a Windows/Linux server
+- In small networks (such as Home networks), the ROUTER typically acts as the DHCP SERVER for HOSTS in the LAN
+- In large networks, the DHCP server is usually a Windows/Linux server
 
 ---
 
@@ -24,7 +24,7 @@ BASIC FUNCTIONS OF DHCP
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/bd292766-0a22-4c0a-ac96-0262ba03d720)
 
-Note: ALL the IPs are the same because this is Jeremy’s Home ROUTER (it provides all these services)
+Note: ALL the IPs are the same because this is Jeremy’s Home router (it provides all these services)
 
 Command `ipconfig /release`
 
@@ -86,10 +86,10 @@ DHCP RENEW PROCESS SUMMARY
 
 DHCP RELAY
 
-- Some NETWORK engineers might choose to configure each ROUTER to act as the DHCP SERVER for its connected LANS
+- Some network engineers might choose to configure each router to act as the DHCP SERVER for its connected LANS
 - However, large enterprises often choose to use a CENTRALIZED DHCP SERVER
 - If the server is centralized, it won’t receive the DHCP CLIENTS’ Broadcast DHCP messages
-- To fix this, you can configure a ROUTER to act as a DHCP RELAY AGENT
+- To fix this, you can configure a router to act as a DHCP RELAY AGENT
 - The router will forward the clients’ Broadcast DHCP messages to the remote DHCP SERVER as a Unicast messages
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/3c0b188e-a120-499e-b089-18740d0d4559)
