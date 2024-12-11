@@ -2,13 +2,13 @@
 
 THE PURPOSE OF DHCP
 
-- DHCP is used to allow HOSTS to automatically / dynamically learn various aspects of their NETWORK configuration; without MANUAL / STATIC configuration
-- It is an ESSENTIAL part of modern NETWORKS
-    - When you connect a phone / laptop to WiFi, do you ask your NETWORK admin which IP ADDRESS, SUBNET MASK, DEFAULT GATEWAY, etc the phone / laptop should use ?
+- DHCP is used to allow HOSTS to automatically/dynamically learn various aspects of their NETWORK configuration without MANUAL/STATIC configuration
+- It is an ESSENTIAL part of modern networks
+    - When you connect a phone/laptop to WiFi, do you ask your network admin which IP ADDRESS, SUBNET MASK, DEFAULT GATEWAY, etc the device should use?
 - Typically used for CLIENT devices (workstations, phones, etc)
 - DEVICES (such as ROUTERS, SERVERS, etc) are usually MANUALLY configured
-- In small NETWORKS (such as Home NETWORKS), the ROUTER typically acts as the DHCP SERVER for HOSTS in the LAN
-- In LARGE NETWORKS, the DHCP SERVER is usually a Windows / Linux SERVER
+- In small networks (such as Home NETWORKS), the ROUTER typically acts as the DHCP SERVER for HOSTS in the LAN
+- In large networks, the dhcp server is usually a Windows/Linux server
 
 ---
 
@@ -50,7 +50,7 @@ Renewing Process has FOUR messages:
 
 1) DHCP DISCOVER
 
-- Are there any DHCP Servers in this NETWORK? I need an IP ADDRESS ?
+- Are there any DHCP Servers in this network? I need an IP address?
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/70f7fc01-3222-4fec-8bd3-8b96cfbc086f)
 
@@ -58,7 +58,7 @@ NOTE the use of DHCP Reserved Ports 67 and 68
 
 2) DHCP OFFER:
 
-- How about THIS IP ADDRESS ?
+- How about THIS IP address?
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/0f6e38bc-5eb0-4538-b0d1-e5795ee3af3a)
 
@@ -67,13 +67,13 @@ NOTE the use of DHCP Reserved Ports 67 and 68
 
 3) DHCP REQUEST
 
-- I want to use the IP ADDRESS that was offered
+- I want to use the IP address that was offered
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/3023a977-2477-42ec-8890-283ef326bad1)
 
 4) DHCP ACK
 
-- Okay! You may use THAT ADDRESS
+- Okay! You may use THAT address
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/543c77e8-326b-45c6-a149-2f3668dac3ff)
 
@@ -88,9 +88,9 @@ DHCP RELAY
 
 - Some NETWORK engineers might choose to configure each ROUTER to act as the DHCP SERVER for its connected LANS
 - However, large enterprises often choose to use a CENTRALIZED DHCP SERVER
-- If the SERVER is centralized, it won’t receive the DHCP CLIENTS’ Broadcast DHCP messages
-- To FIX this, you can configure a ROUTER to act as a DHCP RELAY AGENT
-- The ROUTER will forward the clients’ Broadcast DHCP messages to the remote DHCP SERVER as a Unicast messages
+- If the server is centralized, it won’t receive the DHCP CLIENTS’ Broadcast DHCP messages
+- To fix this, you can configure a ROUTER to act as a DHCP RELAY AGENT
+- The router will forward the clients’ Broadcast DHCP messages to the remote DHCP SERVER as a Unicast messages
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/3c0b188e-a120-499e-b089-18740d0d4559)
 
