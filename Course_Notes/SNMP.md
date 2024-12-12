@@ -60,7 +60,7 @@ SNMP VERSIONS
     - The original version of SNMP
 - **SNMPv2c**
     - Allows the NMS to retrieve LARGE AMOUNTS of information in a SINGLE REQUEST, so it is more efficient
-    - ‘c’ refers to the ‘community strings’ used as PASSWORDS in SNMPv1, removed from SNMPv2, and then added BACK for SNMPv2
+    - ‘c’ refers to the ‘community strings’ used as PASSWORDS in SNMPv1, removed from SNMPv2, and then added BACK for SNMPv2c
 - **SNMPv3**
     - A much more SECURE version of SNMP that supports STRONG ENCRYPTION and AUTHENTICATION.
         
