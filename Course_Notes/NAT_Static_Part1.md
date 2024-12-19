@@ -2,13 +2,13 @@
 
 PRIVATE IPv4 ADDRESSES (RFC 1918)
 
-- IPv4 doesn’t provide enough ADDRESSES for all DEVICES that need an IP ADDRESS in the modern world
+- IPv4 doesn’t provide enough addresses for all devices that need an IP address in the modern world
 - The long-term solution is to switch to IPv6
-- There are THREE MAIN short-term solutions:
+- There are three main short-term solutions:
     - CIDR
     - PRIVATE IPv4 ADDRESS
     - NAT
-- RFC 1918 specifies the following IPv4 ADDRESS RANGES as PRIVATE:
+- RFC 1918 specifies the following IPv4 address ranges as PRIVATE:
     
     ```
     10.0.0.0 /8       (10.0.0.0 to 10.255.255.255)             CLASS A 
@@ -16,7 +16,7 @@ PRIVATE IPv4 ADDRESSES (RFC 1918)
     192.168.0.0 /16   (192.168.0.0 to 192.168.255.255)         CLASS C
     ```
     
-- You are free to use these ADDRESSES in your NETWORKS. They don’t have to be GLOBALLY UNIQUE
+- You are free to use these addresses in your networks. They don’t have to be globally unique
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c774460a-0479-40ed-ac62-1e9820960943)
 
@@ -24,9 +24,9 @@ PRIVATE IPv4 ADDRESSES (RFC 1918)
 
 INTRO TO NAT
 
-- NETWORK ADDRESS TRANSLATION (NAT) is used to modify the SOURCE and / or DESTINATION IP ADDRESSES of packets
-- There are various reasons to use NAT, but the MOST common reason is to ALLOW HOSTS with PRIVATE IP ADDRESSES to communicate with other HOSTS over the INTERNET
-- For the CCNA you have to understand SOURCE NAT and how to configure it on CISCO ROUTERS
+- NETWORK ADDRESS TRANSLATION (NAT) is used to modify the source and/or destination IP addresses of packets
+- There are various reasons to use NAT, but the most common reason is to allow hosts with PRIVATE IP addresses to communicate with other hosts over the internet
+- For the CCNA you have to understand source NAT and how to configure it on Cisco routers
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/11cbc222-4b2d-4283-9a8f-86cfff2e109d)
 
@@ -34,7 +34,7 @@ INTRO TO NAT
 
 STATIC NAT
 
-- STATIC NAT involves statically configuring ONE-TO-ONE MAPPINGS of PRIVATE IP ADDRESSES to PUBLIC ADDRESSES
+- STATIC NAT involves statically configuring ONE-TO-ONE mappings of private IP ADDRESSES to public addresses
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/40867b28-66ff-4182-be97-8495a4c2de23)
 
