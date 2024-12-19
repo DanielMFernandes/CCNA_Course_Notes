@@ -5,7 +5,7 @@ THE PURPOSE OF FTP / TFTP
 - FTP (File Transfer Protocol) and TFTP (Trivial File Transfer Protocol) are industry standard protocols used to TRANSFER FILES over a network
 - They both use a CLIENT-SERVER model
     - clients can use FTP / TFTP to copy files from a server
-    - clients can use FTP / TFTP to copy files TO a server
+    - clients can use FTP / TFTP to copy files to a server
 - As a NETWORK ENGINEER, the most common use for FTP / TFTP is in the process of UPGRADING the OPERATING SYSTEM of a NETWORK DEVICE
 - You can use FTP / TFTP to DOWNLOAD the newer version of IOS from a SERVER and then REBOOT the DEVICE with the new IOS image
 
