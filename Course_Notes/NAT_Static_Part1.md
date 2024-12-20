@@ -25,7 +25,7 @@ PRIVATE IPv4 ADDRESSES (RFC 1918)
 INTRO TO NAT
 
 - NETWORK ADDRESS TRANSLATION (NAT) is used to modify the source and/or destination IP addresses of packets
-- There are various reasons to use NAT, but the most common reason is to allow hosts with PRIVATE IP addresses to communicate with other hosts over the internet
+- There are various reasons to use NAT, but the most common reason is to allow hosts with private IP addresses to communicate with other hosts over the internet
 - For the CCNA you have to understand source NAT and how to configure it on Cisco routers
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/11cbc222-4b2d-4283-9a8f-86cfff2e109d)
@@ -34,7 +34,7 @@ INTRO TO NAT
 
 STATIC NAT
 
-- STATIC NAT involves statically configuring ONE-TO-ONE mappings of private IP ADDRESSES to public addresses
+- STATIC NAT involves statically configuring ONE-TO-ONE mappings of private IP addresses to public addresses
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/40867b28-66ff-4182-be97-8495a4c2de23)
 
