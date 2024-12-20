@@ -15,10 +15,10 @@ MORE ABOUT STATIC NAT
 
 DYNAMIC NAT
 
-- In DYNAMIC NAT, the router dynamically maps inside LOCAL addresses to inside global addresses, as needed
-- An ACL is used to identify WHICH traffic should be translated
-    - If the SOURCE IP is PERMITTED; the SOURCE IP will be translated
-    - If the SOURCE IP is DENIED; the SOURCE IP will NOT be translated
+- In DYNAMIC NAT, the router DYNAMICALLY maps inside local addresses to inside global addresses, as needed
+- An ACL is used to identify which traffic should be translated
+    - If the source IP is permitted; the source IP will be translated
+    - If the source IP is denied; the source IP will NOT be translated
         
         💡 However, Packet Traffic will NOT be dropped
         
@@ -29,10 +29,10 @@ DYNAMIC NAT
 
   
 
-- Although they are dynamically assigned, the mappings are still one-to-one (one inside LOCAL IP address per inside global IP address)
-- If there are NOT enough inside global IP addresses available (=ALL are being used), it is called ‘NAT POOL EXHAUSTION’
-    - If a PACKET from another inside host arrives and needs NAT but there are no AVAILABLE ADDRESSES, the router will drop the PACKET
-    - The host will be unable to access OUTSIDE NETWORKS until one of the inside global IP addresses becomes available
+- Although they are dynamically assigned, the mappings are still one-to-one (one inside local IP address per inside global IP address)
+- If there are NOT enough inside global IP addresses available (=all are being used), it is called ‘NAT POOL EXHAUSTION’
+    - If a packet from another inside host arrives and needs NAT but there are no available addresses, the router will drop the packet
+    - The host will be unable to access outside networks until one of the inside global IP addresses becomes available
     - DYNAMIC NAT entries will time out automatically if not used, or you can clear them manually
 
 NAT POOL EXHAUSTION
@@ -59,10 +59,10 @@ DYNAMIC NAT CONFIGURATION
 
 DYNAMIC PAT (NAT OVERLOAD)
 
-- PAT (NAT OVERLOAD) translates BOTH the IP address and the PORT NUMBER (if necessary)
-- By using a unique PORT NUMBER for each communication flow, a single PUBLIC IP address can be used by many different INTERNAL HOSTS
-    - PORT NUMBERS are 16 bits = over 65,000 available port numbers
-- The ROUTER will keep track of which INSIDE LOCAL address is using which INSIDE GLOBAL address and PORT
+- PAT (NAT OVERLOAD) translates BOTH the IP address and the port number (if necessary)
+- By using a unique port number for each communication flow, a single public IP address can be used by many different internal hosts
+    - port numbers are 16 bits = over 65,000 available port numbers
+- The router will keep track of which inside local address is using which inside global address and port
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8f720b58-9700-4908-bd8d-a1846191854b)
 
