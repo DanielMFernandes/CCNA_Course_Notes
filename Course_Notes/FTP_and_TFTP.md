@@ -6,8 +6,8 @@ THE PURPOSE OF FTP / TFTP
 - They both use a CLIENT-SERVER model
     - clients can use FTP / TFTP to copy files from a server
     - clients can use FTP / TFTP to copy files to a server
-- As a NETWORK ENGINEER, the most common use for FTP / TFTP is in the process of UPGRADING the OPERATING SYSTEM of a NETWORK DEVICE
-- You can use FTP / TFTP to DOWNLOAD the newer version of IOS from a SERVER and then REBOOT the DEVICE with the new IOS image
+- As a network engineer, the most common use for FTP / TFTP is in the process of UPGRADING the OS of a network device
+- You can use FTP / TFTP to DOWNLOAD the newer version of IOS from a server and then reboot the device with the new IOS image
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c3f8288f-cc21-476b-ab36-685fa843f947)
 
