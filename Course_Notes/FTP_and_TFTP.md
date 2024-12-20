@@ -7,7 +7,7 @@ THE PURPOSE OF FTP / TFTP
     - clients can use FTP / TFTP to copy files from a server
     - clients can use FTP / TFTP to copy files to a server
 - As a network engineer, the most common use for FTP / TFTP is in the process of UPGRADING the OS of a network device
-- You can use FTP / TFTP to DOWNLOAD the newer version of IOS from a server and then reboot the device with the new IOS image
+- You can use FTP / TFTP to download the newer version of IOS from a server and then reboot the device with the new IOS image
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c3f8288f-cc21-476b-ab36-685fa843f947)
 
@@ -47,7 +47,7 @@ TFTP TID (Not in the CCNA exam)
 - When the client sends the first message to the server, the DESTINATION PORT is UDP 69 and the SOURCE PORT is a random EPHEMERAL PORT
 - This “random port” is called a “TRANSFER IDENTIFIER” (TID) and identifies the DATA TRANSFER
 - The SERVER then also selects a RANDOM TID to use as a SOURCE PORT when it replies, NOT UDP 69
-- When the CLIENT sends the NEXT message, the DESTINATION PORT will be the SERVER’S TID, NOT UDP 69
+- When the client sends the next message, the destination port will be the SERVER’S TID, NOT UDP 69
 
 UDP PORT 69 (TFTP) is only used at the initial request message
 
