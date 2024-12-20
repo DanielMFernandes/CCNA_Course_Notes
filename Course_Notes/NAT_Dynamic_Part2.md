@@ -7,7 +7,7 @@ MORE ABOUT STATIC NAT
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/60ba15dd-ee70-4bd9-b9a7-febf3ebbcd10)
 
-- HOWEVER, this one-to-one mapping also allows EXTERNAL HOSTS to access the INTERNAL HOST via INSIDE GLOBAL adress
+- HOWEVER, this one-to-one mapping also allows EXTERNAL HOSTS to access the INTERNAL HOST via inside GLOBAL adress
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/09de8e06-249c-4185-9d09-ca5fc1435f5a)
 
@@ -15,7 +15,7 @@ MORE ABOUT STATIC NAT
 
 DYNAMIC NAT
 
-- In DYNAMIC NAT, the ROUTER dynamically maps INSIDE LOCAL adresses to INSIDE GLOBAL adresses, as needed
+- In DYNAMIC NAT, the ROUTER dynamically maps inside LOCAL adresses to inside GLOBAL adresses, as needed
 - An ACL is used to identify WHICH traffic should be translated
     - If the SOURCE IP is PERMITTED; the SOURCE IP will be translated
     - If the SOURCE IP is DENIED; the SOURCE IP will NOT be translated
@@ -23,16 +23,16 @@ DYNAMIC NAT
         💡 However, Packet Traffic will NOT be dropped
         
         
-- A NAT POOL is used to define the available INSIDE GLOBAL ADDRESS
+- A NAT POOL is used to define the available inside GLOBAL adresses
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/98fe2d7d-345c-4d6b-9772-4b152f9bd7a3)
 
   
 
-- Although they are dynamically assigned, the mappings are still one-to-one (one INSIDE LOCAL IP adress per INSIDE GLOBAL IP adress)
-- If there are NOT enough INSIDE GLOBAL IP adresses available (=ALL are being used), it is called ‘NAT POOL EXHAUSTION’
-    - If a PACKET from another INSIDE HOST arrives and needs NAT but there are no AVAILABLE ADDRESSES, the ROUTER will drop the PACKET
-    - The HOST will be unable to access OUTSIDE NETWORKS until one of the INSIDE GLOBAL IP adresses becomes available
+- Although they are dynamically assigned, the mappings are still one-to-one (one inside LOCAL IP adress per inside GLOBAL IP adress)
+- If there are NOT enough inside GLOBAL IP adresses available (=ALL are being used), it is called ‘NAT POOL EXHAUSTION’
+    - If a PACKET from another inside HOST arrives and needs NAT but there are no AVAILABLE ADDRESSES, the ROUTER will drop the PACKET
+    - The HOST will be unable to access OUTSIDE NETWORKS until one of the inside GLOBAL IP adresses becomes available
     - DYNAMIC NAT entries will time out automatically if not used, or you can clear them manually
 
 NAT POOL EXHAUSTION
