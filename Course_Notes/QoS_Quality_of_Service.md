@@ -108,9 +108,9 @@ EXPEDITED FORWARDING (EF)
 ASSURED FORWARDING (AF)
 
 - Defines FOUR TRAFFIC CLASSES
-- ALL PACKETS in a CLASS have the same PRIORITY
+- ALL packets in a CLASS have the same PRIORITY
 - Within each CLASS, there are THREE LEVELS of DROP PRECEDENCE
-    - HIGHER DROP PRECEDENCE = More likely to DROP the PACKET during CONGESTION
+    - HIGHER DROP PRECEDENCE = More likely to DROP the packet during CONGESTION
     
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/407ab29c-678d-4a38-8e8e-2a6f904b4d94)
@@ -147,9 +147,9 @@ CLASS SELECTOR (CS)
 
 RFC 4954
 
-- RFC 4954 was developed with help of Cisco to bring ALL of these VALUES together and STANDARDIZE their use
+- RFC 4954 was developed with help of Cisco to bring ALL of these values together and standardize their use
 
-- The RFC offers MANY specific recommendations, but here are a few KEY ones:
+- The RFC offers MANY specific recommendations, but here are a few key ones:
     - VOICE TRAFFIC : EF
     - INTERACTIVE VIDEO : AF4x
     - STREAMING VIDEO : AF3x
@@ -160,16 +160,16 @@ RFC 4954
 
 TRUST BOUNDARIES
 
-- The TRUST BOUNDARY of a NETWORK defines where the DEVICE TRUST / DON’T TRUST the QoS MARKINGS of received messages
+- The TRUST BOUNDARY of a network defines where the DEVICE TRUST / DON’T TRUST the QoS MARKINGS of received messages
 - If the MARKINGS are TRUSTED:
-    - DEVICE will forward the message without changing the MARKINGS
+    - DEVICE will forward the message without changing the markings
 - If the MARKINGS are NOT TRUSTED:
-    - DEVICE will change the MARKINGS according to configured POLICY
+    - DEVICE will change the markings according to configured policy
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/cdcdc302-9dbe-4dd8-9184-72d1f501bc1a)
 
-- If an IP PHONE is connected to the SWITCH PORT, it is RECOMMENDED to move the TRUST BOUNDARY to the IP PHONES
-- This is done via CONFIGURATION on the SWITCH PORT connected to the IP PHONE
+- If an IP phone is connected to the SWITCH PORT, it is RECOMMENDED to move the TRUST BOUNDARY to the IP phones
+- This is done via CONFIGURATION on the SWITCH PORT connected to the IP phone
 - If a user MARKS their PC’s TRAFFIC with a HIGH PRIORITY, the MARKING will be CHANGED (not trusted)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/606ad681-fad4-4f23-96bf-bd7dde91eaf4)
@@ -178,7 +178,7 @@ TRUST BOUNDARIES
 
 QUEUING / CONGESTION MANAGEMENT
 
-- When a NETWORK DEVICE receives TRAFFIC at a FASTER PACE than it can FORWARD out of the appropriate INTERACE, PACKETS are placed in that INTERFACE’S QUEUE as they wait to be FORWARDED
+- When a NETWORK DEVICE receives TRAFFIC at a FASTER PACE than it can FORWARD out of the appropriate INTERACE, packets are placed in that INTERFACE’S QUEUE as they wait to be FORWARDED
 - When a QUEUE becomes FULL, PACKETS that don’t FIT in the QUEUE are dropped (Tail Drop)
 - RED and WRED DROP PACKETS early to avoid TAIL DROP
 
@@ -195,9 +195,9 @@ QUEUING / CONGESTION MANAGEMENT
 
 - A COMMON scheduling method is *WEIGHTED ROUND-ROBIN*
     - ROUND-ROBIN:
-        - PACKETS taken from each QUEUE in order, cyclically
+        - packets taken from each QUEUE in order, cyclically
     - WEIGHTED:
-        - More DATA taken from HIGH PRORITY QUEUES each time the SCHEDULER reaches that QUEUE
+        - More data taken from HIGH PRORITY QUEUES each time the SCHEDULER reaches that QUEUE
 
 ---
 
@@ -208,15 +208,15 @@ QUEUING / CONGESTION MANAGEMENT
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/eee24cef-c67a-42de-9fa0-9351cab56354)
 
-- ROUND-ROBIN SCHEDULING is NOT IDEAL for VOICE / VIDEO TRAFFIC
-    - Even if VOICE / VIDEO TRAFFIC receives a guaranteed MINIMUM amount of BANDWIDTH, ROUND-ROBIN can add DELAY and JITTER because even the HIGH PRIORITY QUEUES have to wait their turn in the SCHEDULER
+- ROUND-ROBIN SCHEDULING is NOT IDEAL for voice/video traffic
+    - Even if VOICE / VIDEO traffic receives a guaranteed MINIMUM amount of BANDWIDTH, ROUND-ROBIN can add DELAY and JITTER because even the HIGH PRIORITY QUEUES have to wait their turn in the SCHEDULER
 
 ---
 
 - LLQ (LOW LATENCY QUEUING)
     - Designates ONE (or more) QUEUES as *strict priority queues*
     - This means that if there is TRAFFIC in the QUEUE, the SCHEDULER will ALWAYS take the next PACKET from that QUEUE until it is EMPTY
-    - This is VERY EFFECTIVE for reducing the DELAY and JITTER of VOICE / VIDEO TRAFFIC
+    - This is VERY EFFECTIVE for reducing the DELAY and JITTER of voice/video traffic
     - HOWEVER, LLQ has a DOWNSIDE of potentially starving other QUEUES if there is always TRAFFIC in the DESIGNATED *STRICT PRIORITY QUEUE*
         - POLICING can control the AMOUNT of TRAFFIC allowed in the *STRICT PRIORITY QUEUE* so that it can’t take all of the link’s BANDWIDTH
     
@@ -229,18 +229,18 @@ QUEUING / CONGESTION MANAGEMENT
 
 SHAPING / POLICING
 
-- TRAFFIC SHAPING and POLICING are both used to control the RATE of TRAFFIC
+- TRAFFIC SHAPING and POLICING are both used to control the RATE of traffic
 - SHAPING
-    - Buffers TRAFFIC in a QUEUE if the TRAFFIC RATE goes over the CONFIGURED RATE
+    - Buffers traffic in a QUEUE if the TRAFFIC RATE goes over the CONFIGURED RATE
 
 - POLICING
-    - DROPS TRAFFIC if the TRAFFIC RATE goes over the CONFIGURED RATE
-        - POLICING also has the option of RE-MARKING the TRAFFIC, instead of DROPPING
+    - DROPS traffic if the TRAFFIC RATE goes over the CONFIGURED RATE
+        - POLICING also has the option of RE-MARKING the traffic, instead of DROPPING
     - “BURST” TRAFFIC over the CONFIGURED RATE is allowed for a short period of time
     - This accommodates DATA APPLICATIONS which typically are “bursty” in nature (ie: not constant stream)
     - The amount of BURST TRAFFIC allowed is configurable
     
-- In BOTH cases, CLASSIFICATION can be used to ALLOW for different RATES for different KINDS of TRAFFIC
-- WHY would you want to LIMIT the RATE that TRAFFIC is SENT / RECEIVED ?
+- In BOTH cases, CLASSIFICATION can be used to ALLOW for different RATES for different KINDS of traffic
+- WHY would you want to LIMIT the RATE that traffic is sent / received?
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/09771d78-4570-4300-97e1-adba77fe28b4)
