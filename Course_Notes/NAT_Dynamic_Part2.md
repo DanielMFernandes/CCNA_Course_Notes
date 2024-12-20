@@ -2,12 +2,12 @@
 
 MORE ABOUT STATIC NAT
 
-- STATIC NAT involves statically configuring one-to-one mappings of PRIVATE IP ADDRESSES to PUBLIC IP ADDRESSES
-- When traffic from the INTERNAL HOST is sent to the OUTSIDE NETWORK, the ROUTER will translate the SOURCE ADDRESS
+- STATIC NAT involves statically configuring one-to-one mappings of PRIVATE IP adresses to PUBLIC IP adresses
+- When traffic from the INTERNAL HOST is sent to the OUTSIDE NETWORK, the ROUTER will translate the SOURCE adress
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/60ba15dd-ee70-4bd9-b9a7-febf3ebbcd10)
 
-- HOWEVER, this one-to-one mapping also allows EXTERNAL HOSTS to access the INTERNAL HOST via INSIDE GLOBAL ADDRESS
+- HOWEVER, this one-to-one mapping also allows EXTERNAL HOSTS to access the INTERNAL HOST via INSIDE GLOBAL adress
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/09de8e06-249c-4185-9d09-ca5fc1435f5a)
 
@@ -15,15 +15,13 @@ MORE ABOUT STATIC NAT
 
 DYNAMIC NAT
 
-- In DYNAMIC NAT, the ROUTER dynamically maps INSIDE LOCAL ADDRESSES to INSIDE GLOBAL ADDRESSES, as needed
+- In DYNAMIC NAT, the ROUTER dynamically maps INSIDE LOCAL adresses to INSIDE GLOBAL adresses, as needed
 - An ACL is used to identify WHICH traffic should be translated
     - If the SOURCE IP is PERMITTED; the SOURCE IP will be translated
     - If the SOURCE IP is DENIED; the SOURCE IP will NOT be translated
         
-        <aside>
         💡 However, Packet Traffic will NOT be dropped
         
-        </aside>
         
 - A NAT POOL is used to define the available INSIDE GLOBAL ADDRESS
 
@@ -31,10 +29,10 @@ DYNAMIC NAT
 
   
 
-- Although they are dynamically assigned, the mappings are still one-to-one (one INSIDE LOCAL IP ADDRESS per INSIDE GLOBAL IP ADDRESS)
-- If there are NOT enough INSIDE GLOBAL IP ADDRESSES available (=ALL are being used), it is called ‘NAT POOL EXHAUSTION’
+- Although they are dynamically assigned, the mappings are still one-to-one (one INSIDE LOCAL IP adress per INSIDE GLOBAL IP adress)
+- If there are NOT enough INSIDE GLOBAL IP adresses available (=ALL are being used), it is called ‘NAT POOL EXHAUSTION’
     - If a PACKET from another INSIDE HOST arrives and needs NAT but there are no AVAILABLE ADDRESSES, the ROUTER will drop the PACKET
-    - The HOST will be unable to access OUTSIDE NETWORKS until one of the INSIDE GLOBAL IP ADDRESSES becomes available
+    - The HOST will be unable to access OUTSIDE NETWORKS until one of the INSIDE GLOBAL IP adresses becomes available
     - DYNAMIC NAT entries will time out automatically if not used, or you can clear them manually
 
 NAT POOL EXHAUSTION
@@ -61,10 +59,10 @@ DYNAMIC NAT CONFIGURATION
 
 DYNAMIC PAT (NAT OVERLOAD)
 
-- PAT (NAT OVERLOAD) translates BOTH the IP ADDRESS and the PORT NUMBER (if necessary)
-- By using a unique PORT NUMBER for each communication flow, a single PUBLIC IP ADDRESS can be used by many different INTERNAL HOSTS
+- PAT (NAT OVERLOAD) translates BOTH the IP adress and the PORT NUMBER (if necessary)
+- By using a unique PORT NUMBER for each communication flow, a single PUBLIC IP adress can be used by many different INTERNAL HOSTS
     - PORT NUMBERS are 16 bits = over 65,000 available port numbers
-- The ROUTER will keep track of which INSIDE LOCAL ADDRESS is using which INSIDE GLOBAL ADDRESS and PORT
+- The ROUTER will keep track of which INSIDE LOCAL adress is using which INSIDE GLOBAL adress and PORT
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8f720b58-9700-4908-bd8d-a1846191854b)
 
