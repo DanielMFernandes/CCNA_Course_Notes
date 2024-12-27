@@ -67,7 +67,7 @@ INTRO TO QUALITY OF SERVICE (QoS)
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8a21a767-5a93-42bd-a8d4-52453f8a7341)
 
 - Modern networks are typically *converged networks* in which IP phones, video traffic, regular traffic, etc. all share the same IP network
-- This enables cost savings as well as more ADVANCED FEATURES for VOICE and VIDEO traffic (Example : Collaboration Software like Cisco WebEx, MS Teams, etc)
+- This enables cost savings as well as more ADVANCED FEATURES for voice and video traffic (Example : Collaboration Software like Cisco WebEx, MS Teams, etc)
 - However, the different kinds of traffic now have to compete for bandwidth
 - **QoS** is a set of tools used by network devices to apply different treatment to different packets
 
@@ -78,23 +78,23 @@ QUALITY OF SERVICE (QoS)
 - QoS is used to manage the following characteristics of network traffic
     - BANDWIDTH
         - Overall capacity of the link (measured in *bits per second*)
-        - QoS tools allow you to RESERVE a certain amount of a link’s BANDWIDTH for specific kinds of traffic
+        - QoS tools allow you to RESERVE a certain amount of a link’s bandwidth for specific kinds of traffic
     - DELAY
-        - One-Way Delay = Time it takes traffic to go from SOURCE to DESTINATION
-        - Two-Way Delay = Time it takes traffic to go from SOURCE to DESTINATION and return
+        - One-Way Delay = Time it takes traffic to go from source to destination
+        - Two-Way Delay = Time it takes traffic to go from source to destination and return
         
 ![image](https://github.com/psaumur/CCNA/assets/106411237/29ed6306-a6aa-46ba-af2f-5ebcd383d1d7)
         
     
     - JITTER
-        - The variation in ONE-WAY DELAY between PACKETS SENT by the same APPLICATION
-        - IP phones have a ‘jitter buffer’ to provide a FIXED DELAY to audio PACKETS
+        - The variation in ONE-WAY DELAY between PACKETS SENT by the same application
+        - IP phones have a ‘jitter buffer’ to provide a FIXED DELAY to audio packets
     - LOSS
-        - The % of PACKETS sent that DO NOT reach their DESTINATION
-        - Can be caused by FAULTY CABLES
-        - Can also be caused when a DEVICE’S PACKET QUEUES get full and the device starts discarding packets
+        - The % of PACKETS sent that DO NOT reach their destination
+        - Can be caused by faulty cables
+        - Can also be caused when a device’s PACKET QUEUES get full and the device starts discarding packets
     
-- The FOLLOWING STANDARDS are recommended for ACCEPTABLE INTERACTIVE AUDIO quality:
+- The following standards are recommended for ACCEPTABLE INTERACTIVE AUDIO quality:
     - ONE-WAY DELAY : 150 milliseconds or less
     - JITTER : 30 milliseconds or less
     - LOSS : 1% or less
@@ -105,10 +105,10 @@ QUALITY OF SERVICE (QoS)
 
 QoS QUEUING
 
-- If a NETWORK DEVICE receives messages FASTER than it can FORWARD them out of the appropriate INTERFACE, the MESSAGES are placed in the QUEUE
-- By default, the QUEUED MESSAGES will be FORWARDED in a FIRST IN FIRST OUT (FIFO) manner
-    - Message will be SENT in the ORDER they are RECEIVED
-- If the QUEUE is FULL, new PACKETS will be DROPPED
+- If a network device receives messages faster than it can forward them out of the appropriate interface, the messages are placed in the QUEUE
+- By default, the QUEUED MESSAGES will be forwarded in a FIRST IN FIRST OUT (FIFO) manner
+    - Message will be sent in the order they are received
+- If the queue is full, new packets will be dropped
 - The is called *tail drop*
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/15de2fcd-5711-4014-8185-9975b2ce8a0d)
@@ -117,16 +117,16 @@ QoS QUEUING
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/1d22afa7-91aa-4e86-9c5f-ad9506dcb44c)
 
-- When the QUEUE fills UP and TAIL DROP occurs, ALL TCP HOSTS sending traffic will SLOW DOWN the rate at which they SEND traffic
-- They will ALL then INCREASE the RATE at which they send traffic, which rapidly leads to MORE CONGESTION, dropped PACKETS, and the process REPEATS…
+- When the queue fills up and tail drop occurs, all TCP hosts sending traffic will slow down the rate at which they send traffic
+- They will ALL then increase the rate at which they send traffic, which rapidly leads to more congestion, dropped packets, and the process repeats…
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/b75c2cac-043c-4df6-a1d6-f26d9110630a)
 
-- A SOLUTION to prevent TAIL DROP and TCP GLOBAL SYNCHRONIZATION is RANDOM EARLY DETECTION (RED)
+- A solution to prevent tail drops and TCP global synchronization is RANDOM EARLY DETECTION (RED)
 
-- When the amount of TRAFFIC in the QUEUE reaches a certain THRESHOLD, the DEVICE will start RANDOMLY dropping PACKETS from select TCP FLOWS
-- Those TCP FLOWS that dropped PACKETS will reduce the RATE at which TRAFFIC is sent, but you will avoid TCP GLOBAL SYNCHRONIZATION, in which ALL TCP FLOWS reduce and then increase the rate of transmission at the same time, in waves.
-- In STANDARD RED, all kinds of TRAFFIC are treated the SAME
-- WEIGHTED RANDOM EARLY DETECTION (WRED) - an improved version of RED, allows you control which PACKETS are dropped depending on the TRAFFIC CLASS
+- When the amount of traffic in the queue reaches a certain THRESHOLD, the DEVICE will start RANDOMLY dropping PACKETS from select TCP FLOWS
+- Those TCP flows that dropped packets will reduce the rate at which traffic is sent, but you will avoid TCP global synchronization, in which all TCP flows reduce and then increase the rate of transmission at the same time, in waves.
+- In STANDARD RED, all kinds of traffic are treated the same
+- WEIGHTED RANDOM EARLY DETECTION (WRED) - an improved version of RED, allows you control which packets are dropped depending on the TRAFFIC CLASS
 
 ** TRAFFIC CLASSES and details about how QoS works will be covered in DAY 47 **
