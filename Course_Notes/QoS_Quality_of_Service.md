@@ -5,14 +5,14 @@ CLASSIFICATION / MARKING
 - The purpose of QoS is to give certain kinds of NETWORK TRAFFIC priority over other during congestion
 - CLASSIFICATION organizes network TRAFFIC (PACKETS) into TRAFFIC CLASSES (CATEGORIES)
 - CLASSIFICATION is fundamental to QoS.
-    - To give PRIORITY to certain types of TRAFFIC, you have to IDENTIFY which types of TRAFFIC to give PRIORITY to.
+    - To give PRIORITY to certain types of traffic, you have to IDENTIFY which types of traffic to give PRIORITY to.
 - There are MANY methods of CLASSIFYING TRAFFIC
-    - An ACL : TRAFFIC which is permitted by the ACL will be given certain TREATMENT, other TRAFFIC will not
-    - NBAR (Network Based Application Recognition) performs a *DEEP PACKET INSPECTION,* looking beyond the LAYER 3 and LAYER 4 information up to LAYER 7 to identify the specific kinds of TRAFFIC
-    - In the LAYER 2 and LAYER 3 HEADERS there are specific FIELDS used for this purpose
-- The PCP (PRIORITY CODE POINT) FIELD of the 802.1Q Tag (in the ETHERNET HEADER) can be used to identify HIGH / LOW PRIORITY TRAFFIC
+    - An ACL : traffic which is permitted by the ACL will be given certain treatment, other traffic will not
+    - NBAR (Network Based Application Recognition) performs a *DEEP PACKET INSPECTION*, looking beyond the Layer 3 and Layer 4 information up to Layer 7 to identify the specific kinds of traffic
+    - In the Layer 2 and Layer 3 headers there are specific fields used for this purpose
+- The PCP (PRIORITY CODE POINT) field of the 802.1Q Tag (in the Ethernet header) can be used to identify HIGH / LOW PRIORITY traffic
     - ** ONLY when there is a dot1q tag!
-- The DSCP (DIFFERENTIATED SERVICES CODE POINT) FIELD of the IP HEADER can also be used to identify HIGH / LOW PRIORITY TRAFFIC
+- The DSCP (DIFFERENTIATED SERVICES CODE POINT) field of the IP header can also be used to identify HIGH / LOW PRIORITY traffic
 
 ---
 
@@ -27,11 +27,11 @@ PCP / CoS
 ![image](https://github.com/psaumur/CCNA/assets/106411237/af191e31-082d-43c0-ab76-225d4dd2e354)
 
 - PCP VALUE 0:
-    - “BEST EFFORT” DELIVERY means there is no guarantee that data is delivered or that it meets ANY QoS Standard. This is REGULAR TRAFFIC - NOT HIGH PRIORITY
+    - “BEST EFFORT” DELIVERY means there is no guarantee that data is delivered or that it meets ANY QoS Standard. This is REGULAR traffic - NOT HIGH PRIORITY
 
 - PCP VALUE 3 and 5:
-    - IP PHONES MARK call signaling TRAFFIC (used to establish calls) as PCP3
-        - They MARK the actual VOICE TRAFFIC as PCP5
+    - IP phones mark call signaling traffic (used to establish calls) as PCP3
+        - They mark the actual VOICE traffic as PCP5
 
 - Because PCP is found in the dot1q header, it can only be used over the following connections:
     - TRUNK LINKS
@@ -74,14 +74,14 @@ DSCP (CURRENT)
 
 - RFC 2474 (1998) defines the DSCP field, and other ‘DiffServ’ RFCs elaborate on its use
 - With IPP updated to DSCP, new STANDARD MARKINGS had to be decided on
-    - By having generally agreed upon STANDARD MARKINGS for DIFFERENT KINDS of TRAFFIC:
+    - By having generally agreed upon STANDARD MARKINGS for different kinds of traffic:
         - QoS DESIGN and IMPLEMENTATION is simplified.
         - QoS works better between ISPs and ENTERPRISES
         - etc.
 
 - You should be AWARE of the FOLLOWING STANDARD MARKINGS:
-    - DEFAULT FORWARDING (DF) - Best Effort TRAFFIC
-    - EXPEDITED FORWARDING (EF) - Low Loss / Latency / Jitter TRAFFIC (usually voice)
+    - DEFAULT FORWARDING (DF) - Best Effort traffic
+    - EXPEDITED FORWARDING (EF) - Low Loss / Latency / Jitter traffic (usually voice)
     - ASSURED FORWARDING (AF) - A set of 12 STANDARD VALUES
     - CLASS SELECTOR (CS) - A set of 8 STANDARD VALUES, provides backward compatibility with IPP
 
@@ -93,7 +93,7 @@ DEFAULT FORWARDING (DF)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/26f6bc76-6b33-40f0-9327-022b4816d280)
 
-- Used for BEST EFFORT TRAFFIC
+- Used for BEST EFFORT traffic
 - The DSCP marking for DF is 0
 
 EXPEDITED FORWARDING (EF)
@@ -108,9 +108,9 @@ EXPEDITED FORWARDING (EF)
 ASSURED FORWARDING (AF)
 
 - Defines FOUR TRAFFIC CLASSES
-- ALL packets in a CLASS have the same PRIORITY
-- Within each CLASS, there are THREE LEVELS of DROP PRECEDENCE
-    - HIGHER DROP PRECEDENCE = More likely to DROP the packet during CONGESTION
+- ALL packets in a class have the same PRIORITY
+- Within each class, there are THREE LEVELS of DROP PRECEDENCE
+    - HIGHER DROP PRECEDENCE = More likely to drop the packet during congestion
     
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/407ab29c-678d-4a38-8e8e-2a6f904b4d94)
@@ -147,9 +147,9 @@ CLASS SELECTOR (CS)
 
 RFC 4954
 
-- RFC 4954 was developed with help of Cisco to bring ALL of these values together and standardize their use
+- RFC 4954 was developed with help of Cisco to bring all of these values together and standardize their use
 
-- The RFC offers MANY specific recommendations, but here are a few key ones:
+- The RFC offers many specific recommendations, but here are a few key ones:
     - VOICE TRAFFIC : EF
     - INTERACTIVE VIDEO : AF4x
     - STREAMING VIDEO : AF3x
@@ -160,7 +160,7 @@ RFC 4954
 
 TRUST BOUNDARIES
 
-- The TRUST BOUNDARY of a network defines where the DEVICE TRUST / DON’T TRUST the QoS MARKINGS of received messages
+- The TRUST BOUNDARY of a network defines where the DEVICE TRUST / DON’T TRUST the QoS markings of received messages
 - If the MARKINGS are TRUSTED:
     - DEVICE will forward the message without changing the markings
 - If the MARKINGS are NOT TRUSTED:
@@ -170,7 +170,7 @@ TRUST BOUNDARIES
 
 - If an IP phone is connected to the SWITCH PORT, it is RECOMMENDED to move the TRUST BOUNDARY to the IP phones
 - This is done via CONFIGURATION on the SWITCH PORT connected to the IP phone
-- If a user MARKS their PC’s TRAFFIC with a HIGH PRIORITY, the MARKING will be CHANGED (not trusted)
+- If a user MARKS their PC’s traffic with a HIGH PRIORITY, the marking will be changed (not trusted)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/606ad681-fad4-4f23-96bf-bd7dde91eaf4)
 
@@ -178,8 +178,8 @@ TRUST BOUNDARIES
 
 QUEUING / CONGESTION MANAGEMENT
 
-- When a NETWORK DEVICE receives TRAFFIC at a FASTER PACE than it can FORWARD out of the appropriate INTERACE, packets are placed in that INTERFACE’S QUEUE as they wait to be FORWARDED
-- When a QUEUE becomes FULL, PACKETS that don’t FIT in the QUEUE are dropped (Tail Drop)
+- When a NETWORK DEVICE receives traffic at a FASTER PACE than it can forward out of the appropriate INTERACE, packets are placed in that INTERFACE’S queue as they wait to be FORWARDED
+- When a queue becomes FULL, packets that don’t FIT in the queue are dropped (Tail Drop)
 - RED and WRED DROP PACKETS early to avoid TAIL DROP
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/5dbfd417-097c-4107-a5e1-b5476f423b15)
@@ -188,12 +188,12 @@ QUEUING / CONGESTION MANAGEMENT
     - This is where CLASSIFICATION plays a role.
     - DEVICE can match TRAFFIC based on various factors (like DSCP MARKINGS in the IP HEADER) and then place it in the appropriate QUEUE
 
-- HOWEVER, the DEVICE is only able to forward one FRAME out of an INTERFACE at once SO a *SCHEDULER*, is used to decide which QUEUE TRAFFIC is FORWARDED from the next
+- However, the DEVICE is only able to forward one FRAME out of an INTERFACE at once SO a *SCHEDULER*, is used to decide which QUEUE TRAFFIC is FORWARDED from the next
     - *PRIORITZATION* allows the SCHEDULER to give certain QUEUES more PRIORITY than others
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/56bfe184-5bdf-4b8f-8851-756766456bf9)
 
-- A COMMON scheduling method is *WEIGHTED ROUND-ROBIN*
+- A common scheduling method is *WEIGHTED ROUND-ROBIN*
     - ROUND-ROBIN:
         - packets taken from each QUEUE in order, cyclically
     - WEIGHTED:
@@ -202,7 +202,7 @@ QUEUING / CONGESTION MANAGEMENT
 ---
 
 - CBWFQ (CLASS BASED WEIGHED FAIR QUEUING)
-    - Popular method of SCHEDULING
+    - Popular method of scheduling
     - Uses WEIGHTED ROUND-ROBIN SCHEDULER while guaranteeing each QUEUE a certain PERCENTAGE of the INTERFACE’S bandwidth during CONGESTION
     
 
@@ -214,11 +214,11 @@ QUEUING / CONGESTION MANAGEMENT
 ---
 
 - LLQ (LOW LATENCY QUEUING)
-    - Designates ONE (or more) QUEUES as *strict priority queues*
-    - This means that if there is TRAFFIC in the QUEUE, the SCHEDULER will ALWAYS take the next PACKET from that QUEUE until it is EMPTY
+    - Designates one (or more) QUEUES as *strict priority queues*
+    - This means that if there is traffic in the QUEUE, the SCHEDULER will ALWAYS take the next PACKET from that QUEUE until it is empty
     - This is VERY EFFECTIVE for reducing the DELAY and JITTER of voice/video traffic
-    - HOWEVER, LLQ has a DOWNSIDE of potentially starving other QUEUES if there is always TRAFFIC in the DESIGNATED *STRICT PRIORITY QUEUE*
-        - POLICING can control the AMOUNT of TRAFFIC allowed in the *STRICT PRIORITY QUEUE* so that it can’t take all of the link’s BANDWIDTH
+    - HOWEVER, LLQ has a DOWNSIDE of potentially starving other QUEUES if there is always traffic in the DESIGNATED *STRICT PRIORITY QUEUE*
+        - POLICING can control the AMOUNT of traffic allowed in the *STRICT PRIORITY QUEUE* so that it can’t take all of the link’s bandwidth
     
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2b544243-3a2e-4721-bf1f-4636ec4085a7)
@@ -229,7 +229,7 @@ QUEUING / CONGESTION MANAGEMENT
 
 SHAPING / POLICING
 
-- TRAFFIC SHAPING and POLICING are both used to control the RATE of traffic
+- TRAFFIC SHAPING and POLICING are both used to control the rate of traffic
 - SHAPING
     - Buffers traffic in a QUEUE if the TRAFFIC RATE goes over the CONFIGURED RATE
 
@@ -240,7 +240,7 @@ SHAPING / POLICING
     - This accommodates DATA APPLICATIONS which typically are “bursty” in nature (ie: not constant stream)
     - The amount of BURST TRAFFIC allowed is configurable
     
-- In BOTH cases, CLASSIFICATION can be used to ALLOW for different RATES for different KINDS of traffic
+- In both cases, CLASSIFICATION can be used to allow for different rates for different kinds of traffic
 - WHY would you want to LIMIT the RATE that traffic is sent / received?
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/09771d78-4570-4300-97e1-adba77fe28b4)
