@@ -124,7 +124,7 @@ QoS QUEUING
 
 - A solution to prevent tail drops and TCP global synchronization is RANDOM EARLY DETECTION (RED)
 
-- When the amount of traffic in the queue reaches a certain THRESHOLD, the DEVICE will start RANDOMLY dropping PACKETS from select TCP FLOWS
+- When the amount of traffic in the queue reaches a certain threshold, the device will start RANDOMLY dropping packets from select TCP FLOWS
 - Those TCP flows that dropped packets will reduce the rate at which traffic is sent, but you will avoid TCP global synchronization, in which all TCP flows reduce and then increase the rate of transmission at the same time, in waves.
 - In STANDARD RED, all kinds of traffic are treated the same
 - WEIGHTED RANDOM EARLY DETECTION (WRED) - an improved version of RED, allows you control which packets are dropped depending on the TRAFFIC CLASS
