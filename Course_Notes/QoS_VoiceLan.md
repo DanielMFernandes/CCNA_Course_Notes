@@ -16,8 +16,8 @@ IP PHONES
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/0bba51c0-af57-49e4-ae29-fca2a1079a34)
 
-- This allows the PC and the IP phone to share a single switch port. Traffic from the PC passes through the IP PHONE to the switch
-- It is recommended to separate “VOICE” traffic (from IP phone) and “DATA TRAFFIC” (from the PC) by placing them into SEPARATE VLANS (!)
+- This allows the PC and the IP phone to share a single switch port. Traffic from the PC passes through the IP phone to the switch
+- It is recommended to separate “VOICE” traffic (from IP phone) and “DATA" traffic (from the PC) by placing them into SEPARATE VLANS (!)
     - This can be accomplished using a VOICE VLAN
     - Traffic from the PC will be UNTAGGED - but traffic from the phone will be tagged with a VLAN ID
 
@@ -33,22 +33,22 @@ POWER OVER ETHERNET (PoE)
 
 - PoE allows Power Sourcing Equipment (PSE) to provide power to Powered Devices (PD) over an ethernet cable
 - Typically, the PSE is a switch and the PDs are IP phones, IP cameras, wireless access points, etc.
-- The PSE receives AC POWER from the outlet, converts it to DC POWER, and supplies that DC power to the PDs
+- The PSE receives AC power from the outlet, converts it to DC power, and supplies that DC power to the PDs
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4229e398-a50e-487c-adf3-66b235ea9189)
 
 - Too much electrical current can damage electrical devices
 - PoE has a process to determine if a connected device needs power and how much it needs.
-    - When a DEVICE is connected to a PoE-Enabled PORT, the PSE (switch) sends LOW POWER SIGNALS, monitors the response, and determines how much power the PD needs
-    - If the DEVICE needs POWER, the PSE supplies the power to allow the PD to boot
-    - The PSE continues to monitor the PD and SUPPLY the required amount of power (but not too much!)
+    - When a device is connected to a PoE-Enabled port, the PSE (switch) sends LOW POWER SIGNALS, monitors the response, and determines how much power the PD needs
+    - If the device needs power, the PSE supplies the power to allow the PD to boot
+    - The PSE continues to monitor the PD and supply the required amount of power (but not too much!)
 - *POWER POLICING* can be configured to prevent a PD from taking too much power
-    - 'power inline police' configures power policing with the default settings:  disable the PORT and send a SYSLOG message if a PD draws too much power
+    - 'power inline police' configures power policing with the default settings:  disable the port and send a SYSLOG message if a PD draws too much power
         - Equivalent to 'power inline police action err-disable'
-        - The INTERFACE will be put in an ‘error-disabled’ state and can be re-enabled with 'shutdown' followed by 'no shutdown'
+        - The interface will be put in an ‘error-disabled’ state and can be re-enabled with 'shutdown' followed by 'no shutdown'
     
     ![image](https://github.com/psaumur/CCNA/assets/106411237/59914c0d-2c0e-4952-a4af-1f7ada02002d)
-    -  'power inline police action log' does NOT shut down the interface if the PD draws too much power. It WILL restart the interface and send a SYSLOG message
+    -  'power inline police action log' does NOT shut down the interface if the PD draws too much power. It will restart the interface and send a SYSLOG message
     
     ![image](https://github.com/psaumur/CCNA/assets/106411237/9717fb1e-9129-41f9-90bb-613c2bdee460)
     
