@@ -2,8 +2,8 @@
 
 CLASSIFICATION / MARKING
 
-- The purpose of QoS is to give certain kinds of NETWORK TRAFFIC priority over other during congestion
-- CLASSIFICATION organizes network TRAFFIC (PACKETS) into TRAFFIC CLASSES (CATEGORIES)
+- The purpose of QoS is to give certain kinds of network traffic priority over others during congestion
+- CLASSIFICATION organizes network TRAFFIC (packets) into TRAFFIC CLASSES (CATEGORIES)
 - CLASSIFICATION is fundamental to QoS.
     - To give PRIORITY to certain types of traffic, you have to IDENTIFY which types of traffic to give PRIORITY to.
 - There are MANY methods of CLASSIFYING TRAFFIC
@@ -180,45 +180,45 @@ QUEUING / CONGESTION MANAGEMENT
 
 - When a NETWORK DEVICE receives traffic at a FASTER PACE than it can forward out of the appropriate INTERACE, packets are placed in that INTERFACE’S queue as they wait to be FORWARDED
 - When a queue becomes FULL, packets that don’t FIT in the queue are dropped (Tail Drop)
-- RED and WRED DROP PACKETS early to avoid TAIL DROP
+- RED and WRED DROP packets early to avoid TAIL DROP
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/5dbfd417-097c-4107-a5e1-b5476f423b15)
 
 - An essential part of QoS is the use of MULTIPLE QUEUES
     - This is where CLASSIFICATION plays a role.
-    - DEVICE can match TRAFFIC based on various factors (like DSCP MARKINGS in the IP HEADER) and then place it in the appropriate QUEUE
+    - DEVICE can match TRAFFIC based on various factors (like DSCP MARKINGS in the IP HEADER) and then place it in the appropriate queue
 
-- However, the DEVICE is only able to forward one FRAME out of an INTERFACE at once SO a *SCHEDULER*, is used to decide which QUEUE TRAFFIC is FORWARDED from the next
-    - *PRIORITZATION* allows the SCHEDULER to give certain QUEUES more PRIORITY than others
+- However, the DEVICE is only able to forward one FRAME out of an INTERFACE at once SO a *SCHEDULER*, is used to decide which queue traffic is FORWARDED from the next
+    - *PRIORITZATION* allows the SCHEDULER to give certain queues more PRIORITY than others
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/56bfe184-5bdf-4b8f-8851-756766456bf9)
 
 - A common scheduling method is *WEIGHTED ROUND-ROBIN*
     - ROUND-ROBIN:
-        - packets taken from each QUEUE in order, cyclically
+        - packets taken from each queue in order, cyclically
     - WEIGHTED:
-        - More data taken from HIGH PRORITY QUEUES each time the SCHEDULER reaches that QUEUE
+        - More data taken from HIGH PRORITY queues each time the SCHEDULER reaches that QUEUE
 
 ---
 
 - CBWFQ (CLASS BASED WEIGHED FAIR QUEUING)
     - Popular method of scheduling
-    - Uses WEIGHTED ROUND-ROBIN SCHEDULER while guaranteeing each QUEUE a certain PERCENTAGE of the INTERFACE’S bandwidth during CONGESTION
+    - Uses WEIGHTED ROUND-ROBIN SCHEDULER while guaranteeing each queue a certain PERCENTAGE of the interface’s bandwidth during CONGESTION
     
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/eee24cef-c67a-42de-9fa0-9351cab56354)
 
 - ROUND-ROBIN SCHEDULING is NOT IDEAL for voice/video traffic
-    - Even if VOICE / VIDEO traffic receives a guaranteed MINIMUM amount of BANDWIDTH, ROUND-ROBIN can add DELAY and JITTER because even the HIGH PRIORITY QUEUES have to wait their turn in the SCHEDULER
+    - Even if VOICE / VIDEO traffic receives a guaranteed MINIMUM amount of BANDWIDTH, ROUND-ROBIN can add DELAY and JITTER because even the HIGH PRIORITY queues have to wait their turn in the SCHEDULER
 
 ---
 
 - LLQ (LOW LATENCY QUEUING)
-    - Designates one (or more) QUEUES as *strict priority queues*
-    - This means that if there is traffic in the QUEUE, the SCHEDULER will ALWAYS take the next PACKET from that QUEUE until it is empty
+    - Designates one (or more) queues as *strict priority queues*
+    - This means that if there is traffic in the queue, the SCHEDULER will ALWAYS take the next PACKET from that queue until it is empty
     - This is VERY EFFECTIVE for reducing the DELAY and JITTER of voice/video traffic
-    - HOWEVER, LLQ has a DOWNSIDE of potentially starving other QUEUES if there is always traffic in the DESIGNATED *STRICT PRIORITY QUEUE*
-        - POLICING can control the AMOUNT of traffic allowed in the *STRICT PRIORITY QUEUE* so that it can’t take all of the link’s bandwidth
+    - HOWEVER, LLQ has a DOWNSIDE of potentially starving other queues if there is always traffic in the DESIGNATED *STRICT PRIORITY QUEUE*
+        - POLICING can control the amount of traffic allowed in the *STRICT PRIORITY QUEUE* so that it can’t take all of the link’s bandwidth
     
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2b544243-3a2e-4721-bf1f-4636ec4085a7)
@@ -231,14 +231,14 @@ SHAPING / POLICING
 
 - TRAFFIC SHAPING and POLICING are both used to control the rate of traffic
 - SHAPING
-    - Buffers traffic in a QUEUE if the TRAFFIC RATE goes over the CONFIGURED RATE
+    - Buffers traffic in a queue if the traffic RATE goes over the CONFIGURED RATE
 
 - POLICING
     - DROPS traffic if the TRAFFIC RATE goes over the CONFIGURED RATE
         - POLICING also has the option of RE-MARKING the traffic, instead of DROPPING
-    - “BURST” TRAFFIC over the CONFIGURED RATE is allowed for a short period of time
+    - “BURST” traffic over the CONFIGURED RATE is allowed for a short period of time
     - This accommodates DATA APPLICATIONS which typically are “bursty” in nature (ie: not constant stream)
-    - The amount of BURST TRAFFIC allowed is configurable
+    - The amount of BURST traffic allowed is configurable
     
 - In both cases, CLASSIFICATION can be used to allow for different rates for different kinds of traffic
 - WHY would you want to LIMIT the RATE that traffic is sent / received?
