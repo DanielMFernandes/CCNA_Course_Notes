@@ -189,7 +189,7 @@ QUEUING / CONGESTION MANAGEMENT
     - Device can match traffic based on various factors (like DSCP MARKINGS in the IP header) and then place it in the appropriate queue
 
 - However, the device is only able to forward one frame out of an interface at once so a *SCHEDULER*, is used to decide which queue traffic is forwarded from the next
-    - *PRIORITZATION* allows the SCHEDULER to give certain queues more PRIORITY than others
+    - *PRIORITIZATION* allows the scheduler to give certain queues more PRIORITY than others
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/56bfe184-5bdf-4b8f-8851-756766456bf9)
 
