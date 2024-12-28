@@ -5,7 +5,7 @@ CLASSIFICATION / MARKING
 - The purpose of QoS is to give certain kinds of network traffic priority over others during congestion
 - CLASSIFICATION organizes network traffic (packets) into TRAFFIC CLASSES (CATEGORIES)
 - Classification is fundamental to QoS.
-    - To give priority to certain types of traffic, you have to identify which types of traffic to give priority to.
+    - To give priority to certain types of traffic, you have to classify the different types of traffic.
 - There are many methods of classifying traffic
     - An ACL : traffic which is permitted by the ACL will be given certain treatment, other traffic will not
     - NBAR (Network Based Application Recognition) performs a *DEEP PACKET INSPECTION*, looking beyond the Layer 3 and Layer 4 information up to Layer 7 to identify the specific kinds of traffic
