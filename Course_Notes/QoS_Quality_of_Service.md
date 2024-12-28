@@ -209,7 +209,7 @@ QUEUING / CONGESTION MANAGEMENT
 ![image](https://github.com/psaumur/CCNA/assets/106411237/eee24cef-c67a-42de-9fa0-9351cab56354)
 
 - ROUND-ROBIN SCHEDULING is not ideal for voice/video traffic
-    - Even if VOICE / VIDEO traffic receives a guaranteed MINIMUM amount of bandwidth, ROUND-ROBIN can add DELAY and JITTER because even the high priority queues have to wait their turn in the scheduler
+    - Even if VOICE / VIDEO traffic receives a guaranteed minimum amount of bandwidth, ROUND-ROBIN can add DELAY and JITTER because even the high priority queues have to wait their turn in the scheduler
 
 ---
 
