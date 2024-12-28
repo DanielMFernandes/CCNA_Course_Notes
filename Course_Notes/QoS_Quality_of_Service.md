@@ -160,7 +160,7 @@ RFC 4954
 
 TRUST BOUNDARIES
 
-- The TRUST BOUNDARY of a network defines where the device trust / don’t trust the QoS markings of received messages
+- The TRUST BOUNDARY of a network defines where the device trust (or not) the QoS markings of received messages
 - If the markings are TRUSTED:
     - Device will forward the message without changing the markings
 - If the markings are NOT TRUSTED:
