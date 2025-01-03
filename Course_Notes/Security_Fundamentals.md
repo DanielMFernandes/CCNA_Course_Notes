@@ -8,7 +8,7 @@ What is the purpose / goal of security in an enterprise ?
 
 - The principles of the CIA TRIAD form the foundation of security:
     - CONFIDENTIALITY
-        - Only AUTHORIZED USERS should be able to access data
+        - Only ahorized users should be able to access data
         - Some information / data is public and can be accessed by anyone
         - Some information / data is secret and should be only be accessed by specific people
     - INTEGRITY
@@ -17,7 +17,7 @@ What is the purpose / goal of security in an enterprise ?
     - AVAILABILITY
         - The NETWORK / security should be operational and accessible to authorized users
 
-ATTACKERS can threaten the CONFIDENTIALITY, INTEGRITY, and AVAILBILITY of an enterprise’s systems and information
+Attackers can threaten the CONFIDENTIALITY, INTEGRITY, and AVAILBILITY of an enterprise’s systems and information
 
 ---
 
@@ -25,7 +25,7 @@ VULNERABILITY, EXPLOIT, THREAT, MITIGATION
 
 - A VULNERABILITY is any potential weakness that can compromise the CIA of a system
     - A potential weakness isn’t a problem in its own
-- AN EXPLOIT is something that can potentially be used to exploit the vulnerability
+- An EXPLOIT is something that can potentially be used to exploit the vulnerability
     - Something than can *potentially* be used as an exploit isn’t a problem on it’s own.
 
 - A THREAT is the potential of a VULNERABILITY to be EXPLOITED
@@ -55,7 +55,7 @@ COMMON ATTACKS
 
 DoS (Denial of Service) Attacks
 
-- DoS attacks threaten the AVAILABILITY of the SYSTEM
+- DoS attacks threaten the AVAILABILITY of the system
 - One common DoS attack is the TCP SYN Flood
     - TCP Three-Way Handshake : SYN | SYN-ACK | ACK
     - The ATTACKER sends countless TCP SYN messages to the TARGET
@@ -67,7 +67,7 @@ DoS (Denial of Service) Attacks
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/5b04eea4-c53a-48b7-9683-952c9b27c9db)
 
-- In a DDoS (Distributed Denial of Service) Attack, the ATTACKER infects many computers with MALWARE and uses them to initiate a Denial-of-Service Attack.
+- In a DDoS (Distributed Denial of Service) Attack, the attacker infects many computers with MALWARE and uses them to initiate a Denial-of-Service Attack.
 - This group of infected computers is called a BOTNET
 
 Example : A TCP SYN Flood Attack
@@ -102,15 +102,15 @@ REFLECTION / AMPLIFICATION ATTACKS
 
 MAN-IN-THE-MIDDLE ATTACKS
 
-- In a MAN-IN-THE-MIDDLE attack, the attacker places himself between the SOURCE and DESTINATION to eavesdrop on communications, or to modify traffic before it reaches the DESTINATION
+- In a MAN-IN-THE-MIDDLE attack, the attacker places himself between the source and destination to eavesdrop on communications, or to modify traffic before it reaches the destination
 - A common example is ARP SPOOFING, also known as ARP POISONING
-- A HOST sends an ARP REQUEST, asking for the MAC ADDRESS of another DEVICE
-- The target of the request sends an ARP REPLY, informing the requester of it’s MAC ADDRESS
-- The ATTACKER waits and sends another ARP REPLY after it’s legitimate replier
+- A host sends an ARP request, asking for the MAC address of another device
+- The target of the request sends an ARP reply, informing the requester of it’s MAC address
+- The attacker waits and sends another ARP reply after it’s legitimate replier
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/86cee6cd-845a-4732-bfec-4cfe18101322)
 
-- In PC1’s ARP table, the entry for 10.0.0.1 will have the attacker’s MAC ADDRESS
+- In PC1’s ARP table, the entry for 10.0.0.1 will have the attacker’s MAC address
 - When PC1 tries to send traffic to SRV1, it will be forwarded to the attacker instead
 - The attacker can inspect the messages, and then forward them on to SRV1
 - The attacker can also modify the messages before forwarding them to SRV1
@@ -122,9 +122,9 @@ MAN-IN-THE-MIDDLE ATTACKS
 
 RECONNAISSANCE ATTACKS
 
-- RECONNAISSANCE ATTACKS are not attacks themselves but they are used to gather information about a TARGET which can be used for a future attack
+- RECONNAISSANCE ATTACKS are not attacks themselves but they are used to gather information about a target which can be used for a future attack
 - This is often publicly available information
-- IE: nslookup to learn the IP ADDRESS of a site
+- IE: nslookup to learn the IP address of a site
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/6e63b09d-a768-4cb3-ac06-87ad41d45c38)
 
@@ -138,20 +138,20 @@ MALWARE
 
 - MALWARE (MALICIOUS SOFTWARE) refers to a variety of harmful programs that can infect a computer
 - VIRUSES infect other software (a ‘host program’)
-    - The VIRUS spreads as the software is shared by USERS. Typically, they CORRUPT or MODIFY files on the TARGET computer
-- WORMS do not require a host program. They are standalone malware and they are able to spread on their own, without user interaction. They spread of WORMS can congest the NETWORK but the ‘payload’ of a WORM can cause additional harm to TARGET DEVICES
+    - The VIRUS spreads as the software is shared by users. Typically, they corrupt or modify files on the target computer
+- WORMS do not require a host program. They are standalone malware and they are able to spread on their own, without user interaction. They spread of WORMS can congest the NETWORK but the ‘payload’ of a WORM can cause additional harm to target devices
 
-- TROJAN HORSES are harmful software that is disguised as LEGITIMATE software. They are spread through user interaction such as opening email attachments, downloading a file from the Internet.
+- TROJAN HORSES are harmful software that is disguised as legitimate software. They are spread through user interaction such as opening email attachments, downloading a file from the Internet.
 
-The above MALWARE types can exploit various VULNERABILITIES to threaten any of the CIA of a target DEVICE
+The above MALWARE types can exploit various VULNERABILITIES to threaten any of the CIA of a target device
 
-** There are MANY types of MALWARE
+** There are many types of MALWARE
 
 ---
 
 SOCIAL ENGINEERING ATTACKS
 
-- SOCIAL ENGINEERING ATTACKS target the most vulnerable part of ANY system - PEOPLE!
+- SOCIAL ENGINEERING ATTACKS target the most vulnerable part of any system - PEOPLE!
 - They involve psychological manipulation to make the target reveal confidential information or perform some action
 
 - PHISHING typically involves fraudulent emails that appear to come from a legitimate business (Amazon, bank, credit card company, etc) and contain links to a fraudulent website that seems legitimate. Users are told to login to the fraudulent website, providing their login credentials to the attacker.
@@ -161,8 +161,8 @@ SOCIAL ENGINEERING ATTACKS
 
 - SMISHING (SMS Phishing) is phishing using SMS text messages
 
-- WATERING HOLE attacks compromise sites that the TARGET victim frequently visits. If a malicious link is placed on a website the TARGET trusts, they might not hesitate to click it
-- TAILGATING attack involves entering restricted, secured areas by simply walking in behind an authorized person as they enter. Often the target will hold the door open for the ATTACKER to be polite, assuming the attacker is also authorized to enter.
+- WATERING HOLE attacks compromise sites that the target victim frequently visits. If a malicious link is placed on a website the TARGET trusts, they might not hesitate to click it
+- TAILGATING attack involves entering restricted, secured areas by simply walking in behind an authorized person as they enter. Often the target will hold the door open for the attacker to be polite, assuming the attacker is also authorized to enter.
 
 ---
 
@@ -178,20 +178,20 @@ PASSWORD-RELATED ATTACKS
         - A program tries every possible combination of letters, numbers, and special characters to find the target’s password
 
 - STRONG PASSWORDS should contain:
-    - At LEAST 8 characters (preferably more)
-    - A mixture of UPPERCASE and LOWERCASE letters
-    - A mixture of LETTERS and NUMBERS
-    - One of more SPECIAL CHARACTERS (# @ ! ? etc.)
-    - Should be CHANGED REGULARLY
+    - At least 8 characters (preferably more)
+    - A mixture of uppercase and lowercase letters
+    - A mixture of letters and numbers
+    - One of more special characters (# @ ! ? etc.)
+    - Should be changed regularly 
 
 ---
 
 PASSWORDS / MULTI-FACTOR AUTHENTICATION (MFA)
 
 - MULTI-FACTOR AUTHENTICATION involves providing more than just a USERNAME / PASSWORD to prove your identity
-- It usually involves providing TWO of the following ( = Two-Factor Authentication) :
+- It usually involves providing two of the following ( = Two-Factor Authentication) :
     - SOMETHING YOU KNOW
-        - A USERNAME / PASSWORD combination, a PIN, etc.
+        - A username / password combination, a PIN, etc.
         
     - SOMETHING YOU HAVE
         - Pressing a notification that appears on your phone, a badge that is scanned, etc.
@@ -199,13 +199,13 @@ PASSWORDS / MULTI-FACTOR AUTHENTICATION (MFA)
     - SOMETHING YOU ARE
         - Biometrics such as a face scan, palm scan, fingerprint scan, retina scan, etc.
 
-- Requiring multiple factors of AUTHENTICATION greatly increases the security. Even if the ATTACKER learns the TARGET’S PASSWORD (SOMETHING YOU KNOW), they won’t be able to login to the TARGET’S account
+- Requiring multiple factors of authentication greatly increases the security. Even if the attacker learns the target’s password (SOMETHING YOU KNOW), they won’t be able to login to the target’s account
 
 ---
 
 DIGITAL CERTIFICATES
 
-- DIGITAL CERTIFICATES are another form of AUTHENTICATION used to prove the identity of the holder of the certificate
+- DIGITAL CERTIFICATES are another form of authentication used to prove the identity of the holder of the certificate
 - They are used for websites to verify that the website being accessed is legitimate
 - Entities that want a certificate to prove their identity send a CSR (CERTIFICATE SIGNING REQUEST) to a CA (CERTIFICATE AUTHORITY) which will generate and sign the certificate
 
@@ -218,7 +218,7 @@ CONTROLLING AND MONITORING USERS WITH AAA
 
 - AUTHENTICATION
     - Process of verifying a user’s identity
-    - Logging in = AUTHENTICATION
+    - Logging in = authentication
 - AUTHORIZATION
     - Process of granting the user the appropriate access and permissions
     - Granting the user access to some files / services, restricting access to other files / services = AUTHORIZATION
