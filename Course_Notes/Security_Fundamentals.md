@@ -4,26 +4,26 @@ KEY SECURITY CONCEPTS
 
 WHY SECURITY?
 
-What is the purpose / goal of SECURITY in an ENTERPRISE ?
+What is the purpose / goal of security in an enterprise ?
 
-- The principles of the CIA TRIAD form the FOUNDATION of SECURITY:
+- The principles of the CIA TRIAD form the foundation of security:
     - CONFIDENTIALITY
-        - Only AUTHORIZED USERS should be able to ACCESS DATA
-        - Some INFORMATION / DATA is PUBLIC and can be accessed by ANYONE
-        - Some INFORMATION / DATA is SECRET and should be only be accessed by SPECIFIC people
+        - Only AUTHORIZED USERS should be able to access data
+        - Some information / data is public and can be accessed by anyone
+        - Some information / data is secret and should be only be accessed by specific people
     - INTEGRITY
-        - DATA should not be tampered with (modified) by unauthorized USERS
-        - DATA should be CORRECT and AUTHENTIC
+        - data should not be tampered with (modified) by unauthorized users
+        - data should be correct and authentic
     - AVAILABILITY
-        - The NETWORK / SECURITY should be OPERATIONAL and ACCESSIBLE to AUTHORIZED USERS
+        - The NETWORK / security should be operational and accessible to authorized users
 
-ATTACKERS can threaten the CONFIDENTIALITY, INTEGRITY, and AVAILBILITY of an enterprise’s SYSTEMS and INFORMATION
+ATTACKERS can threaten the CONFIDENTIALITY, INTEGRITY, and AVAILBILITY of an enterprise’s systems and information
 
 ---
 
 VULNERABILITY, EXPLOIT, THREAT, MITIGATION
 
-- A VULNERABILITY is any potential weakness that can compromise the CIA of a SYSTEM / INFO
+- A VULNERABILITY is any potential weakness that can compromise the CIA of a system
     - A potential weakness isn’t a problem in its own
 - AN EXPLOIT is something that can potentially be used to exploit the vulnerability
     - Something than can *potentially* be used as an exploit isn’t a problem on it’s own.
@@ -37,10 +37,8 @@ VULNERABILITY, EXPLOIT, THREAT, MITIGATION
         - Servers, Switches, Routers, Firewalls
         - etc.
 
-<aside>
 💡 NO SYSTEM IS PERFECTLY SECURE!
 
-</aside>
 
 ---
 
@@ -80,11 +78,11 @@ Example : A TCP SYN Flood Attack
 
 SPOOFING ATTACKS
 
-- To SPOOF an ADDRESS is to use a FAKE SOURCE ADDRESS (IP or MAC)
-- Numerous attacks involve spoofing; it’s not a SINGLE kind of attack
+- To SPOOF an address is to use a fake source address (IP or MAC)
+- Numerous attacks involve spoofing; it’s not a single kind of attack
 - An example is a DHCP EXHAUSTION attack
-- An ATTACKER uses spoofed MAC ADDRESSES to flood DHCP Discover messages
-- The TARGET server’s DHCP POOL becomes full, resulting in a Denial-of-Service to other DEVICES
+- An attacker uses spoofed MAC addresses to flood DHCP Discover messages
+- The target server’s DHCP POOL becomes full, resulting in a Denial-of-Service to other devices
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c539c50b-1be0-42f9-8ce3-fbeb47ea2034)
 
@@ -92,9 +90,9 @@ SPOOFING ATTACKS
 
 REFLECTION / AMPLIFICATION ATTACKS
 
-- In a REFLECTION attack, the ATTACKER sends traffic to a *reflector*, and spoofs the SOURCE of the PACKET using the TARGET’S IP ADDRESS
-- The *reflector* (ie: a DNS Server) sends the reply to the TARGET’S IP ADDRESS
-- If the amount of traffic sent to the TARGET is large enough, this can result in a Denial-of-Service
+- In a REFLECTION attack, the attacker sends traffic to a *reflector*, and spoofs the SOURCE of the PACKET using the TARGET’S IP ADDRESS
+- The *reflector* (ie: a DNS Server) sends the reply to the target’s IP ADDRESS
+- If the amount of traffic sent to the target is large enough, this can result in a Denial-of-Service
 
 - A REFLECTION attack becomes an AMPLIFICATION attack when the amount of traffic sent by the ATTACKER is small but it triggers a LARGE amount of traffic to be sent from the *reflector* to the TARGET
 
@@ -104,18 +102,18 @@ REFLECTION / AMPLIFICATION ATTACKS
 
 MAN-IN-THE-MIDDLE ATTACKS
 
-- In a MAN-IN-THE-MIDDLE attack, the ATTACKER places himself between the SOURCE and DESTINATION to eavesdrop on communications, or to modify traffic before it reaches the DESTINATION
+- In a MAN-IN-THE-MIDDLE attack, the attacker places himself between the SOURCE and DESTINATION to eavesdrop on communications, or to modify traffic before it reaches the DESTINATION
 - A common example is ARP SPOOFING, also known as ARP POISONING
 - A HOST sends an ARP REQUEST, asking for the MAC ADDRESS of another DEVICE
-- The TARGET of the request sends an ARP REPLY, informing the requester of it’s MAC ADDRESS
+- The target of the request sends an ARP REPLY, informing the requester of it’s MAC ADDRESS
 - The ATTACKER waits and sends another ARP REPLY after it’s legitimate replier
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/86cee6cd-845a-4732-bfec-4cfe18101322)
 
-- In PC1’s ARP table, the entry for 10.0.0.1 will have the ATTACKER’S MAC ADDRESS
-- When PC1 tries to send traffic to SRV1, it will be forwarded to the ATTACKER instead
-- The ATTACKER can inspect the messages, and then forward them on to SRV1
-- The ATTACKER can also modify the messages before forwarding them to SRV1
+- In PC1’s ARP table, the entry for 10.0.0.1 will have the attacker’s MAC ADDRESS
+- When PC1 tries to send traffic to SRV1, it will be forwarded to the attacker instead
+- The attacker can inspect the messages, and then forward them on to SRV1
+- The attacker can also modify the messages before forwarding them to SRV1
 - This compromises the CONFIDENTIALITY and INTEGRITY of communication between PC1 and SRV1
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/07ebfebd-0686-436a-8990-853e3fee4377)
@@ -145,7 +143,7 @@ MALWARE
 
 - TROJAN HORSES are harmful software that is disguised as LEGITIMATE software. They are spread through user interaction such as opening email attachments, downloading a file from the Internet.
 
-The above MALWARE types can exploit various VULNERABILITIES to threaten any of the CIA of a TARGET DEVICE
+The above MALWARE types can exploit various VULNERABILITIES to threaten any of the CIA of a target DEVICE
 
 ** There are MANY types of MALWARE
 
@@ -154,7 +152,7 @@ The above MALWARE types can exploit various VULNERABILITIES to threaten any of t
 SOCIAL ENGINEERING ATTACKS
 
 - SOCIAL ENGINEERING ATTACKS target the most vulnerable part of ANY system - PEOPLE!
-- They involve psychological manipulation to make the TARGET reveal confidential information or perform some action
+- They involve psychological manipulation to make the target reveal confidential information or perform some action
 
 - PHISHING typically involves fraudulent emails that appear to come from a legitimate business (Amazon, bank, credit card company, etc) and contain links to a fraudulent website that seems legitimate. Users are told to login to the fraudulent website, providing their login credentials to the attacker.
     - SPEAR PHISHING is a more targeted form of phishing, ie: aimed at employees of a certain company
@@ -164,7 +162,7 @@ SOCIAL ENGINEERING ATTACKS
 - SMISHING (SMS Phishing) is phishing using SMS text messages
 
 - WATERING HOLE attacks compromise sites that the TARGET victim frequently visits. If a malicious link is placed on a website the TARGET trusts, they might not hesitate to click it
-- TAILGATING attack involves entering restricted, secured areas by simply walking in behind an authorized person as they enter. Often the TARGET will hold the door open for the ATTACKER to be polite, assuming the ATTACKER is also authorized to enter.
+- TAILGATING attack involves entering restricted, secured areas by simply walking in behind an authorized person as they enter. Often the target will hold the door open for the ATTACKER to be polite, assuming the attacker is also authorized to enter.
 
 ---
 
@@ -175,9 +173,9 @@ PASSWORD-RELATED ATTACKS
 - ATTACKERS can learn a user’s passwords via multiple methods:
     - Guessing
     - DICTIONARY ATTACK :
-        - A program runs through a ‘dictionary’ or list of common words / passwords to find the TARGET’S password
+        - A program runs through a ‘dictionary’ or list of common words / passwords to find the target’s password
     - BRUTE FORCE ATTACK :
-        - A program tries every possible combination of letters, numbers, and special characters to find the TARGET’S password
+        - A program tries every possible combination of letters, numbers, and special characters to find the target’s password
 
 - STRONG PASSWORDS should contain:
     - At LEAST 8 characters (preferably more)
@@ -239,10 +237,8 @@ CONTROLLING AND MONITORING USERS WITH AAA
     - TACACS+ : Cisco Proprietary Protocol
         - Uses TCP PORT 49
 
-<aside>
 💡 FOR THE CCNA, KNOW THE DIFFERENCES BETWEEN AUTHENTICATION, AUTHORIZATION, and ACCOUNTING
 
-</aside>
 
 ---
 
