@@ -8,7 +8,7 @@ What is the purpose / goal of security in an enterprise ?
 
 - The principles of the CIA TRIAD form the foundation of security:
     - CONFIDENTIALITY
-        - Only ahorized users should be able to access data
+        - Only authorized users should be able to access data
         - Some information / data is public and can be accessed by anyone
         - Some information / data is secret and should be only be accessed by specific people
     - INTEGRITY
