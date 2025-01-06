@@ -12,10 +12,10 @@ What is the purpose / goal of security in an enterprise ?
         - Some information / data is public and can be accessed by anyone
         - Some information / data is secret and should be only be accessed by specific people
     - INTEGRITY
-        - data should not be tampered with (modified) by unauthorized users
-        - data should be correct and authentic
+        - Data should not be tampered with (modified) by unauthorized users
+        - Data should be correct and authentic
     - AVAILABILITY
-        - The NETWORK / security should be operational and accessible to authorized users
+        - The network / security should be operational and accessible to authorized users
 
 Attackers can threaten the CONFIDENTIALITY, INTEGRITY, and AVAILBILITY of an enterprise’s systems and information
 
@@ -90,11 +90,11 @@ SPOOFING ATTACKS
 
 REFLECTION / AMPLIFICATION ATTACKS
 
-- In a REFLECTION attack, the attacker sends traffic to a *reflector*, and spoofs the SOURCE of the PACKET using the TARGET’S IP ADDRESS
-- The *reflector* (ie: a DNS Server) sends the reply to the target’s IP ADDRESS
+- In a REFLECTION attack, the attacker sends traffic to a *reflector*, and spoofs the source of the packet using the TARGET’S IP ADDRESS
+- The *reflector* (ie: a DNS Server) sends the reply to the target’s IP address
 - If the amount of traffic sent to the target is large enough, this can result in a Denial-of-Service
 
-- A REFLECTION attack becomes an AMPLIFICATION attack when the amount of traffic sent by the ATTACKER is small but it triggers a LARGE amount of traffic to be sent from the *reflector* to the TARGET
+- A REFLECTION attack becomes an AMPLIFICATION attack when the amount of traffic sent by the ATTACKER is small but it triggers a LARGE amount of traffic to be sent from the *reflector* to the target
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/34ca977d-9884-4aeb-b99a-9f3677ba17fa)
 
