@@ -139,7 +139,7 @@ MALWARE
 - MALWARE (MALICIOUS SOFTWARE) refers to a variety of harmful programs that can infect a computer
 - VIRUSES infect other software (a ‘host program’)
     - The VIRUS spreads as the software is shared by users. Typically, they corrupt or modify files on the target computer
-- WORMS do not require a host program. They are standalone malware and they are able to spread on their own, without user interaction. They spread of WORMS can congest the NETWORK but the ‘payload’ of a WORM can cause additional harm to target devices
+- WORMS do not require a host program. They are standalone malware and they are able to spread on their own, without user interaction. The spread of WORMS can congest the NETWORK but the ‘payload’ of a WORM can cause additional harm to target devices
 
 - TROJAN HORSES are harmful software that is disguised as legitimate software. They are spread through user interaction such as opening email attachments, downloading a file from the Internet.
 
@@ -230,12 +230,12 @@ CONTROLLING AND MONITORING USERS WITH AAA
 - Enterprises typically use a AAA server to provide AAA services
     - ISE (Identity Services Engine) is Cisco’s AAA server
 
-- AAA Servers usually support the following TWO AAA Protocols:
+- AAA Servers usually support the following two AAA Protocols:
     - RADIUS :  Open Standard Protocol
-        - Uses UDP PORTS 1812 and 1813
+        - Uses UDP ports 1812 and 1813
         
     - TACACS+ : Cisco Proprietary Protocol
-        - Uses TCP PORT 49
+        - Uses TCP port 49
 
 💡 FOR THE CCNA, KNOW THE DIFFERENCES BETWEEN AUTHENTICATION, AUTHORIZATION, and ACCOUNTING
 
@@ -245,5 +245,5 @@ CONTROLLING AND MONITORING USERS WITH AAA
 SECURITY PROGRAM ELEMENTS
 
 - USER AWARENESS PROGRAMS are designed to make employees aware of potential security threats and risks
-- USER TRAINING PROGRAMS are formal than USER AWARENESS PROGRAMS
-- PHYSICAL ACCESS CONTROL protect equipment and data from potential attackers by only allowing authorized users into the protected areas such as NETWORK CLOSETS or DATA CENTER FLOORS
+- USER TRAINING PROGRAMS are more formal than USER AWARENESS PROGRAMS
+- PHYSICAL ACCESS CONTROL protects equipment and data from potential attackers by only allowing authorized users into the protected areas such as NETWORK CLOSETS or DATA CENTER FLOORS
