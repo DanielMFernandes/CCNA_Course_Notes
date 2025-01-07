@@ -127,7 +127,7 @@ SNMP SUMMARY
     - NMS changes settings on Managed Devices
     - NMS checks status of Managed Devices
     
-- Variables, such as Interface Status, Temperature, Traffic Load, Hostname, etc are stored in the MANAGMENT INFORMATION BASE (MIB) and identified using Object IDs (OIDs)
+- Variables, such as Interface Status, Temperature, Traffic Load, Hostname, etc are stored in the MANAGEMENT INFORMATION BASE (MIB) and identified using Object IDs (OIDs)
 
 Main SNMP versions : SNMPv1, SNMPv2c, SNMPv3
 
