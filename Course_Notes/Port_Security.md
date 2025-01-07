@@ -21,13 +21,13 @@ INTRO TO PORT SECURITY
 
 WHY USE PORT SECURITY?
 
-- Port security allows NETWORK admins to control which devices are allowed to access the network
-- However, MAC address SPOOFING is a simple task
+- Port security allows network admins to control which devices are allowed to access the network
+- However, MAC address spoofing is a simple task
     - It is easy to configure a device to send frames with a different source MAC address
 - Rather than manually specifying the MAC addresses allowed on each port, port security’s ability to limit the number of MAC addresses allowed on an interface is more useful
 - Think of the DHCP STARVATION ATTACK (DAY 48 LAB video)
     - The attacker spoofed thousands of fake MAC addresses
-    - The DHCP server assigned IP addresses to these fake MAC addresses, exhausting the DHCP POOL
+    - The DHCP server assigned IP addresses to these fake MAC addresses, exhausting the DHCP pool
     - The switch’s MAC address table can also become full due to such an attack
 - Limiting the number of MAC addresses on an interface can protect against those attacks
 
@@ -96,11 +96,11 @@ SECURE MAC ADDRESS AGING
 
 - The default Aging Type is absolute
     - ABSOLUTE
-        - After the secure MAC address is learned, the AGING TIMER starts and the MAC is removed after the TIMER expires, even if the switch continues receiving frames from that source MAC address.
+        - After the secure MAC address is learned, the aging timer starts and the MAC is removed after the timer expires, even if the switch continues receiving frames from that source MAC address.
     - INACTIVITY
-        - After the secure MAC address is learned, the AGING TIMER starts but is RESET every time a frame from that source MAC address is received on the interface
+        - After the secure MAC address is learned, the aging timer starts but is reset every time a frame from that source MAC address is received on the interface
             - Aging type is configured with:  `switchport port-security aging type {absolute | inactivity}`
-- Secure Static MAC AGING (address configured with `switchport port-security mac-address x.x.x`) is disabled by default
+- Secure static MAC aging (address configured with `switchport port-security mac-address x.x.x`) is disabled by default
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/93f11517-9d97-4e52-89ad-a0e590bca702)
 
@@ -114,10 +114,10 @@ STICKY SECURE MAC ADDRESSES
 - When enabled, dynamically-learned secure MAC addresses will be added to the running configuration, like this:
     - `switchport port-security mac-address sticky *mac-address*`
 
-- The ‘STICKY’ SECURE MAC addresses will NEVER age out
-    - You need to SAVE the `running-config` to `startup-config` to make them TRULY permanent (or else they will not be kept if the switch restarts)
-- When you issue the `switchport port-security mac-address sticky` command, all current dynamically-learned secure MAC addresses will be converted to STICKY secure MAC addresses
-- If you issue the `no switchport port-security mac-address sticky` command, all current STICKY secure MAC addresses will be converted to regular dynamically-learned secure MAC addresses
+- The ‘STICKY’ secure MAC addresses will NEVER age out
+    - You need to save the `running-config` to `startup-config` to make them truly permanent (or else they will not be kept if the switch restarts)
+- When you issue the `switchport port-security mac-address sticky` command, all current dynamically-learned secure MAC addresses will be converted to sticky secure MAC addresses
+- If you issue the `no switchport port-security mac-address sticky` command, all current sticky secure MAC addresses will be converted to regular dynamically-learned secure MAC addresses
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/10d591f9-334c-4e3b-889e-16030c36c445)
 
@@ -125,8 +125,8 @@ STICKY SECURE MAC ADDRESSES
 
 MAC ADDRESS TABLE
 
-- Secure MAC addresses will be added to the MAC ADDRESS TABLE like any other MAC address
-    - STICKY and STATIC secure MAC addresses will have a type of STATIC
+- Secure MAC addresses will be added to the MAC address table like any other MAC address
+    - Sticky and static secure MAC addresses will have a type of STATIC
     - Dynamically-Learned secure MAC addresses will have a type of DYNAMIC
     - You can view all secure MAC addresses with `show mac address-table secure`
     
