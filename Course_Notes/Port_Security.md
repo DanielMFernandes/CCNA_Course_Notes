@@ -2,18 +2,18 @@
 
 INTRO TO PORT SECURITY
 
-- PORT SECURITY is a security feature of Cisco SWITCHES
-- It allows you to control WHICH SOURCE MAC ADDRESS(ES) are allowed to enter the SWITCHPORT
-- If an unauthorized SOURCE MAC ADDRESS enters the PORT, an ACTION will be TAKEN
-    - The DEFAULT action is to place the INTERFACE in an “err-disabled” state
+- PORT SECURITY is a security feature of Cisco switches
+- It allows you to control which source MAC address(es) are allowed to enter the switchport
+- If an unauthorized source MAC address enters the port, an action will be taken
+    - The default action is to place the interface in an “err-disabled” state
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/92f4ce9b-8fb4-4d57-b200-f41c7d5236ee)
 
-- When you enable PORT SECURITY on an INTERFACE with the DEFAULT settings, one MAC ADDRESS is allowed
-    - You can configure the ALLOWED MAC ADDRESS manually
-    - If you DO NOT configure it manually, the SWITCH will allow the first SOURCE MAC ADDRESS that enters the INTERFACE
-- You can CHANGE the MAXIMUM number of MAC ADDRESSES allowed
-- A COMBINATION of manually configured MAC ADDRESSES and DYNAMICALLY LEARNED ADDRESSES is possible
+- When you enable port security on an interface with the default settings, one MAC address is allowed
+    - You can configure the ALLOWED MAC address manually
+    - If you DO NOT configure it manually, the SWITCH will allow the first source MAC address that enters the interface
+- You can CHANGE the MAXIMUM number of MAC addresses allowed
+- A COMBINATION of manually configured MAC addresses and DYNAMICALLY LEARNED addresses is possible
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/0b6e8053-6819-4e02-ae28-4699a5c9c92d)
 
@@ -21,15 +21,15 @@ INTRO TO PORT SECURITY
 
 WHY USE PORT SECURITY?
 
-- PORT SECURITY allows NETWORK admins to control which DEVICES are allowed to access the NETWORK
-- However, MAC ADDRESS SPOOFING is a simple task
-    - It is easy to configure a DEVICE to send FRAMES with a different SOURCE MAC ADDRESS
-- Rather than manually specifying the MAC ADDRESSES allowed on each PORT, PORT SECURITY’S ability to limit the number of MAC ADDRESSES allowed on an INTERFACE is more useful
+- Port security allows NETWORK admins to control which DEVICES are allowed to access the network
+- However, MAC address SPOOFING is a simple task
+    - It is easy to configure a DEVICE to send FRAMES with a different source MAC address
+- Rather than manually specifying the MAC addresses allowed on each port, port security’s ability to limit the number of MAC addresses allowed on an interface is more useful
 - Think of the DHCP STARVATION ATTACK (DAY 48 LAB video)
-    - The ATTACKER spoofed thousands of fake MAC ADDRESSES
-    - The DHCP SERVER assigned IP ADDRESSES to these fake MAC ADDRESSES, exhausting the DHCP POOL
-    - The SWITCH’S MAC ADDRESS table can also become full due to such an attack
-- Limiting the NUMBER of MAC ADDRESSES on an INTERFACE can protect against those attacks
+    - The ATTACKER spoofed thousands of fake MAC addresses
+    - The DHCP SERVER assigned IP addresses to these fake MAC addresses, exhausting the DHCP POOL
+    - The SWITCH’S MAC address table can also become full due to such an attack
+- Limiting the NUMBER of MAC addresses on an interface can protect against those attacks
 
 ENABLING PORT SECURITY
 
@@ -57,19 +57,19 @@ RE-ENABLING AN INTERFACE (ERR-DISABLE RECOVERY)
 
 VIOLATION MODES
 
-- There are THREE DIFFERENT VIOLATION MODES that determine what the SWITCH will do if an unauthorized FRAME enters an INTERFACE configured with PORT SECURITY
+- There are THREE DIFFERENT VIOLATION MODES that determine what the SWITCH will do if an unauthorized FRAME enters an interface configured with port security
     - SHUTDOWN
-        - Effectively shuts down the PORT by placing it in an ‘err-disabled` state
-        - Generates a SYSLOG and / or SNMP message when the INTERFACE is ‘disabled’
-        - The VIOLATION counter is set to 1 when the INTERFACE is ‘disabled’
+        - Effectively shuts down the port by placing it in an ‘err-disabled` state
+        - Generates a SYSLOG and / or SNMP message when the interface is ‘disabled’
+        - The VIOLATION counter is set to 1 when the interface is ‘disabled’
     - RESTRICT
-        - The SWITCH discards traffic from unauthorized MAC ADDRESSES
+        - The SWITCH discards traffic from unauthorized MAC addresses
         - The INTERFACE is NOT disabled
         - Generates a SYSLOG and / or SNMP message each time an unauthorized MAC is detected
         - The VIOLATION counter is incremented by 1 for each unauthorized FRAME
     
     - PROTECT
-        - The SWITCH discards traffic from unauthorized MAC ADDRESSES
+        - The SWITCH discards traffic from unauthorized MAC addresses
         - The INTERFACE is NOT disabled
         - It does NOT generate a SYSLOG / SNMP message for unauthorized traffic
         - It does NOT increment the VIOLATION counter
@@ -91,16 +91,16 @@ SECURE MAC ADDRESS AGING
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4454fedf-f942-4b0d-9b6f-074765de653d)
 
-- By DEFAULT, SECURE MAC ADDRESSES will not ‘age out’ (Aging Time : 0 mins)
+- By default, SECURE MAC addresses will not ‘age out’ (Aging Time : 0 mins)
     - Can be configured with `switchport port-security aging time *minutes*`
 
-- The DEFAULT Aging Type is ABSOLUTE
+- The default Aging Type is absolute
     - ABSOLUTE
-        - After the SECURE MAC ADDRESS is learned, the AGING TIMER starts and the MAC is removed after the TIMER expires, even if the SWITCH continues receiving FRAMES from that SOURCE MAC ADDRESS.
+        - After the SECURE MAC address is learned, the AGING TIMER starts and the MAC is removed after the TIMER expires, even if the SWITCH continues receiving FRAMES from that source MAC address.
     - INACTIVITY
-        - After the SECURE MAC ADDRESS is learned, the AGING TIMER starts but is RESET every time a FRAME from that SOURCE MAC ADDRESS is received on the INTERFACE
+        - After the SECURE MAC address is learned, the AGING TIMER starts but is RESET every time a FRAME from that source MAC address is received on the interface
             - Aging type is configured with:  `switchport port-security aging type {absolute | inactivity}`
-- Secure Static MAC AGING (address configured with `switchport port-security mac-address x.x.x`) is DISABLED by DEFAULT
+- Secure Static MAC AGING (address configured with `switchport port-security mac-address x.x.x`) is disabled by default
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/93f11517-9d97-4e52-89ad-a0e590bca702)
 
@@ -108,16 +108,16 @@ SECURE MAC ADDRESS AGING
 
 STICKY SECURE MAC ADDRESSES 
 
-- ‘STICKY’ SECURE MAC ADDRESS learning can be enabled with the following command:
+- ‘STICKY’ SECURE MAC address learning can be enabled with the following command:
     - `SW(config-if)# switchport port-security mac-address sticky`
 
-- When enabled, dynamically-learned SECURE MAC ADDRESSES will be added to the running configuration, like this:
+- When enabled, dynamically-learned SECURE MAC addresses will be added to the running configuration, like this:
     - `switchport port-security mac-address sticky *mac-address*`
 
-- The ‘STICKY’ SECURE MAC ADDRESSES will NEVER age out
+- The ‘STICKY’ SECURE MAC addresses will NEVER age out
     - You need to SAVE the `running-config` to `startup-config` to make them TRULY permanent (or else they will not be kept if the SWITCH restarts)
-- When you issue the `switchport port-security mac-address sticky` command, all current dynamically-learned secure MAC addresses will be converted to STICKY SECURE MAC ADDRESSES
-- If you issue the `no switchport port-security mac-address sticky` command, all current STICKY SECURE MAC ADDRESSES will be converted to regular dynamically-learned SECURE MAC ADDRESSES
+- When you issue the `switchport port-security mac-address sticky` command, all current dynamically-learned secure MAC addresses will be converted to STICKY SECURE MAC addresses
+- If you issue the `no switchport port-security mac-address sticky` command, all current STICKY SECURE MAC addresses will be converted to regular dynamically-learned SECURE MAC addresses
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/10d591f9-334c-4e3b-889e-16030c36c445)
 
@@ -125,10 +125,10 @@ STICKY SECURE MAC ADDRESSES
 
 MAC ADDRESS TABLE
 
-- SECURE MAC ADDRESSES will be added to the MAC ADDRESS TABLE like any other MAC ADDRESS
-    - STICKY and STATIC SECURE MAC ADDRESSES will have a type of STATIC
-    - Dynamically-Learned SECURE MAC ADDRESSES will have a type of DYNAMIC
-    - You can view all SECURE MAC ADDRESSES with `show mac address-table secure`
+- SECURE MAC addresses will be added to the MAC ADDRESS TABLE like any other MAC address
+    - STICKY and STATIC SECURE MAC addresses will have a type of STATIC
+    - Dynamically-Learned SECURE MAC addresses will have a type of DYNAMIC
+    - You can view all SECURE MAC addresses with `show mac address-table secure`
     
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c9123729-541c-4363-ba19-d8e49f75c6c5)
