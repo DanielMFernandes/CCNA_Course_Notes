@@ -20,19 +20,19 @@ ATTACKS ON DHCP
 DHCP STARVATION
 
 - An example of a DHCP-based attack is a DHCP STARVATION ATTACK
-- An attacker uses spoofed MAC ADDRESSES to flood DHCP DISCOVER messages
-- The TARGET server’s DHCP POOL becomes full, resulting in a DoS to other DEVICES
+- An attacker uses spoofed MAC addresses to flood DHCP DISCOVER messages
+- The target server’s DHCP pool becomes full, resulting in a DoS to other devices
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/33dfbb8b-2b78-4700-b4ab-0dd95fc03eed)
 
 DHCP POISONING (Man-in-the-Middle)
 
 - Similar to ARP POISONING, DHCP POISONING can be used to perform a Man-in-the-Middle attack
-- A *spurious DHCP SERVER* replies to CLIENTS’ DHCP Discover messages and assigns them IP ADDRESSES but makes the CLIENTS use the *spurious SERVER’S IP* as a default gateway
+- A *spurious DHCP server* replies to clients’ DHCP Discover messages and assigns them IP addresses but makes the clients use the *spurious server’s IP* as a default gateway
 
-** CLIENTS usually accept the first DHCP OFFER message they receive
+** clients usually accept the first DHCP OFFER message they receive
 
-- This will cause the CLIENT to send TRAFFIC to the attacker instead of the legitimate default gateway
+- This will cause the client to send TRAFFIC to the attacker instead of the legitimate default gateway
 - The attacker can then examine / modify the TRAFFIC before forwarding it to the legitimate default gateway
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d0cd7a5c-9ff4-4ab7-bec6-4edec4ea2646)
@@ -43,17 +43,17 @@ DHCP POISONING (Man-in-the-Middle)
 
 DHCP MESSAGES
 
-- When DHCP snooping filters messages, it differentiates between DHCP SERVER messages and DHCP CLIENT messages
+- When DHCP snooping filters messages, it differentiates between DHCP server messages and DHCP client messages
 
-- Messages sent by DHCP SERVERS:
+- Messages sent by DHCP servers:
     - OFFER
     - ACK
-    - NAK = Opposite of ACK - used to DECLINE a CLIENT’S REQUEST
-- Messages sent by DHCP CLIENTS:
+    - NAK = Opposite of ACK - used to decline a client’S request
+- Messages sent by DHCP clients:
     - DISCOVER
     - REQUEST
-    - RELEASE = Used to tell the SERVER that the CLIENT no longer needs its IP ADDRESS
-    - DECLINE = Used to DECLINE the IP ADDRESS offered by a DHCP SERVER
+    - RELEASE = Used to tell the server that the client no longer needs its IP address
+    - DECLINE = Used to DECLINE the IP address offered by a DHCP server
 
 ---
 
@@ -61,18 +61,18 @@ HOW DOES IT WORK?
 
 - If a DHCP message is received on a trusted port, forward it as normal without inspection
 - If a DHCP message is received on an untrusted port, inspect it and act as follows:
-    - If it is a DHCP SERVER message, discard it
-    - If it as a DHCP CLIENT message, perform the following checks:
+    - If it is a DHCP server message, discard it
+    - If it as a DHCP client message, perform the following checks:
         - DISCOVER / REQUEST messages :
-            - Check if the FRAME’S SOURCE MAC ADDRESS and the DHCP message’s CHADDR FIELDS match.
+            - Check if the frame’s source MAC address and the DHCP message’s CHADDR fields match.
                 - MATCH = FORWARD
                 - MISMATCH = DISCARD
         - RELEASE / DECLINE messages:
-            - Check if the PACKET’S SOURCE IP ADDRESS and the receiving INTERFACE match the entry in the *DHCP SNOOPING BINDING TABLE*
-                - MATCH = FORWARD
-                - MISMATCH = DISCARD
+            - Check if the packet’s source IP address and the receiving INTERFACE match the entry in the *DHCP SNOOPING BINDING TABLE*
+                - MATCH = forward
+                - MISMATCH = discard
     
-- When a CLIENT successfully leases an IP ADDRESS from a SERVER, create a new entry in the *DHCP snooping BINDING TABLE*
+- When a client successfully leases an IP address from a server, create a new entry in the *DHCP snooping BINDING TABLE*
 
 ---
 
@@ -105,9 +105,9 @@ DHCP SNOOPING RATE-LIMITING
 DHCP OPTION 82 (INFORMATION OPTION)
 
 - OPTION 82, also known as a ‘DHCP RELAY AGENT INFOMRATION OPTION’ is one of MANY DHCP OPTIONS
-- It provides additional information about which DHCP RELAY AGENT received the CLIENT’S message, on which INTERFACE, in which VLAN, etc.
-- DHCP RELAY AGENTS can add OPTION 82 to message they forward to the remote DHCP SERVER
-- With DHCP snooping enabled, by default Cisco switches will add OPTION 82 to DHCP messages they receive from CLIENTS, even if the switch isn’t acting as a DHCP RELAY AGENT
+- It provides additional information about which DHCP RELAY AGENT received the client’s message, on which INTERFACE, in which VLAN, etc.
+- DHCP RELAY AGENTS can add OPTION 82 to message they forward to the remote DHCP server
+- With DHCP snooping enabled, by default Cisco switches will add OPTION 82 to DHCP messages they receive from clients, even if the switch isn’t acting as a DHCP RELAY AGENT
 - By default, Cisco switches will drop DHCP messages with OPTION 82 that are received on an untrusted port
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2efc6edd-21fd-4c1a-bb11-9c1f761e1d32)
