@@ -32,8 +32,8 @@ DHCP POISONING (Man-in-the-Middle)
 
 ** clients usually accept the first DHCP OFFER message they receive
 
-- This will cause the client to send TRAFFIC to the attacker instead of the legitimate default gateway
-- The attacker can then examine / modify the TRAFFIC before forwarding it to the legitimate default gateway
+- This will cause the client to send traffic to the attacker instead of the legitimate default gateway
+- The attacker can then examine / modify the traffic before forwarding it to the legitimate default gateway
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d0cd7a5c-9ff4-4ab7-bec6-4edec4ea2646)
 
@@ -48,12 +48,12 @@ DHCP MESSAGES
 - Messages sent by DHCP servers:
     - OFFER
     - ACK
-    - NAK = Opposite of ACK - used to decline a client’S request
+    - NAK = Opposite of ACK - used to decline a client’s request
 - Messages sent by DHCP clients:
     - DISCOVER
     - REQUEST
     - RELEASE = Used to tell the server that the client no longer needs its IP address
-    - DECLINE = Used to DECLINE the IP address offered by a DHCP server
+    - DECLINE = Used to decline the IP address offered by a DHCP server
 
 ---
 
@@ -65,14 +65,14 @@ HOW DOES IT WORK?
     - If it as a DHCP client message, perform the following checks:
         - DISCOVER / REQUEST messages :
             - Check if the frame’s source MAC address and the DHCP message’s CHADDR fields match.
-                - MATCH = FORWARD
-                - MISMATCH = DISCARD
+                - MATCH = forward
+                - MISMATCH = discard
         - RELEASE / DECLINE messages:
-            - Check if the packet’s source IP address and the receiving INTERFACE match the entry in the *DHCP SNOOPING BINDING TABLE*
+            - Check if the packet’s source IP address and the receiving interface match the entry in the *DHCP SNOOPING BINDING TABLE*
                 - MATCH = forward
                 - MISMATCH = discard
     
-- When a client successfully leases an IP address from a server, create a new entry in the *DHCP snooping BINDING TABLE*
+- When a client successfully leases an IP address from a server, create a new entry in the *DHCP snooping binding table*
 
 ---
 
@@ -90,9 +90,9 @@ SWITCH 1’s CONFIGURATION
 
 DHCP SNOOPING RATE-LIMITING
 
-- DHCP snooping can limit the RATE at which DHCP messages are allowed to enter an INTERFACE
-- If the RATE of DHCP messages crosses the configured LIMIT, the INTERFACE is `err-disabled`
-- Like with port SECURITY, the interface can be manually re-enabled, or automatically re-enabled with `errdisable recovery`
+- DHCP snooping can limit the RATE at which DHCP messages are allowed to enter an interface
+- If the RATE of DHCP messages crosses the configured LIMIT, the interface is `err-disabled`
+- Like with port security, the interface can be manually re-enabled, or automatically re-enabled with `errdisable recovery`
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/6586df19-5a58-4ca3-a316-bd0aeb2ce67c)
 
@@ -104,28 +104,28 @@ DHCP SNOOPING RATE-LIMITING
 
 DHCP OPTION 82 (INFORMATION OPTION)
 
-- OPTION 82, also known as a ‘DHCP RELAY AGENT INFOMRATION OPTION’ is one of MANY DHCP OPTIONS
-- It provides additional information about which DHCP RELAY AGENT received the client’s message, on which INTERFACE, in which VLAN, etc.
-- DHCP RELAY AGENTS can add OPTION 82 to message they forward to the remote DHCP server
-- With DHCP snooping enabled, by default Cisco switches will add OPTION 82 to DHCP messages they receive from clients, even if the switch isn’t acting as a DHCP RELAY AGENT
-- By default, Cisco switches will drop DHCP messages with OPTION 82 that are received on an untrusted port
+- Option 82, also known as a ‘DHCP RELAY AGENT INFOMRATION OPTION’ is one of many DHCP options
+- It provides additional information about which DHCP relay agent received the client’s message, on which interface, in which VLAN, etc.
+- DHCP relay agents can add option 82 to message they forward to the remote DHCP server
+- With DHCP snooping enabled, by default Cisco switches will add option 82 to DHCP messages they receive from clients, even if the switch isn’t acting as a DHCP relay agent
+- By default, Cisco switches will drop DHCP messages with option 82 that are received on an untrusted port
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2efc6edd-21fd-4c1a-bb11-9c1f761e1d32)
 
-THIS command disables OPTION 82 for SW1 but NOT SW2 
+THIS command disables OPTION 82 for SW1 but not SW2 
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/84f1c3f2-9ad1-4367-97f3-95dab053b30c)
 
-TRAFFIC gets passed to R1 and is DROPPED because of “inconsistent relay information” (packet contains OPTION 82 but wasn’t dropped by SW2)
+traffic gets passed to R1 and is dropped because of “inconsistent relay information” (packet contains option 82 but wasn’t dropped by SW2)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/5c4b547e-c588-4d62-8098-76902199a131)
 
-By ENABLING OPTION 82 on both switches…
+By ENABLING option 82 on both switches…
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/dda50cf6-ae86-47ec-9b4f-104669697f64)
 
-PC1’s DHCP DISCOVER message gets passed, through SW1 and SW2, to R1.
-R1 responds with an DHCP OFFER message, as normal
+PC1’s DHCP discover message gets passed, through SW1 and SW2, to R1.
+R1 responds with an DHCP offer message, as normal
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7e59cc5a-bf8e-482d-848d-5bfa0540c74b)
 
