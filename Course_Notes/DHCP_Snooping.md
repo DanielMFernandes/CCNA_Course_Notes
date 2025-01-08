@@ -2,11 +2,11 @@
 
 WHAT IS DHCP SNOOPING?
 
-- DHCP SNOOPING is a security feature of SWITCHES that is used to filter DHCP messages received on UNTRUSTED PORTS
-- DHCP SNOOPING only filters DHCP MESSAGES.
-    - Non-DHCP MESSAGES are not affected
-- All PORTS are UNTRUSTED, by DEFAULT
-    - Usually UPLINK PORTS are configured as TRUSTED PORTS, and DOWNLINK PORTS remain UNTRUSTED
+- DHCP SNOOPING is a security feature of switches that is used to filter DHCP messages received on untrusted ports
+- DHCP snooping only filters DHCP messages.
+    - Non-DHCP messages are not affected
+- All ports are untrusted, by default
+    - Usually uplink ports are configured as trusted ports, and downlink ports remain untrusted
     
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/9ed71d09-d94c-4fc9-ad87-1b31acfdd132)
@@ -19,21 +19,21 @@ ATTACKS ON DHCP
 
 DHCP STARVATION
 
-- An example of a DHCP-based ATTACK is a DHCP STARVATION ATTACK
-- An ATTACKER uses spoofed MAC ADDRESSES to flood DHCP DISCOVER messages
+- An example of a DHCP-based attack is a DHCP STARVATION ATTACK
+- An attacker uses spoofed MAC ADDRESSES to flood DHCP DISCOVER messages
 - The TARGET server’s DHCP POOL becomes full, resulting in a DoS to other DEVICES
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/33dfbb8b-2b78-4700-b4ab-0dd95fc03eed)
 
 DHCP POISONING (Man-in-the-Middle)
 
-- Similar to ARP POISONING, DHCP POISONING can be used to perform a Man-in-the-Middle ATTACK
-- A *spurious DHCP SERVER* replies to CLIENTS’ DHCP Discover messages and assigns them IP ADDRESSES but makes the CLIENTS use the *spurious SERVER’S IP* as a DEFAULT GATEWAY
+- Similar to ARP POISONING, DHCP POISONING can be used to perform a Man-in-the-Middle attack
+- A *spurious DHCP SERVER* replies to CLIENTS’ DHCP Discover messages and assigns them IP ADDRESSES but makes the CLIENTS use the *spurious SERVER’S IP* as a default gateway
 
 ** CLIENTS usually accept the first DHCP OFFER message they receive
 
-- This will cause the CLIENT to send TRAFFIC to the ATTACKER instead of the legitimate DEFAULT GATEWAY
-- The ATTACKER can then examine / modify the TRAFFIC before forwarding it to the legitimate DEFAULT GATEWAY
+- This will cause the CLIENT to send TRAFFIC to the attacker instead of the legitimate default gateway
+- The attacker can then examine / modify the TRAFFIC before forwarding it to the legitimate default gateway
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d0cd7a5c-9ff4-4ab7-bec6-4edec4ea2646)
 
@@ -43,7 +43,7 @@ DHCP POISONING (Man-in-the-Middle)
 
 DHCP MESSAGES
 
-- When DHCP SNOOPING filters messages, it differentiates between DHCP SERVER messages and DHCP CLIENT messages
+- When DHCP snooping filters messages, it differentiates between DHCP SERVER messages and DHCP CLIENT messages
 
 - Messages sent by DHCP SERVERS:
     - OFFER
@@ -59,12 +59,12 @@ DHCP MESSAGES
 
 HOW DOES IT WORK?
 
-- If a DHCP MESSAGE is received on a TRUSTED PORT, forward it as normal without inspection
-- If a DHCP MESSAGE is received on an UNTRUSTED PORT, inspect it and act as follows:
+- If a DHCP message is received on a trusted port, forward it as normal without inspection
+- If a DHCP message is received on an untrusted port, inspect it and act as follows:
     - If it is a DHCP SERVER message, discard it
     - If it as a DHCP CLIENT message, perform the following checks:
         - DISCOVER / REQUEST messages :
-            - Check if the FRAME’S SOURCE MAC ADDRESS and the DHCP MESSAGE’S CHADDR FIELDS match.
+            - Check if the FRAME’S SOURCE MAC ADDRESS and the DHCP message’s CHADDR FIELDS match.
                 - MATCH = FORWARD
                 - MISMATCH = DISCARD
         - RELEASE / DECLINE messages:
@@ -72,7 +72,7 @@ HOW DOES IT WORK?
                 - MATCH = FORWARD
                 - MISMATCH = DISCARD
     
-- When a CLIENT successfully leases an IP ADDRESS from a SERVER, create a new entry in the *DHCP SNOOPING BINDING TABLE*
+- When a CLIENT successfully leases an IP ADDRESS from a SERVER, create a new entry in the *DHCP snooping BINDING TABLE*
 
 ---
 
@@ -90,9 +90,9 @@ SWITCH 1’s CONFIGURATION
 
 DHCP SNOOPING RATE-LIMITING
 
-- DHCP SNOOPING can limit the RATE at which DHCP messages are allowed to enter an INTERFACE
+- DHCP snooping can limit the RATE at which DHCP messages are allowed to enter an INTERFACE
 - If the RATE of DHCP messages crosses the configured LIMIT, the INTERFACE is `err-disabled`
-- Like with PORT SECURITY, the interface can be manually re-enabled, or automatically re-enabled with `errdisable recovery`
+- Like with port SECURITY, the interface can be manually re-enabled, or automatically re-enabled with `errdisable recovery`
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/6586df19-5a58-4ca3-a316-bd0aeb2ce67c)
 
@@ -107,8 +107,8 @@ DHCP OPTION 82 (INFORMATION OPTION)
 - OPTION 82, also known as a ‘DHCP RELAY AGENT INFOMRATION OPTION’ is one of MANY DHCP OPTIONS
 - It provides additional information about which DHCP RELAY AGENT received the CLIENT’S message, on which INTERFACE, in which VLAN, etc.
 - DHCP RELAY AGENTS can add OPTION 82 to message they forward to the remote DHCP SERVER
-- With DHCP SNOOPING enabled, by default Cisco SWITCHES will add OPTION 82 to DHCP messages they receive from CLIENTS, even if the SWITCH isn’t acting as a DHCP RELAY AGENT
-- By DEFAULT, Cisco SWITCHES will drop DHCP MESSAGES with OPTION 82 that are received on an UNTRUSTED PORT
+- With DHCP snooping enabled, by default Cisco switches will add OPTION 82 to DHCP messages they receive from CLIENTS, even if the switch isn’t acting as a DHCP RELAY AGENT
+- By default, Cisco switches will drop DHCP messages with OPTION 82 that are received on an untrusted port
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2efc6edd-21fd-4c1a-bb11-9c1f761e1d32)
 
@@ -120,7 +120,7 @@ TRAFFIC gets passed to R1 and is DROPPED because of “inconsistent relay inform
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/5c4b547e-c588-4d62-8098-76902199a131)
 
-By ENABLING OPTION 82 on both SWITCHES…
+By ENABLING OPTION 82 on both switches…
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/dda50cf6-ae86-47ec-9b4f-104669697f64)
 
