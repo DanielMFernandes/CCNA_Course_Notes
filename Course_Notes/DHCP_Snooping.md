@@ -20,17 +20,17 @@ ATTACKS ON DHCP
 DHCP STARVATION
 
 - An example of a DHCP-based attack is a DHCP STARVATION ATTACK
-- An attacker uses spoofed MAC addresses to flood DHCP DISCOVER messages
+- An attacker uses spoofed MAC addresses to flood DHCP discover messages
 - The target server’s DHCP pool becomes full, resulting in a DoS to other devices
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/33dfbb8b-2b78-4700-b4ab-0dd95fc03eed)
 
 DHCP POISONING (Man-in-the-Middle)
 
-- Similar to ARP POISONING, DHCP POISONING can be used to perform a Man-in-the-Middle attack
-- A *spurious DHCP server* replies to clients’ DHCP Discover messages and assigns them IP addresses but makes the clients use the *spurious server’s IP* as a default gateway
+- Similar to ARP poisoning, DHCP POISONING can be used to perform a Man-in-the-Middle attack
+- A *spurious DHCP server* replies to clients’ DHCP discover messages and assigns them IP addresses but makes the clients use the *spurious server’s IP* as a default gateway
 
-** clients usually accept the first DHCP OFFER message they receive
+** clients usually accept the first DHCP offer message they receive
 
 - This will cause the client to send traffic to the attacker instead of the legitimate default gateway
 - The attacker can then examine / modify the traffic before forwarding it to the legitimate default gateway
@@ -96,7 +96,7 @@ DHCP SNOOPING RATE-LIMITING
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/6586df19-5a58-4ca3-a316-bd0aeb2ce67c)
 
-- You wouldn’t set the limit rate to 1 since it’s so low, it would shut the port immediately but this shows how RATE-LIMITING works
+- You wouldn’t set the limit rate to 1 since it’s so low, it would shut the port immediately but this shows how rate-limiting works
 
 `errdisable recovery cause dhcp-rate-limit`
 
