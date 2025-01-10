@@ -112,15 +112,15 @@ DHCP OPTION 82 (INFORMATION OPTION)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2efc6edd-21fd-4c1a-bb11-9c1f761e1d32)
 
-This command disables OPTION 82 for SW1 but not SW2 
+This command disables option 82 for SW1 but not SW2 
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/84f1c3f2-9ad1-4367-97f3-95dab053b30c)
 
-traffic gets passed to R1 and is dropped because of “inconsistent relay information” (packet contains option 82 but wasn’t dropped by SW2)
+Traffic gets passed to R1 and is dropped because of “inconsistent relay information” (packet contains option 82 but wasn’t dropped by SW2)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/5c4b547e-c588-4d62-8098-76902199a131)
 
-By ENABLING option 82 on both switches…
+By enabling option 82 on both switches…
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/dda50cf6-ae86-47ec-9b4f-104669697f64)
 
