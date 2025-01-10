@@ -106,7 +106,7 @@ DHCP OPTION 82 (INFORMATION OPTION)
 
 - Option 82, also known as a ‘DHCP RELAY AGENT INFORMATION OPTION’ is one of many DHCP options
 - It provides additional information about which DHCP relay agent received the client’s message, on which interface, in which VLAN, etc.
-- DHCP relay agents can add option 82 to message they forward to the remote DHCP server
+- DHCP relay agents can add option 82 to messages they forward to the remote DHCP server
 - With DHCP snooping enabled, by default Cisco switches will add option 82 to DHCP messages they receive from clients, even if the switch isn’t acting as a DHCP relay agent
 - By default, Cisco switches will drop DHCP messages with option 82 that are received on an untrusted port
 
