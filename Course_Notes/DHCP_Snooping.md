@@ -98,8 +98,6 @@ DHCP SNOOPING RATE-LIMITING
 
 - You wouldn’t set the limit rate to 1 since it’s so low, it would shut the port immediately but this shows how rate-limiting works
 
-`errdisable recovery cause dhcp-rate-limit`
-
 ![image](https://github.com/psaumur/CCNA/assets/106411237/83c324aa-baa0-4ae1-82ac-157e503e048a)
 
 DHCP OPTION 82 (INFORMATION OPTION)
@@ -120,7 +118,7 @@ Traffic gets passed to R1 and is dropped because of “inconsistent relay inform
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/5c4b547e-c588-4d62-8098-76902199a131)
 
-By enabling option 82 on both switches…
+By disabling option 82 on both switches…
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/dda50cf6-ae86-47ec-9b4f-104669697f64)
 
