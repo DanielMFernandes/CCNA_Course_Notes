@@ -19,7 +19,7 @@ ATTACKS ON DHCP
 
 DHCP STARVATION
 
-- An example of a DHCP-based attack is a DHCP STARVATION ATTACK
+- An example of a DHCP-based attack is a DHCP STARVATION ATTACK (DHCP EXHAUSTION)
 - An attacker uses spoofed MAC addresses to flood DHCP discover messages
 - The target server’s DHCP pool becomes full, resulting in a DoS to other devices
 
