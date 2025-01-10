@@ -104,7 +104,7 @@ DHCP SNOOPING RATE-LIMITING
 
 DHCP OPTION 82 (INFORMATION OPTION)
 
-- Option 82, also known as a ‘DHCP RELAY AGENT INFOMRATION OPTION’ is one of many DHCP options
+- Option 82, also known as a ‘DHCP RELAY AGENT INFORMATION OPTION’ is one of many DHCP options
 - It provides additional information about which DHCP relay agent received the client’s message, on which interface, in which VLAN, etc.
 - DHCP relay agents can add option 82 to message they forward to the remote DHCP server
 - With DHCP snooping enabled, by default Cisco switches will add option 82 to DHCP messages they receive from clients, even if the switch isn’t acting as a DHCP relay agent
