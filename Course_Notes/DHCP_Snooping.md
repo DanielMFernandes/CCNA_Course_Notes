@@ -112,7 +112,7 @@ DHCP OPTION 82 (INFORMATION OPTION)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2efc6edd-21fd-4c1a-bb11-9c1f761e1d32)
 
-THIS command disables OPTION 82 for SW1 but not SW2 
+This command disables OPTION 82 for SW1 but not SW2 
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/84f1c3f2-9ad1-4367-97f3-95dab053b30c)
 
