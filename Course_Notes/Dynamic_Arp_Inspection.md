@@ -8,9 +8,9 @@ ARP REVIEW
     - For example, a PC will use ARP to learn the MAC address of its default gateway to communicate with external networks
 - Typically, it is a two message exchange :  ARP request and ARP reply
 
-GRATUITOUS ARP
+GRATUITOUS ARP REVIEW
 
-- A GRATUITOUS ARP message is an ARP reply that is sent without receiving an ARP request
+- A gratuitous ARP message is an ARP reply that is sent without receiving an ARP request
 - It is sent to the broadcast MAC address
 - It allows other devices to learn the MAC address of the sending device without having to send ARP requests.
 - Some devices automatically send GARP messages when an interface is enabled, IP address is changed, MAC address is changed, etc.
