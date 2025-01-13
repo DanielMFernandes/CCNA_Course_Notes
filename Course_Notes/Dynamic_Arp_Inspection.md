@@ -4,23 +4,23 @@ WHAT IS DYNAMIC ARP INSPECTION (DAI) ?
 
 ARP REVIEW
 
-- ARP is used to learn the MAC ADDRESS of another DEVICE with a known IP ADDRESS
-    - For example, a PC will use ARP to learn the MAC ADDRESS of its DEFAULT GATEWAY to communicate with external NETWORKS
-- Typically, it is a TWO MESSAGE EXCHANGE :  ARP REQUEST and ARP REPLY
+- ARP is used to learn the MAC address of another device with a known IP address
+    - For example, a PC will use ARP to learn the MAC address of its default GATEWAY to communicate with external networks
+- Typically, it is a two message exchange :  ARP request and ARP reply
 
 GRATUITOUS ARP
 
-- A GRATUITOUS ARP MESSAGE is an ARP REPLY that is sent without receiving an ARP REQUEST
-- It is SENT to the BROADCAST MAC ADDRESS
-- It allows other DEVICES to learn the MAC ADDRESS of the sending DEVICE without having to send ARP REQUESTS.
-- Some DEVICES automatically send GARP MESSAGES when an INTERFACE is enabled, IP ADDRESS is changed, MAC address is changed, etc.
+- A GRATUITOUS ARP message is an ARP reply that is sent without receiving an ARP request
+- It is sent to the broadcast MAC address
+- It allows other devices to learn the MAC address of the sending device without having to send ARP requests.
+- Some devices automatically send GARP messages when an interface is enabled, IP address is changed, MAC address is changed, etc.
 
 DYNAMIC ARP INSPECTION
 
-- DAI is a SECURITY FEATURE of SWITCHES that is used to filter ARP MESSAGES received on  *UNTRUSTED PORTS*
-- DAI only filters ARP MESSAGES. Non-ARP MESSAGES are NOT affected
-- All PORTS are *UNTRUSTED*, by DEFAULT
-    - Typically, all PORTS connected to other NETWORK DEVICES (SWITCHES, ROUTERS) should be configured as TRUSTED, while INTERFACES connected to END HOSTS should remain UNTRUSTED
+- DAI is a SECURITY FEATURE of switches that is used to filter ARP messages received on  *untrusted ports*
+- DAI only filters ARP messages. Non-ARP messages are not affected
+- All ports are *untrusted*, by default
+    - Typically, all ports connected to other network devices (switches, routers) should be configured as trusted, while interfaces connected to END HOSTS should remain untrusted
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/02da32ef-654c-4755-abcd-ea8230df4029)
 
@@ -32,30 +32,30 @@ DYNAMIC ARP INSPECTION
 
 ARP POISONING (MAN IN THE MIDDLE)
 
-- Similar to DHCP POISONING, ARP POISONING involved an ATTACKER manipulating TARGET’S ARP TABLES so TRAFFIC is sent to the ATTACKER
-- To do this, the ATTACKER can send GRATUITOUS ARP MESSAGES using another DEVICE’S IP ADDRESS
-- Other DEVICES in the NETWORK will receive the GARP and update their ARP TABLES, causing them to send TRAFFIC to the ATTACKER instead of the legitimate DESTINATION
+- Similar to DHCP POISONING, ARP POISONING involved an attacker manipulating target’s ARP tables so traffic is sent to the attacker
+- To do this, the attacker can send GRATUITOUS ARP messages using another device’s IP address
+- Other devices in the network will receive the GARP and update their ARP tables, causing them to send TRAFFIC to the attacker instead of the legitimate destination
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/aae80c8f-2673-4c04-a206-9b646f5c1f08)
 
 DYNAMIC ARP INSPECTION OPERATIONS
 
-- DAI inspects the SENDER MAC and SENDER IP fields of ARP MESSAGES received on UNTRUSTED PORTS and checks that there is a matching entry in the DHCP SNOOPING BINDING TABLE
-    - If there is a MATCH, the ARP MESSAGE is FORWARDED
-    - If there is NO MATCH, the ARP MESSAGE is DISCARDED
+- DAI inspects the sender MAC and sender IP fields of ARP messages received on untrusted ports and checks that there is a matching entry in the DHCP SNOOPING BINDING TABLE
+    - If there is a match, the ARP message is forwarded
+    - If there is no match, the ARP message is discarded
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/060f3d3a-b2fd-46a1-8b3c-7a6839985c87)
 
-- DAI doesn’t inspect messages received on TRUSTED PORTS. They are FORWARDED as normal.
+- DAI doesn’t inspect messages received on trusted ports. They are forwarded as normal.
 
-- ARP ACLs can be manually configured to map IP ADDRESSES / MAC ADDRESSES for DAI to check
+- ARP ACLs can be manually configured to map IP addresses / MAC addresses for DAI to check
     - Useful for HOSTS that don’t use DHCP
     
 - DAI can be configured to perform more in-depth checks also - but these are optional
 
-- Like DHCP SNOOPING, DAI also supports RATE-LIMITING to prevent ATTACKERS from overwhelming the SWITCH with ARP MESSAGES
-    - DHCP SNOOPING and DAI both require work from the SWITCH’S CPU
-    - Even if the ATTACKER’S messages are BLOCKED, they can OVERLOAD the SWITCH CPU with ARP MESSAGES
+- Like DHCP SNOOPING, DAI also supports RATE-LIMITING to prevent attackers from overwhelming the switch with ARP messages
+    - DHCP SNOOPING and DAI both require work from the switch’s CPU
+    - Even if the attacker’s messages are BLOCKED, they can OVERLOAD the switch CPU with ARP messages
 
 ---
 
@@ -87,7 +87,7 @@ CREATE AN ARP ACL FOR SRV1
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/cf121a75-45b2-4e2d-a35f-320e3f5491fa)
 
-AFTER APPLYING IT TO SWITCH 2, SRV1 is able to send ARP REQUEST to R1
+AFTER APPLYING IT TO switch 2, SRV1 is able to send ARP request to R1
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/582feed0-1915-4f59-b3b9-9db37854c6e1)
 
