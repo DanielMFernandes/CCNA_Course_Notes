@@ -32,7 +32,7 @@ DYNAMIC ARP INSPECTION
 
 ARP POISONING (MAN IN THE MIDDLE)
 
-- Similar to DHCP poisoning, ARP snooping involved an attacker manipulating target’s ARP tables so traffic is sent to the attacker
+- Similar to DHCP poisoning, ARP poisoning involved an attacker manipulating target’s ARP tables so traffic is sent to the attacker
 - To do this, the attacker can send GRATUITOUS ARP messages using another device’s IP address
 - Other devices in the network will receive the GARP and update their ARP tables, causing them to send traffic to the attacker instead of the legitimate destination
 
