@@ -5,7 +5,7 @@ WHAT IS DYNAMIC ARP INSPECTION (DAI) ?
 ARP REVIEW
 
 - ARP is used to learn the MAC address of another device with a known IP address
-    - For example, a PC will use ARP to learn the MAC address of its default GATEWAY to communicate with external networks
+    - For example, a PC will use ARP to learn the MAC address of its default gateway to communicate with external networks
 - Typically, it is a two message exchange :  ARP request and ARP reply
 
 GRATUITOUS ARP
@@ -17,10 +17,10 @@ GRATUITOUS ARP
 
 DYNAMIC ARP INSPECTION
 
-- DAI is a SECURITY FEATURE of switches that is used to filter ARP messages received on  *untrusted ports*
+- DAI is a security feature of switches that is used to filter ARP messages received on  *untrusted ports*
 - DAI only filters ARP messages. Non-ARP messages are not affected
 - All ports are *untrusted*, by default
-    - Typically, all ports connected to other network devices (switches, routers) should be configured as trusted, while interfaces connected to END HOSTS should remain untrusted
+    - Typically, all ports connected to other network devices (switches, routers) should be configured as trusted, while interfaces connected to end hosts should remain untrusted
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/02da32ef-654c-4755-abcd-ea8230df4029)
 
@@ -32,15 +32,15 @@ DYNAMIC ARP INSPECTION
 
 ARP POISONING (MAN IN THE MIDDLE)
 
-- Similar to DHCP POISONING, ARP POISONING involved an attacker manipulating target’s ARP tables so traffic is sent to the attacker
+- Similar to DHCP poisoning, ARP snooping involved an attacker manipulating target’s ARP tables so traffic is sent to the attacker
 - To do this, the attacker can send GRATUITOUS ARP messages using another device’s IP address
-- Other devices in the network will receive the GARP and update their ARP tables, causing them to send TRAFFIC to the attacker instead of the legitimate destination
+- Other devices in the network will receive the GARP and update their ARP tables, causing them to send traffic to the attacker instead of the legitimate destination
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/aae80c8f-2673-4c04-a206-9b646f5c1f08)
 
 DYNAMIC ARP INSPECTION OPERATIONS
 
-- DAI inspects the sender MAC and sender IP fields of ARP messages received on untrusted ports and checks that there is a matching entry in the DHCP SNOOPING BINDING TABLE
+- DAI inspects the sender MAC and sender IP fields of ARP messages received on untrusted ports and checks that there is a matching entry in the DHCP snooping binding table
     - If there is a match, the ARP message is forwarded
     - If there is no match, the ARP message is discarded
 
@@ -49,13 +49,13 @@ DYNAMIC ARP INSPECTION OPERATIONS
 - DAI doesn’t inspect messages received on trusted ports. They are forwarded as normal.
 
 - ARP ACLs can be manually configured to map IP addresses / MAC addresses for DAI to check
-    - Useful for HOSTS that don’t use DHCP
+    - Useful for hosts that don’t use DHCP
     
 - DAI can be configured to perform more in-depth checks also - but these are optional
 
-- Like DHCP SNOOPING, DAI also supports RATE-LIMITING to prevent attackers from overwhelming the switch with ARP messages
-    - DHCP SNOOPING and DAI both require work from the switch’s CPU
-    - Even if the attacker’s messages are BLOCKED, they can OVERLOAD the switch CPU with ARP messages
+- Like DHCP snooping, DAI also supports rate-limiting to prevent attackers from overwhelming the switch with ARP messages
+    - DHCP snooping and DAI both require work from the switch’s CPU
+    - Even if the attacker’s messages are blocked, they can overload the switch CPU with ARP messages
 
 ---
 
@@ -83,11 +83,11 @@ DAI OPTIONAL CHECKS
 
 ARP ACLs (Beyond Scope of CCNA)
 
-CREATE AN ARP ACL FOR SRV1
+Create an ARP ACL for SRV1
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/cf121a75-45b2-4e2d-a35f-320e3f5491fa)
 
-AFTER APPLYING IT TO switch 2, SRV1 is able to send ARP request to R1
+After applying it to switch 2, SRV1 is able to send ARP request to R1
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/582feed0-1915-4f59-b3b9-9db37854c6e1)
 
