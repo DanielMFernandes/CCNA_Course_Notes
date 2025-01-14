@@ -31,18 +31,18 @@ COMMON TERMINOLOGIES
 
 2-TIER AND 3-TIER LAN ARCHITECTURE
 
-- The TWO-TIER LAN design consists of two Hierarchical Layers:
+- The TWO-TIER LAN design consists of two hierarchical layers:
     - ACCESS LAYER
     - DISTRIBUTION LAYER
-- Also called a “COLLAPSED CORE” design because it omits a layer that is found in the THREE TIER design : THE CORE LAYER
+- Also called a “COLLAPSED CORE” design because it omits a layer that is found in the THREE TIER LAN design : THE CORE LAYER
 - ACCESS LAYER
-    - The layer that END HOSTS connect to (PCs, Printers, Cameras, etc)
-    - Typically, access layer SWITCHES have lots of ports for END HOSTS to connect to
-    - QoS MARKING is typically done here
-    - Security Services like port SECURITY, DAI, etc are typically performed here
-    - SWITCHPORTS might be PoE-Enabled for Wireless APs, IP Phones, etc.
+    - The layer that end hosts connect to (PCs, Printers, Cameras, etc)
+    - Typically, access layer switches have lots of ports for end hosts to connect to
+    - QoS marking is typically done here
+    - Security Services like port security, DAI, etc are typically performed here
+    - Switchports might be PoE-Enabled for wireless APs, IP Phones, etc.
 - DISTRIBUTION LAYER
-    - Aggregates connections from the access layer SWITCHES
+    - Aggregates connections from the access layer switches
     - Typically is the border between layer 2 and layer 3
     - Connects to services such as Internet, WAN, etc
     - Sometimes called AGGREGATION LAYER
@@ -59,27 +59,27 @@ COMMON TERMINOLOGIES
 
 THREE-TIER CAMPUS LAN design
 
-- In large networks with many DISTRIBUTION LAYER SWITCHES (for example in separate buildings), the number of connections required between DISTRIBUTION LAYER SWITCHES grows rapidly
+- In large networks with many distribution layer switches (for example in separate buildings), the number of connections required between distribution layer switches grows rapidly
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8b94c8e9-813b-40e0-bcd1-b27d73da31e8)
 
-- To help SCALE large LAN networks, you can add a CORE LAYER.
+- To help scale large LAN networks, you can add a CORE LAYER.
 
-** Cisco recommends adding a CORE LAYER if there are more than THREE DISTRIBUTION LAYERS in a single location
+** Cisco recommends adding a CORE LAYER if there are more than three distribution layer in a single location
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d5c1a677-38ff-425f-b91a-65a8fa37c377)
 
-- The THREE-TIER LAN design consists of THREE HIERARCHICAL LAYERS:
+- The THREE-TIER LAN design consists of three hierarchical layers:
     - ACCESS LAYER
     - DISTRIBUTION LAYER
     - CORE LAYER
 
 - CORE LAYER:
-    - Connects DISTRIBUTION LAYERS together in large LAN networks
-    - The focus is SPEED (”FAST TRANSPORT”)
-    - CPU-INTENSIVE OPERATIONS, such as SECURITY, QoS Markings / Classification, etc. should be avoided at this LAYER
-    - Connections are all LAYER 3. NO SPANNING-TREE!
-    - Should maintain connectivity throughout the LAN even if devices FAIL
+    - Connects distribution layers together in large LAN networks
+    - The focus is speed (”FAST TRANSPORT”)
+    - CPU-intensive operations, such as security, QoS Markings / Classification, etc. should be avoided at this LAYER
+    - Connections are all layer 3. NO SPANNING-TREE!
+    - Should maintain connectivity throughout the LAN even if devices fail
     
 ![image](https://github.com/psaumur/CCNA/assets/106411237/633cee0a-8952-4b27-91a3-8653bb8e353c)
     
@@ -88,43 +88,43 @@ THREE-TIER CAMPUS LAN design
 
 SPINE-LEAF ARCHITECTURE (DATA CENTER)
 
-- CISCO ACI architecture (Application Centric Infrastructure) uses this architecture
-- DATA CENTERS are dedicated spaces / buildings used to STORE COMPUTER SYSTEMS such as SERVERS and network devices
-- Traditional DATA CENTER designs used a THREE-TIER architecture (access-DISTRIBUTION-CORE) like we just covered
-- This worked well when most TRAFFIC in the DATA CENTER was NORTH-SOUTH
+- Cisco ACI architecture (Application Centric Infrastructure) uses this architecture
+- Data centers are dedicated spaces / buildings used to STORE COMPUTER SYSTEMS such as SERVERS and network devices
+- Traditional data center designs used a three-tier architecture (access-DISTRIBUTION-CORE) like we just covered
+- This worked well when most traffic in the data center was NORTH-SOUTH
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7e2ff784-d16f-4606-a186-c73223bf5582)
 
-- With the precedence of VIRTUAL SERVERS, applications are often deployed in a DISTRIBUTED manner (across multiple physical SERVERS) which increases the amount of EAST-WEST TRAFFIC in the DATA CENTER
-- The traditional THREE-TIER architecture led to bottlenecks in the BANDWIDTH as well as VARIABILITY in the SERVER-TO-SERVER latency depending on the PATH the TRAFFIC takes
-- To SOLVE this, SPINE-LEAF architecture (also called CLOS architecture) has become prominent in DATA CENTERS
+- With the precedence of VIRTUAL SERVERS, applications are often deployed in a distributed manner (across multiple physical servers) which increases the amount of EAST-WEST traffic in the data center
+- The traditional three-tier architecture led to bottlenecks in the bandwidth as well as VARIABILITY in the SERVER-TO-SERVER latency depending on the PATH the traffic takes
+- To solve this, SPINE-LEAF architecture (also called CLOS architecture) has become prominent in data centers
 
 RULES FOR SPINE-LEAF ARCHITECTURE
 
 - Every LEAF SWITCH is connected to every SPINE SWITCH
 - Every SPINE SWITCH is connected to every LEAF SWITCH
-- LEAF SWITCHES do NOT connect to other LEAF SWITCHES
-- SPINE SWITCHES do NOT connect to other SPINE SWITCHES
-- END HOSTS (Servers, etc) ONLY connect to LEAF SWITCHES
+- LEAF switches do not connect to other LEAF switches
+- SPINE switches do not connect to other SPINE switches
+- End hosts (Servers, etc) only connect to LEAF switches
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/73cbe190-f589-4307-8ce4-e3de8af2f1d5)
 
-- The PATH taken by TRAFFIC is randomly chosen to balance the TRAFFIC LOAD among the SPINE SWITCHES
-- Each SERVER is separated by the same number of “HOPS” (except those connected to the same LEAF) providing CONSISTENT LATENCY for EAST-WEST TRAFFIC
+- The PATH taken by traffic is randomly chosen to balance the traffic load among the SPINE SWITCHES
+- Each SERVER is separated by the same number of “HOPS” (except those connected to the same LEAF) providing CONSISTENT LATENCY for EAST-WEST traffic
 
 ---
 
 SOHO (SMALL OFFICE / HOME OFFICE)
 
 - SMALL OFFICE / HOME OFFICE (SOHO) refers to the office of a small company, or a small home office with few devices
-    - Doesn’t have to be an actual home “office”; if your home has a network connected to the INTERNET it is considered a SOHO network
+    - Doesn’t have to be an actual home “office”; if your home has a network connected to the internet it is considered a SOHO network
 
 - SOHO networks don’t have complex needs, so all networking functions are typically provided by a SINGLE device, often called a “HOME ROUTER” or “WIRELESS ROUTER”
 - The one device can serve as a:
-    - ROUTER
-    - SWITCH
-    - FIREWALL
-    - WIRELESS access POINT
+    - Router
+    - Switch
+    - Firewall
+    - Wireless access point
     - MODEM
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c9edf179-f333-4fec-9e95-ee291b5eb84c)
