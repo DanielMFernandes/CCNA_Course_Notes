@@ -103,16 +103,16 @@ INTERNET CONNECTIVITY
 DIGITAL SUBSCRIBER LINE (DSL)
 
 - DSL provides Internet connectivity to customers over phone lines and can share the same phone line that is already installed in most homes
-- A DSL MODEM (Modulator / Demodulator) is required to convert data into a format suitable to be sent over the phone lines
-    - The MODEM might be a separate device or it might be incorporated in to a “home router”
+- A DSL modem (Modulator / Demodulator) is required to convert data into a format suitable to be sent over the phone lines
+    - The modem might be a separate device or it might be incorporated in to a “home router”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/a708b6b4-6de5-4a72-8c77-13f569f4c2d5)
 
 CABLE INTERNET
 
 - CABLE INTERNET provides Internet access via the same CATV (Cable Television) lines used for TV service
-- Like DLS, a cable MODEM is required to convert data into a format suitable to be sent over the CATV cables.
-    - Like a DSL MODEM, this can be a separate device or built into the home router
+- Like DSL, a cable modem is required to convert data into a format suitable to be sent over the CATV cables.
+    - Like a DSL modem, this can be a separate device or built into the home router
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/a33bb999-83bc-49a8-ad37-e7ca91fcb954)
 
@@ -151,7 +151,7 @@ PROCESS SUMMARY:
 
 3) The sending device sends the NEW packet to the device on the other side of the tunnel
 
-4) The RECEIVING device decrypts the data to get the original packet and then forwards the original packet to it’s destination
+4) The receiving device decrypts the data to get the original packet and then forwards the original packet to it’s destination
 
 - In a “site-to-site” VPN, a tunnel is formed only between two tunnel endpoints (for example, the two routers connected to the Internet)
 - All other devices in each site do not need to create a VPN for themselves. They can send unencrypted data to their site’s router, which will encrypt it and forward it in the tunnel as described above.
