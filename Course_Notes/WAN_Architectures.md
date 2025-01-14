@@ -3,7 +3,7 @@
 INTRODUCTION TO WANS
 
 - WAN stands for WIDE AREA NETWORK
-- A WAN is a NETWORK that extends over a large geographic area
+- A WAN is a network that extends over a large geographic area
 - WANs are used to connect geographically separate LANs
 - Although the Internet can be considered a WAN, the term “WAN” is typically used to refer to an enterprise’s private connections that connect their offices, data centers, and other sites together
 - Over public/shared networks like the Internet, VPNs (Virtual Private Networks) can be used to create private WAN connections
