@@ -1,29 +1,29 @@
 # 52. LAN ARCHITECTURES
 
-- You have studied various NETWORK technologies: ROUTING, SWITCHING, STP, ETHERCHANNEL, OSPF, FHRPs, SWITCH SECURITY FEATURES, etc.
-    - Now, let’s look at some BASIC NETWORK DESIGN / ARCHITECTURE
-- There are standard “BEST PRACTICES” for NETWORK DESIGN
-    - However there are a few UNIVERSAL “CORRECT ANSWERS”
-    - The answer to MOST general questions about NETWORK DESIGN is “IT DEPENDS”
-- In the early stages of your NETWORKING career, you probably won’t be asked to DESIGN NETWORKS yourself
-- However, to understand the NETWORKS you will be CONFIGURING and TROUBLESHOOTING, it’s important to know some BASICS of NETWORK DESIGN
+- You have studied various network technologies: routing, switching, STP, ETHERCHANNEL, OSPF, FHRPs, switch security features, etc.
+    - Now, let’s look at some basic network design / architecture
+- There are standard “best practices” for network design
+    - However there are a few universal “correct answers”
+    - The answer to most general questions about network design is “it depends”
+- In the early stages of your networking career, you probably won’t be asked to design networks yourself
+- However, to understand the networks you will be configuring and troubleshooting, it’s important to know some basics of network design
 
 ---
 
 COMMON TERMINOLOGIES
 
 - STAR
-    - When several DEVICES all connect to ONE CENTRAL DEVICE, we can draw them in a “STAR” shape like below, so this is often called a “STAR TOPOLOGY”
+    - When several devices all connect to one central device, we can draw them in a “star” shape like below, so this is often called a “STAR TOPOLOGY”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8aeb545d-3cc0-44bf-a01e-b7e5d47deaf2)
 
 - FULL MESH
-    - When each DEVICE is connected to each OTHER DEVICE
+    - When each device is connected to each other device
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/cb2d12af-cf17-4ffe-a637-148014d20753)
 
 - PARTIAL MESH
-    - When SOME DEVICES are connected to each other but not ALL
+    - When some devices are connected to each other but not all
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/01ed7fe5-317b-45c7-8baa-0cc74e502433)
 
@@ -31,19 +31,19 @@ COMMON TERMINOLOGIES
 
 2-TIER AND 3-TIER LAN ARCHITECTURE
 
-- The TWO-TIER LAN DESIGN consists of TWO Hierarchical Layers:
+- The TWO-TIER LAN design consists of two Hierarchical Layers:
     - ACCESS LAYER
     - DISTRIBUTION LAYER
-- Also called a “COLLAPSED CORE” DESIGN because it omits a layer that is found in the THREE TIER DESIGN : THE CORE LAYER
+- Also called a “COLLAPSED CORE” design because it omits a layer that is found in the THREE TIER design : THE CORE LAYER
 - ACCESS LAYER
-    - The LAYER that END HOSTS connect to (PCs, Printers, Cameras, etc)
-    - Typically, ACCESS LAYER SWITCHES have lots of PORTS for END HOSTS to connect to
+    - The layer that END HOSTS connect to (PCs, Printers, Cameras, etc)
+    - Typically, access layer SWITCHES have lots of ports for END HOSTS to connect to
     - QoS MARKING is typically done here
-    - Security Services like PORT SECURITY, DAI, etc are typically performed here
+    - Security Services like port SECURITY, DAI, etc are typically performed here
     - SWITCHPORTS might be PoE-Enabled for Wireless APs, IP Phones, etc.
 - DISTRIBUTION LAYER
-    - Aggregates connections from the ACCESS LAYER SWITCHES
-    - Typically is the border between LAYER 2 and LAYER 3
+    - Aggregates connections from the access layer SWITCHES
+    - Typically is the border between layer 2 and layer 3
     - Connects to services such as Internet, WAN, etc
     - Sometimes called AGGREGATION LAYER
 
@@ -57,29 +57,29 @@ COMMON TERMINOLOGIES
 
 ---
 
-THREE-TIER CAMPUS LAN DESIGN
+THREE-TIER CAMPUS LAN design
 
-- In large NETWORKS with many DISTRIBUTION LAYER SWITCHES (for example in separate buildings), the number of connections required between DISTRIBUTION LAYER SWITCHES grows rapidly
+- In large networks with many DISTRIBUTION LAYER SWITCHES (for example in separate buildings), the number of connections required between DISTRIBUTION LAYER SWITCHES grows rapidly
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8b94c8e9-813b-40e0-bcd1-b27d73da31e8)
 
-- To help SCALE large LAN NETWORKS, you can add a CORE LAYER.
+- To help SCALE large LAN networks, you can add a CORE LAYER.
 
 ** Cisco recommends adding a CORE LAYER if there are more than THREE DISTRIBUTION LAYERS in a single location
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d5c1a677-38ff-425f-b91a-65a8fa37c377)
 
-- The THREE-TIER LAN DESIGN consists of THREE HIERARCHICAL LAYERS:
+- The THREE-TIER LAN design consists of THREE HIERARCHICAL LAYERS:
     - ACCESS LAYER
     - DISTRIBUTION LAYER
     - CORE LAYER
 
 - CORE LAYER:
-    - Connects DISTRIBUTION LAYERS together in large LAN NETWORKS
+    - Connects DISTRIBUTION LAYERS together in large LAN networks
     - The focus is SPEED (”FAST TRANSPORT”)
     - CPU-INTENSIVE OPERATIONS, such as SECURITY, QoS Markings / Classification, etc. should be avoided at this LAYER
     - Connections are all LAYER 3. NO SPANNING-TREE!
-    - Should maintain connectivity throughout the LAN even if DEVICES FAIL
+    - Should maintain connectivity throughout the LAN even if devices FAIL
     
 ![image](https://github.com/psaumur/CCNA/assets/106411237/633cee0a-8952-4b27-91a3-8653bb8e353c)
     
@@ -88,16 +88,16 @@ THREE-TIER CAMPUS LAN DESIGN
 
 SPINE-LEAF ARCHITECTURE (DATA CENTER)
 
-- CISCO ACI ARCHITECTURE (Application Centric Infrastructure) uses this architecture
-- DATA CENTERS are dedicated spaces / buildings used to STORE COMPUTER SYSTEMS such as SERVERS and NETWORK DEVICES
-- Traditional DATA CENTER designs used a THREE-TIER ARCHITECTURE (ACCESS-DISTRIBUTION-CORE) like we just covered
+- CISCO ACI architecture (Application Centric Infrastructure) uses this architecture
+- DATA CENTERS are dedicated spaces / buildings used to STORE COMPUTER SYSTEMS such as SERVERS and network devices
+- Traditional DATA CENTER designs used a THREE-TIER architecture (access-DISTRIBUTION-CORE) like we just covered
 - This worked well when most TRAFFIC in the DATA CENTER was NORTH-SOUTH
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7e2ff784-d16f-4606-a186-c73223bf5582)
 
 - With the precedence of VIRTUAL SERVERS, applications are often deployed in a DISTRIBUTED manner (across multiple physical SERVERS) which increases the amount of EAST-WEST TRAFFIC in the DATA CENTER
-- The traditional THREE-TIER ARCHITECTURE led to bottlenecks in the BANDWIDTH as well as VARIABILITY in the SERVER-TO-SERVER latency depending on the PATH the TRAFFIC takes
-- To SOLVE this, SPINE-LEAF ARCHITECTURE (also called CLOS ARCHITECTURE) has become prominent in DATA CENTERS
+- The traditional THREE-TIER architecture led to bottlenecks in the BANDWIDTH as well as VARIABILITY in the SERVER-TO-SERVER latency depending on the PATH the TRAFFIC takes
+- To SOLVE this, SPINE-LEAF architecture (also called CLOS architecture) has become prominent in DATA CENTERS
 
 RULES FOR SPINE-LEAF ARCHITECTURE
 
@@ -116,15 +116,15 @@ RULES FOR SPINE-LEAF ARCHITECTURE
 
 SOHO (SMALL OFFICE / HOME OFFICE)
 
-- SMALL OFFICE / HOME OFFICE (SOHO) refers to the office of a small company, or a small home office with few DEVICES
-    - Doesn’t have to be an actual home “office”; if your home has a NETWORK connected to the INTERNET it is considered a SOHO NETWORK
+- SMALL OFFICE / HOME OFFICE (SOHO) refers to the office of a small company, or a small home office with few devices
+    - Doesn’t have to be an actual home “office”; if your home has a network connected to the INTERNET it is considered a SOHO network
 
-- SOHO NETWORKS don’t have complex needs, so all NETWORKING functions are typically provided by a SINGLE DEVICE, often called a “HOME ROUTER” or “WIRELESS ROUTER”
-- The one DEVICE can serve as a:
+- SOHO networks don’t have complex needs, so all networking functions are typically provided by a SINGLE device, often called a “HOME ROUTER” or “WIRELESS ROUTER”
+- The one device can serve as a:
     - ROUTER
     - SWITCH
     - FIREWALL
-    - WIRELESS ACCESS POINT
+    - WIRELESS access POINT
     - MODEM
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c9edf179-f333-4fec-9e95-ee291b5eb84c)
