@@ -97,7 +97,7 @@ SPINE-LEAF ARCHITECTURE (DATA CENTER)
 
 - With the precedence of virtual servers, applications are often deployed in a distributed manner (across multiple physical servers) which increases the amount of east-west traffic in the data center
 - The traditional three-tier architecture led to bottlenecks in the bandwidth as well as variability in the server-to-server latency depending on the path the traffic takes
-- To solve this, SPINE-LEAF architecture (also called CLOS architecture) has become prominent in data centers
+- To solve this, SPINE-LEAF architecture (also called Clos architecture) has become prominent in data centers
 
 RULES FOR SPINE-LEAF ARCHITECTURE
 
