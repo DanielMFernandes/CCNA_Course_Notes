@@ -33,28 +33,28 @@ WAN OVER SHARED INFRASTRUCTURE (INTERNET VPN)
 LEASED LINES
 
 - A LEASED LINE is a dedicated physical link, typically connecting two sites
-- LEASED LINES use serial connections (PPP or HDLC encapsulation)
+- Leased lines use serial connections (PPP or HDLC encapsulation)
 - There are various standards that provide different speeds and different standards are available in different countries.
-- Due to the HIGHER cost, HIGHER installation lead time, and SLOWER speeds of LEASED LINES, Ethernet WAN technologies are becoming MORE popular
+- Due to the higher cost, higher installation lead time, and slower speeds of leased lines, Ethernet WAN technologies are becoming more popular
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/77dd5503-8b29-4919-8747-6dd80eec28fa)
 
 MPLS VPNs
 
 - MPLS stands for “Multi Protocol Label Switching”
-- Similar to the Internet, service providers’ MPLS NETWORKS are shared infrastructure because many customer enterprises connect to and share the same infrastructure to make WAN connections
-- However, the “label switching” in the name of MPLS allows VPNs to be created over the MPLS infrastructure through the use of LABELS
+- Similar to the Internet, service providers’ MPLS networks are shared infrastructure because many customer enterprises connect to and share the same infrastructure to make WAN connections
+- However, the “label switching” in the name of MPLS allows VPNs to be created over the MPLS infrastructure through the use of labels
 - IMPORTANT terms:
-    - CE ROUTER = Customer Edge ROUTER
-    - PE ROUTER = Provider Edge ROUTER
-    - P ROUTER = Provider Core ROUTER
+    - CE router = Customer Edge router
+    - PE router = Provider Edge router
+    - P router = Provider Core router
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/166bff5b-d977-48dc-9a74-b9a523b91e1b)
 
-- When the PE ROUTERS receive FRAMES from the CE ROUTERS, they add a LABEL to the FRAME
-- These LABELS are used to make forwarding decisions within the SERVICE PROVIDER NETWORK - NOT the DESTINATION IP
-- The CE ROUTERS do NOT USE MPLS, it is only used by the PE/P ROUTERS
-- When using a LAYER 3 MPLS VPN, the CE and PE ROUTERS peer using OSPF, for example, to share ROUTING information
+- When the PE routers receive FRAMES from the CE routers, they add a label to the FRAME
+- These labels are used to make forwarding decisions within the SERVICE PROVIDER network - NOT the DESTINATION IP
+- The CE routers do NOT USE MPLS, it is only used by the PE/P routers
+- When using a LAYER 3 MPLS VPN, the CE and PE routers peer using OSPF, for example, to share ROUTING information
 
 EXAMPLE: 
 
@@ -68,11 +68,11 @@ OFFICE B’s CE will learn about OFFICE A’s ROUTES as well
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2b3d8d6e-3501-4d54-a6f8-5a05c9140d24)
 
-- When using a LAYER 2 MPLS VPN, the CE and PE ROUTERS do NOT form PEERINGS
-- The SERVICE PROVIDER NETWORK is entirely *transparent* to the CE ROUTERS
-- In effect, it is like the TWO CE ROUTERS are directly connected.
+- When using a LAYER 2 MPLS VPN, the CE and PE routers do NOT form PEERINGS
+- The SERVICE PROVIDER network is entirely *transparent* to the CE routers
+- In effect, it is like the TWO CE routers are directly connected.
     - Their WAN INTERFACES will be in the SAME SUBNET
-- If a ROUTING protocol is used, the TWO CE ROUTERS will peer directly with each other
+- If a ROUTING protocol is used, the TWO CE routers will peer directly with each other
 
 CE ROUTERS connected via LAYER 2 MPLS VPN
 
@@ -84,14 +84,14 @@ CE ROUTERS connected via LAYER 2 MPLS VPN
 
 MPLS 
 
-- Many different technologies can be used to connect to a SERVICE PROVIDER’s MPLS NETWORK for WAN Service
+- Many different technologies can be used to connect to a SERVICE PROVIDER’s MPLS network for WAN Service
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c6e6e60d-2a96-415e-82a2-a090c38a68a3)
 
 INTERNET CONNECTIVITY
 
 - There are countless ways for an enterprise to connect to the INTERNET
-- For example, PRIVATE WAN technologies such as LEASED LINES and MPLS VPNs can be used to connect to a SERVICE PROVIDER’s INTERNET infrastructure
+- For example, PRIVATE WAN technologies such as leased lines and MPLS VPNs can be used to connect to a SERVICE PROVIDER’s INTERNET infrastructure
 - In addition, technologies such as CATV and DSL commonly used by consumers (Home Internet Access) can also be used by an enterprise
 - These days for both enterprise and consumer INTERNET access, FIBER OPTIC ETHERNET connections are growing in popularity due to high speeds they provide over long distances
 - Let’s briefly look at TWO INTERNET access technologies mentioned above:
@@ -104,7 +104,7 @@ DIGITAL SUBSCRIBER LINE (DSL)
 
 - DSL provides INTERNET connectivity to customers over phone lines and can share the same phone line that is already installed in most homes
 - A DSL MODEM (Modulator / Demodulator) is required to convert DATA into a format suitable to be sent over the phone lines
-    - The MODEM might be a separate DEVICE or it might be incorporated in to a “HOME ROUTER”
+    - The MODEM might be a separate DEVICE or it might be incorporated in to a “HOME router”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/a708b6b4-6de5-4a72-8c77-13f569f4c2d5)
 
@@ -112,7 +112,7 @@ CABLE INTERNET
 
 - CABLE INTERNET provides INTERNET ACCESS via the same CATV (Cable Television) lines used for TV service
 - Like DLS, a CABLE MODEM is required to convert DATA into a format suitable to be sent over the CATV CABLES.
-    - Like a DSL MODEM, this can be a separate device or built into the HOME ROUTER
+    - Like a DSL MODEM, this can be a separate device or built into the HOME router
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/a33bb999-83bc-49a8-ad37-e7ca91fcb954)
 
@@ -126,7 +126,7 @@ REDUNDANT INTERNET CONNECTIONS
 
 INTERNET VPNs
 
-- PRIVATE WAN SERVICES such as LEASED LINES and MPLS provide security because each customer’s TRAFFIC is separated by using dedicated physical connections (LEASED LINE) or by MPLS TAGS
+- PRIVATE WAN SERVICES such as leased lines and MPLS provide security because each customer’s TRAFFIC is separated by using dedicated physical connections (leased line) or by MPLS TAGS
 - When using the INTERNET as a WAN to connect SITES together, there is no built-in security by DEFAULT
 - To provide secure communications over the Internet, VPNs (Virtual Private Networks) are used
 - We will cover two kinds of Internet VPNs:
@@ -153,8 +153,8 @@ PROCESS SUMMARY:
 
 4) The RECEIVING DEVICE decrypts the DATA to get the original PACKET and then forwards the original PACKET to it’s DESTINATION
 
-- In a “SITE-TO-SITE” VPN, a TUNNEL is formed only between TWO TUNNEL ENDPOINTS (for example, the TWO ROUTERS connected to the INTERNET)
-- All OTHER DEVICES in each site DO NOT need to create a VPN for themselves. They can send unencrypted DATA to their site’s ROUTER, which will ENCRYPT it and FORWARD it in the TUNNEL as described above.
+- In a “SITE-TO-SITE” VPN, a TUNNEL is formed only between TWO TUNNEL ENDPOINTS (for example, the two routers connected to the INTERNET)
+- All OTHER DEVICES in each site DO NOT need to create a VPN for themselves. They can send unencrypted DATA to their site’s router, which will ENCRYPT it and FORWARD it in the TUNNEL as described above.
 
 ---
 
@@ -188,17 +188,17 @@ GRE over IPSec
 
 DMVPN
 
-- DMVPN (Dynamic Multipoint VPN) is a Cisco-Developed solution that allows ROUTERS to dynamically create a FULL MESH of IPSec TUNNELS without having to manually configure every SINGLE TUNNEL
+- DMVPN (Dynamic Multipoint VPN) is a Cisco-Developed solution that allows routers to dynamically create a FULL MESH of IPSec TUNNELS without having to manually configure every SINGLE TUNNEL
 
 1) CONFIGURE IPSec TUNNELS to a HUB SITE
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/00c33e7f-2b28-4a33-908d-7aceff1e4092)
 
-2) The HUB ROUTER gives each ROUTER information about HOW to form an IPSec TUNNEL with the OTHER ROUTERS
+2) The HUB router gives each router information about HOW to form an IPSec TUNNEL with the OTHER routers
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7a621160-10d4-4e14-868b-3c23f6bb0a64)
 
-DMVPN provides the configuration simplicity of HUB-AND-SPOKE (each SPOKE ROUTER only needs one TUNNEL configured) and the EFFICIENCY of DIRECT SPOKE-TO-SPOKE communication (SPOKE ROUTERS can communicate directly without TRAFFIC passing through the HUB)
+DMVPN provides the configuration simplicity of HUB-AND-SPOKE (each SPOKE router only needs one TUNNEL configured) and the EFFICIENCY of DIRECT SPOKE-TO-SPOKE communication (SPOKE routers can communicate directly without TRAFFIC passing through the HUB)
 
 ---
 
@@ -209,8 +209,8 @@ REMOTE-ACCESS VPNs
     - TLS is also what provides security for HTTPS (HTTP SECURE)
     - TLS was formerly known as SSL (Secure Socket Layer) and developed by Netscape, but it was renamed to TLS when it was standardized by the IETF
 - VPN client software  (for example Cisco AnyConnect) is installed on END DEVICES (for example company-provided laptops that employees use to work from home)
-- These END DEVICES then form SECURE TUNNELS to one of the company’s ROUTERS / FIREWALLS acting as a TLS SERVER
-- This allows the END USERS to securely access RESOURCES on the company’s INTERNAL NETWORK without being directly connected to the company NETWORK
+- These END DEVICES then form SECURE TUNNELS to one of the company’s routers / FIREWALLS acting as a TLS SERVER
+- This allows the END USERS to securely access RESOURCES on the company’s INTERNAL network without being directly connected to the company network
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f4a77cb7-9d42-4daa-9a25-630c0fb260cf)
 
@@ -224,7 +224,7 @@ SITE-TO-SITE versus REMOTE-ACCESS VPN
 - REMOTE-ACCESS VPNs provide SERVICE to the ONE END DEVICE the VPN CLIENT SOFTWARE is installed on
 
 - SITE-TO-SITE VPNs are typically used to permanently connect TWO SITES over the INTERNET
-- REMOTE-ACCESS VPNs are typically used to provide ON-DEMAND ACCESS for END DEVICES that want to securely ACCESS company resources while connected to a NETWORK which is not SECURE
+- REMOTE-ACCESS VPNs are typically used to provide ON-DEMAND ACCESS for END DEVICES that want to securely ACCESS company resources while connected to a network which is not SECURE
 
 ---
 
@@ -256,7 +256,7 @@ This will now bring the Tunnel Interface Administratively Up / Up
 
 ================================================
 
-Now you need to set up the TUNNEL ROUTERS as OSPF Neighbors for the Service Provider Network so they can share routes
+Now you need to set up the TUNNEL routers as OSPF Neighbors for the Service Provider Network so they can share routes
 
 `R1(config)router ospf <ospf process ID>`
 
