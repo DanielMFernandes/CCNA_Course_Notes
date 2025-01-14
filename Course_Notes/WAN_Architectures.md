@@ -130,7 +130,7 @@ INTERNET VPNs
 - When using the Internet as a WAN to connect sites together, there is no built-in security by default
 - To provide secure communications over the Internet, VPNs (Virtual Private Networks) are used
 - We will cover two kinds of Internet VPNs:
-    - SITE-TO-SITE VPNS using IPSec
+    - SITE-TO-SITE VPNs using IPSec
     - REMOTE-ACCESS VPNs using TLS
 
 SITE-TO-SITE VPNs (IPSec)
