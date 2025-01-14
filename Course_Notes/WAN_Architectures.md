@@ -44,7 +44,7 @@ MPLS VPNs
 - MPLS stands for “Multi Protocol Label Switching”
 - Similar to the Internet, service providers’ MPLS networks are shared infrastructure because many customer enterprises connect to and share the same infrastructure to make WAN connections
 - However, the “label switching” in the name of MPLS allows VPNs to be created over the MPLS infrastructure through the use of labels
-- IMPORTANT terms:
+- Important terms:
     - CE router = Customer Edge router
     - PE router = Provider Edge router
     - P router = Provider Core router
@@ -52,29 +52,29 @@ MPLS VPNs
 ![image](https://github.com/psaumur/CCNA/assets/106411237/166bff5b-d977-48dc-9a74-b9a523b91e1b)
 
 - When the PE routers receive frames from the CE routers, they add a label to the frame
-- These labels are used to make forwarding decisions within the service provider network - NOT the DESTINATION IP
-- The CE routers do NOT USE MPLS, it is only used by the PE/P routers
-- When using a LAYER 3 MPLS VPN, the CE and PE routers peer using OSPF, for example, to share routing information
+- These labels are used to make forwarding decisions within the service provider network - not the destination IP
+- The CE routers do not USE MPLS, it is only used by the PE/P routers
+- When using a layer 3 MPLS VPN, the CE and PE routers peer using OSPF, for example, to share routing information
 
 EXAMPLE: 
 
-OFFICE A’s CE will peer with one PE
+Office A’s CE will peer with one PE
 
-OFFICE B’s CE will peer with the other PE
+Office B’s CE will peer with the other PE
 
-OFFICE A’s CE will learn about OFFICE B’s ROUTES via this OSPF peering
+Office A’s CE will learn about office B’s routes via this OSPF peering
 
-OFFICE B’s CE will learn about OFFICE A’s ROUTES as well
+Office B’s CE will learn about office A’s routes as well
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2b3d8d6e-3501-4d54-a6f8-5a05c9140d24)
 
-- When using a LAYER 2 MPLS VPN, the CE and PE routers do NOT form PEERINGS
+- When using a layer 2 MPLS VPN, the CE and PE routers do not form peerings
 - The service provider network is entirely *transparent* to the CE routers
 - In effect, it is like the two CE routers are directly connected.
-    - Their WAN INTERFACES will be in the SAME SUBNET
+    - Their WAN interfaces will be in the same subnet
 - If a routing protocol is used, the two CE routers will peer directly with each other
 
-CE ROUTERS connected via LAYER 2 MPLS VPN
+CE routers connected via layer 2 MPLS VPN
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/b0b19dfd-e417-40ce-ac36-ce0ace8484cc)
 
@@ -93,7 +93,7 @@ INTERNET CONNECTIVITY
 - There are countless ways for an enterprise to connect to the Internet
 - For example, PRIVATE WAN technologies such as leased lines and MPLS VPNs can be used to connect to a service provider’s Internet infrastructure
 - In addition, technologies such as CATV and DSL commonly used by consumers (Home Internet Access) can also be used by an enterprise
-- These days for both enterprise and consumer Internet access, FIBER OPTIC ETHERNET connections are growing in popularity due to high speeds they provide over long distances
+- These days for both enterprise and consumer Internet access, fiber optic ethernet connections are growing in popularity due to high speeds they provide over long distances
 - Let’s briefly look at two Internet access technologies mentioned above:
     - CABLE (CATV)
     - DSL
@@ -103,16 +103,16 @@ INTERNET CONNECTIVITY
 DIGITAL SUBSCRIBER LINE (DSL)
 
 - DSL provides Internet connectivity to customers over phone lines and can share the same phone line that is already installed in most homes
-- A DSL MODEM (Modulator / Demodulator) is required to convert DATA into a format suitable to be sent over the phone lines
-    - The MODEM might be a separate device or it might be incorporated in to a “HOME router”
+- A DSL MODEM (Modulator / Demodulator) is required to convert data into a format suitable to be sent over the phone lines
+    - The MODEM might be a separate device or it might be incorporated in to a “home router”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/a708b6b4-6de5-4a72-8c77-13f569f4c2d5)
 
 CABLE INTERNET
 
 - CABLE INTERNET provides Internet access via the same CATV (Cable Television) lines used for TV service
-- Like DLS, a CABLE MODEM is required to convert DATA into a format suitable to be sent over the CATV CABLES.
-    - Like a DSL MODEM, this can be a separate device or built into the HOME router
+- Like DLS, a cable MODEM is required to convert data into a format suitable to be sent over the CATV cables.
+    - Like a DSL MODEM, this can be a separate device or built into the home router
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/a33bb999-83bc-49a8-ad37-e7ca91fcb954)
 
@@ -126,8 +126,8 @@ REDUNDANT INTERNET CONNECTIONS
 
 INTERNET VPNs
 
-- PRIVATE WAN SERVICES such as leased lines and MPLS provide security because each customer’s traffic is separated by using dedicated physical connections (leased line) or by MPLS TAGS
-- When using the Internet as a WAN to connect sites together, there is no built-in security by DEFAULT
+- PRIVATE WAN services such as leased lines and MPLS provide security because each customer’s traffic is separated by using dedicated physical connections (leased line) or by MPLS TAGS
+- When using the Internet as a WAN to connect sites together, there is no built-in security by default
 - To provide secure communications over the Internet, VPNs (Virtual Private Networks) are used
 - We will cover two kinds of Internet VPNs:
     - SITE-TO-SITE VPNS using IPSec
@@ -136,8 +136,8 @@ INTERNET VPNs
 SITE-TO-SITE VPNs (IPSec)
 
 - A “SITE-TO-SITE” VPN is a VPN between two devices and is used to connect two sites together over the Internet
-- A VPN “TUNNEL” is created between the two devices by ENCAPSULATING the original IP packet with a VPN header and a new IP header
-    - When using IPSec, the original packet is encrypted before its ENCAPSULATED with the new header
+- A VPN “TUNNEL” is created between the two devices by encapsulating the original IP packet with a VPN header and a new IP header
+    - When using IPSec, the original packet is encrypted before its encapsulated with the new header
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/b17c6149-90b2-4bc7-beb7-c53698d588a0)
 
@@ -151,32 +151,32 @@ PROCESS SUMMARY:
 
 3) The sending device sends the NEW packet to the device on the other side of the tunnel
 
-4) The RECEIVING device decrypts the DATA to get the original packet and then forwards the original packet to it’s DESTINATION
+4) The RECEIVING device decrypts the data to get the original packet and then forwards the original packet to it’s destination
 
-- In a “site-to-site” VPN, a tunnel is formed only between two tunnel ENDPOINTS (for example, the two routers connected to the Internet)
-- All OTHER devices in each site DO NOT need to create a VPN for themselves. They can send unencrypted DATA to their site’s router, which will encrypt it and FORWARD it in the tunnel as described above.
+- In a “site-to-site” VPN, a tunnel is formed only between two tunnel endpoints (for example, the two routers connected to the Internet)
+- All other devices in each site do not need to create a VPN for themselves. They can send unencrypted data to their site’s router, which will encrypt it and forward it in the tunnel as described above.
 
 ---
 
 LIMITATIONS OF STANDARD IPSec
 
-1) IPSec doesn’t support broadcast or multicast traffic, only UNICAST.
+1) IPSec doesn’t support broadcast or multicast traffic, only unicast.
 
 - This means that routing protocols such as OSPF cannot be used over the tunnels because they rely on multicast traffic
     - This can be SOLVED with “GRE over IPSec”
 
 2) Configuring a full mesh of tunnels between many sites is a labor-intensive task
 
-Let’s look at each of the above SOLUTIONS
+Let’s look at each of the above solutions
 
 ---
 
 GRE over IPSec
 
-- GRE (GENERIC ROUTING ENCAPSULATION) creates tunnels like IPSec, however it does not encrypt the original packet, so it is NOT secure
-- However, it has the advantage of being able to encapsulate a WIDE variety of a LAYER 3 protocols as well as broadcast and multicast messages
+- GRE (GENERIC ROUTING ENCAPSULATION) creates tunnels like IPSec, however it does not encrypt the original packet, so it is not secure
+- However, it has the advantage of being able to encapsulate a wide variety of a layer 3 protocols as well as broadcast and multicast messages
 - To get the flexibility of GRE with the SECURITY of IPSec, “GRE over IPSec” can be used
-- The original packet will be ENCAPSULATED by a GRE header and a new IP header, and then the GRE packet will be encrypted and ENCAPSULATED within an IPSec VPN header and a NEW IP header
+- The original packet will be encapsulated by a GRE header and a new IP header, and then the GRE packet will be encrypted and encapsulated within an IPSec VPN header and a NEW IP header
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/09c7da0c-debe-453e-822c-b97c0b8658ef)
 
@@ -188,29 +188,29 @@ GRE over IPSec
 
 DMVPN
 
-- DMVPN (Dynamic Multipoint VPN) is a Cisco-Developed solution that allows routers to dynamically create a FULL MESH of IPSec tunnels without having to manually configure every SINGLE tunnel
+- DMVPN (Dynamic Multipoint VPN) is a Cisco-Developed solution that allows routers to dynamically create a FULL MESH of IPSec tunnels without having to manually configure every single tunnel
 
-1) CONFIGURE IPSec tunnels to a HUB site
+1) CONFIGURE IPSec tunnels to a hub site
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/00c33e7f-2b28-4a33-908d-7aceff1e4092)
 
-2) The HUB router gives each router information about HOW to form an IPSec tunnel with the OTHER routers
+2) The hub router gives each router information about how to form an IPSec tunnel with the OTHER routers
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7a621160-10d4-4e14-868b-3c23f6bb0a64)
 
-DMVPN provides the configuration simplicity of HUB-AND-SPOKE (each SPOKE router only needs one tunnel configured) and the EFFICIENCY of DIRECT SPOKE-TO-SPOKE communication (SPOKE routers can communicate directly without traffic passing through the HUB)
+DMVPN provides the configuration simplicity of HUB-AND-SPOKE (each spoke router only needs one tunnel configured) and the efficiency of direct spoke-to-spoke communication (spoke routers can communicate directly without traffic passing through the hub)
 
 ---
 
 REMOTE-ACCESS VPNs
 
-- Whereas site-to-site VPNs are used to make a POINT-TO-POINT connection between two sites over the Internet, REMOTE-ACCESS VPNs are used to allow end devices (PCs, Mobile Phone) to access the company’s internal resources securely over the Internet
+- Whereas site-to-site VPNs are used to make a point-to-point connection between two sites over the Internet, REMOTE-ACCESS VPNs are used to allow end devices (PCs, Mobile Phone) to access the company’s internal resources securely over the Internet
 - Remote-access VPNs typically use TLS (TRANSPORT LAYER SECURITY)
     - TLS is also what provides security for HTTPS (HTTP SECURE)
     - TLS was formerly known as SSL (Secure Socket Layer) and developed by Netscape, but it was renamed to TLS when it was standardized by the IETF
 - VPN client software  (for example Cisco AnyConnect) is installed on end devices (for example company-provided laptops that employees use to work from home)
-- These end devices then form secure tunnels to one of the company’s routers / FIREWALLS acting as a TLS SERVER
-- This allows the END USERS to securely access RESOURCES on the company’s INTERNAL network without being directly connected to the company network
+- These end devices then form secure tunnels to one of the company’s routers / firewalls acting as a TLS server
+- This allows the END USERS to securely access resources on the company’s internal network without being directly connected to the company network
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f4a77cb7-9d42-4daa-9a25-630c0fb260cf)
 
@@ -220,8 +220,8 @@ SITE-TO-SITE versus REMOTE-ACCESS VPN
 
 - site-to-site VPNs typically use IPSec
 - Remote-access VPNs typically use TLS
-- site-to-site VPNs provide SERVICE to many devices within the sites they are connecting
-- Remote-access VPNs provide SERVICE to the ONE end device the VPN CLIENT SOFTWARE is installed on
+- site-to-site VPNs provide service to many devices within the sites they are connecting
+- Remote-access VPNs provide service to the one end device the VPN client software is installed on
 
 - site-to-site VPNs are typically used to permanently connect two sites over the Internet
 - Remote-access VPNs are typically used to provide ON-DEMAND access for end devices that want to securely access company resources while connected to a network which is not secure
