@@ -77,7 +77,7 @@ THREE-TIER CAMPUS LAN design
 - CORE LAYER:
     - Connects distribution layers together in large LAN networks
     - The focus is speed (”FAST TRANSPORT”)
-    - CPU-intensive operations, such as security, QoS Markings / Classification, etc. should be avoided at this LAYER
+    - CPU-intensive operations, such as security, QoS Markings / Classification, etc. should be avoided at this layer
     - Connections are all layer 3. NO SPANNING-TREE!
     - Should maintain connectivity throughout the LAN even if devices fail
     
