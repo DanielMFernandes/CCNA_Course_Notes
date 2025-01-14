@@ -1,6 +1,6 @@
 # 52. LAN ARCHITECTURES
 
-- You have studied various network technologies: routing, switching, STP, ETHERCHANNEL, OSPF, FHRPs, switch security features, etc.
+- You have studied various network technologies: routing, switching, STP, etherchannel, OSPF, FHRPs, switch security features, etc.
     - Now, let’s look at some basic network design / architecture
 - There are standard “best practices” for network design
     - However there are a few universal “correct answers”
