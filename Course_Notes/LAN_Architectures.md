@@ -65,7 +65,7 @@ THREE-TIER CAMPUS LAN design
 
 - To help scale large LAN networks, you can add a CORE LAYER.
 
-** Cisco recommends adding a CORE LAYER if there are more than three distribution layer in a single location
+** Cisco recommends adding a core layer if there are more than three distribution layer in a single location
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d5c1a677-38ff-425f-b91a-65a8fa37c377)
 
@@ -89,28 +89,28 @@ THREE-TIER CAMPUS LAN design
 SPINE-LEAF ARCHITECTURE (DATA CENTER)
 
 - Cisco ACI architecture (Application Centric Infrastructure) uses this architecture
-- Data centers are dedicated spaces / buildings used to STORE COMPUTER SYSTEMS such as SERVERS and network devices
-- Traditional data center designs used a three-tier architecture (access-DISTRIBUTION-CORE) like we just covered
-- This worked well when most traffic in the data center was NORTH-SOUTH
+- Data centers are dedicated spaces / buildings used to store computer systems such as servers and network devices
+- Traditional data center designs used a three-tier architecture (access-distribution-core) like we just covered
+- This worked well when most traffic in the data center was north-south
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7e2ff784-d16f-4606-a186-c73223bf5582)
 
-- With the precedence of VIRTUAL SERVERS, applications are often deployed in a distributed manner (across multiple physical servers) which increases the amount of EAST-WEST traffic in the data center
-- The traditional three-tier architecture led to bottlenecks in the bandwidth as well as VARIABILITY in the SERVER-TO-SERVER latency depending on the PATH the traffic takes
+- With the precedence of virtual servers, applications are often deployed in a distributed manner (across multiple physical servers) which increases the amount of east-west traffic in the data center
+- The traditional three-tier architecture led to bottlenecks in the bandwidth as well as variability in the server-to-server latency depending on the path the traffic takes
 - To solve this, SPINE-LEAF architecture (also called CLOS architecture) has become prominent in data centers
 
 RULES FOR SPINE-LEAF ARCHITECTURE
 
-- Every LEAF SWITCH is connected to every SPINE SWITCH
-- Every SPINE SWITCH is connected to every LEAF SWITCH
-- LEAF switches do not connect to other LEAF switches
-- SPINE switches do not connect to other SPINE switches
-- End hosts (Servers, etc) only connect to LEAF switches
+- Every leaf switch is connected to every spine switch
+- Every spine switch is connected to every leaf switch
+- leaf switches do not connect to other leaf switches
+- Spine switches do not connect to other spine switches
+- End hosts (servers, etc) only connect to leaf switches
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/73cbe190-f589-4307-8ce4-e3de8af2f1d5)
 
-- The PATH taken by traffic is randomly chosen to balance the traffic load among the SPINE SWITCHES
-- Each SERVER is separated by the same number of “HOPS” (except those connected to the same LEAF) providing CONSISTENT LATENCY for EAST-WEST traffic
+- The path taken by traffic is randomly chosen to balance the traffic load among the spine switches
+- Each server is separated by the same number of “HOPS” (except those connected to the same leaf) providing consistent latency for east-west traffic
 
 ---
 
@@ -119,7 +119,7 @@ SOHO (SMALL OFFICE / HOME OFFICE)
 - SMALL OFFICE / HOME OFFICE (SOHO) refers to the office of a small company, or a small home office with few devices
     - Doesn’t have to be an actual home “office”; if your home has a network connected to the internet it is considered a SOHO network
 
-- SOHO networks don’t have complex needs, so all networking functions are typically provided by a SINGLE device, often called a “HOME ROUTER” or “WIRELESS ROUTER”
+- SOHO networks don’t have complex needs, so all networking functions are typically provided by a single device, often called a “HOME ROUTER” or “WIRELESS ROUTER”
 - The one device can serve as a:
     - Router
     - Switch
