@@ -145,11 +145,11 @@ SITE-TO-SITE VPNs (IPSec)
 
 PROCESS SUMMARY:
 
-1) The sending device combines the original packet and SESSION KEY (ENCRYPTION KEY) and runs them through an ENCRYPTION FORMULA
+1) The sending device combines the original packet and session key (ENCRYPTION KEY) and runs them through an ENCRYPTION FORMULA
 
 2) The sending device encapsulates the encrypted packet with a VPN header and a new IP header
 
-3) The sending device sends the NEW packet to the device on the other side of the tunnel
+3) The sending device sends the new packet to the device on the other side of the tunnel
 
 4) The receiving device decrypts the data to get the original packet and then forwards the original packet to it’s destination
 
@@ -167,16 +167,14 @@ LIMITATIONS OF STANDARD IPSec
 
 2) Configuring a full mesh of tunnels between many sites is a labor-intensive task
 
-Let’s look at each of the above solutions
-
 ---
 
 GRE over IPSec
 
 - GRE (GENERIC ROUTING ENCAPSULATION) creates tunnels like IPSec, however it does not encrypt the original packet, so it is not secure
 - However, it has the advantage of being able to encapsulate a wide variety of a layer 3 protocols as well as broadcast and multicast messages
-- To get the flexibility of GRE with the SECURITY of IPSec, “GRE over IPSec” can be used
-- The original packet will be encapsulated by a GRE header and a new IP header, and then the GRE packet will be encrypted and encapsulated within an IPSec VPN header and a NEW IP header
+- To get the flexibility of GRE with the security of IPSec, “GRE over IPSec” can be used
+- The original packet will be encapsulated by a GRE header and a new IP header, and then the GRE packet will be encrypted and encapsulated within an IPSec VPN header and a new IP header
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/09c7da0c-debe-453e-822c-b97c0b8658ef)
 
@@ -188,9 +186,9 @@ GRE over IPSec
 
 DMVPN
 
-- DMVPN (Dynamic Multipoint VPN) is a Cisco-Developed solution that allows routers to dynamically create a FULL MESH of IPSec tunnels without having to manually configure every single tunnel
+- DMVPN (Dynamic Multipoint VPN) is a Cisco-Developed solution that allows routers to dynamically create a full mesh of IPSec tunnels without having to manually configure every single tunnel
 
-1) CONFIGURE IPSec tunnels to a hub site
+1) Configure IPSec tunnels to a hub site
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/00c33e7f-2b28-4a33-908d-7aceff1e4092)
 
@@ -198,7 +196,7 @@ DMVPN
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7a621160-10d4-4e14-868b-3c23f6bb0a64)
 
-DMVPN provides the configuration simplicity of HUB-AND-SPOKE (each spoke router only needs one tunnel configured) and the efficiency of direct spoke-to-spoke communication (spoke routers can communicate directly without traffic passing through the hub)
+DMVPN provides the configuration simplicity of hub-and-spoke (each spoke router only needs one tunnel configured) and the efficiency of direct spoke-to-spoke communication (spoke routers can communicate directly without traffic passing through the hub)
 
 ---
 
@@ -210,13 +208,13 @@ REMOTE-ACCESS VPNs
     - TLS was formerly known as SSL (Secure Socket Layer) and developed by Netscape, but it was renamed to TLS when it was standardized by the IETF
 - VPN client software  (for example Cisco AnyConnect) is installed on end devices (for example company-provided laptops that employees use to work from home)
 - These end devices then form secure tunnels to one of the company’s routers / firewalls acting as a TLS server
-- This allows the END USERS to securely access resources on the company’s internal network without being directly connected to the company network
+- This allows the end users to securely access resources on the company’s internal network without being directly connected to the company network
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f4a77cb7-9d42-4daa-9a25-630c0fb260cf)
 
 ---
 
-SITE-TO-SITE versus REMOTE-ACCESS VPN
+SITE-TO-SITE VERSUS REMOTE-ACCESS VPN
 
 - site-to-site VPNs typically use IPSec
 - Remote-access VPNs typically use TLS
@@ -224,7 +222,7 @@ SITE-TO-SITE versus REMOTE-ACCESS VPN
 - Remote-access VPNs provide service to the one end device the VPN client software is installed on
 
 - site-to-site VPNs are typically used to permanently connect two sites over the Internet
-- Remote-access VPNs are typically used to provide ON-DEMAND access for end devices that want to securely access company resources while connected to a network which is not secure
+- Remote-access VPNs are typically used to provide on-demand access for end devices that want to securely access company resources while connected to a network which is not secure
 
 ---
 
@@ -232,7 +230,7 @@ LAB COMMANDS
 
 Create the Tunnel interface
 
-`R1(config)#int tunnel <tunnel number>`
+`R1(config)# int tunnel <tunnel number>`
 
 This changes the mode to the Tunnel Interface
 
@@ -250,7 +248,7 @@ Set the IP of the Source Tunnel Interface (from step 1)
 
 Configure a Default Route to the Service Provider Network
 
-`R1(config)#ip route 0.0.0.0 0.0.0.0 <next hop interface>`
+`R1(config)# ip route 0.0.0.0 0.0.0.0 <next hop interface>`
 
 This will now bring the Tunnel Interface Administratively Up / Up
 
@@ -258,17 +256,17 @@ This will now bring the Tunnel Interface Administratively Up / Up
 
 Now you need to set up the tunnel routers as OSPF Neighbors for the Service Provider Network so they can share routes
 
-`R1(config)router ospf <ospf process ID>`
+`R1(config) router ospf <ospf process ID>`
 
 This switches to the OSPF Router configuration mode
 
 `network <tunnel interface IP> <wildcard mask> area <area #>`
 
-Since the tunnel is a single HOST, you would use 0.0.0.0 for the Wildcard Mask
+Since the tunnel is a single host, you would use 0.0.0.0 for the Wildcard Mask
 
 `network <router gateway IP> <wildcard mask> area <area #>`
 
-Since the router gateway is also a single HOST, you would use 0.0.0.0 for the Wildcard Mask
+Since the router gateway is also a single host, you would use 0.0.0.0 for the Wildcard Mask
 
 `passive-interface <router gateway IP interface>`
 
