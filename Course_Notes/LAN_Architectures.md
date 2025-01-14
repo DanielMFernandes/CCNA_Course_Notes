@@ -39,7 +39,7 @@ COMMON TERMINOLOGIES
     - The layer that end hosts connect to (PCs, Printers, Cameras, etc)
     - Typically, access layer switches have lots of ports for end hosts to connect to
     - QoS marking is typically done here
-    - Security Services like port security, DAI, etc are typically performed here
+    - Security services like port security, DAI, etc are typically performed here
     - Switchports might be PoE-Enabled for wireless APs, IP Phones, etc.
 - DISTRIBUTION LAYER
     - Aggregates connections from the access layer switches
@@ -65,7 +65,7 @@ THREE-TIER CAMPUS LAN design
 
 - To help scale large LAN networks, you can add a CORE LAYER.
 
-** Cisco recommends adding a core layer if there are more than three distribution layer in a single location
+** Cisco recommends adding a core layer if there are more than three distribution layers in a single location
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d5c1a677-38ff-425f-b91a-65a8fa37c377)
 
