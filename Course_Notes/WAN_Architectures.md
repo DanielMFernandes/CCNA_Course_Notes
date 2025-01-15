@@ -14,7 +14,7 @@ INTRODUCTION TO WANS
 
 WAN OVER DEDICATED CONNECTION (LEASED LINE)
 
-HUB-and-SPOKE topology
+Hub-and-Spoke topology
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/57575fad-883d-4999-a56d-a77fa1542976)
 
