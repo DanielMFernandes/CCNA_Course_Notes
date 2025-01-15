@@ -2,7 +2,7 @@
 
 VIRTUAL SERVERS
 
-- Although Cisco is more known for their networking devices (routers, SWITCHES, FIREWALLS), they also offer hardware servers such as UCS (Unified Computing System)
+- Although Cisco is more known for their networking devices (routers, switches, firewalls), they also offer hardware servers such as UCS (Unified Computing System)
 - The largest vendors of hardware servers include Dell, EMC, HPE, and IBM
 
 ---
@@ -11,12 +11,12 @@ SERVERS BEFORE VIRTUALIZATION
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/365cde17-88c6-4149-91f2-d67c79590aec)
 
-- Before VIRTUALIZATION, there was a one-to-one relationship between a PHYSICAL server and OPERATION SYSTEM
-- In that OPERATING SYSTEM, apps providing services (such as a WEB server, EMAIL server, etc) would run
-- One PHYSICAL server would be used for the WEB server, one for the EMAIL server, one for the DATABASE server, etc.
+- Before virtualization, there was a one-to-one relationship between a physical server and operating system
+- In that operating system, apps providing services (such as a web server, email server, etc) would run
+- One physical server would be used for the web server, one for the email server, one for the database server, etc.
 - This is inefficient for multiple reasons:
-    - Each PHYSICAL server is expensive and takes up space, power, etc.
-    - The RESOURCES on each PHYSICAL server (CPU, RAM, STORAGE, NIC) are typically under-utilized
+    - Each physical server is expensive and takes up space, power, etc.
+    - The resources on each physical server (CPU, RAM, storage, NIC) are typically under-utilized
 
 ---
 
@@ -24,9 +24,9 @@ VIRTUALIZATION (TYPE 1 HYPERVISOR)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/62a40737-7451-4b38-a5bd-abd9367cbd40)
 
-- VIRTUALIZATION allows us to break the one-to-one relationships of hardware to OS, allowing multiple OS’s to run on a single PHYSICAL server
+- Virtualization allows us to break the one-to-one relationships of hardware to OS, allowing multiple OS’s to run on a single physical server
 - Each INSTANCE is called a VM (Virtual Machine)
-- A HYPERVISOR is used to manage and allocate the hardware RESOURCES (CPU, RAM, etc.) to each VM
+- A HYPERVISOR is used to manage and allocate the hardware resources (CPU, RAM, etc.) to each VM
 - Another name for a HYPERVISOR is VMM (Virtual Machine Monitor)
 - The type of HYPERVISOR which runs directly on top of hardware is called a TYPE 1 HYPERVISOR
     - Examples include : VMware ESXi, Microsoft Hyper-V, etc.
@@ -52,8 +52,8 @@ VIRTUALIZATION (TYPE 2 HYPERVISOR)
 WHY VIRTUALIZATION?
 
 - PARTITIONING :
-    - Run multiple OS’s on ONE PHYSICAL MACHINE
-    - Divide system resources between VIRTUAL MACHINES
+    - Run multiple OS’s on ONE physical MACHINE
+    - Divide system resources between virtual MACHINES
     
 - ISOLATION :
     - Provide FAULT and SECURITY ISOLATION at the hardware level
@@ -73,8 +73,8 @@ VIRTUAL NETWORKS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7bf3f22c-a7b8-41bf-bc1e-8c128a41f20f)
 
-- VMs are connected to each other and the external network via a VIRTUAL SWITCH running on the HYPERVISOR
-- Just like a regular PHYSICAL SWITCH, the vSWITCH’s interfaces can operate as ACCESS ports or TRUNK ports and use VLANs to separate the VMs at LAYER 2
+- VMs are connected to each other and the external network via a virtual switch running on the HYPERVISOR
+- Just like a regular physical switch, the vSWITCH’s interfaces can operate as ACCESS ports or trunk ports and use VLANs to separate the VMs at LAYER 2
 - Interfaces on the vSWITCH connect to the physical NIC (or NICs) of the server to communicate with the external network
 
 ---
@@ -113,16 +113,16 @@ CLOUD SERVICES
 THE FIVE ESSENTIAL CHARACTERISTICS OF CLOUD
 
 - ON-DEMAND SELF-SERVICE
-    - The CUSTOMER is able to use the service (or stop the service) freely (via a web portal) without direct communication to the service PROVIDER
+    - The customer is able to use the service (or stop the service) freely (via a web portal) without direct communication to the service PROVIDER
 
 - BROAD NETWORK ACCESS
     - The service is available through standard network connections (ie: the Internet or PRIVATE WAN) and can be access through many kinds of devices
 - RESOURCE POOLING
-    - A POOL of RESOURCES is provided by the service PROVIDER and when a CUSTOMER requests a service (for example creates a new VM), the RESOURCES to fulfill that request are allocated from the shared POOL
+    - A pool of resources is provided by the service PROVIDER and when a customer requests a service (for example creates a new VM), the resources to fulfill that request are allocated from the shared pool
 - RAPID ELASTICITY
-    - CUSTOMERS can quickly expand the service they use in the cloud (for example: add new VMs, expand STORAGE, etc) from a POOL of RESOURCES that appear to be infinite. Likewise, they can quickly reduce their services when not needed
+    - Customers can quickly expand the service they use in the cloud (for example: add new VMs, expand STORAGE, etc) from a pool of resources that appear to be infinite. Likewise, they can quickly reduce their services when not needed
 - MEASURED SERVICE
-    - The cloud service PROVIDER measures the CUSTOMER’s usage of cloud RESOURCES and the CUSTOMER can measure their own use as well. CUSTOMERS are charged based on usage (for example: X Dollars per Gigabyte of STORAGE per day)
+    - The cloud service PROVIDER measures the customer’s usage of cloud resources and the customer can measure their own use as well. customers are charged based on usage (for example: X Dollars per Gigabyte of STORAGE per day)
 
 ---
 
@@ -131,7 +131,7 @@ THE THREE SERVICE MODELS OF THE CLOUD
 ![image](https://github.com/psaumur/CCNA/assets/106411237/a3f0e08a-3207-4a69-aa81-d4142d6735a3)
 
 - In cloud COMPUTING, everything is provided on a “service” model
-- For example: rather than the END USER buying a PHYSICAL server, mounting it on a rack, installing the hypervisor, creating the VM, etc. the service PROVIDER offers all of this as a service
+- For example: rather than the END USER buying a physical server, mounting it on a rack, installing the hypervisor, creating the VM, etc. the service PROVIDER offers all of this as a service
 - There are a variety of services referred to as “___________ as a service” or “__aaS”
 - The THREE service models of cloud COMPUTING are:
     
@@ -201,10 +201,10 @@ BENEFITS OF CLOUD COMPUTING
 - COST
     - CapEx (Capital Expense) of buying hardware and software, setting up DATA CENTERS, etc. are reduced or eliminated
 - GLOBAL SCALE
-    - cloud services can scale GLOBALLY at a rapid pace. services can be set up and offered to CUSTOMERS from a geographic location close to them
+    - cloud services can scale globally at a rapid pace. services can be set up and offered to customers from a geographic location close to them
 
 - SPEED / AGILITY
-    - Services are provide ON DEMAND and vast amounts of RESOURCES can be provisioned within minutes
+    - Services are provide ON DEMAND and vast amounts of resources can be provisioned within minutes
 
 - PRODUCTIVITY
     - cloud services remove the need for many time-consuming tasks such as procuring physical servers, racking them, cabling, installing and updating equipment, etc.
