@@ -4,17 +4,17 @@ INTRO TO VRF
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e122f3c6-290f-4f33-a31d-f308f12140a3)
 
-- VIRTUAL ROUTING AND FORWARDING (VRF) is used to DIVIDE a SINGLE ROUTER into MULTIPLE VIRTUAL ROUTERS
-    - Similar to how VLANs are used to divide a SINGLE SWITCH (LAN) into MULTIPLE VIRTUAL SWITCHES (VLANs)
-- It does this by allowing a ROUTER to build MULTIPLE SEPARATE ROUTING TABLES
-    - INTERFACES (LAYER 3 only) and ROUTERS are configured to be in a specific VRF (aka *VRF INSTANCE*)
-    - ROUTER INTERFACES, SVIs and ROUTED PORTS on MULTILAYER SWITCHES can be configured in a VRF
-- TRAFFIC in one VRF cannot be forwarded out of an INTERFACE in another VRF
-    - As an exception, VRF LEAKING can be configured to allow traffic to pass BETWEEN VRFs
+- VIRTUAL ROUTING AND FORWARDING (VRF) is used to divide a single router into multiple virtual routers
+    - Similar to how VLANs are used to divide a single switch (LAN) into multiple virtual switches (VLANs)
+- It does this by allowing a router to build multiple separate routing tables
+    - Interfaces (LAYER 3 only) and routers are configured to be in a specific VRF (aka *VRF INSTANCE*)
+    - Router interfaces, SVIs and routed ports on multilayer switches can be configured in a VRF
+- Traffic in one VRF cannot be forwarded out of an interface in another VRF
+    - As an exception, VRF LEAKING can be configured to allow traffic to pass between VRFs
 - VRF is commonly used to facilitate MPLS (Multiple Protocol Label Switching)
     - The kind of VRF we are talking about is VRF-Lite (VRF without MPLS)
-- VRF is commonly used by SERVICE PROVIDERS to allow ONE DEVICE to carry traffic from MULTIPLE CUSTOMERS
-    - Each CUSTOMER’S TRAFFIC is isolated from the OUTSIDE
+- VRF is commonly used by service providers to allow one device to carry traffic from multiple customers
+    - Each CUSTOMER’S traffic is isolated from the outside
     - CUSTOMER IP ADDRESSES can overlap without issue
 
 VRF CONFIGURATION
