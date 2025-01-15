@@ -205,7 +205,7 @@ REMOTE-ACCESS VPNs
 - Whereas site-to-site VPNs are used to make a point-to-point connection between two sites over the Internet, REMOTE-ACCESS VPNs are used to allow end devices (PCs, Mobile Phone) to access the company’s internal resources securely over the Internet
 - Remote-access VPNs typically use TLS (TRANSPORT LAYER SECURITY)
     - TLS is also what provides security for HTTPS (HTTP SECURE)
-    - TLS was formerly known as SSL (Secure Socket Layer) and developed by Netscape, but it was renamed to TLS when it was standardized by the IETF
+    - TLS was formerly known as SSL (Secure Sockets Layer) and developed by Netscape, but it was renamed to TLS when it was standardized by the IETF
 - VPN client software  (for example Cisco AnyConnect) is installed on end devices (for example company-provided laptops that employees use to work from home)
 - These end devices then form secure tunnels to one of the company’s routers / firewalls acting as a TLS server
 - This allows the end users to securely access resources on the company’s internal network without being directly connected to the company network
