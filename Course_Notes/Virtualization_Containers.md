@@ -1,15 +1,15 @@
 # 54. VIRTUALIZATION (CONTAINERS): PART 2
 
-REVIEW OF VIRTUAL MACHINES (TYPE 1 and TYPE2 HYPERVISORS)
+REVIEW OF VIRTUAL MACHINES (TYPE 1 AND TYPE2 HYPERVISORS)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/bfc801ca-a603-4957-a67c-316fb72e25cb)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/da1b653d-f5f2-42d3-8088-dd3daa430913)
 
-- VIRTUAL MACHINES (VMs) allow multiple OS’s to run on a single physical server
-- A HYPERVISOR is used to manage and allocate hardware resources to each VM
-    - Type 1 hypervisors (aka NATIVE or BARE-METAL) run directly on top of hardware
-    - Type 2 hypervisors (aka HOSTED) run on top of a host OS (ie: Windows)
+- Virtual Machines (VMs) allow multiple OS’s to run on a single physical server
+- A hypervisor is used to manage and allocate hardware resources to each VM
+    - Type 1 hypervisors (aka native or bare-metal) run directly on top of hardware
+    - Type 2 hypervisors (aka hosted) run on top of a host OS (ie: Windows)
 - Type 1 hypervisors are widely used in data center environments
 - Type 2 hypervisors are commonly used on personal devices
     - Running a virtual network lab on your PC using Cisco Modeling Labs (CML)
@@ -28,11 +28,11 @@ CONTAINERS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4f350818-f030-46fe-8850-f2e633d22bfa)
 
-- CONTAINERS are software packages that contain an APP and all dependencies (*Bins/Libs* in the diagram) for the contained APP to run.
+- CONTAINERS are software packages that contain an APP and all dependencies (*Bins/Libs* in the diagram) for the contained app to run.
     - Multiple apps can be run in a single container, but this is not how container are usually used
 - Containers run on a CONTAINER ENGINE (ie: Docker Engine)
     - The container engine is run on a host OS (usually Linux)
-- Containers are lightweight (small in size) and include only the dependencies required to run the specific APP
+- Containers are lightweight (small in size) and include only the dependencies required to run the specific app
 - A CONTAINER ORCHESTRATOR is a software platform for automating the deployment, management, scaling, etc of containers
     - KUBERNETES (originally design by Google) is the most popular container orchestrator
     - DOCKER SWARM is Docker’s container orchestration tool
@@ -52,7 +52,7 @@ VIRTUAL MACHINES vs. CONTAINERS
 - VMs take more disk space (Gigabytes)
 - Containers take up very little disk space (Megabytes)
 
-- VMs use MORE CPU/RAM resources (each VM must run its own OS)
+- VMs use more CPU/RAM resources (each VM must run its own OS)
 - Containers use fewer CPU/RAM resources (shared OS)
 
 - VMs are portable and can move between physical systems running the same hypervisor
