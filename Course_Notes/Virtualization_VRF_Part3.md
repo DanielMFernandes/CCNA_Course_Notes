@@ -7,15 +7,15 @@ INTRO TO VRF
 - VIRTUAL ROUTING AND FORWARDING (VRF) is used to divide a single router into multiple virtual routers
     - Similar to how VLANs are used to divide a single switch (LAN) into multiple virtual switches (VLANs)
 - It does this by allowing a router to build multiple separate routing tables
-    - Interfaces (LAYER 3 only) and routers are configured to be in a specific VRF (aka *VRF INSTANCE*)
+    - Interfaces (layer 3 only) and routers are configured to be in a specific VRF (aka *VRF INSTANCE*)
     - Router interfaces, SVIs and routed ports on multilayer switches can be configured in a VRF
 - Traffic in one VRF cannot be forwarded out of an interface in another VRF
     - As an exception, VRF LEAKING can be configured to allow traffic to pass between VRFs
 - VRF is commonly used to facilitate MPLS (Multiple Protocol Label Switching)
     - The kind of VRF we are talking about is VRF-Lite (VRF without MPLS)
 - VRF is commonly used by service providers to allow one device to carry traffic from multiple customers
-    - Each CUSTOMER’S traffic is isolated from the outside
-    - CUSTOMER IP ADDRESSES can overlap without issue
+    - Each customer’s traffic is isolated from the outside
+    - Customer IP addresses can overlap without issue
 
 VRF CONFIGURATION
 
