@@ -52,11 +52,11 @@ VIRTUALIZATION (TYPE 2 HYPERVISOR)
 WHY VIRTUALIZATION?
 
 - PARTITIONING :
-    - Run multiple OS’s on ONE physical MACHINE
-    - Divide system resources between virtual MACHINES
+    - Run multiple OS’s on one physical machine
+    - Divide system resources between virtual machines
     
 - ISOLATION :
-    - Provide FAULT and SECURITY ISOLATION at the hardware level
+    - Provide fault and security isolation at the hardware level
     - Preserve performance with advanced resource controls
 - ENCAPSULATION :
     - Save the entire state of a virtual machine to files
@@ -74,8 +74,8 @@ VIRTUAL NETWORKS
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7bf3f22c-a7b8-41bf-bc1e-8c128a41f20f)
 
 - VMs are connected to each other and the external network via a virtual switch running on the hypervisor
-- Just like a regular physical switch, the vSWITCH’s interfaces can operate as ACCESS ports or trunk ports and use VLANs to separate the VMs at LAYER 2
-- Interfaces on the vSWITCH connect to the physical NIC (or NICs) of the server to communicate with the external network
+- Just like a regular physical switch, the vSwitch’s interfaces can operate as access ports or trunk ports and use VLANs to separate the VMs at layer 2
+- Interfaces on the vSwitch connect to the physical NIC (or NICs) of the server to communicate with the external network
 
 ---
 
@@ -91,9 +91,9 @@ INTRO TO CLOUD COMPUTING
         - Data centers that rent out space for customers to put their infrastructure (servers, network devices)
         - The data center provides the space, electricity, and cooling
         - The servers, network devices, etc are still the responsibility of the end customer, although they are not located on the customer’s premises
-- Cloud SERVICE provide an alternative that is hugely popular and is continuing to grow
-    - Most people associate “cloud” with PUBLIC cloud PROVIDERS such as AWS
-        - Although this is the most common USE of cloud services, it’s not the only one
+- Cloud service provide an alternative that is hugely popular and is continuing to grow
+    - Most people associate “cloud” with public cloud providers such as AWS
+        - Although this is the most common use of cloud services, it’s not the only one
 
 ---
 
@@ -104,25 +104,25 @@ CLOUD SERVICES
 ![image](https://github.com/psaumur/CCNA/assets/106411237/746a4f38-01b9-49cf-8dd9-5522b4cabf7b)
 
 - To understand what the cloud is, let’s look at the following outlined in SP 800-145:
-    - FIVE ESSENTIAL CHARACTERISTICS
-    - THREE service models
-    - FOUR DEPLOYMENT models
+    - Five essential characteristics
+    - Three service models
+    - Four deployment models
 
 ---
 
 THE FIVE ESSENTIAL CHARACTERISTICS OF CLOUD
 
 - ON-DEMAND SELF-SERVICE
-    - The customer is able to use the service (or stop the service) freely (via a web portal) without direct communication to the service PROVIDER
+    - The customer is able to use the service (or stop the service) freely (via a web portal) without direct communication to the service provider
 
 - BROAD NETWORK ACCESS
-    - The service is available through standard network connections (ie: the Internet or PRIVATE WAN) and can be access through many kinds of devices
+    - The service is available through standard network connections (ie: the Internet or private WAN) and can be access through many kinds of devices
 - RESOURCE POOLING
-    - A pool of resources is provided by the service PROVIDER and when a customer requests a service (for example creates a new VM), the resources to fulfill that request are allocated from the shared pool
+    - A pool of resources is provided by the service provider and when a customer requests a service (for example creates a new VM), the resources to fulfill that request are allocated from the shared pool
 - RAPID ELASTICITY
-    - Customers can quickly expand the service they use in the cloud (for example: add new VMs, expand STORAGE, etc) from a pool of resources that appear to be infinite. Likewise, they can quickly reduce their services when not needed
+    - Customers can quickly expand the service they use in the cloud (for example: add new VMs, expand storage, etc) from a pool of resources that appear to be infinite. Likewise, they can quickly reduce their services when not needed
 - MEASURED SERVICE
-    - The cloud service PROVIDER measures the customer’s usage of cloud resources and the customer can measure their own use as well. customers are charged based on usage (for example: X Dollars per Gigabyte of STORAGE per day)
+    - The cloud service provider measures the customer’s usage of cloud resources and the customer can measure their own use as well. customers are charged based on usage (for example: X Dollars per Gigabyte of storage per day)
 
 ---
 
@@ -130,20 +130,20 @@ THE THREE SERVICE MODELS OF THE CLOUD
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/a3f0e08a-3207-4a69-aa81-d4142d6735a3)
 
-- In cloud COMPUTING, everything is provided on a “service” model
-- For example: rather than the END USER buying a physical server, mounting it on a rack, installing the hypervisor, creating the VM, etc. the service PROVIDER offers all of this as a service
+- In cloud computing, everything is provided on a “service” model
+- For example: rather than the end user buying a physical server, mounting it on a rack, installing the hypervisor, creating the VM, etc. the service provider offers all of this as a service
 - There are a variety of services referred to as “___________ as a service” or “__aaS”
-- The THREE service models of cloud COMPUTING are:
+- The three service models of cloud computing are:
     
-    Software as a service (SaaS) - Example : MS Office 365
+    Software as a Service (SaaS) - Example : MS Office 365
     
 ![image](https://github.com/psaumur/CCNA/assets/106411237/5bcfedb7-3ab6-462a-a089-09884d220ab7)
     
-    PLATFORM as a service (PaaS) - Examples : AWS Lambda and Google App Engine 
+    Platform as a Service (PaaS) - Examples : AWS Lambda and Google App Engine 
     
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e3886b6b-4ed8-4358-ba47-e2f50378c53d)
     
-    INFRASTRUCTURE as a service (Iaas) - Examples: Amazon EC2 and Google Compute Engine
+    Infrastructure as a Service (IaaS) - Examples: Amazon EC2 and Google Compute Engine
     
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f8144a61-0d7f-4928-9e47-73fb969e0b4a)
     
@@ -152,20 +152,20 @@ THE THREE SERVICE MODELS OF THE CLOUD
 
 DEPLOYMENT MODELS
 
-- Most people assume that “cloud” means PUBLIC cloud PROVIDERS like AWS, AZURE, and GCP
-- Although “PUBLIC cloud” is the most common deployment model, it’s not the ONLY one
-- The FOUR DEPLOYMENT models of cloud COMPUTING are:
+- Most people assume that “cloud” means public cloud providers like AWS, AZURE, and GCP
+- Although “public cloud” is the most common deployment model, it’s not the only one
+- The four deployment models of cloud computing are:
 
 - PRIVATE CLOUD
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/b8953a31-3861-41ef-99df-62a49b97610a)
 
-- PRIVATE cloud are generally only used by large enterprises
-- Although the cloud is PRIVATE, it may be owned by a THIRD PARTY
-    - For example: AWS provides PRIVATE cloud services for the American DoD
+- Private cloud are generally only used by large enterprises
+- Although the cloud is private, it may be owned by a THIRD PARTY
+    - For example: AWS provides private cloud services for the American DoD
 - PRIVATE clouds may be ON or OFF PREMISES
     - Many people assume “cloud” and “ON-PREM” are two different things but that is not always the case
-- The same kind of services offered are the same as in PUBLIC clouds (SaaS, PaaS, IaaS) but the infrastructure is reserved for a SINGLE ORGANIZATION
+- The same kind of services offered are the same as in public clouds (SaaS, PaaS, IaaS) but the infrastructure is reserved for a SINGLE ORGANIZATION
 
 - COMMUNITY CLOUD
 
@@ -179,7 +179,7 @@ DEPLOYMENT MODELS
 ![image](https://github.com/psaumur/CCNA/assets/106411237/94e9c895-9538-4664-93db-085f013ee9fb)
 
 - The most common cloud deployment
-- Popular PUBLIC cloud service providers include:
+- Popular public cloud service providers include:
     - AWS
     - MS AZURE
     - GCP (Google Cloud Platform)
