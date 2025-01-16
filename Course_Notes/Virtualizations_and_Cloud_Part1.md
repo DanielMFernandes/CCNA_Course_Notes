@@ -27,12 +27,12 @@ VIRTUALIZATION (TYPE 1 HYPERVISOR)
 - Virtualization allows us to break the one-to-one relationships of hardware to OS, allowing multiple OS’s to run on a single physical server
 - Each INSTANCE is called a VM (Virtual Machine)
 - A HYPERVISOR is used to manage and allocate the hardware resources (CPU, RAM, etc.) to each VM
-- Another name for a HYPERVISOR is VMM (Virtual Machine Monitor)
-- The type of HYPERVISOR which runs directly on top of hardware is called a TYPE 1 HYPERVISOR
+- Another name for a hypervisor is VMM (Virtual Machine Monitor)
+- The type of hypervisor which runs directly on top of hardware is called a type 1 hypervisor
     - Examples include : VMware ESXi, Microsoft Hyper-V, etc.
-- TYPE 1 HYPERVISORS are also called *bare-metal hypervisors* because they run directly on the hardware (metal).
+- Type 1 hypervisors are also called *bare-metal hypervisors* because they run directly on the hardware (metal).
     - Another term is *native hypervisor*
-- This is the type of HYPERVISOR used in data center environments
+- This is the type of hypervisor used in data center environments
 
 ---
 
@@ -40,12 +40,12 @@ VIRTUALIZATION (TYPE 2 HYPERVISOR)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/25a29935-a56d-4ffe-b9e4-15c5c50bca46)
 
-- TYPE 2 HYPERVISORS run as a program on an OS like a regular computer program
+- Type 2 hypervisors run as a program on an OS like a regular computer program
     - Examples: VMware Workstation, Oracle Virtualbox, etc
 - The OS running directly on the hardware is called the HOST OS
 - The OS running in a VM is called a GUEST OS
-- Another name for a TYPE 2 HYPERVISOR is *hosted hypervisor*
-- Although TYPE 2 HYPERVISORS are rarely used in data center environments, they are common on personal-use devices (for example, if a MAC/Linux user needs to run an app that is only supported on Windows, or vice-versa)
+- Another name for a type 2 hypervisor is *hosted hypervisor*
+- Although type 2 hypervisors are rarely used in data center environments, they are common on personal-use devices (for example, if a MAC/Linux user needs to run an app that is only supported on Windows, or vice-versa)
 
 ---
 
@@ -73,7 +73,7 @@ VIRTUAL NETWORKS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7bf3f22c-a7b8-41bf-bc1e-8c128a41f20f)
 
-- VMs are connected to each other and the external network via a virtual switch running on the HYPERVISOR
+- VMs are connected to each other and the external network via a virtual switch running on the hypervisor
 - Just like a regular physical switch, the vSWITCH’s interfaces can operate as ACCESS ports or trunk ports and use VLANs to separate the VMs at LAYER 2
 - Interfaces on the vSWITCH connect to the physical NIC (or NICs) of the server to communicate with the external network
 
@@ -191,20 +191,20 @@ DEPLOYMENT MODELS
     
 ![image](https://github.com/psaumur/CCNA/assets/106411237/14f910cf-b6e2-4f75-8959-4589d2592e1c)
     
-    - Basically ANY combination of the preview THREE DEPLOYMENT TYPES
-    - Example: A PRIVATE cloud which can offload to a PUBLIC cloud when necessary
+    - Basically ANY combination of the preview three deployment types
+    - Example: A private cloud which can offload to a public cloud when necessary
 
 ---
 
 BENEFITS OF CLOUD COMPUTING
 
 - COST
-    - CapEx (Capital Expense) of buying hardware and software, setting up DATA CENTERS, etc. are reduced or eliminated
+    - CapEx (Capital Expense) of buying hardware and software, setting up data centers, etc. are reduced or eliminated
 - GLOBAL SCALE
     - cloud services can scale globally at a rapid pace. services can be set up and offered to customers from a geographic location close to them
 
 - SPEED / AGILITY
-    - Services are provide ON DEMAND and vast amounts of resources can be provisioned within minutes
+    - Services are provide on demand and vast amounts of resources can be provisioned within minutes
 
 - PRODUCTIVITY
     - cloud services remove the need for many time-consuming tasks such as procuring physical servers, racking them, cabling, installing and updating equipment, etc.
