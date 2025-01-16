@@ -29,7 +29,7 @@ CONTAINERS
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4f350818-f030-46fe-8850-f2e633d22bfa)
 
 - CONTAINERS are software packages that contain an APP and all dependencies (*Bins/Libs* in the diagram) for the contained app to run.
-    - Multiple apps can be run in a single container, but this is not how container are usually used
+    - Multiple apps can be run in a single container, but this is not how containers are usually used
 - Containers run on a CONTAINER ENGINE (ie: Docker Engine)
     - The container engine is run on a host OS (usually Linux)
 - Containers are lightweight (small in size) and include only the dependencies required to run the specific app
