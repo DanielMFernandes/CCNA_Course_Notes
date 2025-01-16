@@ -161,7 +161,7 @@ PRIVATE CLOUD
 ![image](https://github.com/psaumur/CCNA/assets/106411237/b8953a31-3861-41ef-99df-62a49b97610a)
 
 - Private cloud are generally only used by large enterprises
-- Although the cloud is private, it may be owned by a THIRD PARTY
+- Although the cloud is private, it may be owned by a third party
     - For example: AWS provides private cloud services for the American DoD
 - Private clouds may be ON or OFF PREMISES
     - Many people assume “cloud” and “on-prem” are two different things but that is not always the case
@@ -201,13 +201,13 @@ BENEFITS OF CLOUD COMPUTING
 - COST
     - CapEx (Capital Expense) of buying hardware and software, setting up data centers, etc. are reduced or eliminated
 - GLOBAL SCALE
-    - cloud services can scale globally at a rapid pace. services can be set up and offered to customers from a geographic location close to them
+    - Cloud services can scale globally at a rapid pace. services can be set up and offered to customers from a geographic location close to them
 
 - SPEED / AGILITY
     - Services are provide on demand and vast amounts of resources can be provisioned within minutes
 
 - PRODUCTIVITY
-    - cloud services remove the need for many time-consuming tasks such as procuring physical servers, racking them, cabling, installing and updating equipment, etc.
+    - Cloud services remove the need for many time-consuming tasks such as procuring physical servers, racking them, cabling, installing and updating equipment, etc.
 - RELIABILITY
     - Backups in the cloud are very easy to perform. Data can be mirrored at multiple sites in different geographic locations to support disaster recovery
 
