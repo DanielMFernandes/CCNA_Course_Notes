@@ -116,7 +116,7 @@ THE FIVE ESSENTIAL CHARACTERISTICS OF CLOUD
     - The customer is able to use the service (or stop the service) freely (via a web portal) without direct communication to the service provider
 
 - BROAD NETWORK ACCESS
-    - The service is available through standard network connections (ie: the Internet or private WAN) and can be access through many kinds of devices
+    - The service is available through standard network connections (ie: the Internet or private WAN) and can be accessed through many kinds of devices
 - RESOURCE POOLING
     - A pool of resources is provided by the service provider and when a customer requests a service (for example creates a new VM), the resources to fulfill that request are allocated from the shared pool
 - RAPID ELASTICITY
