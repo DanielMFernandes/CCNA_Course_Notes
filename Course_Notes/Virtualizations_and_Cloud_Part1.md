@@ -156,25 +156,25 @@ DEPLOYMENT MODELS
 - Although “public cloud” is the most common deployment model, it’s not the only one
 - The four deployment models of cloud computing are:
 
-- PRIVATE CLOUD
+PRIVATE CLOUD
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/b8953a31-3861-41ef-99df-62a49b97610a)
 
 - Private cloud are generally only used by large enterprises
 - Although the cloud is private, it may be owned by a THIRD PARTY
     - For example: AWS provides private cloud services for the American DoD
-- PRIVATE clouds may be ON or OFF PREMISES
-    - Many people assume “cloud” and “ON-PREM” are two different things but that is not always the case
-- The same kind of services offered are the same as in public clouds (SaaS, PaaS, IaaS) but the infrastructure is reserved for a SINGLE ORGANIZATION
+- Private clouds may be ON or OFF PREMISES
+    - Many people assume “cloud” and “on-prem” are two different things but that is not always the case
+- The same kind of services offered are the same as in public clouds (SaaS, PaaS, IaaS) but the infrastructure is reserved for a single organization
 
-- COMMUNITY CLOUD
+COMMUNITY CLOUD
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/1c9008e9-205b-4ca8-8236-fc0b02c3addc)
 
-- Least common CLOUD deployment
-- Similar to PRIVATE cloud, but the INFRASTRUCTURE is reserved for use by a SPECIFIC GROUP or ORGANIZATION
+- Least common cloud deployment
+- Similar to private cloud, but the infrastructure is reserved for use by a specific group or organization
 
-- PUBLIC CLOUD
+PUBLIC CLOUD
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/94e9c895-9538-4664-93db-085f013ee9fb)
 
@@ -187,11 +187,11 @@ DEPLOYMENT MODELS
     - IBM Cloud
     - Alibaba Cloud
 
-- HYBRID CLOUD
+HYBRID CLOUD
     
 ![image](https://github.com/psaumur/CCNA/assets/106411237/14f910cf-b6e2-4f75-8959-4589d2592e1c)
     
-    - Basically ANY combination of the preview three deployment types
+    - Basically any combination of the preview three deployment types
     - Example: A private cloud which can offload to a public cloud when necessary
 
 ---
