@@ -172,7 +172,7 @@ COMMUNITY CLOUD
 ![image](https://github.com/psaumur/CCNA/assets/106411237/1c9008e9-205b-4ca8-8236-fc0b02c3addc)
 
 - Least common cloud deployment
-- Similar to private cloud, but the infrastructure is reserved for use by a specific group or organization
+- Similar to private cloud, but the infrastructure is reserved for use by a specific group of organizations
 
 PUBLIC CLOUD
 
