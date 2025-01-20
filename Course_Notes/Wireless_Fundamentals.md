@@ -54,14 +54,14 @@ SIGNAL REFRACTION
 
 SIGNAL DIFFRACTION
 
-- Diffraction happens when a wave encounters an OBSTACLE and travels AROUND it
-    - This can result in “BLIND SPOTS” behind the obstacle
+- Diffraction happens when a wave encounters an obstacle and travels around it
+    - This can result in “blind spots” behind the obstacle
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/abd44fc3-ec6f-484c-8c81-a2de38c26999)
 
 SIGNAL SCATTERING
 
-- Scattering happens when a material causes a signal to SCATTER in all directions
+- Scattering happens when a material causes a signal to scatter in all directions
     - Dust, smog, uneven surfaces, etc. can cause scattering
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/9474adb8-3fc0-44ac-b480-c846cec21e9a)
@@ -126,7 +126,7 @@ RADIO FREQUENCY BANDS
 - The 2.4 GHz band typically provides further reach in open space and better penetration of obstacles such as walls.
     - However, more devices tend to use the 2.4 GHz band so interference can be a bigger problem compared to 5GHz
 
-** WI-FI 6 (802.11ax) has EXPANDED the spectrum range to include a band in the 6 GHz range
+** WI-FI 6 (802.11ax) has expanded the spectrum range to include a band in the 6 GHz range
 
 ---
 
@@ -141,7 +141,7 @@ CHANNELS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/005d246e-d2d2-491e-8d1e-f2fb5afbb664)
 
-- The 5 GHz band consists of NON-OVERLAPPING channels so it’s much easier to avoid interference between adjacent APs
+- The 5 GHz band consists of non-overlapping channels so it’s much easier to avoid interference between adjacent APs
 
 - Using channels 1, 6, 11, you can place APs in a “HONEYCOMB” pattern to provide complete coverage of an area without interference between channels
 
@@ -179,7 +179,7 @@ SERVICE SETS : BSS
 
 - A BSS (BASIC SERVICE SET) is a kind of infrastructure service set in which clients connect to each other via an AP (ACCESS POINT) but not DIRECTLY to each other
 - A BSSID (BASIC SERVICE SET ID) is used to uniquely identify the AP
-    - Other APs can use the same SSID but not THE same BSSID
+    - Other APs can use the same SSID but not the same BSSID
     - The BSSID is the MAC address of the APs radio
 - Wireless devices request to *associate* with the BSS
 - Wireless devices that have associated with the BSS are called “CLIENTS” or “STATIONS”
@@ -207,8 +207,8 @@ SERVICE SETS: MBSS
     - One provides BSS to wireless clients
     - One forms a “BACKHAUL NETWORK” which is used to bridge traffic from AP to AP
 - At least one AP is connected to the wired network and it is called the RAP (ROOT ACCESS POINT)
-- The OTHER APs are called MAPs (MESH ACCESS POINTS)
-- A PROTOCOL is used to determine the best path through the MESH (similar to how DYNAMIC ROUTING PROTOCOLS are used to determine the best path to a destination)
+- The other APs are called MAPs (MESH ACCESS POINTS)
+- A PROTOCOL is used to determine the best path through the MESH (similar to how dynamic routing protocols are used to determine the best path to a destination)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/1604f0ea-8a93-4922-a78d-fe55e836ba9a)
 
@@ -217,14 +217,14 @@ SERVICE SETS: MBSS
 DISTRIBUTION SYSTEM
 
 - Most wireless networks are not standalone networks
-    - Rather, they are a way for wireless clients to connect to the wired network INFRASTRUCTURE
-- In 802.11, the UPSTREAM wired network is called the DS (DISTRIBUTION SYSTEM)
+    - Rather, they are a way for wireless clients to connect to the wired network infrastructure
+- In 802.11, the upstream wired network is called the DS (DISTRIBUTION SYSTEM)
 - Each wireless BSS or ESS is mapped to a VLAN in the wired network
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/adf9deae-693c-4f1b-8d6d-c4fbfc356418)
 
 - It is possible for an AP to provide multiple wireless LANs, each with a unique SSID
-- Each WLAN is mapped to a separate VLAN and connected to the wired network via a TRUNK
+- Each WLAN is mapped to a separate VLAN and connected to the wired network via a trunk
 - Each WLAN uses a unique BSSID, usually by incrementing the last digit of the BBSID by one
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/5667abba-dc3f-4571-a11a-43b3e8cf4304)
@@ -243,8 +243,8 @@ ADDITIONAL AP OPERATIONAL MODES
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7973107f-7f2a-47de-9272-186040b038b5)
 
-- A WORKGROUP BRIDGE (WGB) operates as a wireless client of another AP and can be used to CONNECT wired devices to the wireless network
-- In the example below, PC1 does not have wireless capabilities, and also DOES not have ACCESS to wired connections to SW1
+- A WORKGROUP BRIDGE (WGB) operates as a wireless client of another AP and can be used to connect wired devices to the wireless network
+- In the example below, PC1 does not have wireless capabilities, and also does not have access to wired connections to SW1
 - PC1 has a wired connection to the WGB, which has a wireless connection to the AP
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/85cffc3f-3e76-4a55-9810-254135162a82)
