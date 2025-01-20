@@ -60,19 +60,19 @@ WLC CONFIGURATION
 
 WLC PORTS
 
-- WLC ports are the PHYSICAL ports that cables connect to
-- WLC interfaces are the logical interfaces within the WLC (ie: SVIs on a SWITCH)
+- WLC ports are the physical ports that cables connect to
+- WLC interfaces are the logical interfaces within the WLC (ie: SVIs on a switch)
 - WLCs have a few different ports:
     - SERVICE PORT
         - A dedicated management port
         - Used for out-of-band management
-        - Must connected to a SWITCH ACCESS port because it only supports one VLAN
-        - This port can be used to connect to the DEVICE while it is booting, performing system recovery, etc.
+        - Must connected to a switch access port because it only supports one VLAN
+        - This port can be used to connect to the device while it is booting, performing system recovery, etc.
     - DISTRIBUTION SYSTEM PORT
-        - These are the standard NETWORK ports that connect to the “DISTRIBUTION SYSTEM” (WIRED NETWORK) and are used for DATA traffic.
-        - These ports usually connect to SWITCH TRUNK ports, and if multiple distribution ports are used they can form a LAG
+        - These are the standard network ports that connect to the “distribution system” (wired network) and are used for data traffic.
+        - These ports usually connect to switch trunk ports, and if multiple distribution ports are used they can form a LAG
     - CONSOLE PORT
-        - This is a standard CONSOLE port, either RJ45 or USB
+        - This is a standard console port, either RJ45 or USB
     - REDUNDANCY PORT
         - This port is used to connect to another WLC to form a high availability (HA) pair
 
@@ -84,13 +84,13 @@ WLC INTERFACES
 
 - MANAGEMENT INTERFACES
     - Used for management traffic such as TELNET, SSH, HTTP, HTTPS, RADIUS authentication, NTP, SYSLOG, etc.
-    - CAPWAP TUNNELS are also formed to / from the WLC’s management interface
+    - CAPWAP tunnels are also formed to / from the WLC’s management interface
 - REDUNDANCY MANAGEMENT INTERFACE
-    - When TWO WLCs are connected by their redundancy ports, one WLC is “ACTIVE” and the other is “standby”
+    - When TWO WLCs are connected by their redundancy ports, one WLC is “active” and the other is “standby”
     - This interface can be used to connect to and manage the “standby” WLC
 
 - VIRTUAL INTERFACE
-    - This interface is used when communicating with WIRELESS CLIENTS to relay DHCP requests, perform CLIENT WEB AUTHENTICATION, etc.
+    - This interface is used when communicating with Wireless CLIENTS to relay DHCP requests, perform CLIENT WEB AUTHENTICATION, etc.
 
 - SERVICE PORT INTERFACE
     - If the service port is used, this interface is bound to it and used for out-of-band management
@@ -98,7 +98,7 @@ WLC INTERFACES
 - DYNAMIC INTERFACE
     - These are the interfaces used to map a WLAN to a VLAN
     - For example :
-        - TRAFFIC from the “internal” WLAN will be sent to the WIRED NETWORK from the WLCs “internal” DYNAMIC interface
+        - Traffic from the “internal” WLAN will be sent to the wired network from the WLCs “internal” dynamic interface
 
 ---
 
@@ -153,7 +153,7 @@ Change the PSK FORMAT to “ASCII” and enter a PASSWORD (at least 8 chars in l
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8cd2c63a-aa10-48c3-b826-fe107d04666d)
 
 - WEB AUTHENTICATION
-    - After the WIRELESS CLIENTS gets an IP ADDRESS and tries to access a WEB PAGE, they will have to enter a USERNAME and PASSWORD to AUTHENTICATE
+    - After the Wireless CLIENTS gets an IP ADDRESS and tries to access a WEB PAGE, they will have to enter a USERNAME and PASSWORD to AUTHENTICATE
 
 - WEB PASSTHROUGH
     - Similar to the above, but NO USERNAME or PASSWORD are required
@@ -206,7 +206,7 @@ To SEE a list of the CLIENTS connected, click the left-hand side “CLIENTS” t
 
 ADDTIONAL WLC FEATURES
 
-WIRELESS tab showing a list of the APs currently in the NETWORK
+Wireless tab showing a list of the APs currently in the network
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/29f5608e-9edb-4c6e-9382-998deedd4c72)
 
@@ -226,7 +226,7 @@ Clicking “Mgmt Via Wireless” allows you change if you can access management 
 
 ---
 
-SECURITY tab can allow us to create ACCESS LISTS
+SECURITY tab can allow us to create access LISTS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7eddccfb-07cd-4ba9-914e-54161a4b10f3)
 
