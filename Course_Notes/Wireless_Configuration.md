@@ -120,11 +120,11 @@ Internal interface has now been created
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/80a91b22-c4fa-43e2-b035-05ac6199c6f3)
 
-Now, repeat the above steps for the GUEST interface
+Now, repeat the above steps for the guest interface
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/80d5a300-a3ef-4e46-ae1a-7b7afb6a5078)
 
-Fill out details (IP, Netmask, Gateway…) and then click “apply”
+Fill out details (IP, Netmask, Gateway, etc) and then click “apply”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/43f70936-4b10-4647-8f57-a086e3f0b7bc)
 
@@ -191,12 +191,12 @@ Change status to “enabled” and interface group to “guest”
 
 Now, we need to change the security policy to [WPA2][Auth(PSK)]
 
-Returning to MONITORING, we can see the changes we made to the configuration
+Returning to monitoring, we can see the changes we made to the configuration
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/5a06ae8b-cad0-46ec-bf34-adab0960fc41)
 
 Current number of clients is now 0. By connecting to the WLANS, these numbers should change.
-To SEE a list of the clients connected, click the left-hand side “clients” tab
+To see a list of the clients connected, click the left-hand side “clients” tab
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/b6eefbd8-f79e-4dc6-90e6-95a8c0c17849)
 
@@ -226,7 +226,7 @@ Clicking “Mgmt Via Wireless” allows you change if you can access management 
 
 ---
 
-SECURITY tab can allow us to create access lists
+Security tab can allow us to create access lists
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7eddccfb-07cd-4ba9-914e-54161a4b10f3)
 
