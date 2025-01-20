@@ -83,14 +83,14 @@ WLC PORTS
 WLC INTERFACES
 
 - MANAGEMENT INTERFACES
-    - Used for management traffic such as TELNET, SSH, HTTP, HTTPS, RADIUS authentication, NTP, SYSLOG, etc.
+    - Used for management traffic such as telnet, SSH, HTTP, HTTPS, RADIUS authentication, NTP, syslog, etc.
     - CAPWAP tunnels are also formed to / from the WLC’s management interface
 - REDUNDANCY MANAGEMENT INTERFACE
-    - When TWO WLCs are connected by their redundancy ports, one WLC is “active” and the other is “standby”
+    - When two WLCs are connected by their redundancy ports, one WLC is “active” and the other is “standby”
     - This interface can be used to connect to and manage the “standby” WLC
 
 - VIRTUAL INTERFACE
-    - This interface is used when communicating with Wireless CLIENTS to relay DHCP requests, perform CLIENT WEB AUTHENTICATION, etc.
+    - This interface is used when communicating with Wireless clients to relay DHCP requests, perform client web authentication, etc.
 
 - SERVICE PORT INTERFACE
     - If the service port is used, this interface is bound to it and used for out-of-band management
@@ -108,11 +108,11 @@ Click “NEW”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/b20dbb39-fac6-4cf3-926b-869e75c04e15)
 
-Fill in details of the interface and click “APPLY”
+Fill in details of the interface and click “apply”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/48a4810d-a56c-4aef-8cfd-d2474d42cbb1)
 
-Fill out details (IP, Netmask, Gateway…) and then click “APPLY”
+Fill out details (IP, Netmask, Gateway…) and then click “apply”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/6d11036b-3d82-4c2f-a20a-4367eb18ca8a)
 
@@ -124,7 +124,7 @@ Now, repeat the above steps for the GUEST interface
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/80d5a300-a3ef-4e46-ae1a-7b7afb6a5078)
 
-Fill out details (IP, Netmask, Gateway…) and then click “APPLY”
+Fill out details (IP, Netmask, Gateway…) and then click “apply”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/43f70936-4b10-4647-8f57-a086e3f0b7bc)
 
@@ -144,22 +144,22 @@ SECURITY will also need to be changed from [WPA2] to [WPA2 PSK]
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4cb2783e-26db-4584-8daa-feba124e9966)
 
-(Need to CHECK the PSK “Enable” box at the bottom)
+(Need to check the PSK “Enable” box at the bottom)
 
-Change the PSK FORMAT to “ASCII” and enter a PASSWORD (at least 8 chars in length)
+Change the PSK format to “ASCII” and enter a password (at least 8 chars in length)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/220202e1-222f-4966-81a6-aafa81727c33)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/8cd2c63a-aa10-48c3-b826-fe107d04666d)
 
 - WEB AUTHENTICATION
-    - After the Wireless CLIENTS gets an IP ADDRESS and tries to access a WEB PAGE, they will have to enter a USERNAME and PASSWORD to AUTHENTICATE
+    - After the Wireless clients gets an IP address and tries to access a web page, they will have to enter a username and password to authenticate
 
 - WEB PASSTHROUGH
-    - Similar to the above, but NO USERNAME or PASSWORD are required
-    - A warning or statement is displayed and the CLIENT simply has to agree to gain access to the INTERNET
+    - Similar to the above, but no username or password are required
+    - A warning or statement is displayed and the client simply has to agree to gain access to the internet
     
-- CONDITIONAL and SPLASH PAGE web redirect options are similar but additionally require 802.1x LAYER 2 AUTHENTICATION
+- Conditional and splash page web redirect options are similar but additionally require 802.1x LAYER 2 authentication
 
 ---
 
@@ -167,7 +167,7 @@ QoS
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/957336a3-d81c-4914-b35f-99925a316ad3)
 
-Default QoS setting is “SILVER” (Best Effort). This can be changed depending on the class of traffic being sent through the WLAN
+Default QoS setting is “silver” (Best Effort). This can be changed depending on the class of traffic being sent through the WLAN
 
 ---
 
@@ -183,20 +183,20 @@ CONFIGURING A NEW WLAN (GUEST)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4782e82e-4545-458e-917c-42d40e08748d)
 
-Change STATUS to “ENABLED” and interface GROUP to “GUEST”
+Change status to “enabled” and interface group to “guest”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7a84ce73-0250-404b-896c-695ac5b9d05a)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/2ca8357b-7564-4ef9-8f36-cb730a4b415f)
 
-Now, we need to change the SECURITY POLICY to [WPA2][Auth(PSK)]
+Now, we need to change the security policy to [WPA2][Auth(PSK)]
 
 Returning to MONITORING, we can see the changes we made to the configuration
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/5a06ae8b-cad0-46ec-bf34-adab0960fc41)
 
-Current number of CLIENTS is now 0. By connecting to the WLANS, these numbers should change.
-To SEE a list of the CLIENTS connected, click the left-hand side “CLIENTS” tab
+Current number of clients is now 0. By connecting to the WLANS, these numbers should change.
+To SEE a list of the clients connected, click the left-hand side “clients” tab
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/b6eefbd8-f79e-4dc6-90e6-95a8c0c17849)
 
@@ -216,7 +216,7 @@ Clicking on an AP shows information and configuration settings for it
 
 ---
 
-Management tab allows you change the ways you can MANAGE the WLC
+Management tab allows you change the ways you can manage the WLC
 
 Clicking “Mgmt Via Wireless” allows you change if you can access management via WI-FI
 
@@ -226,15 +226,15 @@ Clicking “Mgmt Via Wireless” allows you change if you can access management 
 
 ---
 
-SECURITY tab can allow us to create access LISTS
+SECURITY tab can allow us to create access lists
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7eddccfb-07cd-4ba9-914e-54161a4b10f3)
 
-First, NAME the ACL and what kind of IP ADDRESS it’s for
+First, name the ACL and what kind of IP address it’s for
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/e9f303bc-9078-4ff2-be86-f63fb9877008)
 
-CLICK “Add New Rule” to specify the ACL Rules (What traffic can pass)
+Click “Add New Rule” to specify the ACL Rules (What traffic can pass)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4637053c-042d-4afc-acf8-27e914698c00)
 
@@ -242,13 +242,13 @@ CLICK “Add New Rule” to specify the ACL Rules (What traffic can pass)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/afbdb580-5383-4f32-9713-708f0a4ebb7e)
 
-We now need to APPLY the ACL (just like applying it to an interface on a ROUTER)
+We now need to apply the ACL (just like applying it to an interface on a router)
 
 Click “CPU ACL” from the left-hand menu
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/3eeee534-2071-47df-97f6-639e46d54b94)
 
-Select the new ACL from the pull-down list and then click “APPLY”
+Select the new ACL from the pull-down list and then click “apply”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7c18a89c-cad3-4f54-b6e5-6d5956edbd37)
 
