@@ -41,7 +41,7 @@
 
 802.11 ASSOCIATION PROCESS
 
-- ACCESS POINTS bridge traffic between WIRELESS STATIONS and other DEVICES
+- ACCESS POINTS bridge traffic between wireless STATIONS and other DEVICES
 - For a STATION to send traffic through the AP, it must be associated with the AP
 - There are THREE 802.11 CONNECTION STATES:
     - NOT AUTHENTICATED, NOT ASSOCIATED
@@ -101,7 +101,7 @@ AUTONOMOUS APs
 ![image](https://github.com/psaumur/CCNA/assets/106411237/57faecbb-36a6-424d-b019-52994a5740db)
 
 - AUTONOMOUS APs connect to the WIRED NETWORK with a TRUNK link
-- DATA traffic from WIRELESS CLIENTS have a very direct PATH to the WIRED NETWORK or to other WIRELESS CLIENTS associated with the same AP
+- DATA traffic from wireless CLIENTS have a very direct PATH to the WIRED NETWORK or to other wireless CLIENTS associated with the same AP
 - Each VLAN has to STRETCH across the entire NETWORK. This is considered BAD practice
     - Large Broadcast Domains
     - Spanning Tree will disable links
@@ -142,7 +142,7 @@ LIGHTWEIGHT APs
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c154bcad-ae81-4fb8-9acf-56913dffaf04)
 
-- THE WLC and lightweight APs use a PROTOCOL called CAPWAP (CONTROL AND PROVISIONING OF WIRELESS ACCESS POINTS) to communicate
+- THE WLC and lightweight APs use a PROTOCOL called CAPWAP (CONTROL AND PROVISIONING OF Wireless ACCESS POINTS) to communicate
     - Based on an older PROTOCOL called LWAPP (LIGHTWEIGHT ACCESS POINT PROTOCOL)
 
 - TWO TUNNELS are created between each AP and the WLC :
@@ -150,7 +150,7 @@ LIGHTWEIGHT APs
         - This TUNNEL is used to configure the APs and control and manage operations
         - All traffic in this TUNNEL is ENCRYPTED, by default
     - DATA TUNNEL (UDP Port 5247)
-        - All traffic from WIRELESS CLIENTS is sent through this TUNNEL to the WLC
+        - All traffic from wireless CLIENTS is sent through this TUNNEL to the WLC
         - IT DOES NOT GO DIRECTLY TO THE WIRED NETWORK !
 
 - Traffic in this TUNNEL is not ENCRYPTED by default but you can configure it to be ENCRYPTED with DTLS (DATAGRAM TRANSPORT LAYER SECURITY)
@@ -188,7 +188,7 @@ There are some KEY BENEFITS to SPLIT-MAC ARCHITECTURE
         
     - FLEXCONNECT
         - Like a LIGHTWEIGHT AP in LOCAL mode, it offers ONE or MORE BSSs for CLIENTS to associate with
-        - HOWEVER, FLEXCONNECT allows the AP to locally SWITCH traffic between the WIRED (TRUNK) and WIRELESS NETWORKS (ACCESS) if the TUNNELS to the WLC go down
+        - HOWEVER, FLEXCONNECT allows the AP to locally SWITCH traffic between the WIRED (TRUNK) and wireless NETWORKS (ACCESS) if the TUNNELS to the WLC go down
     
 ![image](https://github.com/psaumur/CCNA/assets/106411237/aa2d7d98-2d6f-46b6-ab38-7acc96c8dc52)
     
@@ -218,7 +218,7 @@ There are some KEY BENEFITS to SPLIT-MAC ARCHITECTURE
 
 - FLEX PLUS BRIDGE
     - Adds FLEXCONNECT functionality to the BRIDGE / MESH mode
-    - Allows WIRELESS ACCESS POINTS to locally forward traffic even if connectivity to the WLC is lost
+    - Allows wireless ACCESS POINTS to locally forward traffic even if connectivity to the WLC is lost
     
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/940a414b-208f-408c-a3e2-37e3bfbb0d32)
