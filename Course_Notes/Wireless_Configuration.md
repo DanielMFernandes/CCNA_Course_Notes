@@ -4,11 +4,11 @@ TOPOLOGY INTRODUCTION
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/1e8ed6b8-1183-42e7-9584-d5504c52987a)
 
-INTERNAL PC (VLAN 100) ACCESSING DEFAULT GATEWAY via Internal CAPWAP tunnel
+Internal PC (VLAN 100) accessing default gateway via Internal CAPWAP tunnel
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4dec4c60-945e-4f2c-b7db-3028269ec441)
 
-REACHING External GUEST PC  via DEFAULT GATEWAY + Internal and External CAPWAP tunnels
+Reaching External guest PC  via default gateway + Internal and External CAPWAP tunnels
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/3b1c79a6-f8c5-496b-a0b8-d561ff87880f)
 
@@ -32,7 +32,7 @@ This helps set up the WLC to allow GUI configuration
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/313e030b-add3-4384-bdf0-96306e3663b1)
 
-Why Jeremy chose FRANCE for Country Code (has to do with regulatory domain of equipment)
+Why Jeremy chose France for Country Code (has to do with regulatory domain of equipment)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c3a21043-c4fc-47fb-9294-953700fbd8ed)
 
@@ -60,21 +60,21 @@ WLC CONFIGURATION
 
 WLC PORTS
 
-- WLC PORTS are the PHYSICAL PORTS that cables connect to
-- WLC INTERFACES are the logical interfaces within the WLC (ie: SVIs on a SWITCH)
-- WLCs have a few different PORTS:
+- WLC ports are the PHYSICAL ports that cables connect to
+- WLC interfaces are the logical interfaces within the WLC (ie: SVIs on a SWITCH)
+- WLCs have a few different ports:
     - SERVICE PORT
-        - A dedicated MANAGEMENT PORT
-        - Used for OUT-OF-BAND management
-        - Must connected to a SWITCH ACCESS PORT because it only supports one VLAN
-        - This PORT can be used to connect to the DEVICE while it is booting, performing system recovery, etc.
+        - A dedicated management port
+        - Used for out-of-band management
+        - Must connected to a SWITCH ACCESS port because it only supports one VLAN
+        - This port can be used to connect to the DEVICE while it is booting, performing system recovery, etc.
     - DISTRIBUTION SYSTEM PORT
-        - These are the standard NETWORK PORTS that connect to the “DISTRIBUTION SYSTEM” (WIRED NETWORK) and are used for DATA traffic.
-        - These PORTS usually connect to SWITCH TRUNK PORTS, and if multiple distribution PORTS are used they can form a LAG
+        - These are the standard NETWORK ports that connect to the “DISTRIBUTION SYSTEM” (WIRED NETWORK) and are used for DATA traffic.
+        - These ports usually connect to SWITCH TRUNK ports, and if multiple distribution ports are used they can form a LAG
     - CONSOLE PORT
-        - This is a standard CONSOLE PORT, either RJ45 or USB
+        - This is a standard CONSOLE port, either RJ45 or USB
     - REDUNDANCY PORT
-        - This PORT is used to connect to another WLC to form a HIGH AVAILABILITY (HA) pair
+        - This port is used to connect to another WLC to form a high availability (HA) pair
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/cec94d93-d58b-43b1-8e5e-f4c07ee430fd)
 
@@ -84,21 +84,21 @@ WLC INTERFACES
 
 - MANAGEMENT INTERFACES
     - Used for management traffic such as TELNET, SSH, HTTP, HTTPS, RADIUS authentication, NTP, SYSLOG, etc.
-    - CAPWAP TUNNELS are also formed to / from the WLC’s management INTERFACE
+    - CAPWAP TUNNELS are also formed to / from the WLC’s management interface
 - REDUNDANCY MANAGEMENT INTERFACE
-    - When TWO WLCs are connected by their REDUNDANCY PORTS, one WLC is “ACTIVE” and the other is “STANDBY”
-    - This INTERFACE can be used to connect to and manage the “STANDBY” WLC
+    - When TWO WLCs are connected by their redundancy ports, one WLC is “ACTIVE” and the other is “standby”
+    - This interface can be used to connect to and manage the “standby” WLC
 
 - VIRTUAL INTERFACE
-    - This INTERFACE is used when communicating with WIRELESS CLIENTS to relay DHCP requests, perform CLIENT WEB AUTHENTICATION, etc.
+    - This interface is used when communicating with WIRELESS CLIENTS to relay DHCP requests, perform CLIENT WEB AUTHENTICATION, etc.
 
 - SERVICE PORT INTERFACE
-    - If the SERVICE PORT is used, this INTERFACE is bound to it and used for OUT-OF-BAND MANAGEMENT
+    - If the service port is used, this interface is bound to it and used for out-of-band management
 
 - DYNAMIC INTERFACE
-    - These are the INTERFACES used to map a WLAN to a VLAN
+    - These are the interfaces used to map a WLAN to a VLAN
     - For example :
-        - TRAFFIC from the “INTERNAL” WLAN will be sent to the WIRED NETWORK from the WLCs “INTERNAL” DYNAMIC INTERFACE
+        - TRAFFIC from the “internal” WLAN will be sent to the WIRED NETWORK from the WLCs “internal” DYNAMIC interface
 
 ---
 
@@ -116,7 +116,7 @@ Fill out details (IP, Netmask, Gateway…) and then click “APPLY”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/6d11036b-3d82-4c2f-a20a-4367eb18ca8a)
 
-INTERNAL interface has now been created
+Internal interface has now been created
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/80a91b22-c4fa-43e2-b035-05ac6199c6f3)
 
@@ -130,13 +130,13 @@ Fill out details (IP, Netmask, Gateway…) and then click “APPLY”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/3a98ae1c-13a4-4bde-ab8c-398f8d16da43)
 
-Now that all the INTERFACES are created, we can start WLAN CONFIGURATION
+Now that all the interfaces are created, we can start WLAN configuration
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d80eff95-41c7-43c6-a31e-0ebde3a7cd81)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/960f24e5-efb9-4a15-9f5f-2a8e45b2d425)
 
-INTERNAL WLAN is set to “MANAGEMENT”, it needs to be changed to “INTERNAL”
+Internal WLAN is set to “management”, it needs to be changed to “internal”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/a3cb544c-3ce4-43b5-b054-e52e8388ab83)
 
@@ -183,7 +183,7 @@ CONFIGURING A NEW WLAN (GUEST)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4782e82e-4545-458e-917c-42d40e08748d)
 
-Change STATUS to “ENABLED” and INTERFACE GROUP to “GUEST”
+Change STATUS to “ENABLED” and interface GROUP to “GUEST”
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7a84ce73-0250-404b-896c-695ac5b9d05a)
 
@@ -191,7 +191,7 @@ Change STATUS to “ENABLED” and INTERFACE GROUP to “GUEST”
 
 Now, we need to change the SECURITY POLICY to [WPA2][Auth(PSK)]
 
-Returning to MONITORING, we can see the changes we made to the CONFIGURATION
+Returning to MONITORING, we can see the changes we made to the configuration
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/5a06ae8b-cad0-46ec-bf34-adab0960fc41)
 
@@ -216,9 +216,9 @@ Clicking on an AP shows information and configuration settings for it
 
 ---
 
-MANAGEMENT tab allows you change the ways you can MANAGE the WLC
+Management tab allows you change the ways you can MANAGE the WLC
 
-Clicking “Mgmt Via Wireless” allows you change if you can access MANAGEMENT via WI-FI
+Clicking “Mgmt Via Wireless” allows you change if you can access management via WI-FI
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/605361a0-c8da-47fc-bca3-af09751838dd)
 
@@ -242,7 +242,7 @@ CLICK “Add New Rule” to specify the ACL Rules (What traffic can pass)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/afbdb580-5383-4f32-9713-708f0a4ebb7e)
 
-We now need to APPLY the ACL (just like applying it to an INTERFACE on a ROUTER)
+We now need to APPLY the ACL (just like applying it to an interface on a ROUTER)
 
 Click “CPU ACL” from the left-hand menu
 
