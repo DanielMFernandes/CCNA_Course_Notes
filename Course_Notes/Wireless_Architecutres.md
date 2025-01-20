@@ -6,23 +6,23 @@
 
 - 802.11 frames have a different format than 802.3 ethernet frames
 - For the CCNA, you don’t have to learn it in as much detail as the ethernet and IP headers
-- Depending on the 802.11 VERSION and the message type, some of the fields might not be present in the frame
+- Depending on the 802.11 version and the message type, some of the fields might not be present in the frame
     - For example: Not all messages use all 4 address fields
 - Frame CONTROL
     - Provides information such as message type and subtype
     - Indicates if the frame is a management frame
 - DURATION / ID
     - Depending on the message type, this field can indicate:
-        - The TIME (in microseconds) the CHANNEL will be dedicated to transmission of the frame
-        - Identifier for the ASSOCIATION (the connection)
+        - The time (in microseconds) the channel will be dedicated to transmission of the frame
+        - Identifier for the association (the connection)
     
 - ADDRESSES
     - Up to four addresses can be present in an 802.11 frame.
     - Which addresses are present, and their order, depends on the message type
-        - Destination Address (DA) : Final recipient of the frame
-        - Source Address (SA) : Original sender of the frame
-        - Receiver Address (RA) : Immediate recipient of the frame
-        - Transmitter Address (TA) : Immediate sender of the frame
+        - Destination Address (DA) : final recipient of the frame
+        - Source Address (SA) : original sender of the frame
+        - Receiver Address (RA) : immediate recipient of the frame
+        - Transmitter Address (TA) : immediate sender of the frame
     
 - SEQUENCE CONTROL
     - Used to reassemble fragments and eliminate duplicate frames
@@ -91,8 +91,8 @@ AUTONOMOUS APs
     - Can be configured by HTTP / HTTPS Web connection (GUI)
     - An IP address for remote management should be configured
     - The RF parameters must be manually configured (Transmit Power, Channel, etc)
-    - SECURITY POLICIES are handled individually by each AP
-    - QoS RULES etc. are configured individually by each AP
+    - Security Policies are handled individually by each AP
+    - QoS rules etc. are configured individually by each AP
 
  
 
@@ -123,21 +123,21 @@ LIGHTWEIGHT APs
 
 - LIGHTWEIGHT APs handle **“real-time”** operations like:
     - Transmitting / Receiving of traffic
-    - Encryption / decryption of traffic
+    - Encryption / Decryption of traffic
     - Sending out beacons / probes
     - Packet prioritization
     - Etc…
 - WLC Functions (not time dependent)
     - RF management
-    - SECURITY / QoS management
+    - Security / QoS management
     - Client authentication
     - Client association / roaming management
-    - RESOURCE allocation
+    - Resource allocation
     - Etc…
     
 - The WLC is also used to centrally configured the lightweight APs
 - The WLC can be located in the same subnet / VLAN as the lightweight APs it manages OR in a different subnet / VLAN
-- The WLC and the lightweight APs authenticate each other using DIGITAL CERTIFICATES installed on each device ( X.509 STANDARD CERTIFICATES )
+- The WLC and the lightweight APs authenticate each other using DIGITAL CERTIFICATES installed on each device ( X.509 Standard Certificates )
     - This ensures that only authorized APs can join the network
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c154bcad-ae81-4fb8-9acf-56913dffaf04)
@@ -155,7 +155,7 @@ LIGHTWEIGHT APs
 
 - Traffic in this tunnel is not encrypted by default but you can configure it to be encrypted with DTLS (DATAGRAM TRANSPORT LAYER SECURITY)
 
-- Because all traffic from wireless clients is tunneled to the WLC with CAPWAP, APs connect to the SWITCH ACCESS PORTS - not trunk PORTS
+- Because all traffic from wireless clients is tunneled to the WLC with CAPWAP, APs connect to the switch access ports - not trunk ports
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/10917a40-468a-4ea6-8253-bf229d612af1)
 
@@ -163,7 +163,7 @@ LIGHTWEIGHT APs
 
 ***  (Not necessary to MEMORIZE for CCNA) ***
 
-There are some KEY BENEFITS to split-MAC ARCHITECTURE
+There are some key benefits to split-MAC architecture
 
 - SCALABILITY
     - With a WLC (or multiple) it’s simpler to build and support a network with thousands of APs
@@ -187,37 +187,37 @@ There are some KEY BENEFITS to split-MAC ARCHITECTURE
         - This is the default mode where the AP offers a BSS (more multiple BSSs) for clients to associate with
         
     - FLEXCONNECT
-        - Like a LIGHTWEIGHT AP in local mode, it offers ONE or MORE BSSs for clients to associate with
-        - However, FLEXCONNECT allows the AP to locally SWITCH traffic between the wired (trunk) and wireless networks (access) if the tunnels to the WLC go down
+        - Like a Lightweight AP in local mode, it offers one or more BSSs for clients to associate with
+        - However, FLEXCONNECT allows the AP to locally switch traffic between the wired (trunk) and wireless networks (access) if the tunnels to the WLC go down
     
 ![image](https://github.com/psaumur/CCNA/assets/106411237/aa2d7d98-2d6f-46b6-ab38-7acc96c8dc52)
     
 
 - SNIFFER
-    - The AP does not OFFER a BSS for clients
-    - Dedicated to CAPTURING 802.11 frames and SENDING them to a device running software such as WIRESHARK
+    - The AP does not offer a BSS for clients
+    - Dedicated to capturing 802.11 frames and sending them to a device running software such as Wireshark
 
 - MONITOR
     - The AP does not offer a BSS for clients
-    - Dedicated to RECEIVING 802.11 frames to detect rogue devices
-    - If a client is found to be a rogue device, an AP can send DE-AUTHENTICATION messages to disassociate the rogue device from the AP
+    - Dedicated to receiving 802.11 frames to detect rogue devices
+    - If a client is found to be a rogue device, an AP can send de-authentication messages to disassociate the rogue device from the AP
 
 - ROGUE DETECTOR
-    - The AP does not even USE its RADIO
-    - It LISTENS to traffic on the wired network only, but it receives a list of SUSPECTED rogue clients and AP MAC addresses from the WLC
-    - By LISTENING to ARP messages on the wired network and correlating it with the information it receives from the WLC, it can DETECT rogue devices
+    - The AP does not even use its radio
+    - It listens to traffic on the wired network only, but it receives a list of suspected rogue clients and AP MAC addresses from the WLC
+    - By listening to ARP messages on the wired network and correlating it with the information it receives from the WLC, it can detect rogue devices
 
 - SE-CONNECT (SPECTRUM EXPERT CONNECT)
-    - The AP does not OFFER a BSS for clients
-    - Dedicated to RF SPECTRUM ANALYSIS on all CHANNELS
-    - It can send information to software such as Cisco Spectrum Expert on a PC to COLLECT and ANALYZE the data
+    - The AP does not offer a BSS for clients
+    - Dedicated to RF spectrum analysis on all channels
+    - It can send information to software such as Cisco Spectrum Expert on a PC to collect and analyze the data
 
 - BRIDGE / MESH
-    - Like the autonomous APs *OUTDOOR BRIDGE* mode, the LIGHTWEIGHT AP can be a DEDICATED BRIDGE between SITES (Example:  over LONG distances)
+    - Like the autonomous APs *outdoor bridge* mode, the lightweight AP can be a dedicated bridge between sites (Example:  over long distances)
     - A MESH can be made between the access points
 
 - FLEX PLUS BRIDGE
-    - Adds FLEXCONNECT functionality to the BRIDGE / MESH mode
+    - Adds flexconnect functionality to the bridge / mesh mode
     - Allows wireless access points to locally forward traffic even if connectivity to the WLC is lost
     
 
@@ -227,11 +227,11 @@ There are some KEY BENEFITS to split-MAC ARCHITECTURE
 
 CLOUD-BASED APs
 
-- Cloud-based AP architecture is between autonomous AP and split-MAC ARCHITECTURE
+- Cloud-based AP architecture is between autonomous AP and split-MAC architecture
     - Autonomous APs that are centrally managed in the cloud
 - CISCO MERAKI is a popular cloud-based WI-FI solution
 - The MERAKI dashboard can be used to configure APs, monitor the network, generate performance reports, etc.
-    - MERAKI also tells each AP which CHANNEL to use, what transmit power, etc.
+    - MERAKI also tells each AP which channel to use, what transmit power, etc.
 - However, data traffic is not sent to the cloud. It is sent directly to the wired network like when using autonomous APs
     - Only management / control traffic is sent to the cloud
 
@@ -243,14 +243,14 @@ CLOUD-BASED APs
 
 WIRELESS LAN CONTROLLER (WLC) DEPLOYMENTS
 
-- In a split-MAC architecture, there four main WLC DEPLOYMENT MODES:
+- In a split-MAC architecture, there four main WLC deployment modes:
     - UNIFIED
         - THE WLC is a hardware applicance in a central location of the network
     - Cloud-based
-        - The WLC is a VM running on a SERVER, usually in a PRIVATE cloud in a data CENTER
+        - The WLC is a VM running on a server, usually in a private cloud in a data center
         - This is not the same as the cloud-based AP architecture discussed previously
     - EMBEDDED
-        - The WLC is integrated within a SWITCH
+        - The WLC is integrated within a switch
     - MOBILITY EXPRESS
         - THE WLC is integrated within an AP
 
@@ -268,7 +268,7 @@ UNIFIED WLC
 
 CLOUD-BASED
 
-- The WLC is a VM running on a SERVER, usually in a PRIVATE cloud in a data CENTER
+- The WLC is a VM running on a server, usually in a private cloud in a data center
 - Cloud-based WLCs can typically support up to about 3000 APs
 - If more than 3000 APs are needed, more WLC VMs can be deployed
 
@@ -278,9 +278,9 @@ CLOUD-BASED
 
 EMBEDDED WLC
 
-- The WLC is embedded within a SWITCH
-- An EMBEDDED WLC can support up to about 200 APs
-- If more than 200 APs are needed, more SWITCHES with EMBEDDED WLCs can be added
+- The WLC is embedded within a switch
+- An embedded WLC can support up to about 200 APs
+- If more than 200 APs are needed, more switches with embedded WLCs can be added
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/fc6a79f2-a7b5-4b5a-99d6-b94238362e8e)
 
@@ -290,6 +290,6 @@ CISCO MOBILITY EXPRESS WLC
 
 - The WLC is embedded within an AP
 - A MOBILITY EXPRESS WLC can support up to about 100 APs
-- If more than 100 APs are needed, more APs with EMBEDDED MOBILITY  EXPRESS WLCs can be added
+- If more than 100 APs are needed, more APs with embedded Mobility Express WLCs can be added
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4ff02aee-83c9-4a56-8a71-a14e20e8bf3c)
