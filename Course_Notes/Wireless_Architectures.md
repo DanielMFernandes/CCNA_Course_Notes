@@ -5,7 +5,7 @@
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7b459483-7156-44cf-9ee7-f9391e476636)
 
 - 802.11 frames have a different format than 802.3 ethernet frames
-- For the CCNA, you don’t have to learn it in as much detail as the ethernet and IP headers
+- For the CCNA, you don’t have to learn it in as much detail as the Ethernet and IP headers
 - Depending on the 802.11 version and the message type, some of the fields might not be present in the frame
     - For example: Not all messages use all 4 address fields
 - Frame CONTROL
