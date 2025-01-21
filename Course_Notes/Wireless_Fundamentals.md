@@ -27,7 +27,7 @@ WIRELESS NETWORKS
 
 3)  Wireless signal coverage area must be considered
 
-- Signal Range
+- Signal range
 - Signal absorption, reflection, refraction, diffraction, and scattering
 
 ---
@@ -158,7 +158,7 @@ WI-FI STANDARDS (802.11)
 SERVICE SETS
 
 - 802.11 defines different kinds of SERVICE SETS which are groups of wireless network devices
-- There are three main TYPES:
+- There are three main types:
     - INDEPENDENT
     - INFRASTRUCTURE
     - MESH
@@ -168,7 +168,7 @@ SERVICE SETS
 
 SERVICE SETS : IBSS
 
-- An IBSS (INDEPENDENT BASIC SERVICE SET) is a wireless network in which two or more wireless devices connect directly without using an AP (ACCESS POINT)
+- An IBSS (Independent Basic Service Set) is a wireless network in which two or more wireless devices connect directly without using an AP (Access Point)
 - Also called an AD HOC network
 - Can be used for file transfer (ie: AirDrop)
 - Not scalable beyond a few devices
@@ -177,19 +177,19 @@ SERVICE SETS : IBSS
 
 SERVICE SETS : BSS
 
-- A BSS (BASIC SERVICE SET) is a kind of infrastructure service set in which clients connect to each other via an AP (ACCESS POINT) but not DIRECTLY to each other
-- A BSSID (BASIC SERVICE SET ID) is used to uniquely identify the AP
+- A BSS (Basic Service Set) is a kind of infrastructure service set in which clients connect to each other via an AP but not directly to each other
+- A BSSID (Basic Service Set ID) is used to uniquely identify the AP
     - Other APs can use the same SSID but not the same BSSID
     - The BSSID is the MAC address of the APs radio
 - Wireless devices request to *associate* with the BSS
 - Wireless devices that have associated with the BSS are called “CLIENTS” or “STATIONS”
-- The area around an AP where its signal is usable is called a BSA (BASIC SERVICE AREA)
+- The area around an AP where its signal is usable is called a BSA (Basic Service Area)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/ef259f45-ead1-45f3-8ad3-5f343a763988)
 
 SERVICE SETS: ESS
 
-- To create larger wireless LANS beyond the range of a single AP, we use an ESS (EXTENDED SERVICE SET)
+- To create larger wireless LANS beyond the range of a single AP, we use an ESS (EXTENDED Service Set)
 - APs with their own BSSs are connected by a wired network
     - Each BSS uses the same SSID
     - Each BSS has a unique BSSID
@@ -202,12 +202,12 @@ SERVICE SETS: ESS
 
 SERVICE SETS: MBSS
 
-- An MBSS (MESH BASIC SERVICE SET) can be used in situations where it’s difficult to run an ethernet connection to every AP
+- An MBSS (Mesh Basic Service Set) can be used in situations where it’s difficult to run an ethernet connection to every AP
 - MESH APs use two radios:
     - One provides BSS to wireless clients
     - One forms a “BACKHAUL NETWORK” which is used to bridge traffic from AP to AP
-- At least one AP is connected to the wired network and it is called the RAP (ROOT ACCESS POINT)
-- The other APs are called MAPs (MESH ACCESS POINTS)
+- At least one AP is connected to the wired network and it is called the RAP (Root Access Point)
+- The other APs are called MAPs (Mesh Access Points)
 - A PROTOCOL is used to determine the best path through the MESH (similar to how dynamic routing protocols are used to determine the best path to a destination)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/1604f0ea-8a93-4922-a78d-fe55e836ba9a)
