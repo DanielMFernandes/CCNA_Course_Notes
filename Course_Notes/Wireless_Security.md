@@ -75,13 +75,13 @@ The original 802.11 standard included two options for authentication:
 EAP (Extensible Authentication Protocol)
 
 - EAP is an authentication FRAMEWORK
-- It defines a standard SET of authentication FUNCTIONS that are used by the various *EAP methods*
+- It defines a standard SET of authentication functions that are used by the various *EAP methods*
 - We will look at four EAP methods:
     - LEAP
     - EAP-FAST
     - PEAP
     - EAP-TLS
-- EAP is integrated with **802.1X** which provides *PORT-BASED network access CONTROL*
+- EAP is integrated with **802.1X** which provides *port-based network access control*
 
 **802.1X** is used to limit network access for clients connected to a LAN or WLAN until they authenticate
 
@@ -97,14 +97,14 @@ There are **three main entities** in 802.1X:
     - LEAP was developed by Cisco an an improvement over WEP
     - Clients must provide a username and password to authenticate
     - In addition, *mutual authentication* is provided by both the client and server sending a CHALLENGE PHRASE to each other.
-    - DYNAMIC WEP keys are used, meaning that the WEP keys are changed frequently
+    - Dynamic WEP keys are used, meaning that the WEP keys are changed frequently
     - Like WEP, LEAP is considered vulnerable and should not be used anymore
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/0b9ecce2-4219-42d0-8275-086b92134cda)
 
 - EAP-FAST (EAP FLEXIBLE Authentication via Secure Tunneling)
     - EAP-FAST was also developed by Cisco
-    - Consists of three PHASES:
+    - Consists of three phases:
         - A PAC (Protected Access Credential) is generated and passed from server to client
         - A secure TLS tunnel is established between the client and authentication server
         - Inside of the secure (encrypted) TLS tunnel, the client and server communicated further to authenticate / authorize the client
