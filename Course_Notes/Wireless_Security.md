@@ -96,13 +96,13 @@ There are **three main entities** in 802.1X:
 - LEAP (Lightweight EAP)
     - LEAP was developed by Cisco an an improvement over WEP
     - Clients must provide a username and password to authenticate
-    - In addition, *mutual authentication* is provided by both the client and server sending a CHALLENGE PHRASE to each other.
+    - In addition, *mutual authentication* is provided by both the client and server sending a challenge phrase to each other.
     - Dynamic WEP keys are used, meaning that the WEP keys are changed frequently
     - Like WEP, LEAP is considered vulnerable and should not be used anymore
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/0b9ecce2-4219-42d0-8275-086b92134cda)
 
-- EAP-FAST (EAP FLEXIBLE Authentication via Secure Tunneling)
+- EAP-FAST (EAP Flexible Authentication via Secure Tunneling)
     - EAP-FAST was also developed by Cisco
     - Consists of three phases:
         - A PAC (Protected Access Credential) is generated and passed from server to client
@@ -112,7 +112,7 @@ There are **three main entities** in 802.1X:
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f17d6f7b-9f87-4cb2-be24-5d8c95dc0cfc)
 
-- PEAP (PROTECTED EAP)
+- PEAP (Protected EAP)
     - Like EAP-FAST, PEAP involves establishing a secure TLS tunnel between the client and server
     - Instead of a PAC, the server has a DIGITAL CERTIFICATE
     - The client uses this digital certificate to authenticate the server
@@ -122,7 +122,7 @@ There are **three main entities** in 802.1X:
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/0f9babe7-d86f-49c8-b732-20f31ea26437)
 
-- EAP-TLS (EAP TRANSPORT LAYER Security)
+- EAP-TLS (EAP Transport Layer Security)
     - Whereas PEAP only requires the AS to have a certificate, EAP-TLS requires a certificate on the AS and on every single client
     - EAP-TLS is the most secure wireless authentication method, but it is more difficult to implement than PEAP because every client device needs a certificate
     - Because the client and server authenticate each other with digital certificates, there is no need to authenticate the client within the TLS tunnel
