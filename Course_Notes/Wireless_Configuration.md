@@ -218,7 +218,7 @@ Clicking on an AP shows information and configuration settings for it
 
 Management tab allows you change the ways you can manage the WLC
 
-Clicking “Mgmt Via Wireless” allows you change if you can access management via WI-FI
+Clicking “Mgmt Via Wireless” allows you change if you can access management via Wi-Fi
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/605361a0-c8da-47fc-bca3-af09751838dd)
 
