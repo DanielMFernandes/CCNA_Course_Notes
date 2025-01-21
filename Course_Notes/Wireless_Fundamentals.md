@@ -1,10 +1,10 @@
 # 55. WIRELESS FUNDAMENTALS
 
-- Although we will briefly look at other types of wireless networks, in this section of the course we will be focusing on wireless LANs using WI-FI
+- Although we will briefly look at other types of wireless networks, in this section of the course we will be focusing on wireless LANs using Wi-Fi
 - The standards we use for wireless LANs are defined in IEEE 802.11
-- The term WI-FI is a trademark of the WI-FI Alliance, not directly connected to the IEEE
-- The WI-FI Alliance tests and certifies equipment for 802.11 standards compliance
-- However, WI-FI has become the common term that people use to refer to 802.11 wireless LANs and that term will be used through the course videos
+- The term Wi-Fi is a trademark of the Wi-Fi Alliance, not directly connected to the IEEE
+- The Wi-Fi Alliance tests and certifies equipment for 802.11 standards compliance
+- However, Wi-Fi has become the common term that people use to refer to 802.11 wireless LANs and that term will be used through the course videos
 
 WIRELESS NETWORKS
 
@@ -41,7 +41,7 @@ SIGNAL ABSORPTION
 SIGNAL REFLECTION
 
 - Reflection happens when a signal bounces off a material (like metal)
-    - This is why WI-FI reception is usually poor in elevators. The signal bounces off the metal and very little penetrates into the elevator
+    - This is why Wi-Fi reception is usually poor in elevators. The signal bounces off the metal and very little penetrates into the elevator
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/d57a94df-4e82-46f2-8045-de01f7a293f1)
 
@@ -112,7 +112,7 @@ RADIO FREQUENCY (RF)
 
 RADIO FREQUENCY BANDS 
 
-- WI-FI uses two main bands (frequency ranges)
+- Wi-Fi uses two main bands (frequency ranges)
 - 2.4 GHz band
     - Range is 2.400 - 2.4835 GHz
 - 5 GHz band
@@ -126,7 +126,7 @@ RADIO FREQUENCY BANDS
 - The 2.4 GHz band typically provides further reach in open space and better penetration of obstacles such as walls.
     - However, more devices tend to use the 2.4 GHz band so interference can be a bigger problem compared to 5GHz
 
-** WI-FI 6 (802.11ax) has expanded the spectrum range to include a band in the 6 GHz range
+** Wi-Fi 6 (802.11ax) has expanded the spectrum range to include a band in the 6 GHz range
 
 ---
 
@@ -194,7 +194,7 @@ SERVICE SETS: ESS
     - Each BSS uses the same SSID
     - Each BSS has a unique BSSID
     - Each BSS uses a different channel to avoid interference
-- Clients can pass between APs without having to reconnect, providing a seamless WI-FI experience when moving between APs
+- Clients can pass between APs without having to reconnect, providing a seamless Wi-Fi experience when moving between APs
     - This is called ROAMING
 - The BSAs should overlap about 10-15%
 
