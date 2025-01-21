@@ -63,7 +63,7 @@ The original 802.11 standard included two options for authentication:
     - For encryption, WEP uses the RC4 ALGORITHM
     - WEP is a “shared-key” protocol, requiring the sender and receiver to have the same key
     - WEP keys can be 40 bits or 104 bits in length
-    - The above keys are combined with a 24-bit “IV” (INITIALIZATION VECTOR) to bring the total length to 64 bits or 128 bits
+    - The above keys are combined with a 24-bit “IV” (Initialization Vector) to bring the total length to 64 bits or 128 bits
     - WEP encryption is not secure and can easily be cracked
     - WEP can be used for authentication like this:
     
@@ -74,8 +74,8 @@ The original 802.11 standard included two options for authentication:
 
 EAP (Extensible Authentication Protocol)
 
-- EAP is an authentication FRAMEWORK
-- It defines a standard SET of authentication functions that are used by the various *EAP methods*
+- EAP is an authentication framework
+- It defines a standard set of authentication functions that are used by the various *EAP methods*
 - We will look at four EAP methods:
     - LEAP
     - EAP-FAST
