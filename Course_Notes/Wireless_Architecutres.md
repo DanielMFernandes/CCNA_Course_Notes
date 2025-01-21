@@ -31,8 +31,8 @@
     - Used in QoS to prioritize certain traffic
 - HT (High Throughput) Control
     - Added in 802.11n to enable High Throughput operations
-    - 802.11n is also known as “High Throughput” (HT) WI-FI
-    - 802.11ac is also know as “Very High Throughput” (VHT) WI-FI
+    - 802.11n is also known as “High Throughput” (HT) Wi-Fi
+    - 802.11ac is also know as “Very High Throughput” (VHT) Wi-Fi
 
 - FCS (FRAME CHECK SEQUENCE)
     - Same as in an ethernet frame, used to check for errors
@@ -229,7 +229,7 @@ CLOUD-BASED APs
 
 - Cloud-based AP architecture is between autonomous AP and split-MAC architecture
     - Autonomous APs that are centrally managed in the cloud
-- CISCO MERAKI is a popular cloud-based WI-FI solution
+- CISCO MERAKI is a popular cloud-based Wi-Fi solution
 - The MERAKI dashboard can be used to configure APs, monitor the network, generate performance reports, etc.
     - MERAKI also tells each AP which channel to use, what transmit power, etc.
 - However, data traffic is not sent to the cloud. It is sent directly to the wired network like when using autonomous APs
