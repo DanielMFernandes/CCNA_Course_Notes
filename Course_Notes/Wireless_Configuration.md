@@ -18,7 +18,7 @@ LAYER 3 SWITCH CONFIGURATION (SW1)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/eae43f12-aa95-41a3-8a5d-26ffc5e83262)
 
-PART 2 of configuration
+Part 2 of configuration
 
 Note DHCP “Option 43”
 
@@ -140,7 +140,7 @@ Internal WLAN is set to “management”, it needs to be changed to “internal�
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/a3cb544c-3ce4-43b5-b054-e52e8388ab83)
 
-SECURITY will also need to be changed from [WPA2] to [WPA2 PSK]
+Security will also need to be changed from [WPA2] to [WPA2 PSK]
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4cb2783e-26db-4584-8daa-feba124e9966)
 
