@@ -18,7 +18,7 @@ AUTHENTICATION
 
 - All clients must be authenticated before they can associate with an AP
 - In a corporate setting, only trusted users / devices should be given access to the network
-    - In corporate settings, a separate SSID which doesn’t have access to the corporate network can be provided for GUEST users
+    - In corporate settings, a separate SSID which doesn’t have access to the corporate network can be provided for guest users
 - Ideally, clients should also authenticate the AP to avoid associating with a malicious AP
 - There are multiple ways to authenticate:
     - Password
@@ -42,7 +42,7 @@ ENCRYPTION
 
 INTEGRITY
 
-- As explained in the “security FUNDAMENTALS” video of the course, integrity ensures that the message is not modified by a third-party
+- As explained in the “Security Fundamentals” video of the course, integrity ensures that the message is not modified by a third-party
 - The message that is sent by the source host should be the same as the message that is received by the destination host
 - A MIC (Message Integrity Check) is added to the message to help protect their integrity.
 
@@ -52,16 +52,16 @@ INTEGRITY
 
 AUTHENTICATION METHODS
 
-The original 802.11 STANDARD included two OPTIONS for authentication:
+The original 802.11 standard included two options for authentication:
 
 - OPEN AUTHENTICATION
-    - The client sends an authentication REQUEST and the AP just accepts it
+    - The client sends an authentication request and the AP just accepts it
     - The is clearly not a secure authentication method
     - After the client is authenticated and associated with the AP, it’s possible to require the user to authenticate via other methods before access to the network is granted (ie: Starbucks Wi-Fi)
 - WEP (Wired Equivalent Privacy)
     - WEP is used to provide both authentication and encryption of wireless traffic
     - For encryption, WEP uses the RC4 ALGORITHM
-    - WEP is a “SHARED-KEY” protocol, requiring the SENDER and RECEIVER to have the same KEY
+    - WEP is a “shared-key” protocol, requiring the sender and receiver to have the same key
     - WEP keys can be 40 bits or 104 bits in length
     - The above keys are combined with a 24-bit “IV” (INITIALIZATION VECTOR) to bring the total length to 64 bits or 128 bits
     - WEP encryption is not secure and can easily be cracked
@@ -75,8 +75,8 @@ The original 802.11 STANDARD included two OPTIONS for authentication:
 EAP (Extensible Authentication Protocol)
 
 - EAP is an authentication FRAMEWORK
-- It defines a STANDARD SET of authentication FUNCTIONS that are used by the various *EAP METHODS*
-- We will look at FOUR EAP METHODS:
+- It defines a standard SET of authentication FUNCTIONS that are used by the various *EAP methods*
+- We will look at four EAP methods:
     - LEAP
     - EAP-FAST
     - PEAP
@@ -85,10 +85,10 @@ EAP (Extensible Authentication Protocol)
 
 **802.1X** is used to limit network access for clients connected to a LAN or WLAN until they authenticate
 
-There are **three MAIN ENTITIES** in 802.1X:
+There are **three main entities** in 802.1X:
 
-- SUPPLICANT : The device that wants to connect to the network
-- AUTHENTICATOR : The device that provides access to the network
+- Supplicant : The device that wants to connect to the network
+- Authenticator : The device that provides access to the network
 - Authentication Server (AS) : The device that receives client credentials and permits / denies access
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/5565e646-696f-4245-b1e5-d728fe0e3380)
@@ -126,7 +126,7 @@ There are **three MAIN ENTITIES** in 802.1X:
     - Whereas PEAP only requires the AS to have a certificate, EAP-TLS requires a certificate on the AS and on every single client
     - EAP-TLS is the most secure wireless authentication method, but it is more difficult to implement than PEAP because every client device needs a certificate
     - Because the client and server authenticate each other with digital certificates, there is no need to authenticate the client within the TLS tunnel
-    - The TLS tunnel is still used to exchange encryption KEY information (encryption methods will be discussed next)
+    - The TLS tunnel is still used to exchange encryption key information (encryption methods will be discussed next)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c6c57595-fd75-4761-8760-29fab8dbf698)
 
@@ -136,14 +136,14 @@ ENCRYPTION / INTEGRITY METHODS
 
 - TKIP (Temporal Key Integrity Protocol)
     - WEP was found to be vulnerable, but wireless hardware at the time was built to use WEP
-    - A temporary solution was needed until a new STANDARD was created and a new HARDWARE was built
+    - A temporary solution was needed until a new standard was created and a new hardware was built
     - TKIP adds various security features:
         - A MIC (Message Integrity Check) is added to protect the integrity of messages
-        - A KEY MIXING ALGORITHM is used to create a unique WEP key for every frame
-        - The INITIALIZATION VECTOR is doubled in length from 24 bits to 48 bits, making BRUTE-FORCE attacks much more difficult
-        - The MIC includes the SENDER MAC ADDRESS to identify the FRAME’s SENDER
-        - A TIMESTAMP is added to the MIC to prevent replay attacks. Replay attacks involved re-resending a FRAME that has already been transmitted
-        - A TKIP SEQUENCE NUMBER is used to keep track of FRAMES sent from each source MAC ADDRESS. This also protects against REPLAY ATTACKS
+        - A key mixing algorithm is used to create a unique WEP key for every frame
+        - The initialization vector is doubled in length from 24 bits to 48 bits, making brute-force attacks much more difficult
+        - The MIC includes the sender MAC address to identify the frame’s sender
+        - A timestamp is added to the MIC to prevent replay attacks. Replay attacks involved re-resending a frame that has already been transmitted
+        - A TKIP sequence number is used to keep track of frames sent from each source MAC address. This also protects against replay attacks
 
 ** You probably don’t need to memorize all of the above features
 
@@ -154,55 +154,55 @@ ENCRYPTION / INTEGRITY METHODS
     - It is used in WPA2
     - To use CCMP, it must be supported by the device’s hardware.
     - Old hardware built only to use WEP / TKIP cannot use CCMP
-    - CCMP consists of two DIFFERENT ALGORITHMS to provide encryption and MIC :
-        - AES (Advanced Encryption Standard) COUNTER Mode encryption
+    - CCMP consists of two different algorithms to provide encryption and MIC :
+        - AES (Advanced Encryption Standard) Counter Mode encryption
             - AES is the most secure encryption protocol currently available.
             - Widely used all over the world
             - There are multiple modes of operation for AES.
-            - CCMP uses “COUNTER Mode”
-        - CBC-MAC (CIPHER BLOCK CHAINING MESSAGE Authentication CODE)
+            - CCMP uses “Counter Mode”
+        - CBC-MAC (Cipher Block Chaining Message Authentication Code)
             - Used as a MIC to ensure the integrity of messages
 
 - GCMP (GALOIS / COUNTER MODE PROTOCOL)
     - GCMP is more secure and efficient than CCMP
     - Its increased efficiency allows higher data throughput than CCMP
     - It is used in WPA3
-    - GCMP consists of two ALGORITHMS:
-        - AES COUNTER Mode encryption
-        - GMAC (GALOIS MESSAGE Authentication CODE)
+    - GCMP consists of two algorithms:
+        - AES Counter Mode encryption
+        - GMAC (Galois Message Authentication Code)
             - Used as a MIC to ensure the integrity of message
 
 ---
 
 WI-FI PROTECTED ACCESS (WPA)
 
-- The Wi-Fi Alliance has developed three WPA CERTIFICATIONS for wireless devices:
+- The Wi-Fi Alliance has developed three WPA certifications for wireless devices:
     - WPA
     - WPA2
     - WPA3
-- To be WPA-CERTIFIED, EQUIPMENT must be TESTED in authorized testing labs
+- To be WPA-certified, equipment must be tested in authorized testing labs
 - All of the above support two Authentication modes:
     - PERSONAL MODE :
-        - A PRE-SHARED KEY (PSK) is used for AUTHENTICATOIN
+        - A PRE-SHARED KEY (PSK) is used for authentication
         - When you connect to a home Wi-Fi network, enter the password and are authenticated, that is PERSONAL Mode
         - This is common in small networks
         - The PSK itself is not sent over the air
         - A four-way handshake is used for authentication and the PSK is used to generate encryption keys
     - ENTERPRISE MODE :
         - 802.1X is used with an authentication server (RADIUS server)
-        - No specific EAP METHOD is specified, so all are supported (PEAP, EAP-TLS, etc)
+        - No specific EAP method is specified, so all are supported (PEAP, EAP-TLS, etc)
     
     WPA
     
-    - The WPA CERTIFICATION was developed after WEP was proven to be vulnerable and includes the following protocols:
+    - The WPA certification was developed after WEP was proven to be vulnerable and includes the following protocols:
         - TKIP (based on WEP) provides encryption / MIC
-        - 802.1X authentication (ENTERPRISE Mode) or PSK (Personal Mode)
+        - 802.1X authentication (Enterprise Mode) or PSK (Personal Mode)
     
     WPA2
     
     - Was released in 2004 and includes the following protocols:
         - CCMP provides encryption / MIC
-        - 802.1X authentication (ENTERPRISE Mode) or PSK (Personal Mode)
+        - 802.1X authentication (Enterprise Mode) or PSK (Personal Mode)
     
     WPA3
     
@@ -211,9 +211,9 @@ WI-FI PROTECTED ACCESS (WPA)
         - 802.1X authentication (Enterprise mode) or PSK (Personal mode)
         
         - WPA3 also provides several additional security features:
-            - PMF (PROTECTED MANAGEMENT FRAMES)
-                - Protecting 802.11 MANAGEMENT FRAMES from eavesdropping / forging
-            - SAE (SIMULTANEOUS Authentication OF EQUALS)
+            - PMF (Protected Management Frames)
+                - Protecting 802.11 Management frames from eavesdropping / forging
+            - SAE (Simultaneous Authentication of Equals)
                 - Protects the four-way handshake when using personal mode authentication
             - FORWARD SECRECY
-                - Prevents data from being decrypted after it has been transmitted over the air so an attacker can’t capture wireless FRAMES and then try to decrypt them later
+                - Prevents data from being decrypted after it has been transmitted over the air so an attacker can’t capture wireless frames and then try to decrypt them later
