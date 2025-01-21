@@ -57,7 +57,7 @@ The original 802.11 STANDARD included TWO OPTIONS for authentication:
 - OPEN AUTHENTICATION
     - The client sends an authentication REQUEST and the AP just accepts it
     - The is clearly not a secure authentication method
-    - After the client is authenticated and associated with the AP, it’s possible to require the user to authenticate via other methods before access to the network is granted (ie: Starbucks WI-FI)
+    - After the client is authenticated and associated with the AP, it’s possible to require the user to authenticate via other methods before access to the network is granted (ie: Starbucks Wi-Fi)
 - WEP (Wired Equivalent Privacy)
     - WEP is used to provide both authentication and encryption of wireless traffic
     - For encryption, WEP uses the RC4 ALGORITHM
@@ -176,7 +176,7 @@ ENCRYPTION / INTEGRITY METHODS
 
 WI-FI PROTECTED ACCESS (WPA)
 
-- The WI-FI Alliance has developed three WPA CERTIFICATIONS for wireless devices:
+- The Wi-Fi Alliance has developed three WPA CERTIFICATIONS for wireless devices:
     - WPA
     - WPA2
     - WPA3
@@ -184,7 +184,7 @@ WI-FI PROTECTED ACCESS (WPA)
 - All of the above support TWO Authentication modes:
     - PERSONAL MODE :
         - A PRE-SHARED KEY (PSK) is used for AUTHENTICATOIN
-        - When you connect to a home WI-FI network, enter the password and are authenticated, that is PERSONAL Mode
+        - When you connect to a home Wi-Fi network, enter the password and are authenticated, that is PERSONAL Mode
         - This is common in small networks
         - The PSK itself is not sent over the air
         - A FOUR-WAY HANDSHAKE is used for authentication and the PSK is used to GENERATE encryption KEYS
