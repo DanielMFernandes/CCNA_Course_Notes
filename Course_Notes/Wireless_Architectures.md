@@ -8,15 +8,15 @@
 - For the CCNA, you don’t have to learn it in as much detail as the Ethernet and IP headers
 - Depending on the 802.11 version and the message type, some of the fields might not be present in the frame
     - For example: Not all messages use all 4 address fields
-- Frame CONTROL
+- Frame Control
     - Provides information such as message type and subtype
     - Indicates if the frame is a management frame
-- DURATION / ID
+- Duration / ID
     - Depending on the message type, this field can indicate:
         - The time (in microseconds) the channel will be dedicated to transmission of the frame
         - Identifier for the association (the connection)
     
-- ADDRESSES
+- Addresses
     - Up to four addresses can be present in an 802.11 frame.
     - Which addresses are present, and their order, depends on the message type
         - Destination Address (DA) : final recipient of the frame
@@ -24,17 +24,17 @@
         - Receiver Address (RA) : immediate recipient of the frame
         - Transmitter Address (TA) : immediate sender of the frame
     
-- SEQUENCE CONTROL
+- Sequence Control
     - Used to reassemble fragments and eliminate duplicate frames
 
-- QoS CONTROL
+- QoS Control
     - Used in QoS to prioritize certain traffic
 - HT (High Throughput) Control
     - Added in 802.11n to enable High Throughput operations
     - 802.11n is also known as “High Throughput” (HT) Wi-Fi
     - 802.11ac is also know as “Very High Throughput” (VHT) Wi-Fi
 
-- FCS (FRAME CHECK SEQUENCE)
+- FCS (Frame Check Sequence)
     - Same as in an ethernet frame, used to check for errors
 
 ---
@@ -71,8 +71,8 @@
 - CONTROL
     - Used to control access to the medium (Radio Frequency)
     - Assists with delivery of management and data frames
-        - RTS (request to send)
-        - CTS (clear to send)
+        - RTS (Request To Send)
+        - CTS (Clear To Send)
         - ACK
 
 - DATA
@@ -91,7 +91,7 @@ AUTONOMOUS APs
     - Can be configured by HTTP / HTTPS Web connection (GUI)
     - An IP address for remote management should be configured
     - The RF parameters must be manually configured (Transmit Power, Channel, etc)
-    - Security Policies are handled individually by each AP
+    - Security policies are handled individually by each AP
     - QoS rules etc. are configured individually by each AP
 
  
@@ -110,9 +110,9 @@ AUTONOMOUS APs
     - Large networks can have thousands of APs
 
 - Autonomous APs can also function in the modes covered in the previous video:
-    - REPEATER
-    - OUTDOOR BRIDGE
-    - WORKGROUP BRIDGE
+    - Repeater
+    - Outdoor Bridge
+    - Workgroup Bridge
 
 ---
 
@@ -142,18 +142,17 @@ LIGHTWEIGHT APs
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/c154bcad-ae81-4fb8-9acf-56913dffaf04)
 
-- THE WLC and lightweight APs use a protocol called CAPWAP (Control AND Provisiong of Wireless Access Points) to communicate
-    - Based on an older protocol called LWAPP (LIGHTWEIGHT ACCESS POINT PROTOCOL)
+- The WLC and lightweight APs use a protocol called CAPWAP (Control And Provisiong of Wireless Access Points) to communicate
+    - Based on an older protocol called LWAPP (Lightweight Access Point Protocol)
 
-- TWO tunnels are created between each AP and the WLC :
+- Two tunnels are created between each AP and the WLC :
     - Control tunnel (UDP Port 5246)
         - This tunnel is used to configure the APs and control and manage operations
         - All traffic in this tunnel is encrypted, by default
     - Data tunnel (UDP Port 5247)
         - All traffic from wireless clients is sent through this tunnel to the WLC
         - It does not go directly to the wired network!
-
-- Traffic in this tunnel is not encrypted by default but you can configure it to be encrypted with DTLS (Datagram Transport Layer Security)
+        - Traffic in this tunnel is not encrypted by default but you can configure it to be encrypted with DTLS (Datagram Transport Layer Security)
 
 - Because all traffic from wireless clients is tunneled to the WLC with CAPWAP, APs connect to the switch access ports - not trunk ports
 
@@ -175,14 +174,14 @@ There are some key benefits to split-MAC architecture
     - When an AP stops functioning, the WLC can increase the transmit power of nearby APs to avoid coverage holes
 - SEAMLESS ROAMING
     - Clients can roam between APs with no noticeable delay
-- Client LOAD BALANCING
+- CLIENT LOAD BALANCING
     - If a client is in range of two APs, the WLC can associate the client with the least-used AP, to balance the load among APs
 - SECURITY / QoS management
     - Central management of security and QoS policies ensures consistency across the network
 
 ---
 
-- LIGHTWEIGHT APs can be configured to operate in various modes:
+- Lightweight APs can be configured to operate in various modes:
     - LOCAL
         - This is the default mode where the AP offers a BSS (more multiple BSSs) for clients to associate with
         
@@ -207,14 +206,14 @@ There are some key benefits to split-MAC architecture
     - It listens to traffic on the wired network only, but it receives a list of suspected rogue clients and AP MAC addresses from the WLC
     - By listening to ARP messages on the wired network and correlating it with the information it receives from the WLC, it can detect rogue devices
 
-- SE-CONNECT (SPECTRUM EXPERT CONNECT)
+- SE-CONNECT (Spectrum Expert Connect)
     - The AP does not offer a BSS for clients
     - Dedicated to RF spectrum analysis on all channels
     - It can send information to software such as Cisco Spectrum Expert on a PC to collect and analyze the data
 
 - BRIDGE / MESH
     - Like the autonomous APs *outdoor bridge* mode, the lightweight AP can be a dedicated bridge between sites (Example:  over long distances)
-    - A MESH can be made between the access points
+    - A mesh can be made between the access points
 
 - FLEX PLUS BRIDGE
     - Adds flexconnect functionality to the bridge / mesh mode
@@ -230,8 +229,8 @@ CLOUD-BASED APs
 - Cloud-based AP architecture is between autonomous AP and split-MAC architecture
     - Autonomous APs that are centrally managed in the cloud
 - CISCO MERAKI is a popular cloud-based Wi-Fi solution
-- The MERAKI dashboard can be used to configure APs, monitor the network, generate performance reports, etc.
-    - MERAKI also tells each AP which channel to use, what transmit power, etc.
+- The Meraki dashboard can be used to configure APs, monitor the network, generate performance reports, etc.
+    - Meraki also tells each AP which channel to use, what transmit power, etc.
 - However, data traffic is not sent to the cloud. It is sent directly to the wired network like when using autonomous APs
     - Only management / control traffic is sent to the cloud
 
