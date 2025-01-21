@@ -189,7 +189,7 @@ SERVICE SETS : BSS
 
 SERVICE SETS: ESS
 
-- To create larger wireless LANS beyond the range of a single AP, we use an ESS (EXTENDED Service Set)
+- To create larger wireless LANS beyond the range of a single AP, we use an ESS (Extended Service Set)
 - APs with their own BSSs are connected by a wired network
     - Each BSS uses the same SSID
     - Each BSS has a unique BSSID
@@ -208,7 +208,7 @@ SERVICE SETS: MBSS
     - One forms a “BACKHAUL NETWORK” which is used to bridge traffic from AP to AP
 - At least one AP is connected to the wired network and it is called the RAP (Root Access Point)
 - The other APs are called MAPs (Mesh Access Points)
-- A PROTOCOL is used to determine the best path through the MESH (similar to how dynamic routing protocols are used to determine the best path to a destination)
+- A protocol is used to determine the best path through the mesh (similar to how dynamic routing protocols are used to determine the best path to a destination)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/1604f0ea-8a93-4922-a78d-fe55e836ba9a)
 
@@ -218,7 +218,7 @@ DISTRIBUTION SYSTEM
 
 - Most wireless networks are not standalone networks
     - Rather, they are a way for wireless clients to connect to the wired network infrastructure
-- In 802.11, the upstream wired network is called the DS (DISTRIBUTION SYSTEM)
+- In 802.11, the upstream wired network is called the DS (Distribution System)
 - Each wireless BSS or ESS is mapped to a VLAN in the wired network
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/adf9deae-693c-4f1b-8d6d-c4fbfc356418)
@@ -243,13 +243,13 @@ ADDITIONAL AP OPERATIONAL MODES
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7973107f-7f2a-47de-9272-186040b038b5)
 
-- A WORKGROUP BRIDGE (WGB) operates as a wireless client of another AP and can be used to connect wired devices to the wireless network
+- A Workgroup Bridge (WGB) operates as a wireless client of another AP and can be used to connect wired devices to the wireless network
 - In the example below, PC1 does not have wireless capabilities, and also does not have access to wired connections to SW1
 - PC1 has a wired connection to the WGB, which has a wireless connection to the AP
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/85cffc3f-3e76-4a55-9810-254135162a82)
 
-- AN OUTDOOR BRIDGE can be used to connect networks over long distances without a physical cable connecting them
+- AN Outdoor Bridge can be used to connect networks over long distances without a physical cable connecting them
 - The APs will use specialized antennas that focus most of the signal power in one direction, which allows the wireless connection to be made over longer distances than normally possible
 - The connection can be point-to-point as in the diagram below, or point-to-multipoint in which multiple sites connect to on central site
 
