@@ -42,13 +42,13 @@
 802.11 ASSOCIATION PROCESS
 
 - Access points bridge traffic between wireless stations and other devices
-- For a STATION to send traffic through the AP, it must be associated with the AP
+- For a station to send traffic through the AP, it must be associated with the AP
 - There are three 802.11 connection states:
     - Not authenticated, not associated
     - Authenticated, not associated
     - Authenticated and associated
 
-- The STATION must be authenticated and associated with the AP to send traffic through it
+- The station must be authenticated and associated with the AP to send traffic through it
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/568d795d-41ee-4afd-908d-858297e89c6c)
 
@@ -96,7 +96,7 @@ AUTONOMOUS APs
 
  
 
-- There is NO CENTRAL MONITORING or management of APs
+- There is no central monitoring or management of APs
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/57faecbb-36a6-424d-b019-52994a5740db)
 
@@ -136,7 +136,7 @@ LIGHTWEIGHT APs
     - Etc…
     
 - The WLC is also used to centrally configured the lightweight APs
-- The WLC can be located in the same subnet / VLAN as the lightweight APs it manages OR in a different subnet / VLAN
+- The WLC can be located in the same subnet / VLAN as the lightweight APs it manages or in a different subnet / VLAN
 - The WLC and the lightweight APs authenticate each other using DIGITAL CERTIFICATES installed on each device ( X.509 Standard Certificates )
     - This ensures that only authorized APs can join the network
 
@@ -153,7 +153,7 @@ LIGHTWEIGHT APs
         - All traffic from wireless clients is sent through this tunnel to the WLC
         - It does not go directly to the wired network!
 
-- Traffic in this tunnel is not encrypted by default but you can configure it to be encrypted with DTLS (DATAGRAM TRANSPORT LAYER SECURITY)
+- Traffic in this tunnel is not encrypted by default but you can configure it to be encrypted with DTLS (Datagram Transport Layer Security)
 
 - Because all traffic from wireless clients is tunneled to the WLC with CAPWAP, APs connect to the switch access ports - not trunk ports
 
@@ -161,7 +161,7 @@ LIGHTWEIGHT APs
 
 ---
 
-***  (Not necessary to MEMORIZE for CCNA) ***
+***  (Not necessary to memorize for CCNA) ***
 
 There are some key benefits to split-MAC architecture
 
@@ -176,7 +176,7 @@ There are some key benefits to split-MAC architecture
 - SEAMLESS ROAMING
     - Clients can roam between APs with no noticeable delay
 - Client LOAD BALANCING
-    - If a client is in range of TWO APs, the WLC can associate the client with the least-used AP, to balance the load among APs
+    - If a client is in range of two APs, the WLC can associate the client with the least-used AP, to balance the load among APs
 - SECURITY / QoS management
     - Central management of security and QoS policies ensures consistency across the network
 
@@ -245,21 +245,21 @@ WIRELESS LAN CONTROLLER (WLC) DEPLOYMENTS
 
 - In a split-MAC architecture, there four main WLC deployment modes:
     - UNIFIED
-        - THE WLC is a hardware applicance in a central location of the network
+        - The WLC is a hardware applicance in a central location of the network
     - Cloud-based
         - The WLC is a VM running on a server, usually in a private cloud in a data center
         - This is not the same as the cloud-based AP architecture discussed previously
     - EMBEDDED
         - The WLC is integrated within a switch
     - MOBILITY EXPRESS
-        - THE WLC is integrated within an AP
+        - The WLC is integrated within an AP
 
 ---
 
 UNIFIED WLC
 
-- THE WLC is a hardware applicance in a central location of the network
-- A UNIFIED WLC can support up to about 6000 APs
+- The WLC is a hardware applicance in a central location of the network
+- A unified WLC can support up to about 6000 APs
 - If more than 6000 APs are needed, additional WLCs can be added to the network
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/922eac1f-6c62-4926-89bb-a447f8be2edd)
