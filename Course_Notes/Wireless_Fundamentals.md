@@ -249,7 +249,7 @@ ADDITIONAL AP OPERATIONAL MODES
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/85cffc3f-3e76-4a55-9810-254135162a82)
 
-- AN Outdoor Bridge can be used to connect networks over long distances without a physical cable connecting them
+- An Outdoor Bridge can be used to connect networks over long distances without a physical cable connecting them
 - The APs will use specialized antennas that focus most of the signal power in one direction, which allows the wireless connection to be made over longer distances than normally possible
 - The connection can be point-to-point as in the diagram below, or point-to-multipoint in which multiple sites connect to on central site
 
