@@ -189,7 +189,7 @@ SERVICE SETS : BSS
 
 SERVICE SETS: ESS
 
-- To create larger wireless LANS beyond the range of a single AP, we use an ESS (Extended Service Set)
+- To create larger wireless LANS (WLANs) beyond the range of a single AP, we use an ESS (Extended Service Set)
 - APs with their own BSSs are connected by a wired network
     - Each BSS uses the same SSID
     - Each BSS has a unique BSSID
