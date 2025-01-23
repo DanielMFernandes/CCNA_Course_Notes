@@ -135,7 +135,7 @@ LIGHTWEIGHT APs
     - Resource allocation
     - Etc…
     
-- The WLC is also used to centrally configured the lightweight APs
+- The WLC is also used to centrally configure the lightweight APs
 - The WLC can be located in the same subnet / VLAN as the lightweight APs it manages or in a different subnet / VLAN
 - The WLC and the lightweight APs authenticate each other using DIGITAL CERTIFICATES installed on each device ( X.509 Standard Certificates )
     - This ensures that only authorized APs can join the network
