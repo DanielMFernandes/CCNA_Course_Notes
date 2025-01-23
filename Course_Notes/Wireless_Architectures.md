@@ -176,7 +176,7 @@ There are some key benefits to split-MAC architecture
     - Clients can roam between APs with no noticeable delay
 - CLIENT LOAD BALANCING
     - If a client is in range of two APs, the WLC can associate the client with the least-used AP, to balance the load among APs
-- SECURITY / QoS management
+- SECURITY / QoS MANAGEMENT
     - Central management of security and QoS policies ensures consistency across the network
 
 ---
