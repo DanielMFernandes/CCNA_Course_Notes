@@ -93,12 +93,12 @@ A SIMPLE SUMMARY:
 
 DATA PLANE
 
-- All tasks involved in forwarding USER  data / TRAFFIC from one interface to another are part of the data plane
+- All tasks involved in forwarding user data / traffic from one interface to another are part of the data plane
 - A router receives a message, looks for the most specific matching router in its routing table, and forwards it out of the appropriate interface to the next hop
     - It also de-encapsulates the original layer 2 header, and re-encapsulates with a new header destined for the next hop’s MAC address
 - A switch receives a message, looks at the destination MAC address, and forwards it out of the appropriate interface (or floods it)
     - This includes functions like adding / removing 802.1q VLAN tags
-- NAT (changing the SRC / DST addresses before forwarding) is part of the data plane
+- NAT (changing the source / destination addresses before forwarding) is part of the data plane
 - Deciding to forward / discard messages due to ACL’s, port-security, etc. is part of the data plane
 - The data plane is also called the ‘forwarding plane’
 
@@ -132,7 +132,7 @@ MANAGEMENT PLANE
 
 - Like the control plane, the management plane performs overhead work
     - However, the management plane doesn’t directly affect the forwarding of messages in the data plane
-- The MANAGMENT PLANE consists of protocols that are used to manage devices
+- The management plane consists of protocols that are used to manage devices
     - SSH / TELNET : Used to connect to the CLI of a device to configure / manage it
     - SYSLOG : Used to keep logs of events that occur on the device
     - SNMP : Used to monitor the operations of the device
@@ -177,7 +177,7 @@ SOUTHBOUND INTERFACE (SBI)
 
 - Using the SBI, the controller communicates with the managed devices and gathers information about them:
     - The devices in the network
-    - The TOPOLOGY (how the devices are connected together)
+    - The topology (how the devices are connected together)
     - The available interfaces on each device
     - Their configurations
 - The Northbound interface (NBI) is what allows us to:
@@ -186,7 +186,7 @@ SOUTHBOUND INTERFACE (SBI)
     - Program the network
     - Make changes to the network via the SBI
 
-- A REST API (Representational State Transfer) is used on the controller as an interface for APPS to interact with it
+- A REST API (Representational State Transfer) is used on the controller as an interface for apps to interact with it
 - OSGi (Java Open Services Gateway Initiative) - Java based NBI API
 
 - Data is sent in a structured (*serialized*) format such as JSON or XML
@@ -199,16 +199,16 @@ SOUTHBOUND INTERFACE (SBI)
 AUTOMATION IN TRADITIONAL NETWORKS VS SDN
 
 - Networking tasks can be automated in traditional network architectures too:
-    - SCRIPTS can be written (ie: using Python) to push commands to many devices at once
+    - Scripts can be written (ie: using Python) to push commands to many devices at once
     - Python with good use of regular expressions can parse through “show” commands to gather information about network devices
     
 - However, the robust and centralized data collected by SDN controllers greatly facilitates these functions
     - The controller collects information about all devices in the network
-    - NORTHBOUND APIs allow APPS to access information in a format that is easy for programs to understand (ie: JSON and XML)
+    - Northbound APIs allow apps to access information in a format that is easy for programs to understand (ie: JSON and XML)
     - The centralized data facilitates network-wide analytics
 - SDN Tools can provide the benefits of automation without the requirement of third-party scripts and apps.
     - You don’t need expertise in automation to make use of SDN Tools
     - However, APIs allow third-party applications to interact with the controller, which can be very powerful
 
 
->💡 Although SDN and automation aren’t the same thing, the SDN architecture greatly facilitates the automation of various tasks in the network via the SDN controller and APIs
+💡 Although SDN and automation aren’t the same thing, the SDN architecture greatly facilitates the automation of various tasks in the network via the SDN controller and APIs
