@@ -47,9 +47,9 @@ LOGICAL “PLANES” OF NETWORK FUNCTIONS
 
 - It forwards messages between networks by examining information in the Layer 3 header
 - It uses a routing protocol like OSPF to share route information with other routers and build a routing table
-- It uses ARP to build an ARP table, mapping IP Addresses to MAC Addresses
+- It uses ARP to build an ARP table, mapping IP addresses to MAC addresses
 - It uses Syslog to keep logs of events that occur
-- and MUCH more…
+- and much more…
 
 **What does a switch do?**
 
@@ -70,7 +70,7 @@ The various functions of network devices can be logically divided up (categorize
 ```
 
 
-- The operations of the MANAGEMENT PLANE and the control plane are usually managed by the CPU
+- The operations of the management plane and the control plane are usually managed by the CPU
 - However, this is not desirable for data plane operations because CPU processing is slow (relatively speaking)
 - Instead, a specialized hardware ASIC (Application-Specific Integrated Circuit) is used.
     - ASICs are chips built for a specific purpose
@@ -86,21 +86,21 @@ The various functions of network devices can be logically divided up (categorize
 
 A SIMPLE SUMMARY:
 
->- When a device receives control / MANAGEMENT traffic (destined for itself), it will be processed in the CPU
+>- When a device receives control / management traffic (destined for itself), it will be processed in the CPU
 >- When a device receives data traffic which should pass through the device, it is processed by the ASIC for maximum speed
 
 ---
 
 DATA PLANE
 
-- All tasks involved in forwarding USER  data / TRAFFIC from one INTERFACE to another are part of the data plane
-- A router receives a message, looks for the most specific matching router in its ROUTING table, and forwards it out of the appropriate INTERFACE to the next hop
-    - It also de-encapsulates the original LAYER 2 header, and re-encapsulates with a new header destined for the next hop’s MAC address
-- A switch receives a message, looks at the destination MAC address, and forwards it out of the appropriate INTERFACE (or FLOODS it)
+- All tasks involved in forwarding USER  data / TRAFFIC from one interface to another are part of the data plane
+- A router receives a message, looks for the most specific matching router in its routing table, and forwards it out of the appropriate interface to the next hop
+    - It also de-encapsulates the original layer 2 header, and re-encapsulates with a new header destined for the next hop’s MAC address
+- A switch receives a message, looks at the destination MAC address, and forwards it out of the appropriate interface (or floods it)
     - This includes functions like adding / removing 802.1q VLAN tags
 - NAT (changing the SRC / DST addresses before forwarding) is part of the data plane
 - Deciding to forward / discard messages due to ACL’s, port-security, etc. is part of the data plane
-- The data plane is also called the ‘FORWARDING PLANE’
+- The data plane is also called the ‘forwarding plane’
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/6a72186b-2956-45f6-8643-801caa2cb28e)
 
@@ -109,19 +109,19 @@ DATA PLANE
 CONTROL PLANE
 
 - How does a device’s data plane make its forwarding decisions?
-    - ROUTING table
-    - MAC ADDRESS table
+    - Routing table
+    - MAC address table
     - ARP table
     - STP
     - etc…
     
-- Functions that build THESE tables (and other functions that influence the data plane) are part of the control plane
+- Functions that build these tables (and other functions that influence the data plane) are part of the control plane
 
-- The control plane *controls* what the data plane does, for example by building the router’s ROUTING table
+- The control plane *controls* what the data plane does, for example by building the router’s routing table
 
 - The control plane performs *overhead* work
-    - OSPF itself doesn’t forward user data packets, but it informs the data plane about HOW packets should be forwarded
-    - STP itself isn’t directly involved in the process of forwarding frames, but it informs the data plane about which INTERFACES should and shouldn’t be used to forward frames
+    - OSPF itself doesn’t forward user data packets, but it informs the data plane about how packets should be forwarded
+    - STP itself isn’t directly involved in the process of forwarding frames, but it informs the data plane about which interfaces should and shouldn’t be used to forward frames
     - ARP messages aren’t user data but they are used to build an ARP table which is used in the process of forwarding data
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4c21b082-5d6e-4388-94c5-bebf33b50c8d)
@@ -130,9 +130,9 @@ CONTROL PLANE
 
 MANAGEMENT PLANE
 
-- Like the control plane, the MANAGEMENT PLANE performs overhead work
-    - However, the MANAGEMENT PLANE doesn’t directly affect the forwarding of messages in the data plane
-- The MANAGMENT PLANE consists of PROTOCOLS that are used to manage devices
+- Like the control plane, the management plane performs overhead work
+    - However, the management plane doesn’t directly affect the forwarding of messages in the data plane
+- The MANAGMENT PLANE consists of protocols that are used to manage devices
     - SSH / TELNET : Used to connect to the CLI of a device to configure / manage it
     - SYSLOG : Used to keep logs of events that occur on the device
     - SNMP : Used to monitor the operations of the device
@@ -160,7 +160,7 @@ SOFTWARE-DEFINED NETWORKING (SDN)
 SOUTHBOUND INTERFACE (SBI)
 
 - The SBI is used for communications between the controller and the network devices it controls
-- It typically consists of a COMMUNICATION PROTOCOL and API (Application Programming Interface)
+- It typically consists of a communication protocol and API (Application Programming Interface)
 
 - APIs facilitate data exchanges between programs
     - Data is exchanged between the controller and the network devices
@@ -178,9 +178,9 @@ SOUTHBOUND INTERFACE (SBI)
 - Using the SBI, the controller communicates with the managed devices and gathers information about them:
     - The devices in the network
     - The TOPOLOGY (how the devices are connected together)
-    - The available INTERFACES on each device
+    - The available interfaces on each device
     - Their configurations
-- The NORTHBOUND INTERFACE (NBI) is what allows us to:
+- The Northbound interface (NBI) is what allows us to:
     - Interact with the controller
     - Access the data it gathers about the network
     - Program the network
@@ -200,7 +200,7 @@ AUTOMATION IN TRADITIONAL NETWORKS VS SDN
 
 - Networking tasks can be automated in traditional network architectures too:
     - SCRIPTS can be written (ie: using Python) to push commands to many devices at once
-    - Python with good use of REGULAR EXPRESSIONS can parse through “show” commands to gather information about network devices
+    - Python with good use of regular expressions can parse through “show” commands to gather information about network devices
     
 - However, the robust and centralized data collected by SDN controllers greatly facilitates these functions
     - The controller collects information about all devices in the network
