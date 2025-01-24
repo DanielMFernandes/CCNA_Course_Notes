@@ -85,7 +85,7 @@ XML (EXTENSIBLE MARKUP LANGUAGE)
     - XML is generally less human-readable than JSON
     - Whitespace is insignificant
     - Often used by REST APIs
-    - The format is "<key> value </key>" (similar to HTML)
+    - The format is "`<key> value </key>`" (similar to HTML)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f954b0ef-f563-4536-94c8-334b6d8f97c6)
 
