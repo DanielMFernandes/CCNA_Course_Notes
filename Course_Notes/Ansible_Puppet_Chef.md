@@ -10,7 +10,7 @@ CONFIGURATION DRIFT
 - Even without automation tools, it is best to have standard configuration management practices.
     - When a change is made, save the config as a text file and place it in a shared folder
         - A standard naming system like (*hostname_yyyymmdd)* might be used.
-        - There are flaws to this system, as an engineer might forget to place the new config in the folder after making changes. Which one should be considered the “CORRECT” config?
+        - There are flaws to this system, as an engineer might forget to place the new config in the folder after making changes. Which one should be considered the “correct” config?
         - Even if configurations are properly saved like this, it doesn’t guarantee that the configurations actually match the standard
 ---
 
@@ -79,14 +79,14 @@ ANSIBLE
 
 PUPPET 
 
-- PUPPET is a configuration management tool written in RUBY
+- PUPPET is a configuration management tool written in Ruby
 - Puppet is typically agent-based
     - Specific software must be installed on the managed devices
     - Not all Cisco devices support a Puppet agent
     
-- It CAN be run *agentless,* in which a proxy agent runs on an external host, and a proxy agent uses SSH to connect to the managed devices and communicate with them
+- It can be run *agentless,* in which a proxy agent runs on an external host, and a proxy agent uses SSH to connect to the managed devices and communicate with them
 - The Puppet server is called the “Puppet master”
-- Puppet uses a PULL model (clients “pull” configurations from the Puppet master)
+- Puppet uses a pull model (clients “pull” configurations from the Puppet master)
     - Clients use TCP 8140 to communicate with the Puppet master
 - Instead of YAML, it uses a proprietary language for files
 - Text files required on the Puppet master include:
@@ -94,7 +94,7 @@ PUPPET
         - The file defines the desired configuration state of a network device
     - TEMPLATES :
         - Similar to Ansible templates.
-        - Used to generate MANIFESTS
+        - Used to generate manifests
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/ec26ad33-7534-4f15-93f0-4557337bfaec)
 
@@ -102,17 +102,17 @@ PUPPET
 
 CHEF
 
-- CHEF is a configuration management tool written in RUBY
-- CHEF is Agent-Based
+- CHEF is a configuration management tool written in Ruby
+- Chef is Agent-Based
     - Specific software must be installed on the managed devices
-    - Not all Cisco devices support a CHEF agent
-- CHEF uses a PULL model
+    - Not all Cisco devices support a Chef agent
+- Chef uses a pull model
 - The server uses TCP 10002 to send configurations to clients
 - Files use a DSL (Domain-Specific Language) based on Ruby
-- Text files used by CHEF include:
+- Text files used by Chef include:
     - RESOURCES :
         - The “ingredients” in a RECIPE.
-        - Configuration objects managed by CHEF
+        - Configuration objects managed by Chef
     - RECIPES :
         - The “recipes” in a COOKBOOK.
         - Outlines the logic and actions of the tasks performed on the resources
