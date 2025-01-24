@@ -1,4 +1,4 @@
-# 61. REST APIS
+# 61. REST APIs
 
 API REVIEW
 
@@ -15,19 +15,19 @@ CRUD OPERATIONS AND HTTP VERBS
 - CRUD ( CREATE, READ, UPDATE, DELETE) refers to the operations we perform using REST APIs
 
 - CREATE :
-    - Used to CREATE new variables and set their initial values
+    - Used to create new variables and set their initial values
         - Example:  create a variable “ip_address” and set the value to “10.1.1.1”
 
 - READ :
-    - Used to READ the value of a variable
+    - Used to read the value of a variable
         - Example: Read the value of variable “ip_address” (”10.1.1.1”)
 
 - UPDATE :
-    - Used to CHANGE / UPDATE the value of a variable
+    - Used to change / update the value of a variable
         - Example: Change the value of “ip_address” from “10.1.1.1” to “10.2.3.4”
     
 - DELETE :
-    - Used to DELETE variables
+    - Used to delete variables
         - Example: Delete variable “ip_address”
 
 - HTTP uses *verbs* (aka. methods) that map to these CRUD operations
@@ -62,14 +62,14 @@ Check the list at  https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
 
 - When a REST client makes an API call (request) to a REST server, it will send an HTTP request like the one above
 
-> 💡 REST APIs do NOT have to use HTTP for communication, although HTTP is the most common choice 
+💡 REST APIs do not have to use HTTP for communication, although HTTP is the most common choice 
 
 ---
 
 HTTP RESPONSE :
 
-- The server’s response will include a STATUS CODE indicating if the request succeeded or failed, as well as other details
-- The FIRST digit indicates the class of the response:
+- The server’s response will include a status code indicating if the request succeeded or failed, as well as other details
+- The first digit indicates the class of the response:
     - 1xx : Informational - request was received, continuing process
     - 2xx : Successful - request was successfully received, understood, and accepted
     - 3xx : Redirection - further action needs to be taken in order to complete the request
@@ -131,14 +131,14 @@ REST: Client-Server
 
 REST: Stateless
 
-- REST APIs exchanges are STATELESS
+- REST APIs exchanges are stateless
 - This means that each API exchange is a separate event, independent of all past exchanges between the client and server
     - The server does not store information about previous requests from the client to determine how it should respond to new requests
 - If authentication is required, this means that the client must authenticate with the server for each request it makes
-- TCP is an example of a STATEFUL protocol
-- UDP is an example of  STATELESS protocol
+- TCP is an example of a stateful protocol
+- UDP is an example of  stateless protocol
 
-** Although REST APIs use HTTP, which uses TCP (STATEFUL) as it’s LAYER 4 protocol, HTTP and REST APIs themselves aren’t STATEFUL. The functions of each layer are separate ! 
+** Although REST APIs use HTTP, which uses TCP (stateful) as it’s layer 4 protocol, HTTP and REST APIs themselves aren’t stateful. The functions of each layer are separate ! 
 
 ---
 
@@ -148,7 +148,7 @@ REST: Cacheable or Non-Cacheable
 - *Caching* refers to storing data for future use
     - Example :
         - Your computer might cache many elements of a web page so it doesn’t have to retrieve the entire page every time you visit. This improves performance for the client and reduces load on the server
-- Not all resources have to be cacheable but cacheable resources MUST be declared as cacheable
+- Not all resources have to be cacheable but cacheable resources must be declared as cacheable
 
 FOR THE CCNA
 
@@ -160,9 +160,9 @@ REST API CALLS USING CISCO DEVNET
 
 - “Cisco DevNet is Cisco’s developer program to help developers and IT professionals who want to write applications and develop integrations with Cisco products, platforms, and API’s”
 
-- DevNet offers lots of free resources such as courses, tutorials, labs, sandboxes, documentation, etc to learn about AUTOMATION and develop your skills
+- DevNet offers lots of free resources such as courses, tutorials, labs, sandboxes, documentation, etc to learn about automation and develop your skills
 
-- There is also a DevNet certification track that you can pursue if you are interested in AUTOMATION
+- There is also a DevNet certification track that you can pursue if you are interested in automation
 
 - We will use their Cisco DNA Center Sandbox to send a REST API call using Postman
     - DNA Center is one of Cisco’s SDN Controllers (covered in more detail later)
