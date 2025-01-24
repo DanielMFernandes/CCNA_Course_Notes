@@ -6,8 +6,8 @@ SD REVIEW
 - Traditional control planes use a distributed architecture
 - A SDN controller centralizes control plane functions like calculating routes
 - The controller can interact programmatically with the network devices using APIs
-- The SBI (South Bound Interface) is used for communications between the controller and the network device it controls
-- The NBI (North Bound Interface) is what allows us to interact with the controller with our scripts and applications
+- The SBI (SouthBound Interface) is used for communications between the controller and the network device it controls
+- The NBI (NorthBound Interface) is what allows us to interact with the controller with our scripts and applications
 
 SDN ARCHITECTURE
 
