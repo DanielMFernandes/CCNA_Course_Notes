@@ -13,7 +13,7 @@ DATA SERIALIZATION
 
 JSON (JAVASCRIPT OBJECT NOTATION)
 
-- JSON (JavaScript Object Notation) **is an open standard file format and data interchange format that uses human-readable text to store and transmit data objects
+- JSON (JavaScript Object Notation) is an open standard file format and data interchange format that uses human-readable text to store and transmit data objects
 
 - It is standardized in RFC 8259 (https://datatracker.ietf.org/doc/html/rfc8259)
 - It was derived from JavaScript, but it is language-independent and many modern programming languages are able to generate and read JSON data
@@ -43,7 +43,7 @@ JSON PRIMITIVE DATA TYPES:
     - 5
     - 100
     
-- A boolean is a data Type that has only two possible values, not surrounded by quotes
+- A boolean is a data type that has only two possible values, not surrounded by quotes
     - true
     - false
 
@@ -70,7 +70,7 @@ JSON STRUCTURED DATA TYPES:
 
 - An array is a series of *values* separated by commas
     - Not *key-value pairs*
-    - The values do not have to be the same data Type
+    - The values do not have to be the same data type
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/3212f472-f966-49e5-9b9a-7bedcfe47487)
 
@@ -85,7 +85,7 @@ XML (EXTENSIBLE MARKUP LANGUAGE)
     - XML is generally less human-readable than JSON
     - Whitespace is insignificant
     - Often used by REST APIs
-    - <key> value </key> (similar to HTML)
+    - The format is "<key> value </key>" (similar to HTML)
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/f954b0ef-f563-4536-94c8-334b6d8f97c6)
 
