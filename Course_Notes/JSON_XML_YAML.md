@@ -101,7 +101,7 @@ YAML (YAML AIN’T MARKUP LANGUAGE)
 - Whitespace **is significant** (unlike JSON and XML)
     - Indentation is very important
 - YAML files start with - - - (three dashes)
-- - is used to indicate a list
+- `-` is used to indicate a list
 - Keys and Values are represented as key : value
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/ecfa3659-4bc3-4596-9f11-10d2644eac1a)
