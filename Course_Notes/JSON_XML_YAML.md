@@ -13,7 +13,7 @@ DATA SERIALIZATION
 
 JSON (JAVASCRIPT OBJECT NOTATION)
 
-- JSON (JAVASCRIPT OBJECT NOTATION) **is an open standard file format and data interchange format that uses human-readable text to store and transmit data objects
+- JSON (JavaScript Object Notation) **is an open standard file format and data interchange format that uses human-readable text to store and transmit data objects
 
 - It is standardized in RFC 8259 (https://datatracker.ietf.org/doc/html/rfc8259)
 - It was derived from JavaScript, but it is language-independent and many modern programming languages are able to generate and read JSON data
@@ -97,7 +97,7 @@ YAML (YAML AIN’T MARKUP LANGUAGE)
 
 - YAML originally meant *Yet Another Markup Language* but to distinguish its purpose as a data-serialization language rather than a markup language, it was repurposed to *YAML Aint Markup Language*
 - YAML is used by the network automation tool Ansible (covered later in the course)
-- YAML is very Human-Readable
+- YAML is very human-readable
 - Whitespace **is significant** (unlike JSON and XML)
     - Indentation is very important
 - YAML files start with - - - (three dashes)
