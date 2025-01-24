@@ -54,7 +54,7 @@ SD-ACCESS UNDERLAY
 - A NEW deployment (*greenfield deployment)* will be configured by DNA Center to use the optimal SD-Access underlay:
     - ALL Switches are layer 3 and use IS-IS as their routing protocol
     - All Links between Switches are routed ports. This means STP is not needed
-    - Edge NODES (Access switches) act as the the default gateway of end hosts *(Routed Access Layer)*
+    - Edge nodes (Access switches) act as the the default gateway of end hosts *(Routed Access Layer)*
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/0315f1e5-d9c6-47ce-acf2-1de6f14ac89c)
 
@@ -68,7 +68,7 @@ SD-ACCESS OVERLAY
     - A list of mappings of EIDs (endpoint identifiers) to RLOCs (routing locators) is kept
     - EIDs identify end hosts connected to edge switches
     - RLOCS identify the edge switch which can be used to reach the end host
-    - There is a LOT more detail to cover about LISP but I think you can see how it differs from traditional CONTROL PLANE
+    - There is a lot more detail to cover about LISP but I think you can see how it differs from traditional control plane
     
 - Cisco TrustSec (CTS) provides policy control (QoS, Security Policy, etc.)
 
@@ -93,14 +93,14 @@ CISCO DNA CENTER
 - DNA Center enables *Intent-Based Networking* (IBN)
     - The goal is to allow the engineer to communicate their intent for network behavior to DNA Center, and then DNA Center will take care of the details of the actual configurations and policies on devices
 
-- Traditional security policies using ACLs can become VERY cumbersome
+- Traditional security policies using ACLs can become very cumbersome
     - ACLs can have thousands of entries
     - The intent of entries is forgotten with time and as engineers leave and new engineers take over
 
 - DNA Center allows the engineer to specify the intent of the policy
     - Examples :
-        - THIS group of users can’t communicate with THAT group
-        - THIS group can access THIS server but not THAT server
+        - This group of users can’t communicate with that group
+        - This group can access this server but not that server
     - DNA Center will take care of the exact details of implementing this policy
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/30773f46-3564-4d66-a175-20962d1569dd)
@@ -115,15 +115,15 @@ DNA CENTER NETWORK MANAGEMENT VS. TRADITIONAL
 
 Traditional Management :
 
-- DEVICES are configured one-by-one via SSH or Console connection
-- DEVICES are manually configured via Console connection before being deployed
+- Devices are configured one-by-one via SSH or Console connection
+- Devices are manually configured via Console connection before being deployed
 - Configurations and polices are managed per-device
 - New network deployments can take a long time due to the manual labor required
 - Errors and failures are more likely due to increased manual effort
 
 DNA CENTER-based Network Management :
 
-- DEVICES are centrally managed and monitored from the DNA Center GUI or other applications using it’s REST API
+- Devices are centrally managed and monitored from the DNA Center GUI or other applications using it’s REST API
 - The Administrator communicates their intended network behavior to DNA Center, which changes those intentions into configurations on the managed network devices
 - Configurations and policies are centrally managed
 - Software versions are also centrally managed. DNA Center can monitor cloud servers for new versions and then update the managed devices
