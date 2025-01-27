@@ -18,8 +18,8 @@ SDN ARCHITECTURE
 CISCO SD-ACCESS
 
 - Cisco SD-ACCESS is Cisco’s SDN solution for automating campus LANs
-    - ACI (Application Centric Infrastructure) is their SDN solution for automating data center networks
-    - SD-WAN is their SDN solution for automating WANs
+- ACI (Application Centric Infrastructure) is their SDN solution for automating data center networks
+- SD-WAN is their SDN solution for automating WANs
 - Cisco DNA (Digital Network Architecture) Center is the controller at the center of SD-Access
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/4c1662ee-490c-4eee-8970-550ca60feabb)
