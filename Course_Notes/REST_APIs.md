@@ -12,7 +12,7 @@ API REVIEW
 
 CRUD OPERATIONS AND HTTP VERBS
 
-- CRUD ( CREATE, READ, UPDATE, DELETE) refers to the operations we perform using REST APIs
+- CRUD (CREATE, READ, UPDATE, DELETE) refers to the operations we perform using REST APIs
 
 - CREATE :
     - Used to create new variables and set their initial values
@@ -55,7 +55,7 @@ Check the list at  https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/010f553f-971d-49d8-be1b-dd0eff5854ac)
 
-- An example would be an ACCEPT header, which informs the server about the types(s) of data that can be sent back to the client.
+- An example would be an accept header, which informs the server about the types(s) of data that can be sent back to the client.
     - Example: **Accept: application/json** or **Accept: application/xml**
 
 - You can also view standard HTTP header fields with some examples at https://en.wikipedia.org/wiki/List_of_HTTP_header_fields
@@ -84,7 +84,7 @@ Examples of each HTTP Response class:
     - 102 Processing indicates that the server received the request and is processing it but the response is not available yet
 
 - 2xx Successful
-    - 200 OK **indicates that the request succeeded
+    - 200 OK indicates that the request succeeded
     - 201 Created indicates the request succeeded and a new resource was created
 
 - 3xx Redirection
@@ -105,7 +105,7 @@ REST APIs
 - REST APIs are also know as REST-based APIs or RESTful APIs
     - REST isn’t a specific API. Instead it describes a set of rules about how the API should work
     
-- The SIX constraints of RESTful architecture are:
+- The six constraints of RESTful architecture are:
     - Stateless
     - Layered system
     - Uniform Interface
