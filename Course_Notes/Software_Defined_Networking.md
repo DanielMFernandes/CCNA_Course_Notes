@@ -51,8 +51,8 @@ SD-ACCESS UNDERLAY
     - Google ‘Cisco SD-Access compatibility matrix’ if you are curious
     - In this case DNA Center won’t configure the underlay
 
-- A NEW deployment (*greenfield deployment)* will be configured by DNA Center to use the optimal SD-Access underlay:
-    - ALL Switches are layer 3 and use IS-IS as their routing protocol
+- A new deployment (*greenfield deployment)* will be configured by DNA Center to use the optimal SD-Access underlay:
+    - All Switches are layer 3 and use IS-IS as their routing protocol
     - All Links between Switches are routed ports. This means STP is not needed
     - Edge nodes (Access switches) act as the the default gateway of end hosts *(Routed Access Layer)*
 
