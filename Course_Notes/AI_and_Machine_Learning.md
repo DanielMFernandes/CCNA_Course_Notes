@@ -21,31 +21,40 @@ Some examples:
 
 ---
 
-Machine learning (ML)
-A subset of AI that focuses on enabling computers to learn from data and improve without the need for explicit programming.
+WHAT IS ML?
+- Machine learning (ML) is a subset of AI that focuses on enabling computers to learn from data and improve without the need for explicit programming.
 
-Instead of hard-coded instructions (programmed by a human), ML algorithms identify patterns in data and make predictions or decisions based on those patterns.
-Diagram:
-Input data → Model learns patterns from data → Make predictions/decisions on new data
+- Instead of hard-coded instructions (programmed by a human), ML algorithms identify patterns in data and make predictions or decisions based on those patterns.
+
+
+IMAGEM
+
+
 Some examples:
-Email spam filtering
-Personalized product recommendations
-Fraud detection (banking)
-Natural language processing (NLP)
-…and more!
-ML is the driving force behind many modern AI applications.
+- Email spam filtering
+- Personalized product recommendations
+- Fraud detection (banking)
+- Natural language processing (NLP)
 
+  
+-ML is the driving force behind many modern AI applications.
 
+---
+TYPES OF ML 
 
-Supervised learning
-The model is trained on labeled data, where the correct answers are provided, to make predictions or classifications on new data.
-Unsupervised learning
-The model is given unlabeled data and tasked with finding patterns, relationships, or groupings within the data.
-Reinforcement learning
-The model learns by interacting with an environment, receiving rewards or penalties based on its actions to maximize its performance over time.
-Deep learning
-A specialized subset of ML that uses multi-layered neural networks to handle large datasets and perform complex tasks like image recognition and natural language processing.
+- Supervised learning
+  - The model is trained on labeled data, where the correct answers are provided, to make predictions or classifications on new data.
 
+- Unsupervised learning
+  - The model is given unlabeled data and tasked with finding patterns, relationships, or groupings within the data.
+
+- Reinforcement learning
+  - The model learns by interacting with an environment, receiving rewards or penalties based on its actions to maximize its performance over time.
+
+- Deep learning
+  - A specialized subset of ML that uses multi-layered neural networks to handle large datasets and perform complex tasks like image recognition and natural language processing.
+
+---
 
 Supervised Learning
 
