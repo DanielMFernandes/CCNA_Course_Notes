@@ -183,8 +183,7 @@ PREDICTIVE AND GENERATIVE AI
 
 - Predictive AI
   - Uses machine learning to analyze historical data and predict future outcomes or trends.
-
-Examples: Security anomaly detection, weather forecasting.
+  - Examples: Security anomaly detection, weather forecasting.
 
 - Generative AI
   - Uses machine learning to learn patterns from existing data and create new content, such as text, images, or audio.
@@ -194,148 +193,102 @@ Examples: Security anomaly detection, weather forecasting.
 
 PREDICTIVE AI
 
-The model identifies patterns and correlations in past data.
+- Predictive AI analyzes historical data to forecast future outcomes, trends, or events.
+- The model identifies patterns and correlations in past data.
+- The learned patterns are applied to make predictions
 
-Applications:
-
-Healthcare: Predicting patient outcomes or disease progression.
-
-Network security: Detecting anomalies that might indicate a potential threat or failure.
-
-Traffic management: Predicting congestion based on historical and real-time traffic data.
-
-Business forecasting: Predicting sales trends or customer behavior.
-
-Weather Forecasting: Analyzing meteorological data to predict weather conditions.
+- Applications:
+  - Healthcare: Predicting patient outcomes or disease progression.
+  - Network security: Detecting anomalies that might indicate a potential threat or failure.
+  - Traffic management: Predicting congestion based on historical and real-time traffic data.
+  - Business forecasting: Predicting sales trends or customer behavior.
+  - Weather Forecasting: Analyzing meteorological data to predict weather conditions.
 
 Advantages:
 
-Improves decision-making by providing actionable insights.
+- Improves decision-making by providing actionable insights.
 
-Detects potential problems before they occur (e.g., network issues or severe weather).
+- Detects potential problems before they occur (e.g., network issues or severe weather).
 
 Disadvantages:
 
-Requires high-quality, relevant historical data.
+- Requires high-quality, relevant historical data.
 
-Accuracy depends on how well the patterns in past data generalize to new scenarios.
-
+- Accuracy depends on how well the patterns in past data generalize to new scenarios.
 
 ---
 
-
 GENERATIVE AI
 
-Generative AI learns patterns from existing data and creates new content such as text, images, and audio.
-
-It focuses on producing outputs that resemble the input that it was trained on.
-
-Examples:
-
-cat
-
-dog
-
-cat
-
-cat
-
-dog
-
-dog
-
-cat
-
-dog
+- Generative AI learns patterns from existing data and creates new content such as text, images, and audio.
+- It focuses on producing outputs that resemble the input that it was trained on.
 
 Applications:
 
-Text generation: ChatGPT, Gemini, Copilot
+- Text generation: ChatGPT, Gemini, Copilot
 
-Image generation: Midjourney, DALL-E
+- Image generation: Midjourney, DALL-E
 
-Example: Generate an image of a cat.
-
-Video generation: Sora (OpenAI), Veo (Google)
+- Video generation: Sora (OpenAI), Veo (Google)
 
 Advantages:
 
-Great for creative tasks where human input is limited or time-consuming.
+- Great for creative tasks where human input is limited or time-consuming.
+- Enables automation of content creation across various fields
 
 Disadvantages:
 
-Risk of misuse (e.g., deepfakes, plagiarism).
+- Risk of misuse (e.g., deepfakes, plagiarism).
 
-Generated content is only as good as the quality of the training material.
+- Generated content is only as good as the quality of the training material.
 
-Hallucinations.
+- Hallucinations.
 
+---
 
+PREDICTIVE AND GENERATIVE AI IN NETWORKS
 
-
-
-
-
-AI & Machine Learning | CCNA 200-301 Day 59 (part 2) | Active AI in Networks
 Predictive AI:
-Traffic forecasting: Predict network traffic patterns to optimize bandwidth allocation and prevent congestion.
+- Traffic forecasting: Predict network traffic patterns to optimize bandwidth allocation and prevent congestion.
 
-Security threat detection: Identify anomalies or suspicious patterns in real-time to mitigate potential security threats.
+- Security threat detection: Identify anomalies or suspicious patterns in real-time to mitigate potential security threats.
 
-Predictive maintenance: Anticipate hardware failures by analyzing historical and current performance data, reducing downtime.
+- Predictive maintenance: Anticipate hardware failures by analyzing historical and current performance data, reducing downtime.
 
 Generative AI:
-Network documentation: Generate documentation about network configurations, policies, etc.
+- Network documentation: Generate documentation about network configurations, policies, etc.
 
-Configuration generation: Automatically generate configurations for network devices based on desired policies and requirements.
+- Configuration generation: Automatically generate configurations for network devices based on desired policies and requirements.
 
-Network design: Suggest optimized network layouts or modifications tailored to specific business needs and workloads.
+- Network design: Suggest optimized network layouts or modifications tailored to specific business needs and workloads.
 
-Troubleshooting: Produce solutions or diagnostics based on log files or error messages to resolve issues efficiently.
+- Troubleshooting: Produce solutions or diagnostics based on log files or error messages to resolve issues efficiently.
 
-Script generation: Automatically generate network automation scripts (e.g., Python scripts to configure network devices).
+- Script generation: Automatically generate network automation scripts (e.g., Python scripts to configure network devices).
 
+---
 
+CISCO CATALYST CENTER
 
-
-
-
-
-
-AI & Machine Learning | CCNA 200-301 Day 59 (part 2) | Analyst Center
 Cisco Catalyst Center (formerly DNA Center) features a variety of AI-enabled features to identify issues before they impact users, reduce the time required to resolve issues, and increase the performance and security of the network.
 
 Features include...
 
-AI Network Analytics
+- AI Network Analytics
+  - Uses AI to establish the baseline behavior of the network.
+  - Provides insights and recommendations for optimizing network performance.
+  - Continuously monitors the network to detect and predict anomalies.
 
-Uses AI to establish the baseline behavior of the network.
+- Machine Reasoning Engine (MRE)
+  - Uses AI to perform root-cause analysis when network issues arise.
+  - Suggests resolutions or takes automated corrective actions without requiring manual intervention.
+  - Reduces downtime by identifying and resolving issues faster than traditional methods.
 
-Provides insights and recommendations for optimizing network performance.
+- AI Endpoint Analytics
+  - Identifies and classifies devices on the network, providing detailed visibility.
+  - Detects unauthorized devices or unusual behavior.
+  - Simplifies device onboarding by automating profiling and segmentation.
 
-Continuously monitors the network to detect and predict anomalies.
-
-Machine Reasoning Engine (MRE)
-
-Uses AI to perform root-cause analysis when network issues arise.
-
-Suggests resolutions or takes automated corrective actions without requiring manual intervention.
-
-Reduces downtime by identifying and resolving issues faster than traditional methods.
-
-AI Endpoint Analytics
-
-Identifies and classifies devices on the network, providing detailed visibility.
-
-Detects unauthorized devices or unusual behavior.
-
-Simplifies device onboarding by automating profiling and segmentation.
-
-AI-enhanced Radio Resource Management (RRM)
-
-Optimizes wireless network performance by dynamically adjusting radio settings.
-
-Uses AI to balance load, reduce interference, and improve coverage across wireless access points.
-
-
-
+- AI-enhanced Radio Resource Management (RRM)
+  - Optimizes wireless network performance by dynamically adjusting radio settings.
+  - Uses AI to balance load, reduce interference, and improve coverage across wireless access points.
