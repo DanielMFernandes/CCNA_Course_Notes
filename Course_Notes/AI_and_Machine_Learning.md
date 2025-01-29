@@ -37,7 +37,7 @@ Some examples:
 - Natural language processing (NLP)
 
   
--ML is the driving force behind many modern AI applications.
+- ML is the driving force behind many modern AI applications.
 
 ---
 TYPES OF ML 
@@ -141,88 +141,58 @@ Disadvantages:
 
 DEEP LEARNING
 
-Deep learning uses artificial neural networks to process and learn from large and complex datasets.
+- Deep learning uses artificial neural networks to process and learn from large and complex datasets.
+  - An artificial neural network is a computational model inspired by how biological neural networks like the human brain process information.
+  - Data is passed through multiple layers of nodes (neurons), with each layer extracting increasingly abstract features.
+  - The neural network can be trained using supervised, unsupervised, and/or reinforcement methods.
 
-An artificial neural network is a computational model inspired by how biological neural networks like the human brain process information.
 
-Data is passed through multiple layers of nodes (neurons), with each layer extracting increasingly abstract features.
-
-The neural network can be trained using supervised, unsupervised, and/or reinforcement methods.
-
-Structure:
-
-Input layer
-
-Hidden layers
-
-Output layer
 
 Advantages:
 
-Deep learning excels at handling large, unstructured datasets like images, audio, and text.
+- Deep learning excels at handling large, unstructured datasets like images, audio, and text.
 
-Achieves state-of-the-art performance in tasks like image recognition, natural language processing (NLP), and more.
+- Achieves state-of-the-art performance in tasks like image recognition, natural language processing (NLP), and more.
 
 Disadvantages:
 
-Resource intensive.
+- Resource intensive.
 
-The model can be a "black box," making it difficult to interpret how it arrives at its decisions.
+- The model can be a "black box," making it difficult to interpret how it arrives at its decisions.
 
+---
 
+- Supervised Learning
+  - The model is trained on labeled data, where the correct answers are provided, to make predictions or classifications on new data.
 
-Supervised Learning
+- Unsupervised Learning
+  - The model is given unlabeled data and tasked with finding patterns, relationships, or groupings within the data.
 
-The model is trained on labeled data, where the correct answers are provided, to make predictions or classifications on new data.
+- Reinforcement Learning
+  - The model learns by interacting with an environment, receiving rewards or penalties based on its actions to maximize its performance over time.
 
-Unsupervised Learning
+- Deep Learning
+  - A specialized subset of ML that uses multi-layered neural networks to handle large datasets and perform complex tasks like image recognition and natural language processing.
 
-The model is given unlabeled data and tasked with finding patterns, relationships, or groupings within the data.
+IMAGEM
 
-Reinforcement Learning
-
-The model learns by interacting with an environment, receiving rewards or penalties based on its actions to maximize its performance over time.
-
-Deep Learning
-
-A specialized subset of ML that uses multi-layered neural networks to handle large datasets and perform complex tasks like image recognition and natural language processing.
-
-Artificial Intelligence
-
-Machine Learning
-
-Supervised Learning
-
-Reinforcement Learning
-
-Unsupervised Learning
-
-Deep Learning
+---
 
 
+PREDICTIVE AND GENERATIVE AI
 
-
-AI & Machine Learning | CCNA 200-301 (Day 59) | Generative AI
-Predictive AI
-Uses machine learning to analyze historical data and predict future outcomes or trends.
+- Predictive AI
+  - Uses machine learning to analyze historical data and predict future outcomes or trends.
 
 Examples: Security anomaly detection, weather forecasting.
 
-Generative AI
-Uses machine learning to learn patterns from existing data and create new content, such as text, images, or audio.
+- Generative AI
+  - Uses machine learning to learn patterns from existing data and create new content, such as text, images, or audio.
+  - Examples: ChatGPT, Gemini, Midjourney, DALL-E, etc.
 
-Examples: ChatGPT, Gemini, Midjourney, DALL-E, etc.
+---
 
-Artificial Intelligence
-Machine Learning
-
-Deep Learning
-
-Predictive & Generative AI
-
-
-
-Predictive AI
+PREDICTIVE AI
 
 The model identifies patterns and correlations in past data.
 
@@ -251,10 +221,10 @@ Requires high-quality, relevant historical data.
 Accuracy depends on how well the patterns in past data generalize to new scenarios.
 
 
+---
 
 
-
-Generative AI
+GENERATIVE AI
 
 Generative AI learns patterns from existing data and creates new content such as text, images, and audio.
 
