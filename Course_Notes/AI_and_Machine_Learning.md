@@ -56,103 +56,90 @@ TYPES OF ML
 
 ---
 
-Supervised Learning
+SUPERVISED LEARNING
 
 Supervised learning trains the model on a labeled dataset.
 
-Each input provided to the model for training has a corresponding label.
+- Each input provided to the model for training has a corresponding label.
 
-By examining these labeled examples, the model learns the relationship between the data and the given label.
+- By examining these labeled examples, the model learns the relationship between the data and the given label.
 
-Examples:
+- By training on labeled examples, the model learns to classify new, unseen data with high accuracy.
 
-Classified as "cat"
 
-Classified as "dog"
+IMAGEM
 
-By training on labeled examples, the model learns to classify new, unseen data with high accuracy.
 
 Advantages:
 
-Highly accurate when labeled data is available.
+- Highly accurate when labeled data is available.
 
 Disadvantages:
 
-Requires large, labeled datasets, which can be expensive and time-consuming to create.
+- Requires large, labeled datasets, which can be expensive and time-consuming to create.
 
+- output is limited to the labels in the training data
 
+---
 
-
-Unsupervised Learning
+UNSUPERVISED LEARNING
 
 Unsupervised learning trains the model on an unlabeled dataset.
 
-No predefined labels are provided.
+- No predefined labels are provided.
 
-The model can discover patterns, structures, or relationships within the data (without human supervision).
+- The model can discover patterns, structures, or relationships within the data (without human supervision).
+  - It groups (clusters) similar data points based on shared features.
 
-It groups (clusters) similar data points based on shared features.
-
-Examples:
-
-Cluster 1: "cat"
-
-Cluster 2: "dog"
-
-Cluster 3: "bird"
 
 Advantages:
 
-No need for labeled data.
+- No need for labeled data.
 
-Reveals hidden patterns.
+- Reveals hidden patterns.
 
 Disadvantages:
 
-Interpretation and labeling of the results is required.
+- Interpretation and labeling of the results is required.
 
-Less accurate.
+- Less accurate.
+
+---
 
 
+REINFORCEMENT LEARNING
+
+- Reinforcement learning trains a model by rewarding or penalizing its actions in a given environment to maximize its performance over time.
+  - The model learns to take actions that achieve the highest reward or best outcome.
+
+- How it works:
+  - The model (called an agent) interacts with an environment.
+  - It takes an action and receives feedback (reward or penalty).
+  - Over time, it learns which actions lead to the best results.
 
 
-Reinforcement Learning
+- Applications include:
 
-Reinforcement learning trains a model by rewarding or penalizing its actions in a given environment to maximize its performance over time.
+  - Self-driving cars: Learning how to navigate safely by trial and error.
+  - Game AI: Mastering strategies in games like Chess, Go, or video games.
+  - Robotics: Teaching robots how to walk, pick up objects, or perform tasks.
 
-The model learns to take actions that achieve the highest reward or best outcome.
-
-How it works:
-
-The model (called an agent) interacts with an environment.
-
-It takes an action and receives feedback (reward or penalty).
-
-Over time, it learns which actions lead to the best results.
-
-Applications include:
-
-Self-driving cars: Learning how to navigate safely by trial and error.
-
-Game AI: Mastering strategies in games like Chess, Go, or video games.
-
-Robotics: Teaching robots how to walk, pick up objects, or perform tasks.
 
 Advantages:
 
-Capable of learning complex behaviors.
+- Capable of learning complex behaviors.
 
-Adapts to dynamic environments.
+- Adapts to dynamic environments.
 
 Disadvantages:
 
-Resource intensive.
+- Resource intensive.
 
-Risk of suboptimal learning if the reward system isn't properly designed.
+- Risk of suboptimal learning if the reward system isn't properly designed.
 
+---
 
-
-Deep Learning
+DEEP LEARNING
 
 Deep learning uses artificial neural networks to process and learn from large and complex datasets.
 
@@ -382,6 +369,3 @@ Uses AI to balance load, reduce interference, and improve coverage across wirele
 
 
 
-
-
-output is limited to the labels in the training data - sup learning
