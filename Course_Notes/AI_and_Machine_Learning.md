@@ -1,19 +1,25 @@
 # 59-2. AI AND MACHINE LEARNING:
 
-Artificial intelligence (AI)
-Uses computers to simulate intelligence, allowing them to exhibit behaviors typically associated with humans, such as recognizing patterns, learning, making decisions, and solving problems.
+WHAT IS AI?
 
-Although ChatGPT is on everyone’s mind these days, the field of AI is much wider.
+- Artificial intelligence (AI) uses computers to simulate intelligence, allowing them to exhibit behaviors typically associated with humans, such as recognizing patterns, learning, making decisions, and solving problems.
+
 Some examples:
-Virtual assistants: Siri, Alexa, Google Assistant
-Recommendation systems: Netflix, YouTube, Amazon product recommendations
-Self-driving cars and robotics: Tesla FSD, Waymo
-Chatbots: ChatGPT, virtual concierges
-Game play and analysis: Stockfish (Chess), AlphaGo (Go)
-…and many more!
-AI is growing in importance, driven by increased computing power, availability of big data, and breakthroughs in AI research (i.e., the AI boom since ChatGPT’s release).
+
+- Virtual assistants: Siri, Alexa, Google Assistant
+  
+- Recommendation systems: Netflix, YouTube, Amazon product recommendations
+  
+- Self-driving cars and robotics: Tesla FSD, Waymo
+  
+- Chatbots: ChatGPT, virtual concierges
+  
+- Game play and analysis: Stockfish (Chess), AlphaGo (Go)
 
 
+- AI is growing in importance, driven by increased computing power, availability of big data, and breakthroughs in AI research (i.e., the AI boom since ChatGPT’s release).
+
+---
 
 Machine learning (ML)
 A subset of AI that focuses on enabling computers to learn from data and improve without the need for explicit programming.
