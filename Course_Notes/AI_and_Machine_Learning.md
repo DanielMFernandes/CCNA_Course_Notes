@@ -27,7 +27,10 @@ WHAT IS ML?
 - Instead of hard-coded instructions (programmed by a human), ML algorithms identify patterns in data and make predictions or decisions based on those patterns.
 
 
-IMAGEM
+![Image1](https://github.com/user-attachments/assets/8a4aecaa-b85f-4404-afaf-d20bb68c48d9)
+
+
+![image](https://github.com/user-attachments/assets/684f0baf-3fa4-4568-9478-d05704cca584)
 
 
 Some examples:
