@@ -30,9 +30,6 @@ WHAT IS ML?
 ![Image1](https://github.com/user-attachments/assets/8a4aecaa-b85f-4404-afaf-d20bb68c48d9)
 
 
-![image](https://github.com/user-attachments/assets/684f0baf-3fa4-4568-9478-d05704cca584)
-
-
 Some examples:
 - Email spam filtering
 - Personalized product recommendations
@@ -56,6 +53,10 @@ TYPES OF ML
 
 - Deep learning
   - A specialized subset of ML that uses multi-layered neural networks to handle large datasets and perform complex tasks like image recognition and natural language processing.
+ 
+
+![image](https://github.com/user-attachments/assets/fe821022-5737-4f26-a0ff-9550b5c0edc2)
+
 
 ---
 
@@ -70,7 +71,8 @@ Supervised learning trains the model on a labeled dataset.
 - By training on labeled examples, the model learns to classify new, unseen data with high accuracy.
 
 
-IMAGEM
+![image](https://github.com/user-attachments/assets/34069a99-9ebb-42b8-b9ba-a8ab16d663e7)
+
 
 
 Advantages:
@@ -93,6 +95,9 @@ Unsupervised learning trains the model on an unlabeled dataset.
 
 - The model can discover patterns, structures, or relationships within the data (without human supervision).
   - It groups (clusters) similar data points based on shared features.
+
+
+![image](https://github.com/user-attachments/assets/ce27dd24-6023-4078-a702-e4ab5e1ebc74)
 
 
 Advantages:
@@ -191,6 +196,10 @@ PREDICTIVE AND GENERATIVE AI
 - Generative AI
   - Uses machine learning to learn patterns from existing data and create new content, such as text, images, or audio.
   - Examples: ChatGPT, Gemini, Midjourney, DALL-E, etc.
+
+
+![image](https://github.com/user-attachments/assets/cbf44685-65fd-4e8a-924f-acb747648d8e)
+
 
 ---
 
