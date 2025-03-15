@@ -53,7 +53,7 @@ MPLS VPNs
 
 - When the PE routers receive frames from the CE routers, they add a label to the frame
 - These labels are used to make forwarding decisions within the service provider network - not the destination IP
-- The CE routers do not USE MPLS, it is only used by the PE/P routers
+- The CE routers do not use MPLS, it is only used by the PE/P routers
 - When using a layer 3 MPLS VPN, the CE and PE routers peer using OSPF, for example, to share routing information
 
 EXAMPLE: 
