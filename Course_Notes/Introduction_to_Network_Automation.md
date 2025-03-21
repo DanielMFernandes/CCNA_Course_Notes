@@ -18,7 +18,7 @@ DOWNSIDES OF CONFIGURING DEVICES ONE-BY-ONE
 
 BENEFITS OF NETWORK AUTOMATION
 
-- Human Error (Typos, etc) is reduced
+- Human Error (typos, etc) are reduced
 - Networks become much more scalable and implemented in a fraction of the time
     - New deployments
     - Network-wide changes
