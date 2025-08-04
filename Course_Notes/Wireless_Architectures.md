@@ -82,6 +82,8 @@
 
 ---
 
+There are 3 main deployment methods: autonomous, lightweight and cloud-based.
+
 AUTONOMOUS APs
 
 - Autonomous APs are self-contained systems that do not rely on a WLC
