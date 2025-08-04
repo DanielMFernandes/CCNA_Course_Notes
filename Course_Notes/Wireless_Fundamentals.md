@@ -16,10 +16,10 @@ WIRELESS NETWORKS
 
 - Privacy of data within the LAN is a greater concern
 - CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) is used to facilitate half-duplex communications
-- CSMA / CD is used in wired networks to detect and recover from collisions
-- CSMA / CA is used in wireless networks to avoid collisions
+- CSMA/CD is used in wired networks to detect and recover from collisions
+- CSMA/CA is used in wireless networks to avoid collisions
 
-- When using CSMA / CA, a device will wait for other devices to stop transmitting before it transmits data itself.
+- When using CSMA/CA, a device will wait for other devices to stop transmitting before it transmits data itself.
 
 ![image](https://github.com/psaumur/CCNA/assets/106411237/7d266279-5342-478e-8001-0146a016296b)
 
