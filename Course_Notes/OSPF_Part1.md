@@ -4,7 +4,7 @@
 
 LINK STATE ROUTING PROTOCOLS
 
-- When using a LINK STATE ROUTING PROTOCOL, every ROUTER creates a ‘connectivity map’ of the NETWORK
+- When using a LINK STATE ROUTING PROTOCOL, every router creates a ‘connectivity map’ of the NETWORK
 - To allow this, each ROUTER ADVERTISES information about its INTERFACES (connected NETWORKS) to its NEIGHBOURS. These ADVERTISEMENTS are passed along to the other ROUTERS, until all ROUTERS in the NETWORK develop the same map of the NETWORK
 - Each ROUTER independently uses this MAP to calculate the BEST ROUTES to each DESTINATION
 - LINK STATE PROTOCOLS use more resources (CPU) on the ROUTER, because MORE information is shared.
