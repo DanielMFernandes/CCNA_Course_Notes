@@ -81,6 +81,8 @@
  
 
 ---
+DEPLOYMENT METHODS
+
 
 There are 3 main deployment methods: autonomous, lightweight and cloud-based.
 
