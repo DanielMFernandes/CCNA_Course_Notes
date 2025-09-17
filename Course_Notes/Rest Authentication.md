@@ -1,14 +1,14 @@
 Authentication is the process of validating the identity of a user or system to ensure legitimate access to resources.
 
-In the case of an API, the resource is the application and its data.
+- In the case of an API, the resource is the application and its data.
 
 Without authentication, unauthorized users can send API requests, potentially accessing sensitive data or modifying the application.
 
-Implementing a reliable authentication method is essential for protecting applications and data.
+- Implementing a reliable authentication method is essential for protecting applications and data.
 
 Many APIs track usage for analytics and billing purposes.
 
-e.g., charging customers according to how much they use the API.
+- e.g., charging customers according to how much they use the API.
 
 image 
 ---
