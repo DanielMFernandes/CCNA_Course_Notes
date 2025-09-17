@@ -29,72 +29,68 @@ REST APIs use various types of authentication to verify client identity and secu
 - OAuth2.0:
   - A secure framework that grants access via access tokens, commonly used for delegated access and third-party authentication.
 ----
+BASIC AUTHENTICATION
+
 Basic authentication includes a username and password in the HTTP headers of each API request for authentication.
 
+<img width="1600" height="512" alt="image" src="https://github.com/user-attachments/assets/aa785aa0-3173-4704-a503-cd6f51db02ee" />
+![image]()
+
 image
 
------
-
-hese credentials are encoded in Base64 format but not encrypted.
-
-Base64 is an encoding scheme, which is simply a way of representing data.
-
-Unlike encryption, it is not secure and can easily be decoded.
-
-Always use HTTPS (TLS) for security.
+These credentials are encoded in Base64 format but not encrypted.
+- Base64 is an encoding scheme, which is simply a way of representing data.
+- Unlike encryption, it is not secure and can easily be decoded.
+- Always use HTTPS (TLS) for security.
 
 The username/password are sent in the format username:password, encoded in Base64.
+- For example, jeremy:ccna would be sent as amVyZM150mNjbmE=
+- You can encode/decode Base64 at https://www.base64decode.org/
 
-For example, j#remy:c#na would be sent as amVyZM150mNjbmE=
+**Advantages:**
 
-You can encode/decode Base64 at https://www.base64decode.org/
+- Simple and easy to implement.
 
-Advantages:
+**Disadvantages:**
 
-Simple and easy to implement.
+- Since credentials are sent in every request, attackers could steal them if the connection is not properly secured.
 
-Disadvantages:
+- Even if using HTTPS for encryption, relying solely on a username/password combination isn’t particularly secure.
 
-Since credentials are sent in every request, attackers could steal them if the connection is not properly secured.
+<img width="1385" height="259" alt="image" src="https://github.com/user-attachments/assets/743193d7-c33e-4f54-9f35-8759da9f7c13" />
 
-Even if using HTTPS for encryption, relying solely on a username/password combination isn’t particularly secure.
-
-image
 
 ----
+BEARER AUTHENTICATION
 
 Bearer authentication (a form of token-based authentication) uses a token instead of a username/password.
 
-The client first obtains a token by authenticating with an authorization server.
+- The client first obtains a token by authenticating with an authorization server. This can be done using Basic authentication or another method.
 
-This can be done using Basic authentication or another method.
-
-For each API call, the client includes the token in the HTTP Authorization header.
-
-e.g., Authorization: Bearer ya29.a0ARrdaM8
+- For each API call, the client includes the token in the HTTP Authorization header.
+  - e.g., Authorization: Bearer ya29.a0ARrdaM8
 
 The term bearer means that anyone who possesses the token can use it.
+- If an attacker steals the token, they can make API calls as if they were the legitimate user.
+- To mitigate against this, tokens expire after a set period of time.
 
-If an attacker steals the token, they can make API calls as if they were the legitimate user.
+**Advantages:**
 
-To mitigate against this, tokens expire after a set period of time.
+- More secure than Basic authentication (no need to transmit the same username/password for every API call).
 
-Advantages:
+- Tokens expire, so a stolen token will only be temporarily valid.
 
-More secure than Basic authentication (no need to transmit the same username/password for every API call).
+**Disadvantages:**
 
-Tokens expire, so a stolen token will only be temporarily valid.
+- If a token is stolen, the attacker can access the API until it expires.
 
-Disadvantages:
+- Tokens need to be refreshed periodically, adding extra complexity to implement.
 
-If a token is stolen, the attacker can access the API until it expires.
-
-Tokens need to be refreshed periodically, adding extra complexity to implement.
-
-Should only be used with HTTPS.
+- Should only be used with HTTPS.
 
 
-image
+<img width="1106" height="346" alt="image" src="https://github.com/user-attachments/assets/c339afc0-2657-4847-b12f-07c19a316def" />
+
 
 ---
 
