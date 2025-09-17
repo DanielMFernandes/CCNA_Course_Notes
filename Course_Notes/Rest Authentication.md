@@ -10,6 +10,8 @@ Many APIs track usage for analytics and billing purposes.
 
 - e.g., charging customers according to how much they use the API.
 
+<img width="1350" height="430" alt="image" src="https://github.com/user-attachments/assets/2b279240-7d75-424f-ba49-8395d4996ee1" />
+
 image 
 ---
 REST APIs use various types of authentication to verify client identity and secure access to resources.
