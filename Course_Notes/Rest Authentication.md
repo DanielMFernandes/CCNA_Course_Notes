@@ -33,10 +33,8 @@ BASIC AUTHENTICATION
 
 Basic authentication includes a username and password in the HTTP headers of each API request for authentication.
 
-<img width="1600" height="512" alt="image" src="https://github.com/user-attachments/assets/aa785aa0-3173-4704-a503-cd6f51db02ee" />
-![image]()
+![image](https://github.com/user-attachments/assets/aa785aa0-3173-4704-a503-cd6f51db02ee)
 
-image
 
 These credentials are encoded in Base64 format but not encrypted.
 - Base64 is an encoding scheme, which is simply a way of representing data.
@@ -57,8 +55,7 @@ The username/password are sent in the format username:password, encoded in Base6
 
 - Even if using HTTPS for encryption, relying solely on a username/password combination isn’t particularly secure.
 
-<img width="1385" height="259" alt="image" src="https://github.com/user-attachments/assets/743193d7-c33e-4f54-9f35-8759da9f7c13" />
-
+![image](https://github.com/user-attachments/assets/743193d7-c33e-4f54-9f35-8759da9f7c13)
 
 ----
 BEARER AUTHENTICATION
@@ -89,91 +86,71 @@ The term bearer means that anyone who possesses the token can use it.
 - Should only be used with HTTPS.
 
 
-<img width="1106" height="346" alt="image" src="https://github.com/user-attachments/assets/c339afc0-2657-4847-b12f-07c19a316def" />
-
+![image](https://github.com/user-attachments/assets/c339afc0-2657-4847-b12f-07c19a316def)
 
 ---
+API KEY AUTHENTICATION
 
 API key authentication uses a static key issued by the API provider.
-
-The client uses this key in each API call for authentication.
-
-Unlike bearer tokens, the API key is static and remains valid until revoked.
+- The client uses this key in each API call for authentication.
+- Unlike bearer tokens, the API key is static and remains valid until revoked.
 
 API keys can be sent in:
 
-The HTTP Authorization header (recommended)
+- The HTTP Authorization header (recommended)
+- The URL (e.g., add ?api_key=abcd1234 to the end of the URL). Not recommended! URLs are often logged by web servers, proxies, browsers, etc.
+- A cookie (sometimes used for browser-based APIs).
 
-The URL (e.g., add ?api_key=abcd1234 to the end of the URL)
+**Advantages:**
 
-Not recommended! URLs are often logged by web servers, proxies, browsers, etc.
+- Easier to implement than Bearer authentication (no need to refresh tokens).
 
-A cookie (sometimes used for browser-based APIs).
+- Good for tracking API usage. Often used by cloud services and third-party APIs.
 
-Advantages:
+**Disadvantages:**
 
-Easier to implement than Bearer authentication (no need to refresh tokens).
+- If stolen, the key grants full access until revoked.
 
-Good for tracking API usage. Often used by cloud services and third-party APIs.
-
-Disadvantages:
-
-If stolen, the key grants full access until revoked.
-
-API keys must be rotated manually to maintain security, whereas tokens expire automatically.
+- API keys must be rotated manually to maintain security, whereas tokens expire automatically.
 
 
-image
+![image](https://github.com/user-attachments/assets/60d6193e-07f6-4e68-868e-a93f57d1d944)
 
 
 ---
+OAUTH 2.0
 
 OAuth 2.0 is a secure authentication framework that is widely used in modern web applications.
 
-It provides access delegation, granting third-party applications limited access to resources on behalf of the resource’s owner.
-
-There is no need to share the resource owner’s credentials with the third party.
+- It provides access delegation, granting third-party applications limited access to resources on behalf of the resource’s owner. There is no need to share the resource owner’s credentials with the third party.
 
 Examples of OAuth2.0:
 
-Logging in with Google:
+- Logging in with Google:
+  - Many websites and apps offer the option to log in using your Google account.
 
-Many websites and apps offer the option to log in using your Google account.
+- Connecting apps to social media accounts:
+  - Many apps can be connected to accounts on social media platforms like Instagram, Facebook, LinkedIn, etc.
 
-Connecting apps to social media accounts:
-
-Many apps can be connected to accounts on social media platforms like Instagram, Facebook, LinkedIn, etc.
-
-Calendar integration:
-
-A third-party tool can be given access to your Google Calendar to check availability and schedule meetings.
+-Calendar integration:
+  - A third-party tool can be given access to your Google Calendar to check availability and schedule meetings.
 
 
-------
+1. The client app requests authorization from the resource owner (you) to access the resource (your Google Calendar data).
 
+2. The resource owner grants authorization by logging into their account (e.g., Google account) and giving permission.
 
+3. The client app exchanges the authorization grant for an access token from the auth server.
 
-The client app requests authorization from the resource owner (you) to access the resource (your Google Calendar data).
+4. The auth server provides an access token to the client app.
 
-The resource owner grants authorization by logging into their account (e.g., Google account) and giving permission.
+5. The client app sends the access token to the resource server (e.g., Google’s server hosting calendar data) to request the resource.
 
-The client app exchanges the authorization grant for an access token from the auth server.
-
-The auth server provides an access token to the client app.
-
-The client app sends the access token to the resource server (e.g., Google’s server hosting calendar data) to request the resource.
-
-The resource server validates the access token and provides the requested resource (calendar data) to the client app.
+6. The resource server validates the access token and provides the requested resource (calendar data) to the client app.
 
 The access token granted in step 4 functions just like the token used in bearer authentication.
+- It grants access to the specified resource within the appropriate scope of access (e.g., read-only access).
+- Access tokens expire after a short period, but OAuth 2.0 uses refresh tokens (granted by the Auth server) to obtain new access tokens without requiring the user to log in every time.
 
-It grants access to the specified resource within the appropriate scope of access (e.g., read-only access).
-
-Access tokens expire after a short period, but OAuth 2.0 uses refresh tokens (granted by the Auth server) to obtain new access tokens without requiring the user to log in every time.
-
-
-image
-
-
-
-END          
+![image](https://github.com/user-attachments/assets/f34e4bf1-18fe-48d4-befb-2fca1d33c218)
+       
