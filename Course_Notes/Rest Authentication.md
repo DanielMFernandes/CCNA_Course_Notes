@@ -14,27 +14,20 @@ Many APIs track usage for analytics and billing purposes.
 
  
 ---
-REST APIs use various types of authentication to verify client identity and secure access to resources.
+REST APIs use various types of authentication to verify client identity and secure access to resources. These are also called **methods** or **schemes**.
 
-These are also called methods or schemes.
 
-We will cover four:
+- Basic authentication:
+  - Sends a username and password in every request, encoded in Base64.
 
-Basic authentication:
+- Bearer authentication:
+  - Uses a token (bearer token) as an HTTP header in each request to verify the client’s identity.
 
-Sends a username and password in every request, encoded in Base64.
+- API key authentication:
+  - Requires a unique key, typically included as an HTTP header, to authenticate API requests.
 
-Bearer authentication:
-
-Uses a token (bearer token) as an HTTP header in each request to verify the client’s identity.
-
-API key authentication:
-
-Requires a unique key, typically included as an HTTP header, to authenticate API requests.
-
-OAuth2.0:
-
-A secure framework that grants access via access tokens, commonly used for delegated access and third-party authentication.
+- OAuth2.0:
+  - A secure framework that grants access via access tokens, commonly used for delegated access and third-party authentication.
 ----
 Basic authentication includes a username and password in the HTTP headers of each API request for authentication.
 
