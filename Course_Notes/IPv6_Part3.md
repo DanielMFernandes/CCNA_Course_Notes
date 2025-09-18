@@ -168,7 +168,7 @@ IPv6 STATIC ROUTING
 
 Everything is configured similar to normal static routes in IPv4
 
-[AD] = Administrative Distance. You NEED this value in order to configure a STATIC ROUTE
+[AD] = Administrative Distance. Optional value
 
 DIRECTLY ATTACHED Static Route:
 
